@@ -49,6 +49,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #f1f1f1;
+  border-radius: 50%;
 }
 .product-price {
   font-size: 18px;
@@ -56,9 +58,8 @@
   padding-right: 8px;
 }
 .add-to-cart {
-  background-color: #f1f1f1;
   border: none;
-  border-radius: 50%;
+
   width: 24px;
   height: 24px;
   display: flex;
