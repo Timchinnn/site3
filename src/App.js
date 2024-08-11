@@ -3,6 +3,7 @@ import axios from "axios";
 import "./App.css"; // Для стилей, создайте этот файл
 
 function App() {
+  let a = 0;
   const [products, setProducts] = useState([]);
 
   const fetchProducts = () => {
