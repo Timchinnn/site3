@@ -26,3 +26,24 @@
   top: 20px; /* Увеличил отступ для кнопки */
   right: 20px; /* Увеличил отступ для кнопки */
 }
+.button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e0f7ff; /* Светло-голубой цвет фона */
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Небольшая тень */
+}
+
+.button .icon {
+  color: #007bff; /* Синий цвет иконки */
+  font-size: 20px; /* Размер иконки */
+}
+
+.button:hover {
+  background-color: #d0e7ff; /* Более темный цвет фона при наведении */
+}
