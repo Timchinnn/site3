@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css"; // Для стилей, создайте этот файл
-import ProductModal from "./ProductModal"; // Импортируйте модальное окно
+import ProductModal from "./components/ProductModal/ProductModal";
 
 function App() {
   const [products, setProducts] = useState([]);
