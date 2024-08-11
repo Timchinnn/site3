@@ -7,7 +7,7 @@ function App() {
 
   const fetchProducts = () => {
     axios
-      .get("http://217.18.62.19:3000/api/products")
+      .get("/api/products") // Теперь будет направляться на ваш сервер
       .then((response) => {
         setProducts(response.data);
       })
