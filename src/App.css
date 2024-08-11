@@ -62,9 +62,9 @@
 
   width: 24px;
   height: 24px;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
