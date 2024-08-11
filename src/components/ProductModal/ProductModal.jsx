@@ -10,7 +10,9 @@ const ProductModal = ({ product, onClose }) => {
         <h2>{product.name}</h2>
         <img src={product.photo_url} alt={product.name} />
         <p>{product.description}</p>
-        <button onClick={onClose}>x</button>
+        <button class="button" onClick={onClose}>
+          <span class="icon">×</span>
+        </button>
       </div>
     </div>
   );
