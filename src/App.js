@@ -58,9 +58,7 @@ function App() {
 
             <div className="product-price-add">
               <div className="product-price">{product.description}</div>
-              <button className="add-to-cart" onClick={onAddToCart}>
-                +
-              </button>
+              <button className="add-to-cart">+</button>
             </div>
           </div>
           // <div
