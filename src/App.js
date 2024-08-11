@@ -47,14 +47,31 @@ function App() {
       <div className="products">
         {products.map((product) => (
           <div
+            className="product-card"
             key={product.id}
-            className="product"
             onClick={() => openModal(product)}
           >
-            <img src={product.photo_url} alt={product.name} />
-            <h2>{product.name}</h2>
-            <p>{product.description}</p>
+            <div className="product-image">
+              <img src={product.photo_url} alt={product.name} />
+            </div>
+            <div className="product-title">{product.name}</div>
+
+            <div className="product-price-add">
+              <div className="product-price">{product.description}</div>
+              <button className="add-to-cart" onClick={onAddToCart}>
+                +
+              </button>
+            </div>
           </div>
+          // <div
+          //   key={product.id}
+          //   className="product"
+          //   onClick={() => openModal(product)}
+          // >
+          //   <img src={product.photo_url} alt={product.name} />
+          //   <h2>{product.name}</h2>
+          //   <p>{product.description}</p>
+          // </div>
         ))}
       </div>
 
