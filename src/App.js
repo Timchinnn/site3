@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css"; // Для стилей, создайте этот файл
+import ProductModal from "./ProductModal"; // Импортируйте модальное окно
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const fetchProducts = () => {
     axios
@@ -28,18 +31,36 @@ function App() {
     return () => clearInterval(intervalId);
   }, []);
 
+  const openModal = (product) => {
+    setSelectedProduct(product);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedProduct(null);
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="App">
       <h1>Магазин товаров</h1>
       <div className="products">
         {products.map((product) => (
-          <div key={product.id} className="product">
+          <div
+            key={product.id}
+            className="product"
+            onClick={() => openModal(product)}
+          >
             <img src={product.photo_url} alt={product.name} />
             <h2>{product.name}</h2>
             <p>{product.description}</p>
           </div>
         ))}
       </div>
+
+      {isModalOpen && (
+        <ProductModal product={selectedProduct} onClose={closeModal} />
+      )}
     </div>
   );
 }
