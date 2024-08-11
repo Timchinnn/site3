@@ -51,20 +51,19 @@
   align-items: center;
   background-color: #f1f1f1;
   border-radius: 10px;
+  padding: 10px;
 }
 .product-price {
   font-size: 18px;
   font-weight: bold;
-  padding-right: 8px;
+  margin-right: 20px;
 }
 .add-to-cart {
   border: none;
 
   width: 24px;
   height: 24px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
