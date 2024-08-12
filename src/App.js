@@ -118,7 +118,7 @@ function App() {
               </div>
               <div className="product-title">{product.name}</div>
               <div className="product-price-add">
-                {quantity > 1 && (
+                {quantity >= 1 && (
                   <button
                     onClick={(e) => {
                       e.stopPropagation();
