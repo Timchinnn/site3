@@ -24,7 +24,7 @@ const Product = ({ product, quantity, onAdd, onRemove, openModal }) => {
             -
           </button>
         )}
-        <div className="product-price">{product.description}</div>
+        <div className="product-price">{product.description}₽</div>
         <button
           className="add-to-cart"
           onClick={(e) => {
