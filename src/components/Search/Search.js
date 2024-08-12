@@ -3,12 +3,15 @@ import "./Search.css";
 
 const Search = ({ searchQuery, setSearchQuery }) => {
   return (
-    <input
-      type="text"
-      placeholder="Поиск товаров..."
-      value={searchQuery}
-      onChange={(e) => setSearchQuery(e.target.value)} // Обновляем состояние поискового запроса
-    />
+    <div className="search-box">
+      {" "}
+      <input
+        type="text"
+        placeholder="Поиск товаров..."
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)} // Обновляем состояние поискового запроса
+      />
+    </div>
   );
 };
 
