@@ -4,11 +4,6 @@ import "./App.css";
 import ProductModal from "./components/ProductModal/ProductModal";
 import { useTelegram } from "./hooks/useTelegram";
 
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import ProductModal from "./ProductModal"; // Предполагаем, что у вас есть компонент ProductModal
-import { useTelegram } from "./useTelegram"; // Предполагаем, что у вас уже есть эта функция
-
 const getTotalPrice = (items = []) => {
   return items.reduce((acc, item) => {
     return (acc += item.description * item.quantity);
