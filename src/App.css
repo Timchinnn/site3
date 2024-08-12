@@ -89,12 +89,12 @@
   cursor: pointer;
 }
 
-.button {
+/* .button {
   border: none;
-  background: none; /* Убираем фоновый цвет */
-  color: black; /* Цвет текста для кнопки "-" */
+  background: none; 
+  color: black; 
   cursor: pointer;
-}
+} */
 
 .add-to-cart {
   border: none;
