@@ -3,13 +3,12 @@
 }
 
 .products {
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .product {
-  display: flex;
   border: 1px solid #ccc;
   border-radius: 10px;
   margin: 10px;
