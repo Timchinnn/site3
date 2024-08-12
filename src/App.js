@@ -89,7 +89,13 @@ function App() {
 
             <div className="product-price-add">
               <div className="product-price">{product.description}</div>
-              <button className="add-to-cart" onClick={() => onAdd(product)}>
+              <button
+                className="add-to-cart"
+                onClick={(e) => {
+                  e.stopPropagation(); // Предотвращаем событие клика от пациента вверх
+                  onAdd(product); // Вызываем функцию добавления товара в корзину
+                }}
+              >
                 +
               </button>
             </div>
