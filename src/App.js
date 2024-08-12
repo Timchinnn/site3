@@ -6,10 +6,12 @@ import ProductModal from "./components/ProductModal/ProductModal";
 import { useTelegram } from "./hooks/useTelegram";
 import ProductList from "./components/ProductList/ProductList";
 import useCart from "./useCart";
+import Search from "./components/Search/Search";
 function App() {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState(""); // Новое состояние для поискового запроса
   const { tg } = useTelegram();
   const { addedItems, onAdd, onRemove } = useCart(tg);
 
@@ -30,6 +32,10 @@ function App() {
     return () => clearInterval(intervalId);
   }, []);
 
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   const openModal = (product) => {
     setSelectedProduct(product);
     setIsModalOpen(true);
@@ -43,8 +49,10 @@ function App() {
   return (
     <div className="App">
       <h1>Магазин товаров</h1>
+      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />{" "}
+      {/* Используем компонент поиска */}
       <ProductList
-        products={products}
+        products={filteredProducts} // Используем отфильтрованные продукты
         addedItems={addedItems}
         onAdd={onAdd}
         onRemove={onRemove}
