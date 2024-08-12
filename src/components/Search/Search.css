@@ -1,7 +1,7 @@
 .search-box {
   position: relative;
   width: 300px;
-  margin: 100px auto;
+  margin: auto;
 }
 
 .search-box input {
