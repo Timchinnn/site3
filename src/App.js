@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./App.css"; // Для стилей, создайте этот файл
+import "./App.css";
 import ProductModal from "./components/ProductModal/ProductModal";
 import { useTelegram } from "./hooks/useTelegram";
 
 const getTotalPrice = (items = []) => {
   return items.reduce((acc, item) => {
-    return (acc += item.description * item.quantity); // Используйте item.price вместо item.description для расчета стоимости
+    return (acc += item.description * item.quantity);
   }, 0);
 };
 
@@ -19,7 +19,7 @@ function App() {
 
   const fetchProducts = () => {
     axios
-      .get("/api/products") // Теперь будет направляться на ваш сервер
+      .get("/api/products")
       .then((response) => {
         setProducts(response.data);
       })
@@ -29,14 +29,12 @@ function App() {
   };
 
   useEffect(() => {
-    fetchProducts(); // Получаем товары при первом рендере
+    fetchProducts();
 
-    // Устанавливаем интервал для обновления данных
     const intervalId = setInterval(() => {
-      fetchProducts(); // Обновляем данные каждые 5 секунд
+      fetchProducts();
     }, 5000);
 
-    // Очистка интервала при размонтировании компонента
     return () => clearInterval(intervalId);
   }, []);
 
@@ -48,10 +46,8 @@ function App() {
     let newItems = [...addedItems];
 
     if (existingItemIndex > -1) {
-      // Если товар уже есть в корзине, увеличиваем его количество
       newItems[existingItemIndex].quantity += 1;
     } else {
-      // Если товара еще нет, добавляем его
       newItems.push({ ...product, quantity: 1 });
     }
 
@@ -105,15 +101,6 @@ function App() {
               </button>
             </div>
           </div>
-          // <div
-          //   key={product.id}
-          //   className="product"
-          //   onClick={() => openModal(product)}
-          // >
-          //   <img src={product.photo_url} alt={product.name} />
-          //   <h2>{product.name}</h2>
-          //   <p>{product.description}</p>
-          // </div>
         ))}
       </div>
 
