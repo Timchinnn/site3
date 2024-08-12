@@ -1,14 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./App.css";
-import ProductModal from "./components/ProductModal/ProductModal";
-import { useTelegram } from "./hooks/useTelegram";
-
-const getTotalPrice = (items = []) => {
-  return items.reduce((acc, item) => {
-    return (acc += item.description * item.quantity);
-  }, 0);
-};
+import Product from "./Product"; // Импорт нового компонента
+import { getTotalPrice } from "./utils"; // Импорт функции
+import ProductModal from "./ProductModal"; // Импорт вашего модального окна
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -30,12 +24,20 @@ function App() {
 
   useEffect(() => {
     fetchProducts();
-    const intervalId = setInterval(() => {
-      fetchProducts();
-    }, 5000);
-
+    const intervalId = setInterval(fetchProducts, 5000);
     return () => clearInterval(intervalId);
   }, []);
+
+  const updateMainButton = (items) => {
+    if (items.length === 0) {
+      tg.MainButton.hide();
+    } else {
+      tg.MainButton.show();
+      tg.MainButton.setParams({
+        text: `Купить ${getTotalPrice(items)}`,
+      });
+    }
+  };
 
   const onAdd = (product) => {
     const existingItemIndex = addedItems.findIndex(
@@ -50,15 +52,7 @@ function App() {
     }
 
     setAddedItems(newItems);
-
-    if (newItems.length === 0) {
-      tg.MainButton.hide();
-    } else {
-      tg.MainButton.show();
-      tg.MainButton.setParams({
-        text: `Купить ${getTotalPrice(newItems)}`,
-      });
-    }
+    updateMainButton(newItems);
   };
 
   const onRemove = (product) => {
@@ -75,14 +69,7 @@ function App() {
       }
 
       setAddedItems(newItems);
-
-      if (newItems.length === 0) {
-        tg.MainButton.hide();
-      }
-
-      tg.MainButton.setParams({
-        text: `Купить ${getTotalPrice(newItems)}`,
-      });
+      updateMainButton(newItems);
     }
   };
 
@@ -103,48 +90,18 @@ function App() {
         {products.map((product) => {
           const addedItem = addedItems.find((item) => item.id === product.id);
           const quantity = addedItem ? addedItem.quantity : 0;
-
           return (
-            <div
-              className={`product-card ${quantity > 0 ? "highlight" : ""}`}
+            <Product
               key={product.id}
-              onClick={() => openModal(product)}
-            >
-              <div className="product-image">
-                <img src={product.photo_url} alt={product.name} />
-                {quantity > 0 && (
-                  <div className="quantity-overlay">{quantity}</div>
-                )}
-              </div>
-              <div className="product-title">{product.name}</div>
-              <div className="product-price-add">
-                {quantity >= 1 && (
-                  <button
-                    className="add-to-cart-min"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onRemove(product);
-                    }}
-                  >
-                    -
-                  </button>
-                )}
-                <div className="product-price">{product.description}</div>
-                <button
-                  className="add-to-cart"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onAdd(product);
-                  }}
-                >
-                  +
-                </button>
-              </div>
-            </div>
+              product={product}
+              quantity={quantity}
+              onAdd={onAdd}
+              onRemove={onRemove}
+              openModal={openModal}
+            />
           );
         })}
       </div>
-
       {isModalOpen && (
         <ProductModal product={selectedProduct} onClose={closeModal} />
       )}
