@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css"; // Для стилей, создайте этот файл
 import ProductModal from "./components/ProductModal/ProductModal";
-import { useTelegram } from "../../hooks/useTelegram";
+import { useTelegram } from "./hooks/useTelegram";
 
 const getTotalPrice = (items = []) => {
   return items.reduce((acc, item) => {
