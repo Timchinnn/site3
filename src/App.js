@@ -5,7 +5,7 @@ import axios from "axios";
 import ProductModal from "./components/ProductModal/ProductModal";
 import { useTelegram } from "./hooks/useTelegram";
 import ProductList from "./components/ProductList/ProductList";
-import { useCart } from "./useCart";
+import useCart from "./useCart";
 function App() {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
