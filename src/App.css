@@ -1,7 +1,7 @@
 .App {
   text-align: center;
 }
-.Naming {
+h1 {
   display: flex;
   align-items: center;
   justify-content: center;
