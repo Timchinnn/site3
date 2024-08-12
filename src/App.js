@@ -6,7 +6,7 @@ import { useTelegram } from "./hooks/useTelegram";
 
 const getTotalPrice = (items = []) => {
   return items.reduce((acc, item) => {
-    return (acc += item.description);
+    return (acc += item.description * item.quantity); // Используйте item.price вместо item.description для расчета стоимости
   }, 0);
 };
 
@@ -41,13 +41,18 @@ function App() {
   }, []);
 
   const onAdd = (product) => {
-    const alreadyAdded = addedItems.find((item) => item.id === product.id);
-    let newItems = [];
+    const existingItemIndex = addedItems.findIndex(
+      (item) => item.id === product.id
+    );
 
-    if (alreadyAdded) {
-      newItems = addedItems.filter((item) => item.id !== product.id);
+    let newItems = [...addedItems];
+
+    if (existingItemIndex > -1) {
+      // Если товар уже есть в корзине, увеличиваем его количество
+      newItems[existingItemIndex].quantity += 1;
     } else {
-      newItems = [...addedItems, product];
+      // Если товара еще нет, добавляем его
+      newItems.push({ ...product, quantity: 1 });
     }
 
     setAddedItems(newItems);
