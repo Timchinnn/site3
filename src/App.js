@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./App.css";
+import "./App.css"; // Для стилей, создайте этот файл
 import ProductModal from "./components/ProductModal/ProductModal";
 import { useTelegram } from "./hooks/useTelegram";
 
 const getTotalPrice = (items = []) => {
   return items.reduce((acc, item) => {
-    return (acc += item.price * item.quantity);
+    return (acc += item.description);
   }, 0);
 };
 
@@ -19,7 +19,7 @@ function App() {
 
   const fetchProducts = () => {
     axios
-      .get("/api/products")
+      .get("/api/products") // Теперь будет направляться на ваш сервер
       .then((response) => {
         setProducts(response.data);
       })
@@ -29,23 +29,25 @@ function App() {
   };
 
   useEffect(() => {
-    fetchProducts();
+    fetchProducts(); // Получаем товары при первом рендере
+
+    // Устанавливаем интервал для обновления данных
     const intervalId = setInterval(() => {
-      fetchProducts();
+      fetchProducts(); // Обновляем данные каждые 5 секунд
     }, 5000);
+
+    // Очистка интервала при размонтировании компонента
     return () => clearInterval(intervalId);
   }, []);
 
   const onAdd = (product) => {
-    const existingItemIndex = addedItems.findIndex(
-      (item) => item.id === product.id
-    );
-    let newItems = [...addedItems];
+    const alreadyAdded = addedItems.find((item) => item.id === product.id);
+    let newItems = [];
 
-    if (existingItemIndex > -1) {
-      newItems[existingItemIndex].quantity += 1;
+    if (alreadyAdded) {
+      newItems = addedItems.filter((item) => item.id !== product.id);
     } else {
-      newItems.push({ ...product, quantity: 1 });
+      newItems = [...addedItems, product];
     }
 
     setAddedItems(newItems);
@@ -84,21 +86,32 @@ function App() {
               <img src={product.photo_url} alt={product.name} />
             </div>
             <div className="product-title">{product.name}</div>
+
             <div className="product-price-add">
-              <div className="product-price">{product.price}</div>
+              <div className="product-price">{product.description}</div>
               <button
                 className="add-to-cart"
                 onClick={(e) => {
-                  e.stopPropagation();
-                  onAdd(product);
+                  e.stopPropagation(); // Предотвращаем событие клика от пациента вверх
+                  onAdd(product); // Вызываем функцию добавления товара в корзину
                 }}
               >
                 +
               </button>
             </div>
           </div>
+          // <div
+          //   key={product.id}
+          //   className="product"
+          //   onClick={() => openModal(product)}
+          // >
+          //   <img src={product.photo_url} alt={product.name} />
+          //   <h2>{product.name}</h2>
+          //   <p>{product.description}</p>
+          // </div>
         ))}
       </div>
+
       {isModalOpen && (
         <ProductModal product={selectedProduct} onClose={closeModal} />
       )}
