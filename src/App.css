@@ -2,7 +2,5 @@
   text-align: center;
 }
 h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
