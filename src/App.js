@@ -41,7 +41,6 @@ function App() {
     const existingItemIndex = addedItems.findIndex(
       (item) => item.id === product.id
     );
-
     let newItems = [...addedItems];
 
     if (existingItemIndex > -1) {
@@ -76,6 +75,11 @@ function App() {
       }
 
       setAddedItems(newItems);
+
+      if (newItems.length === 0) {
+        tg.MainButton.hide();
+      }
+
       tg.MainButton.setParams({
         text: `Купить ${getTotalPrice(newItems)}`,
       });
@@ -114,19 +118,17 @@ function App() {
               </div>
               <div className="product-title">{product.name}</div>
               <div className="product-price-add">
-                <div className="product-price">
-                  {quantity > 1 && (
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        onRemove(product);
-                      }}
-                    >
-                      -
-                    </button>
-                  )}
-                  {product.description}
-                </div>
+                {quantity > 1 && (
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onRemove(product);
+                    }}
+                  >
+                    -
+                  </button>
+                )}
+                <div className="product-price">{product.description}</div>
                 <button
                   className="add-to-cart"
                   onClick={(e) => {
