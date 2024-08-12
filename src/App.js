@@ -3,6 +3,7 @@ import axios from "axios";
 import Product from "./components/Product/Product";
 import { getTotalPrice } from "./utils";
 import ProductModal from "./components/ProductModal/ProductModal";
+import { useTelegram } from "./hooks/useTelegram";
 function App() {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
