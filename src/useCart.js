@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { getTotalPrice } from "./utils";
 
 const useCart = (tg) => {
