@@ -7,6 +7,7 @@ import { useTelegram } from "./hooks/useTelegram";
 import ProductList from "./components/ProductList/ProductList";
 import useCart from "./useCart";
 import Search from "./components/Search/Search";
+import "./App.css";
 function App() {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
