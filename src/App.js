@@ -89,7 +89,7 @@ function App() {
 
             <div className="product-price-add">
               <div className="product-price">{product.description}</div>
-              <button className="add-to-cart" onAdd={() => onAdd(product)}>
+              <button className="add-to-cart" onClick={() => onAdd(product)}>
                 +
               </button>
             </div>
