@@ -89,6 +89,13 @@
   cursor: pointer;
 }
 
+.button {
+  border: none;
+  background: none; /* Убираем фоновый цвет */
+  color: black; /* Цвет текста для кнопки "-" */
+  cursor: pointer;
+}
+
 .add-to-cart {
   border: none;
   width: 24px;
