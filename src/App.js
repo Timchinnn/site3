@@ -48,7 +48,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Магазин товаров</h1>
+      <h1 className="Naming">Магазин товаров</h1>
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />{" "}
       {/* Используем компонент поиска */}
       <ProductList
