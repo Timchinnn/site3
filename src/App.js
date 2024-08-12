@@ -120,7 +120,7 @@ function App() {
               <div className="product-price-add">
                 {quantity >= 1 && (
                   <button
-                    className="add-to-cart"
+                    className="add-to-cart-min"
                     onClick={(e) => {
                       e.stopPropagation();
                       onRemove(product);

@@ -104,3 +104,12 @@
   cursor: pointer;
   padding-top: 4px;
 }
+.add-to-cart-min {
+  border: none;
+  width: 24px;
+  height: 24px;
+  font-size: 18px;
+  cursor: pointer;
+  padding-top: 3px;
+  padding-right: 7px;
+}
