@@ -59,8 +59,8 @@
   display: flex; /* Изменено на flex для кнопки "-" */
   align-items: center;
   font-size: 18px;
-  margin-right: 20px;
-  margin-left: 7px;
+  /* margin-right: 20px;
+  margin-left: 7px; */
 }
 
 .product-price button {
@@ -92,5 +92,5 @@
   font-size: 18px;
   cursor: pointer;
   padding-top: 3px;
-  padding-right: 27px;
+  /* padding-right: 27px; */
 }
