@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import Product from "./Product"; // Импорт нового компонента
-import { getTotalPrice } from "./utils"; // Импорт функции
-import ProductModal from "./ProductModal"; // Импорт вашего модального окна
-
+import Product from "./components/Product/Product";
+import { getTotalPrice } from "./utils";
+import ProductModal from "./components/ProductModal/ProductModal";
 function App() {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
