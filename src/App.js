@@ -2,11 +2,20 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css"; // Для стилей, создайте этот файл
 import ProductModal from "./components/ProductModal/ProductModal";
+import { useTelegram } from "../../hooks/useTelegram";
+
+const getTotalPrice = (items = []) => {
+  return items.reduce((acc, item) => {
+    return (acc += item.description);
+  }, 0);
+};
 
 function App() {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const { tg, queryId } = useTelegram();
+  const [addedItems, setAddedItems] = useState([]);
 
   const fetchProducts = () => {
     axios
@@ -30,6 +39,28 @@ function App() {
     // Очистка интервала при размонтировании компонента
     return () => clearInterval(intervalId);
   }, []);
+
+  const onAdd = (product) => {
+    const alreadyAdded = addedItems.find((item) => item.id === product.id);
+    let newItems = [];
+
+    if (alreadyAdded) {
+      newItems = addedItems.filter((item) => item.id !== product.id);
+    } else {
+      newItems = [...addedItems, product];
+    }
+
+    setAddedItems(newItems);
+
+    if (newItems.length === 0) {
+      tg.MainButton.hide();
+    } else {
+      tg.MainButton.show();
+      tg.MainButton.setParams({
+        text: `Купить ${getTotalPrice(newItems)}`,
+      });
+    }
+  };
 
   const openModal = (product) => {
     setSelectedProduct(product);
@@ -58,7 +89,9 @@ function App() {
 
             <div className="product-price-add">
               <div className="product-price">{product.description}</div>
-              <button className="add-to-cart">+</button>
+              <button className="add-to-cart" onAdd={() => onAdd(product)}>
+                +
+              </button>
             </div>
           </div>
           // <div
