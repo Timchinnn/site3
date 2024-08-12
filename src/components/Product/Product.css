@@ -9,9 +9,9 @@
   padding: 16px;
   background-color: white;
   text-align: center;
-  position: relative; /* Добавлено для размещения наложений */
-  transition: background-color 0.3s; /* Плавный переход для фона */
-  flex: 0 0 calc(50% - 20px);
+  position: relative; /* Для наложений */
+  transition: background-color 0.3s; /* Анимация фона */
+  flex: 0 0 calc(50% - 30px); /* Две карточки в ряду с учетом отступов */
 }
 
 .product-card.highlight {
