@@ -4,46 +4,47 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7); /* Немного увеличил затемнение фона */
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000; /* Убедитесь, что модальное окно выше остального контента */
 }
 
 .modal-content {
   background-color: white;
+  border-radius: 10px;
   padding: 20px;
-  border-radius: 5px;
-  max-width: 100%; /* Изменил для заполнения всего экрана */
-  height: 100%; /* Заполняем всю высоту экрана */
-  width: 100%; /* Заполняем всю ширину экрана */
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   position: relative;
-  overflow-y: auto; /* Добавить скролирование, если контент превышает высоту экрана */
 }
 
-.modal-content button {
-  position: absolute;
-  top: 20px; /* Увеличил отступ для кнопки */
-  right: 20px; /* Увеличил отступ для кнопки */
+.modal-title {
+  margin: 0 0 15px;
 }
-.button button {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #e0f7ff; /* Светло-голубой цвет фона */
+
+.modal-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.modal-description {
+  margin: 15px 0;
+}
+
+.modal-close-button {
+  background: none;
   border: none;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Небольшая тень */
+  font-size: 24px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
-.button button .icon {
-  color: #007bff; /* Синий цвет иконки */
-  font-size: 20px; /* Размер иконки */
-}
-
-.button button:hover {
-  background-color: #d0e7ff; /* Более темный цвет фона при наведении */
+.icon {
+  font-size: 24px;
 }
