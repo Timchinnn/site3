@@ -18,11 +18,6 @@
   box-sizing: border-box; /* Учитываем границы и отступы в ширине */
 }
 
-.product img {
-  max-width: 100%;
-  height: auto;
-}
-
 .product-card {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -33,12 +28,36 @@
   background-color: white;
   text-align: center;
   flex: 0 0 calc(50% - 20px);
+  position: relative; /* Добавлено для размещения наложений */
+  transition: background-color 0.3s; /* Плавный переход для фона */
 }
+
+.product-card.highlight {
+  background-color: rgba(135, 206, 235, 0.5); /* голубой полупрозрачный фон */
+}
+
+.product-image {
+  position: relative;
+}
+
 .product-image img {
   border-radius: 8px;
   width: 100%;
   height: auto;
 }
+
+.quantity-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8); /* белый фон для текста */
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 1.5em;
+  z-index: 1; /* Делаем наложение выше */
+}
+
 .product-title {
   font-size: 16px;
   margin: 12px 0 8px;
@@ -54,17 +73,26 @@
   padding: 10px;
   width: min-content;
 }
+
 .product-price {
+  display: flex; /* Изменено на flex для кнопки "-" */
+  align-items: center;
   font-size: 18px;
   margin-right: 20px;
   margin-left: 7px;
 }
+
+.product-price button {
+  border: none;
+  background: none; /* Убираем фоновый цвет */
+  color: black; /* Цвет текста для кнопки "-" */
+  cursor: pointer;
+}
+
 .add-to-cart {
   border: none;
-
   width: 24px;
   height: 24px;
-
   font-size: 18px;
   cursor: pointer;
   padding-top: 4px;
