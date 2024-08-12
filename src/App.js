@@ -14,7 +14,7 @@ function App() {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { tg, queryId } = useTelegram();
+  const { tg } = useTelegram();
   const [addedItems, setAddedItems] = useState([]);
 
   const fetchProducts = () => {
