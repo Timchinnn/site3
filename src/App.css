@@ -66,15 +66,20 @@
 
 .product-price-add {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between; /* Выравниваем элементы по краям */
-  width: 100%; /* Занимает всю ширину карточки */
-  padding: 0 10px; /* Добавляем отступы для правильного расположения */
+  background-color: #f1f1f1;
+  border-radius: 28px;
+  padding: 10px;
+  width: min-content;
 }
 
 .product-price {
+  display: flex; /* Изменено на flex для кнопки "-" */
+  align-items: center;
   font-size: 18px;
-  margin: 0 10px; /* Задаем одинаковые отступы со всех сторон */
+  margin-right: 20px;
+  margin-left: 7px;
 }
 
 .product-price button {
