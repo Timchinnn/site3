@@ -1,45 +1,24 @@
-.cart-modal {
-  display: flex;
+.modal-overlay {
   position: fixed;
-  z-index: 1000;
-  left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.8);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.cart-modal-content {
-  background-color: #fff;
-  margin: 15% auto;
+.modal {
+  background: white;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 600px;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  min-width: 300px;
 }
 
 .cart-item {
   display: flex;
-  margin-bottom: 10px;
-}
-
-.cart-item img {
-  width: 50px; /* или ваша желаемая ширина */
-  height: auto;
-  margin-right: 10px;
+  justify-content: space-between;
 }

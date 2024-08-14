@@ -6,17 +6,16 @@ import ProductList from "./components/ProductList/ProductList";
 import useCart from "./useCart";
 import Search from "./components/Search/Search";
 import "./App.css";
-import CartModal from "./components/CartModal/CartModal";
-
 function App() {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isCartModalOpen, setIsCartModalOpen] = useState(false); // Новое состояние для отображения корзины
+  const [isProductModalOpen, setIsProductModalOpen] = useState(false);
+  const [isCartModalOpen, setIsCartModalOpen] = useState(false); // Новое состояние для модального окна корзины
   const [searchQuery, setSearchQuery] = useState("");
   const { tg } = useTelegram();
-
-  const { addedItems, onAdd, onRemove } = useCart(tg, openModal, openCartModal); // Передаем новую функцию для открытия корзины
+  const { addedItems, onAdd, onRemove } = useCart(tg, () =>
+    setIsCartModalOpen(true)
+  ); // передаем функцию открытия корзины
 
   const fetchProducts = () => {
     axios
@@ -35,40 +34,43 @@ function App() {
     return () => clearInterval(intervalId);
   }, []);
 
-  const openModal = () => {
-    setIsModalOpen(true);
+  const openProductModal = (product) => {
+    setSelectedProduct(product);
+    setIsProductModalOpen(true);
   };
 
-  const closeModal = () => {
+  const closeProductModal = () => {
     setSelectedProduct(null);
-    setIsModalOpen(false);
-  };
-
-  const openCartModal = () => {
-    setIsCartModalOpen(true);
+    setIsProductModalOpen(false);
   };
 
   const closeCartModal = () => {
-    setIsCartModalOpen(false);
+    setIsCartModalOpen(false); // Закрываем модальное окно корзины
   };
 
   return (
     <div className="App">
       <h1>Магазин товаров</h1>
-      <TelegramWebAppComponent />
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <ProductList
-        products={filteredProducts}
+        products={products} // Передаем все продукты
         addedItems={addedItems}
         onAdd={onAdd}
         onRemove={onRemove}
-        openModal={openModal}
+        openModal={openProductModal} // передаем функцию для открытия модального окна товара
       />
-      {isModalOpen && (
-        <ProductModal product={selectedProduct} onClose={closeModal} />
+      {isProductModalOpen && (
+        <ProductModal product={selectedProduct} onClose={closeProductModal} />
       )}
       {isCartModalOpen && (
-        <CartModal items={addedItems} onClose={closeCartModal} />
+        <CartModal
+          items={addedItems}
+          total={addedItems.reduce(
+            (acc, item) => acc + item.price * item.quantity,
+            0
+          )}
+          onClose={closeCartModal}
+        />
       )}
     </div>
   );

@@ -53,6 +53,9 @@ const useCart = (tg, openModal) => {
       updateMainButton(newItems);
     }
   };
+  tg.MainButton.onClick(() => {
+    openModal(); // Открываем модальное окно
+  });
 
   return { addedItems, onAdd, onRemove };
 };
