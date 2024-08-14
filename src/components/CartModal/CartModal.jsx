@@ -1,11 +1,24 @@
-import React from "react";
-import "./CartModal.css"; // импортируйте стили по желанию
+import React, { useEffect } from "react";
 
-const CartModal = ({ items, onClose }) => {
-  const totalPrice = items.reduce(
-    (total, item) => total + item.price * item.quantity,
-    0
-  );
+const TelegramWebAppComponent = () => {
+  useEffect(() => {
+    // Инициализация Telegram WebApp
+    const tg = window.Telegram.WebApp;
+
+    // Настройка mainButton
+    tg.MainButton.setText("Нажми меня");
+    tg.MainButton.show();
+
+    // Обработчик нажатия на mainButton
+    tg.MainButton.onClick(() => {
+      alert("MainButton clicked!");
+    });
+
+    return () => {
+      tg.MainButton.offClick();
+      tg.MainButton.hide();
+    };
+  }, []);
 
   return (
     <div className="cart-modal">
@@ -36,4 +49,4 @@ const CartModal = ({ items, onClose }) => {
   );
 };
 
-export default CartModal;
+export default TelegramWebAppComponent;
