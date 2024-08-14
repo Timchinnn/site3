@@ -11,7 +11,11 @@ const TelegramWebAppComponent = () => {
 
     // Обработчик нажатия на mainButton
     tg.MainButton.onClick(() => {
-      alert("MainButton clicked!");
+      return (
+        <div className="cart-modal">
+          <h3>hgjhjghjg</h3>
+        </div>
+      );
     });
 
     return () => {
