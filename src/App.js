@@ -5,7 +5,7 @@ import { useTelegram } from "./hooks/useTelegram";
 import ProductList from "./components/ProductList/ProductList";
 import useCart from "./useCart";
 import Search from "./components/Search/Search";
-import CartModal from "./components/CartModal"; // Импортируем компонент CartModal
+import CartModal from "./components/CartModal/CartModal";
 import "./App.css";
 
 function App() {
