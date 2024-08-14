@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-// import Product from "./components/Product/Product";
-// import { getTotalPrice } from "./utils";
 import ProductModal from "./components/ProductModal/ProductModal";
 import { useTelegram } from "./hooks/useTelegram";
 import ProductList from "./components/ProductList/ProductList";

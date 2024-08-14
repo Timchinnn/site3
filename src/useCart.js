@@ -9,11 +9,14 @@ const useCart = (tg) => {
       tg.MainButton.hide();
     } else {
       tg.MainButton.show();
+      const itemNames = items.map((item) => item.name).join(", "); // Предполагается, что каждый item имеет поле 'name'
       tg.MainButton.setParams({
-        text: `Купить ${getTotalPrice(items)}`,
+        text: `Корзина: ${itemNames}`,
       });
     }
   };
+
+  // добавьте здесь вашу логику для добавления и удаления товаров из addedItems
 
   const onAdd = (product) => {
     const existingItemIndex = addedItems.findIndex(
