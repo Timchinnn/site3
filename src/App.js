@@ -11,10 +11,15 @@ import TelegramWebAppComponent from "./components/CartModal/CartModal";
 function App() {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isProductModalOpen, setIsProductModalOpen] = useState(false);
+  const [isCartModalOpen, setIsCartModalOpen] = useState(false); // Новое состояние для модального окна корзины
   const [searchQuery, setSearchQuery] = useState(""); // Новое состояние для поискового запроса
   const { tg } = useTelegram();
-  const { addedItems, onAdd, onRemove } = useCart(tg);
+
+  // Передаем функцию открытия модального окна в useCart
+  const { addedItems, onAdd, onRemove } = useCart(tg, () =>
+    setIsCartModalOpen(true)
+  );
 
   const fetchProducts = () => {
     axios
@@ -37,33 +42,39 @@ function App() {
     product.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const openModal = (product) => {
+  const openProductModal = (product) => {
     setSelectedProduct(product);
-    setIsModalOpen(true);
+    setIsProductModalOpen(true);
   };
 
-  const closeModal = () => {
+  const closeProductModal = () => {
     setSelectedProduct(null);
-    setIsModalOpen(false);
+    setIsProductModalOpen(false);
+  };
+
+  const closeCartModal = () => {
+    setIsCartModalOpen(false);
   };
 
   return (
     <div className="App">
       <h1>Магазин товаров</h1>
-      <TelegramWebAppComponent></TelegramWebAppComponent>
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />{" "}
-      {/* Используем компонент поиска */}
       <ProductList
         products={filteredProducts} // Используем отфильтрованные продукты
         addedItems={addedItems}
         onAdd={onAdd}
         onRemove={onRemove}
-        openModal={openModal}
+        openModal={openProductModal}
       />
-      {isModalOpen && (
-        <ProductModal product={selectedProduct} onClose={closeModal} />
+      {isProductModalOpen && (
+        <ProductModal product={selectedProduct} onClose={closeProductModal} />
+      )}
+      {isCartModalOpen && (
+        <CartModal items={addedItems} onClose={closeCartModal} />
       )}
     </div>
   );
 }
+
 export default App;

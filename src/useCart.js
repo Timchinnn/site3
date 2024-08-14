@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { getTotalPrice } from "./utils";
 
-const useCart = (tg) => {
+const useCart = (tg, openModal) => {
   const [addedItems, setAddedItems] = useState([]);
 
   const updateMainButton = (items) => {
@@ -13,6 +13,11 @@ const useCart = (tg) => {
         text: `Купить ${getTotalPrice(items)}`,
       });
     }
+
+    // Добавляем обработчик клика для MainButton, который открывает модальное окно
+    tg.MainButton.onClick(() => {
+      openModal();
+    });
   };
 
   const onAdd = (product) => {
