@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getTotalPrice } from "./utils";
+// import { getTotalPrice } from "./utils";
 
 const useCart = (tg) => {
   const [addedItems, setAddedItems] = useState([]);
