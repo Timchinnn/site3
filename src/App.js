@@ -11,15 +11,12 @@ import CartModal from "./components/CartModal/CartModal";
 function App() {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [isProductModalOpen, setIsProductModalOpen] = useState(false);
-  const [isCartModalOpen, setIsCartModalOpen] = useState(false); // Новое состояние для модального окна корзины
-  const [searchQuery, setSearchQuery] = useState(""); // Новое состояние для поискового запроса
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isCartModalOpen, setIsCartModalOpen] = useState(false); // Новое состояние для отображения корзины
+  const [searchQuery, setSearchQuery] = useState("");
   const { tg } = useTelegram();
 
-  // Передаем функцию открытия модального окна в useCart
-  const { addedItems, onAdd, onRemove } = useCart(tg, () =>
-    setIsCartModalOpen(true)
-  );
+  const { addedItems, onAdd, onRemove } = useCart(tg, openModal, openCartModal); // Передаем новую функцию для открытия корзины
 
   const fetchProducts = () => {
     axios
@@ -38,18 +35,17 @@ function App() {
     return () => clearInterval(intervalId);
   }, []);
 
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
-
-  const openProductModal = (product) => {
-    setSelectedProduct(product);
-    setIsProductModalOpen(true);
+  const openModal = () => {
+    setIsModalOpen(true);
   };
 
-  const closeProductModal = () => {
+  const closeModal = () => {
     setSelectedProduct(null);
-    setIsProductModalOpen(false);
+    setIsModalOpen(false);
+  };
+
+  const openCartModal = () => {
+    setIsCartModalOpen(true);
   };
 
   const closeCartModal = () => {
@@ -59,16 +55,17 @@ function App() {
   return (
     <div className="App">
       <h1>Магазин товаров</h1>
-      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />{" "}
+      <TelegramWebAppComponent />
+      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <ProductList
-        products={filteredProducts} // Используем отфильтрованные продукты
+        products={filteredProducts}
         addedItems={addedItems}
         onAdd={onAdd}
         onRemove={onRemove}
-        openModal={openProductModal}
+        openModal={openModal}
       />
-      {isProductModalOpen && (
-        <ProductModal product={selectedProduct} onClose={closeProductModal} />
+      {isModalOpen && (
+        <ProductModal product={selectedProduct} onClose={closeModal} />
       )}
       {isCartModalOpen && (
         <CartModal items={addedItems} onClose={closeCartModal} />
