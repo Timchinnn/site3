@@ -89,7 +89,14 @@ const useCart = (tg) => {
     }
   };
 
-  return { addedItems, setAddedItems, updateMainButton, CartModal };
+  return {
+    addedItems,
+    setAddedItems,
+    onAdd,
+    onRemove,
+    updateMainButton,
+    CartModal,
+  };
 };
 
 export default useCart;
