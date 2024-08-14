@@ -6,6 +6,7 @@ import ProductList from "./components/ProductList/ProductList";
 import useCart from "./useCart";
 import Search from "./components/Search/Search";
 import "./App.css";
+import CartModal from "./components/CartModal/CartModal";
 function App() {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
