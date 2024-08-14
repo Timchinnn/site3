@@ -1,9 +1,8 @@
 import { useState } from "react";
-// import { getTotalPrice } from "./utils";
+import { getTotalPrice } from "./utils";
 
 const useCart = (tg) => {
   const [addedItems, setAddedItems] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const updateMainButton = (items) => {
     if (items.length === 0) {
@@ -12,48 +11,9 @@ const useCart = (tg) => {
       tg.MainButton.show();
       tg.MainButton.setParams({
         text: `Купить ${getTotalPrice(items)}`,
-        onClick: () => openCartModal(), // Добавьте функцию открытия модального окна
       });
     }
   };
-
-  const openCartModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeCartModal = () => {
-    setIsModalOpen(false);
-  };
-
-  const getTotalPrice = (items) => {
-    return items.reduce((total, item) => total + item.price, 0);
-  };
-
-  const CartModal = () => {
-    return (
-      <div className={`modal ${isModalOpen ? "is-open" : ""}`}>
-        <div className="modal-content">
-          <h2>Ваша корзина</h2>
-          {addedItems.length === 0 ? (
-            <p>Корзина пуста.</p>
-          ) : (
-            <ul>
-              {addedItems.map((item, index) => (
-                <li key={index}>
-                  <img src={item.image} alt={item.name} />
-                  <h3>{item.name}</h3>
-                  <p>Цена: {item.price}₽</p>
-                </li>
-              ))}
-            </ul>
-          )}
-          <button onClick={closeCartModal}>Закрыть</button>
-        </div>
-      </div>
-    );
-  };
-
-  // добавьте здесь вашу логику для добавления и удаления товаров из addedItems
 
   const onAdd = (product) => {
     const existingItemIndex = addedItems.findIndex(
@@ -89,14 +49,7 @@ const useCart = (tg) => {
     }
   };
 
-  return {
-    addedItems,
-    setAddedItems,
-    onAdd,
-    onRemove,
-    updateMainButton,
-    CartModal,
-  };
+  return { addedItems, onAdd, onRemove };
 };
 
 export default useCart;
