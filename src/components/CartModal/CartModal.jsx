@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-const TelegramWebAppComponent = () => {
+const CartModal = () => {
   useEffect(() => {
     // Инициализация Telegram WebApp
     const tg = window.Telegram.WebApp;
@@ -31,4 +31,4 @@ const TelegramWebAppComponent = () => {
   );
 };
 
-export default TelegramWebAppComponent;
+export default CartModal;

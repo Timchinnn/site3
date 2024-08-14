@@ -6,7 +6,7 @@ import ProductList from "./components/ProductList/ProductList";
 import useCart from "./useCart";
 import Search from "./components/Search/Search";
 import "./App.css";
-import TelegramWebAppComponent from "./components/CartModal/CartModal";
+import CartModal from "./components/CartModal/CartModal";
 
 function App() {
   const [products, setProducts] = useState([]);
