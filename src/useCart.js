@@ -10,7 +10,7 @@ const useCart = (tg) => {
     } else {
       tg.MainButton.show();
       tg.MainButton.setParams({
-        text: `Купить ${getTotalPrice(items)}`,
+        text: Купить ${getTotalPrice(items)},
       });
     }
   };
