@@ -52,7 +52,7 @@ function App() {
     fetchCategories(); // Загружаем категории
     // const intervalId = setInterval(fetchProducts, 5000);
     // return () => clearInterval(intervalId);
-  }, []);
+  }, [selectedCategory]);
 
   const openProductModal = (product) => {
     setSelectedProduct(product);
