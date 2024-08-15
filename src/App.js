@@ -109,28 +109,28 @@ function App() {
   const [isRegisterFormOpen, setIsRegisterFormOpen] = useState(false);
 
   // Проверка пользователя
-  const checkUserProfile = (userId) => {
-    axios
-      .get("/api/users")
-      .then((response) => {
-        const userProfile = response.data.find(
-          (user) => user.user_id === userId
-        );
-        if (userProfile) {
-          if (!userProfile.name && !userProfile.phone && !userProfile.email) {
-            setIsRegisterFormOpen(true);
-          } else {
-            setUserData(userProfile);
-          }
-        } else {
-          setIsRegisterFormOpen(true); // Пользователь не найден
-        }
-        setIsProfileModalOpen(true);
-      })
-      .catch((error) => {
-        console.error("Ошибка при получении данных пользователя:", error);
-      });
-  };
+  // const checkUserProfile = (userId) => {
+  //   axios
+  //     .get("/api/users")
+  //     .then((response) => {
+  //       const userProfile = response.data.find(
+  //         (user) => user.user_id === userId
+  //       );
+  //       if (userProfile) {
+  //         if (!userProfile.name && !userProfile.phone && !userProfile.email) {
+  //           setIsRegisterFormOpen(true);
+  //         } else {
+  //           setUserData(userProfile);
+  //         }
+  //       } else {
+  //         setIsRegisterFormOpen(true); // Пользователь не найден
+  //       }
+  //       setIsProfileModalOpen(true);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Ошибка при получении данных пользователя:", error);
+  //     });
+  // };
 
   // const handleProfileButtonClick = () => {
   //   // Получаем user_id Telegram пользователя
