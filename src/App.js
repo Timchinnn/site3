@@ -25,23 +25,6 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [allProducts, setAllProducts] = useState([]);
   const [isCategorySelected, setIsCategorySelected] = useState(false);
-
-  // const updatedUser = {
-  //   user_id: 467518658,
-  //   name: "Новое имя",
-  //   phone: "1234567890",
-  //   email: "newemail@example.com",
-  // };
-
-  // const updateUser = async () => {
-  //   try {
-  //     const response = await axios.post("/api/users", updatedUser);
-  //     console.log("Пользователь обновлен:", response.data);
-  //   } catch (error) {
-  //     console.error("Ошибка при обновлении пользователя:", error);
-  //   }
-  // };
-
   const fetchProducts = () => {
     axios
       .get("/api/products")
@@ -144,13 +127,14 @@ function App() {
       <div className="profile-button">
         <button onClick={handleProfileButtonClick}>Профиль</button>{" "}
       </div>
+      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
       {/* Кнопка профиля */}
       <CategoryButtons
         categories={categories}
         onSelect={handleCategorySelect}
       />
-      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+
       <ProductList
         products={filteredProducts}
         addedItems={addedItems}
