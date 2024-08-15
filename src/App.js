@@ -23,7 +23,7 @@ function App() {
   );
   const [selectedCategory, setSelectedCategory] = useState("");
   const [allProducts, setAllProducts] = useState([]);
-  const [isCategorySelected, setIsCategorySelected] = useState(false); // Новое состояние
+  const [isCategorySelected, setIsCategorySelected] = useState(false);
 
   const fetchProducts = () => {
     axios
@@ -73,21 +73,17 @@ function App() {
 
   const handleCategorySelect = (categoryName) => {
     if (selectedCategory === categoryName && isCategorySelected) {
-      // Если текущая категория уже выбрана, сбрасываем выбор
       setSelectedCategory("");
-      setProducts(allProducts); // Показываем все товары
-      setIsCategorySelected(false); // Сбрасываем состояние
+      setProducts(allProducts);
+      setIsCategorySelected(false);
     } else {
-      // Если категория выбрана или новая категория
       setSelectedCategory(categoryName);
-      setIsCategorySelected(true); // Установим, что категория выбрана
-
-      // Фильтруем продукты на основе выбранной категории
+      setIsCategorySelected(true);
       const filteredProducts = allProducts.filter(
         (product) => product.category === categoryName
       );
 
-      setProducts(filteredProducts); // Обновляем состояние продуктов
+      setProducts(filteredProducts);
     }
   };
 
