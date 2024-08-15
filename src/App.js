@@ -35,10 +35,7 @@ function App() {
 
   const updateUser = async () => {
     try {
-      const response = await axios.put(
-        "https://inspiring-meringue-ff10dc.netlify.app/api/users",
-        updatedUser
-      );
+      const response = await axios.put("/api/users", updatedUser);
       console.log("Пользователь обновлен:", response.data);
     } catch (error) {
       console.error("Ошибка при обновлении пользователя:", error);
