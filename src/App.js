@@ -67,6 +67,12 @@ function App() {
     setIsCartModalOpen(false);
   };
 
+  const filterProducts = (productsToFilter) => {
+    return productsToFilter.filter((product) =>
+      product.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+  };
+
   const handleCategorySelect = (categoryName) => {
     if (selectedCategory === categoryName && isCategorySelected) {
       // Если текущая категория уже выбрана, сбрасываем выбор
