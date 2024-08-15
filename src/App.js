@@ -9,6 +9,7 @@ import "./App.css";
 import CartModal from "./components/CartModal/CartModal";
 import { getTotalPrice } from "./utils";
 import CategoryButtons from "./components/CategoryButtons/CategoryButtons";
+
 function App() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]); // Состояние для категорий
@@ -65,11 +66,20 @@ function App() {
   };
 
   const handleCategorySelect = (categoryName) => {
-    // Фильтруем продукты по выбранной категории
-    const filteredProducts = products.filter(
-      (product) => product.category === categoryName
-    );
-    setProducts(filteredProducts);
+    setSelectedCategory(categoryName); // Установка выбранной категории
+
+    // Запрос к API для получения фильтрованных товаров
+    axios
+      .get("/api/products") // Вы можете использовать тот же API для фильтрации, изменив URL, соответственно
+      .then((response) => {
+        const filteredProducts = response.data.filter(
+          (product) => product.category === categoryName
+        );
+        setProducts(filteredProducts);
+      })
+      .catch((error) => {
+        console.error("Ошибка при получении товаров:", error);
+      });
   };
 
   return (
