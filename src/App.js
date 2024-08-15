@@ -127,14 +127,13 @@ function App() {
       <div className="profile-button">
         <button onClick={handleProfileButtonClick}>Профиль</button>{" "}
       </div>
-      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
       {/* Кнопка профиля */}
       <CategoryButtons
         categories={categories}
         onSelect={handleCategorySelect}
       />
-
+      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <ProductList
         products={filteredProducts}
         addedItems={addedItems}
