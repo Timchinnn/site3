@@ -5,7 +5,7 @@ const ProfileModal = ({
   userData,
   onClose,
   isRegisterFormOpen,
-  onRegisterComplete,
+  //   onRegisterComplete,
   telegramUserId,
 }) => {
   const [name, setName] = useState("");
@@ -107,22 +107,3 @@ const ProfileModal = ({
 };
 
 export default ProfileModal;
-
-<div className="profile-button">
-  <h2>Регистрация </h2>
-  {/* Здесь размещаем вашу форму регистрации */}
-  <button
-    // className="profile-button"
-    onClick={() => {
-      const newUser = {
-        user_id: telegramUserId,
-        name: "Имя",
-        phone: "Телефон",
-        email: "Email",
-      };
-      onRegisterComplete(newUser); // Сохраняем пользователя
-    }}
-  >
-    Зарегистрироваться
-  </button>
-</div>;
