@@ -19,3 +19,7 @@
 .category-buttons button:hover {
   background-color: #0056b3;
 }
+
+.category-buttons button.active {
+  background-color: #28a745; /* Цвет для активной кнопки */
+}
