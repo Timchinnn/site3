@@ -125,7 +125,10 @@ function App() {
   return (
     <div className="App">
       <h1>Магазин товаров</h1>
-      <button onClick={handleProfileButtonClick}>Профиль</button>{" "}
+      <div className="profile-button">
+        <button onClick={handleProfileButtonClick}>Профиль</button>{" "}
+      </div>
+
       {/* Кнопка профиля */}
       <CategoryButtons
         categories={categories}
