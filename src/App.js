@@ -95,7 +95,7 @@ function App() {
   // Проверка пользователя
   const checkUserProfile = (userId) => {
     axios
-      .get("/api/users")
+      .get("http://217.18.62.19:3000/api/users")
       .then((response) => {
         const userProfile = response.data.find(
           (user) => user.user_id === userId
@@ -117,7 +117,9 @@ function App() {
   };
 
   const handleProfileButtonClick = () => {
-    checkUserProfile(tg?.initDataUnsafe?.user?.id); // Получаем user_id Telegram пользователя
+    // Получаем user_id Telegram пользователя
+    const telegramUserId = tg?.initDataUnsafe?.user?.id;
+    checkUserProfile(telegramUserId);
   };
 
   return (
@@ -153,9 +155,10 @@ function App() {
           onClose={() => setIsProfileModalOpen(false)}
           isRegisterFormOpen={isRegisterFormOpen}
           onRegisterComplete={(data) => {
-            setUserData(data); // Сохранение нового пользователя
+            setUserData(data); // Сохраняем нового пользователя
             setIsRegisterFormOpen(false);
           }}
+          telegramUserId={tg?.initDataUnsafe?.user?.id} // Передаем user_id
         />
       )}
     </div>

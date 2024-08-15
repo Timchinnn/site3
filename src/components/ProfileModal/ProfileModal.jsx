@@ -5,17 +5,16 @@ const ProfileModal = ({
   onClose,
   isRegisterFormOpen,
   onRegisterComplete,
+  telegramUserId,
 }) => {
   return (
     <div className="modal">
       {isRegisterFormOpen ? (
-        // Здесь можно разместить вашу форму регистрации
         <div>
           <h2>Регистрация</h2>
-          {/* Форма регистрации */}
+          {/* Здесь размещаем вашу форму регистрации */}
           <button
             onClick={() => {
-              // Здесь должно быть завершение регистрации и отправка данных на сервер
               const newUser = {
                 user_id: telegramUserId,
                 name: "Имя",
