@@ -9,6 +9,7 @@ import "./App.css";
 import CartModal from "./components/CartModal/CartModal";
 import { getTotalPrice } from "./utils";
 import CategoryButtons from "./components/CategoryButtons/CategoryButtons";
+import ProfileModal from "./components/ProfileModal/ProfileModal";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -87,9 +88,43 @@ function App() {
     }
   };
 
+  const [userData, setUserData] = useState(null);
+  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
+  const [isRegisterFormOpen, setIsRegisterFormOpen] = useState(false);
+
+  // Проверка пользователя
+  const checkUserProfile = (userId) => {
+    axios
+      .get("/api/users")
+      .then((response) => {
+        const userProfile = response.data.find(
+          (user) => user.user_id === userId
+        );
+        if (userProfile) {
+          if (!userProfile.name && !userProfile.phone && !userProfile.email) {
+            setIsRegisterFormOpen(true);
+          } else {
+            setUserData(userProfile);
+          }
+        } else {
+          setIsRegisterFormOpen(true); // Пользователь не найден
+        }
+        setIsProfileModalOpen(true);
+      })
+      .catch((error) => {
+        console.error("Ошибка при получении данных пользователя:", error);
+      });
+  };
+
+  const handleProfileButtonClick = () => {
+    checkUserProfile(tg?.initDataUnsafe?.user?.id); // Получаем user_id Telegram пользователя
+  };
+
   return (
     <div className="App">
       <h1>Магазин товаров</h1>
+      <button onClick={handleProfileButtonClick}>Профиль</button>{" "}
+      {/* Кнопка профиля */}
       <CategoryButtons
         categories={categories}
         onSelect={handleCategorySelect}
@@ -110,6 +145,17 @@ function App() {
           items={addedItems}
           total={getTotalPrice(addedItems)}
           onClose={closeCartModal}
+        />
+      )}
+      {isProfileModalOpen && (
+        <ProfileModal
+          userData={userData}
+          onClose={() => setIsProfileModalOpen(false)}
+          isRegisterFormOpen={isRegisterFormOpen}
+          onRegisterComplete={(data) => {
+            setUserData(data); // Сохранение нового пользователя
+            setIsRegisterFormOpen(false);
+          }}
         />
       )}
     </div>
