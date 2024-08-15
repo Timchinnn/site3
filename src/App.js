@@ -93,6 +93,10 @@ function App() {
     }
   };
 
+  useEffect(() => {
+    setProducts(filterProducts(allProducts));
+  }, [searchQuery, allProducts]);
+
   return (
     <div className="App">
       <h1>Магазин товаров</h1>
