@@ -37,9 +37,7 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         // Предполагая, что API возвращает массив
-        const userProfile = data.find(
-          (user) => user.user_id === telegramUserId
-        );
+        const userProfile = data.find((user) => user.user_id === 467518658);
 
         if (userProfile) {
           // Если пользователь найден, обновляем его данные
