@@ -7,6 +7,7 @@ import useCart from "./useCart";
 import Search from "./components/Search/Search";
 import "./App.css";
 import CartModal from "./components/CartModal/CartModal";
+import { getTotalPrice } from "./utils";
 function App() {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -66,10 +67,7 @@ function App() {
       {isCartModalOpen && (
         <CartModal
           items={addedItems}
-          total={addedItems.reduce(
-            (acc, item) => acc + item.price * item.quantity,
-            0
-          )}
+          total={getTotalPrice(items)}
           onClose={closeCartModal}
         />
       )}
