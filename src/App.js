@@ -8,16 +8,18 @@ import Search from "./components/Search/Search";
 import "./App.css";
 import CartModal from "./components/CartModal/CartModal";
 import { getTotalPrice } from "./utils";
+import CategoryButtons from "./components/CategoryButtons/CategoryButtons";
 function App() {
   const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]); // Состояние для категорий
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isProductModalOpen, setIsProductModalOpen] = useState(false);
-  const [isCartModalOpen, setIsCartModalOpen] = useState(false); // Новое состояние для модального окна корзины
+  const [isCartModalOpen, setIsCartModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const { tg } = useTelegram();
   const { addedItems, onAdd, onRemove } = useCart(tg, () =>
     setIsCartModalOpen(true)
-  ); // передаем функцию открытия корзины
+  );
 
   const fetchProducts = () => {
     axios
@@ -30,8 +32,20 @@ function App() {
       });
   };
 
+  const fetchCategories = () => {
+    axios
+      .get("http://217.18.62.19:3000/api/categories")
+      .then((response) => {
+        setCategories(response.data);
+      })
+      .catch((error) => {
+        console.error("Ошибка при получении категорий:", error);
+      });
+  };
+
   useEffect(() => {
     fetchProducts();
+    fetchCategories(); // Загружаем категории
     const intervalId = setInterval(fetchProducts, 5000);
     return () => clearInterval(intervalId);
   }, []);
@@ -47,19 +61,32 @@ function App() {
   };
 
   const closeCartModal = () => {
-    setIsCartModalOpen(false); // Закрываем модальное окно корзины
+    setIsCartModalOpen(false);
+  };
+
+  const handleCategorySelect = (categoryName) => {
+    // Фильтруем продукты по выбранной категории
+    const filteredProducts = products.filter(
+      (product) => product.category === categoryName
+    );
+    setProducts(filteredProducts);
   };
 
   return (
     <div className="App">
       <h1>Магазин товаров</h1>
+      <CategoryButtons
+        categories={categories}
+        onSelect={handleCategorySelect}
+      />{" "}
+      {/* Используем компонент для категорий */}
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <ProductList
-        products={products} // Передаем все продукты
+        products={products}
         addedItems={addedItems}
         onAdd={onAdd}
         onRemove={onRemove}
-        openModal={openProductModal} // передаем функцию для открытия модального окна товара
+        openModal={openProductModal}
       />
       {isProductModalOpen && (
         <ProductModal product={selectedProduct} onClose={closeProductModal} />
