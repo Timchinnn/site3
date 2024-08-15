@@ -34,7 +34,7 @@ function App() {
 
   const fetchCategories = () => {
     axios
-      .get("http://217.18.62.19:3000/api/categories")
+      .get("/api/categories")
       .then((response) => {
         setCategories(response.data);
       })
