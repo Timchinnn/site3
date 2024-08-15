@@ -26,21 +26,21 @@ function App() {
   const [allProducts, setAllProducts] = useState([]);
   const [isCategorySelected, setIsCategorySelected] = useState(false);
 
-  const updatedUser = {
-    user_id: 467518658,
-    name: "Новое имя",
-    phone: "1234567890",
-    email: "newemail@example.com",
-  };
+  // const updatedUser = {
+  //   user_id: 467518658,
+  //   name: "Новое имя",
+  //   phone: "1234567890",
+  //   email: "newemail@example.com",
+  // };
 
-  const updateUser = async () => {
-    try {
-      const response = await axios.post("/api/users", updatedUser);
-      console.log("Пользователь обновлен:", response.data);
-    } catch (error) {
-      console.error("Ошибка при обновлении пользователя:", error);
-    }
-  };
+  // const updateUser = async () => {
+  //   try {
+  //     const response = await axios.post("/api/users", updatedUser);
+  //     console.log("Пользователь обновлен:", response.data);
+  //   } catch (error) {
+  //     console.error("Ошибка при обновлении пользователя:", error);
+  //   }
+  // };
 
   const fetchProducts = () => {
     axios
@@ -109,40 +109,40 @@ function App() {
   const [isRegisterFormOpen, setIsRegisterFormOpen] = useState(false);
 
   // Проверка пользователя
-  // const checkUserProfile = (userId) => {
-  //   axios
-  //     .get("/api/users")
-  //     .then((response) => {
-  //       const userProfile = response.data.find(
-  //         (user) => user.user_id === userId
-  //       );
-  //       if (userProfile) {
-  //         if (!userProfile.name && !userProfile.phone && !userProfile.email) {
-  //           setIsRegisterFormOpen(true);
-  //         } else {
-  //           setUserData(userProfile);
-  //         }
-  //       } else {
-  //         setIsRegisterFormOpen(true); // Пользователь не найден
-  //       }
-  //       setIsProfileModalOpen(true);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Ошибка при получении данных пользователя:", error);
-  //     });
-  // };
+  const checkUserProfile = (userId) => {
+    axios
+      .get("/api/users")
+      .then((response) => {
+        const userProfile = response.data.find(
+          (user) => user.user_id === userId
+        );
+        if (userProfile) {
+          if (!userProfile.name && !userProfile.phone && !userProfile.email) {
+            setIsRegisterFormOpen(true);
+          } else {
+            setUserData(userProfile);
+          }
+        } else {
+          setIsRegisterFormOpen(true); // Пользователь не найден
+        }
+        setIsProfileModalOpen(true);
+      })
+      .catch((error) => {
+        console.error("Ошибка при получении данных пользователя:", error);
+      });
+  };
 
-  // const handleProfileButtonClick = () => {
-  //   // Получаем user_id Telegram пользователя
-  //   const telegramUserId = tg?.initDataUnsafe?.user?.id;
-  //   checkUserProfile(telegramUserId);
-  // };
+  const handleProfileButtonClick = () => {
+    // Получаем user_id Telegram пользователя
+    const telegramUserId = tg?.initDataUnsafe?.user?.id;
+    checkUserProfile(telegramUserId);
+  };
 
   return (
     <div className="App">
       <h1>Магазин товаров</h1>
       <div className="profile-button">
-        <button onClick={updateUser}>Профиль</button>{" "}
+        <button onClick={handleProfileButtonClick}>Профиль</button>{" "}
       </div>
 
       {/* Кнопка профиля */}
