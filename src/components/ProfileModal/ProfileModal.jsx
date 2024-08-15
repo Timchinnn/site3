@@ -37,6 +37,7 @@ const ProfileModal = ({
               <p>Имя: {userData.name}</p>
               <p>Телефон: {userData.phone}</p>
               <p>Email: {userData.email}</p>
+              <p>user_id: {telegramUserId}</p>
             </>
           ) : (
             <p>Пользователь не найден.</p>
