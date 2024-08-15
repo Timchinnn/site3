@@ -26,6 +26,47 @@ function App() {
   const [allProducts, setAllProducts] = useState([]);
   const [isCategorySelected, setIsCategorySelected] = useState(false);
 
+  const fetchUsers = () => {
+    const newUser = {
+      user_id: 467518658,
+      name: "gjg",
+      phone: "hgj",
+      email: "hgjh",
+    };
+    fetch(`/api/users?user_id=467518658`)
+      .then((response) => response.json())
+      .then((data) => {
+        // Предполагая, что API возвращает массив
+        const userProfile = data.find(
+          (user) => user.user_id === telegramUserId
+        );
+
+        if (userProfile) {
+          // Если пользователь найден, обновляем его данные
+          return fetch(`http://217.18.62.19:3000/api/users/${userProfile.id}`, {
+            // Предполагая, что у вас есть идентификатор для обновления
+            method: "PUT", // Используйте PUT для обновления данных
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newUser),
+          });
+        } else {
+          // Если не нашли, то создаем нового пользователя
+          return fetch(`http://217.18.62.19:3000/api/users`, {
+            method: "POST", // Используем метод POST для создания нового пользователя
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newUser),
+          });
+        }
+      });
+  };
+  useEffect(() => {
+    fetchUsers();
+  }, []);
+
   const fetchProducts = () => {
     axios
       .get("/api/products")
