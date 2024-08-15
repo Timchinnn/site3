@@ -15,7 +15,7 @@ const ProfileModal = ({
           <h2>Регистрация </h2>
           {/* Здесь размещаем вашу форму регистрации */}
           <button
-            className="profile-button"
+            // className="profile-button"
             onClick={() => {
               const newUser = {
                 user_id: telegramUserId,
@@ -41,9 +41,7 @@ const ProfileModal = ({
           ) : (
             <p>Пользователь не найден.</p>
           )}
-          <button className="profile-button" onClick={onClose}>
-            Закрыть
-          </button>
+          <button onClick={onClose}>Закрыть</button>
         </div>
       )}
     </div>
