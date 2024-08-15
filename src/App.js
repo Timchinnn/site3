@@ -43,12 +43,12 @@ function App() {
       });
   };
 
-  useEffect(() => {
-    fetchProducts();
-    fetchCategories(); // Загружаем категории
-    const intervalId = setInterval(fetchProducts, 5000);
-    return () => clearInterval(intervalId);
-  }, []);
+  // useEffect(() => {
+  //   fetchProducts();
+  //   fetchCategories(); // Загружаем категории
+  //   const intervalId = setInterval(fetchProducts, 5000);
+  //   return () => clearInterval(intervalId);
+  // }, []);
 
   const openProductModal = (product) => {
     setSelectedProduct(product);
