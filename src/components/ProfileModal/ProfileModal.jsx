@@ -1,4 +1,5 @@
 import React from "react";
+import "./ProfileModal.css";
 
 const ProfileModal = ({
   userData,
