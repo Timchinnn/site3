@@ -21,6 +21,7 @@ function App() {
   const { addedItems, onAdd, onRemove } = useCart(tg, () =>
     setIsCartModalOpen(true)
   );
+  const [selectedCategory, setSelectedCategory] = useState("");
 
   const fetchProducts = () => {
     axios
