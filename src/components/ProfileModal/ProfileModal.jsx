@@ -56,10 +56,10 @@ const ProfileModal = ({
         }
         throw new Error("Ошибка при обновлении данных пользователя");
       })
-      .then((data) => {
-        console.log("Данные пользователя успешно обновлены:", data);
-        onRegisterComplete(data); // Вызов функции для обработки успешной регистрации
-      })
+      //   .then((data) => {
+      //     console.log("Данные пользователя успешно обновлены:", data);
+      //     onRegisterComplete(data); // Вызов функции для обработки успешной регистрации
+      //   })
       .catch((error) => {
         console.error(error);
       });
