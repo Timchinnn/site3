@@ -22,12 +22,14 @@ function App() {
     setIsCartModalOpen(true)
   );
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [allProducts, setAllProducts] = useState([]);
 
   const fetchProducts = () => {
     axios
       .get("/api/products")
       .then((response) => {
         setProducts(response.data);
+        setAllProducts(response.data);
       })
       .catch((error) => {
         console.error("Ошибка при получении товаров:", error);
@@ -50,7 +52,7 @@ function App() {
     fetchCategories(); // Загружаем категории
     // const intervalId = setInterval(fetchProducts, 5000);
     // return () => clearInterval(intervalId);
-  }, [selectedCategory]);
+  }, []);
 
   const openProductModal = (product) => {
     setSelectedProduct(product);
@@ -67,20 +69,14 @@ function App() {
   };
 
   const handleCategorySelect = (categoryName) => {
-    setSelectedCategory(categoryName); // Установка выбранной категории
+    setSelectedCategory(categoryName);
 
-    // Запрос к API для получения фильтрованных товаров
-    axios
-      .get("/api/products") // Вы можете использовать тот же API для фильтрации, изменив URL, соответственно
-      .then((response) => {
-        const filteredProducts = response.data.filter(
-          (product) => product.category === categoryName
-        );
-        setProducts(filteredProducts);
-      })
-      .catch((error) => {
-        console.error("Ошибка при получении товаров:", error);
-      });
+    // Фильтруем продукты на основе выбранной категории
+    const filteredProducts = categoryName
+      ? allProducts.filter((product) => product.category === categoryName)
+      : allProducts; // Если категория не выбрана, показываем все товары
+
+    setProducts(filteredProducts); // Обновляем состояние продуктов
   };
 
   return (
