@@ -12,7 +12,7 @@ import CategoryButtons from "./components/CategoryButtons/CategoryButtons";
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [categories, setCategories] = useState([]); // Состояние для категорий
+  const [categories, setCategories] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   const [isCartModalOpen, setIsCartModalOpen] = useState(false);
@@ -23,6 +23,7 @@ function App() {
   );
   const [selectedCategory, setSelectedCategory] = useState("");
   const [allProducts, setAllProducts] = useState([]);
+  const [isCategorySelected, setIsCategorySelected] = useState(false); // Новое состояние
 
   const fetchProducts = () => {
     axios
@@ -49,10 +50,8 @@ function App() {
 
   useEffect(() => {
     fetchProducts();
-    fetchCategories(); // Загружаем категории
-    // const intervalId = setInterval(fetchProducts, 5000);
-    // return () => clearInterval(intervalId);
-  }, [selectedCategory]);
+    fetchCategories();
+  }, []);
 
   const openProductModal = (product) => {
     setSelectedProduct(product);
@@ -69,14 +68,23 @@ function App() {
   };
 
   const handleCategorySelect = (categoryName) => {
-    setSelectedCategory(categoryName);
+    if (selectedCategory === categoryName && isCategorySelected) {
+      // Если текущая категория уже выбрана, сбрасываем выбор
+      setSelectedCategory("");
+      setProducts(allProducts); // Показываем все товары
+      setIsCategorySelected(false); // Сбрасываем состояние
+    } else {
+      // Если категория выбрана или новая категория
+      setSelectedCategory(categoryName);
+      setIsCategorySelected(true); // Установим, что категория выбрана
 
-    // Фильтруем продукты на основе выбранной категории
-    const filteredProducts = categoryName
-      ? allProducts.filter((product) => product.category === categoryName)
-      : allProducts; // Если категория не выбрана, показываем все товары
+      // Фильтруем продукты на основе выбранной категории
+      const filteredProducts = allProducts.filter(
+        (product) => product.category === categoryName
+      );
 
-    setProducts(filteredProducts); // Обновляем состояние продуктов
+      setProducts(filteredProducts); // Обновляем состояние продуктов
+    }
   };
 
   return (
@@ -85,8 +93,7 @@ function App() {
       <CategoryButtons
         categories={categories}
         onSelect={handleCategorySelect}
-      />{" "}
-      {/* Используем компонент для категорий */}
+      />
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <ProductList
         products={products}
