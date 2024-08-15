@@ -26,12 +26,12 @@ function App() {
   const [allProducts, setAllProducts] = useState([]);
   const [isCategorySelected, setIsCategorySelected] = useState(false);
 
-  const [updatedUser, setUpdatedUser] = useState({
+  const updatedUser = {
     user_id: 467518658,
     name: "Новое имя",
     phone: "1234567890",
     email: "newemail@example.com",
-  });
+  };
 
   const updateUser = async () => {
     try {
@@ -132,11 +132,11 @@ function App() {
       });
   };
 
-  const handleProfileButtonClick = () => {
-    // Получаем user_id Telegram пользователя
-    const telegramUserId = tg?.initDataUnsafe?.user?.id;
-    checkUserProfile(telegramUserId);
-  };
+  // const handleProfileButtonClick = () => {
+  //   // Получаем user_id Telegram пользователя
+  //   const telegramUserId = tg?.initDataUnsafe?.user?.id;
+  //   checkUserProfile(telegramUserId);
+  // };
 
   return (
     <div className="App">
