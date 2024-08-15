@@ -67,11 +67,9 @@ function App() {
     setIsCartModalOpen(false);
   };
 
-  const filterProducts = (productsToFilter) => {
-    return productsToFilter.filter((product) =>
-      product.name.toLowerCase().includes(searchQuery.toLowerCase())
-    );
-  };
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   const handleCategorySelect = (categoryName) => {
     if (selectedCategory === categoryName && isCategorySelected) {
@@ -93,10 +91,6 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    setProducts(filterProducts(allProducts));
-  }, [searchQuery, allProducts]);
-
   return (
     <div className="App">
       <h1>Магазин товаров</h1>
@@ -106,7 +100,7 @@ function App() {
       />
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <ProductList
-        products={products}
+        products={filteredProducts}
         addedItems={addedItems}
         onAdd={onAdd}
         onRemove={onRemove}
