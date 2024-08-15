@@ -67,7 +67,7 @@ function App() {
       {isCartModalOpen && (
         <CartModal
           items={addedItems}
-          total={getTotalPrice(items)}
+          total={getTotalPrice(products)}
           onClose={closeCartModal}
         />
       )}
