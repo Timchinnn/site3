@@ -35,7 +35,7 @@ function App() {
 
   const updateUser = async () => {
     try {
-      const response = await axios.post(
+      const response = await axios.put(
         "https://inspiring-meringue-ff10dc.netlify.app/api/users",
         updatedUser
       );
