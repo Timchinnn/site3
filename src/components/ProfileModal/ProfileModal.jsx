@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ProfileModal.css";
 
 const ProfileModal = ({
   userData,
   onClose,
   isRegisterFormOpen,
+  onRegisterComplete,
   telegramUserId,
 }) => {
   const [name, setName] = useState("");
@@ -21,7 +22,7 @@ const ProfileModal = ({
     };
 
     // Сначала нужно получить текущие данные пользователя
-    fetch(`http://217.18.62.19:3000/api/users?user_id=${telegramUserId}`)
+    fetch(`/api/users?user_id=${telegramUserId}`)
       .then((response) => response.json())
       .then((data) => {
         // Предполагая, что API возвращает массив
@@ -31,7 +32,7 @@ const ProfileModal = ({
 
         if (userProfile) {
           // Если пользователь найден, обновляем его данные
-          return fetch(`http://217.18.62.19:3000/api/users/${userProfile.id}`, {
+          return fetch(`/api/users/${userProfile.id}`, {
             // Предполагая, что у вас есть идентификатор для обновления
             method: "PUT", // Используйте PUT для обновления данных
             headers: {
@@ -41,7 +42,7 @@ const ProfileModal = ({
           });
         } else {
           // Если не нашли, то создаем нового пользователя
-          return fetch(`http://217.18.62.19:3000/api/users`, {
+          return fetch(`/api/users`, {
             method: "POST", // Используем метод POST для создания нового пользователя
             headers: {
               "Content-Type": "application/json",
@@ -55,16 +56,8 @@ const ProfileModal = ({
           return response.json();
         }
         throw new Error("Ошибка при обновлении данных пользователя");
-      })
-      //   .then((data) => {
-      //     console.log("Данные пользователя успешно обновлены:", data);
-      //     onRegisterComplete(data); // Вызов функции для обработки успешной регистрации
-      //   })
-      .catch((error) => {
-        console.error(error);
       });
   };
-
   return (
     <div className="modal">
       {isRegisterFormOpen ? (
@@ -94,13 +87,14 @@ const ProfileModal = ({
           <button onClick={handleRegister}>Зарегистрироваться</button>
         </div>
       ) : (
-        <div>
+        <div className="profile-button">
           <h2>Профиль пользователя</h2>
           {userData ? (
             <>
               <p>Имя: {userData.name}</p>
               <p>Телефон: {userData.phone}</p>
               <p>Email: {userData.email}</p>
+              <p>user_id: {telegramUserId}</p>
             </>
           ) : (
             <p>Пользователь не найден.</p>
@@ -113,3 +107,22 @@ const ProfileModal = ({
 };
 
 export default ProfileModal;
+
+<div className="profile-button">
+  <h2>Регистрация </h2>
+  {/* Здесь размещаем вашу форму регистрации */}
+  <button
+    // className="profile-button"
+    onClick={() => {
+      const newUser = {
+        user_id: telegramUserId,
+        name: "Имя",
+        phone: "Телефон",
+        email: "Email",
+      };
+      onRegisterComplete(newUser); // Сохраняем пользователя
+    }}
+  >
+    Зарегистрироваться
+  </button>
+</div>;
