@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios"; // Не забудьте установить axios, если он еще не установлен
 import "./ProfileModal.css";
 
 const ProfileModal = ({
@@ -22,6 +23,17 @@ const ProfileModal = ({
     }));
   };
 
+  const updateUser = async (updatedUser) => {
+    try {
+      const response = await axios.post("/api/users", updatedUser);
+      console.log("Пользователь обновлен:", response.data);
+      // Вызываем callback, чтобы обновить состояние в родительском компоненте
+      onRegisterComplete(response.data);
+    } catch (error) {
+      console.error("Ошибка при обновлении пользователя:", error);
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.name && formData.phone && formData.email) {
@@ -29,7 +41,7 @@ const ProfileModal = ({
         user_id: telegramUserId,
         ...formData,
       };
-      onRegisterComplete(newUser);
+      updateUser(newUser); // Здесь мы вызываем updateUser
     } else {
       alert("Пожалуйста, заполните все поля.");
     }
@@ -88,7 +100,7 @@ const ProfileModal = ({
               <p>Имя: {userData.name}</p>
               <p>Телефон: {userData.phone}</p>
               <p>Email: {userData.email}</p>
-              <p>user_id: {telegramUserId}</p>
+              <p>User ID: {telegramUserId}</p>
             </>
           ) : (
             <p>Пользователь не найден.</p>
