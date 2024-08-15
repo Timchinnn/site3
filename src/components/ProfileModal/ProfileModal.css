@@ -21,7 +21,7 @@
   z-index: 999; /* Убедитесь, что оверлей под модальным окном */
 }
 
-button {
+.profile-button button {
   padding: 10px 15px;
   border: none;
   background-color: #007bff;
@@ -31,6 +31,6 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
+.profile-button button:hover {
   background-color: #0056b3;
 }

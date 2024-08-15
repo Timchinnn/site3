@@ -11,7 +11,7 @@ const ProfileModal = ({
   return (
     <div className="modal">
       {isRegisterFormOpen ? (
-        <div>
+        <div className="profile-button">
           <h2>Регистрация </h2>
           {/* Здесь размещаем вашу форму регистрации */}
           <button
@@ -30,7 +30,7 @@ const ProfileModal = ({
           </button>
         </div>
       ) : (
-        <div>
+        <div className="profile-button">
           <h2>Профиль пользователя</h2>
           {userData ? (
             <>
