@@ -95,7 +95,7 @@ function App() {
   // Проверка пользователя
   const checkUserProfile = (userId) => {
     axios
-      .get("http://217.18.62.19:3000/api/users")
+      .get("/api/users")
       .then((response) => {
         const userProfile = response.data.find(
           (user) => user.user_id === userId
