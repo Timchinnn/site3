@@ -27,8 +27,8 @@ const ProfileModal = ({
     try {
       const response = await axios.post("/api/users", updatedUser);
       console.log("Пользователь обновлен:", response.data);
-      // Вызываем callback, чтобы обновить состояние в родительском компоненте
-      onRegisterComplete(response.data);
+      onRegisterComplete(response.data); // Обновляем состояние пользователя в родительском компоненте
+      onClose(); // Закрываем модальное окно после успешного обновления
     } catch (error) {
       console.error("Ошибка при обновлении пользователя:", error);
     }
@@ -41,7 +41,7 @@ const ProfileModal = ({
         user_id: telegramUserId,
         ...formData,
       };
-      updateUser(newUser); // Здесь мы вызываем updateUser
+      updateUser(newUser);
     } else {
       alert("Пожалуйста, заполните все поля.");
     }
