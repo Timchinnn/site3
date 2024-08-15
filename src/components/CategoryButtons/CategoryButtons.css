@@ -2,6 +2,8 @@
   display: flex;
   gap: 10px;
   margin-bottom: 20px; /* Отступ снизу */
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .category-buttons button {
