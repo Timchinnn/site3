@@ -1,7 +1,7 @@
 .category-buttons {
   display: flex;
   gap: 10px;
-  margin-bottom: 20px; /* Отступ снизу */
+  margin-bottom: 2px; /* Отступ снизу */
   flex-wrap: wrap;
   justify-content: center;
 }
