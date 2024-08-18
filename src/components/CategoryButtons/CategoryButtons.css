@@ -19,9 +19,9 @@
   align-items: center;
   background-color: #f1f1f1;
   border-radius: 28px;
-  padding: 5px 10px;
-  width: 100%;
+  padding: 10px 15px;
   box-sizing: border-box;
+  border: 0px;
 }
 
 .category-buttons button:hover {
