@@ -8,13 +8,13 @@
   background-color: white;
   text-align: center;
   flex: 0 0 calc(50% - 20px);
-  position: relative; /* Добавлено для размещения наложений */
-  transition: background-color 0.3s; /* Плавный переход для фона */
+  position: relative;
+  transition: background-color 0.3s;
   display: inline-block;
 }
 
 .product-card.highlight {
-  background-color: rgba(135, 206, 235, 0.5); /* голубой полупрозрачный фон */
+  background-color: rgba(135, 206, 235, 0.5);
 }
 
 .product-image {
@@ -23,9 +23,9 @@
 
 .product-image img {
   border-radius: 8px;
-  width: 100%; /* Ширина по умолчанию */
-  height: 120px; /* Установите фиксированную высоту */
-  object-fit: contain; /* Подгонка изображения внутри контейнера без обрезки */
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
 }
 
 .quantity-overlay {
@@ -33,11 +33,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.8); /* белый фон для текста */
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
   padding: 5px 10px;
   font-size: 1.5em;
-  z-index: 1; /* Делаем наложение выше */
+  z-index: 1;
 }
 
 .product-title {
@@ -57,24 +57,17 @@
 }
 
 .product-price {
-  display: flex; /* Изменено на flex для кнопки "-" */
+  display: flex;
   align-items: center;
   font-size: 18px;
 }
 
 .product-price button {
   border: none;
-  background: none; /* Убираем фоновый цвет */
-  color: black; /* Цвет текста для кнопки "-" */
+  background: none;
+  color: black;
   cursor: pointer;
 }
-
-/* .button {
-    border: none;
-    background: none; 
-    color: black; 
-    cursor: pointer;
-  } */
 
 .add-to-cart {
   border: none;
@@ -84,6 +77,7 @@
   cursor: pointer;
   padding-top: 4px;
 }
+
 .add-to-cart-min {
   border: none;
   width: 24px;
@@ -91,4 +85,13 @@
   font-size: 18px;
   cursor: pointer;
   padding-top: 3px;
+}
+
+.price-controls {
+  display: flex;
+  align-items: center;
+}
+
+.product-quantity {
+  margin: 0 10px;
 }
