@@ -24,19 +24,17 @@ const Product = ({ product, quantity, onAdd, onRemove, openModal }) => {
             В корзину
           </button>
         ) : (
-          <div className="cart-controls">
-            {quantity > 0 && (
-              <button
-                className="add-to-cart-min"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onRemove(product);
-                }}
-              >
-                -
-              </button>
-            )}
-            <span className="product-quantity">{quantity}</span>
+          <div className="price-controls">
+            <button
+              className="add-to-cart-min"
+              onClick={(e) => {
+                e.stopPropagation();
+                onRemove(product);
+              }}
+            >
+              -
+            </button>
+            <div className="product-quantity">{quantity}</div>
             <button
               className="add-to-cart"
               onClick={(e) => {
