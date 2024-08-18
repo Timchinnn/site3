@@ -12,6 +12,7 @@ const Product = ({ product, quantity, onAdd, onRemove, openModal }) => {
         {quantity > 0 && <div className="quantity-overlay">{quantity}</div>}
       </div>
       <div className="product-title">{product.name}</div>
+      <p>{product.description}₽</p>
       <div className="product-price-add">
         {quantity >= 1 && (
           <button
@@ -24,7 +25,8 @@ const Product = ({ product, quantity, onAdd, onRemove, openModal }) => {
             -
           </button>
         )}
-        <div className="product-price">{product.description}₽</div>
+        <div className="product-price">Купить</div>
+        {/* <div className="product-price">{product.description}₽</div> */}
         <button
           className="add-to-cart"
           onClick={(e) => {
