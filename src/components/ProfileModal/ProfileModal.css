@@ -1,24 +1,24 @@
 .modal {
-  position: fixed; /* Чтобы модальное окно было фиксированным относительно окна браузера */
-  top: 50%; /* Центруем по вертикали */
-  left: 50%; /* Центруем по горизонтали */
-  transform: translate(-50%, -50%); /* Центрируем точно */
-  width: 300px; /* Ширина модального окна */
-  background-color: white; /* Цвет фона */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для эффекта поднятия */
-  z-index: 1000; /* Обеспечиваем, чтобы окно было на верхнем уровне */
-  padding: 20px; /* Отступы внутри модального окна */
-  border-radius: 5px; /* Радиус скругления углов */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .modal-overlay {
-  position: fixed; /* Фон оверлея фиксирован */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Занимает всю ширину */
-  height: 100%; /* Занимает всю высоту */
-  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный */
-  z-index: 999; /* Убедитесь, что оверлей под модальным окном */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 
 .profile-button button {
