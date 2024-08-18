@@ -99,7 +99,14 @@
 .add-to-cart:active,
 .add-to-cart-min:active,
 .add-to-cart:focus,
-.add-to-cart-min:focus {
-  background-color: transparent; /* или любой другой цвет, который вам подходит */
-  color: inherit; /* наследовать цвет от родителя */
+.add-to-cart-min:focus,
+.add-to-cart:hover,
+.add-to-cart-min:hover {
+  background-color: transparent; /* Без фона при взаимодействии */
+  color: inherit; /* Наследует цвет от родителя */
+}
+
+.add-to-cart,
+.add-to-cart-min {
+  -webkit-tap-highlight-color: transparent; /* Убирает эффект выделения при касании на мобильных */
 }
