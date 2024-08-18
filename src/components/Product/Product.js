@@ -1,13 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Product.css";
 
 const Product = ({ product, quantity, onAdd, onRemove, openModal }) => {
-  const [isInCart, setIsInCart] = useState(false);
-
-  const handleAddToCartClick = () => {
-    setIsInCart(true);
-  };
-
   return (
     <div
       className={`product-card ${quantity > 0 ? "highlight" : ""}`}
@@ -19,11 +13,7 @@ const Product = ({ product, quantity, onAdd, onRemove, openModal }) => {
       </div>
       <div className="product-title">{product.name}</div>
       <div className="product-price-add">
-        {!isInCart ? (
-          <button className="add-to-cart" onClick={handleAddToCartClick}>
-            В корзину
-          </button>
-        ) : (
+        {quantity > 0 ? (
           <div className="price-controls">
             <button
               className="add-to-cart-min"
@@ -45,6 +35,10 @@ const Product = ({ product, quantity, onAdd, onRemove, openModal }) => {
               +
             </button>
           </div>
+        ) : (
+          <button className="add-to-cart" onClick={() => onAdd(product)}>
+            В корзину
+          </button>
         )}
       </div>
     </div>
