@@ -23,6 +23,7 @@ h1 {
   border: 1px solid #212224; /* Цвет и ширина рамки */
   padding: 5px; /* Отступ вокруг изображения */
   overflow: hidden;
+  cursor: pointer;
 }
 
 .profile-image {
