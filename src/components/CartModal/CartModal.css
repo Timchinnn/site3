@@ -17,9 +17,8 @@ body.no-scroll {
 
 .modal {
   background: white;
-  /* max-width: 600px; Установка максимальной ширины */
-  width: 100%; /* Это позволит модалке занимать всю ширину родителя, но не превышать его */
-  height: auto; /* Используйте auto, чтобы избежать переполнения по высоте */
+  width: 100vw; /* Ширина равна ширине окна просмотра */
+  height: 100vh; /* Высота равна высоте окна просмотра */
   display: flex;
   flex-direction: column;
   position: relative;
@@ -33,8 +32,8 @@ body.no-scroll {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-height: calc(100vh - 40px); /* Ограничение высоты с учетом paddings */
-  box-sizing: border-box; /* Учитывает padding в высоте */
+  height: 100%; /* Высота на 100% относительно родителя */
+  box-sizing: border-box;
 }
 
 .cart-item {
