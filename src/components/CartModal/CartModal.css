@@ -17,7 +17,7 @@ body.no-scroll {
 
 .modal {
   background: white;
-  border-radius: 0;
+  border-radius: 0; /* Убираем скругления, чтобы окно занимало весь экран */
   padding: 0;
   width: 100%;
   height: 100%;
@@ -29,10 +29,11 @@ body.no-scroll {
 
 .modal-inner-content {
   padding: 20px;
-  overflow: auto;
-  flex-grow: 1; /* Дает возможность внутреннему содержимому расти */
+  overflow: auto; /* Добавьте прокрутку, если содержимое превышает высоту экрана */
   display: flex;
   flex-direction: column;
+  align-items: center;
+  flex-grow: 1; /* Дает возможность внутреннему содержимому расти */
 }
 
 .cart-item {
@@ -41,10 +42,6 @@ body.no-scroll {
   width: 100%;
   padding: 10px;
   border-bottom: 1px solid #ddd;
-}
-
-.modal-title {
-  margin: 20px 0;
 }
 
 .modal-close-button {
