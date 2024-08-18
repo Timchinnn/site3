@@ -43,7 +43,7 @@ const Product = ({ product, quantity, onAdd, onRemove, openModal }) => {
               onAdd(product);
             }}
           >
-            В корзину
+            Купить
           </button>
         )}
       </div>
