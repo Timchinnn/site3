@@ -30,6 +30,7 @@ body.no-scroll {
 .modal-inner-content {
   padding: 20px;
   overflow: auto;
+  flex-grow: 1; /* Дает возможность внутреннему содержимому расти */
   display: flex;
   flex-direction: column;
   align-items: center;
