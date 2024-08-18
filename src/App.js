@@ -124,12 +124,23 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Магазин товаров</h1>
-      <div className="profile-button">
-        <img onClick={handleProfileButtonClick} src={profile} alt="Sample" />
-        {/* <img src="/profile.png" alt=""></img> */}
-        {/* <button onClick={handleProfileButtonClick}>Профиль</button>{" "} */}
+      <div className="heaeder-top">
+        <h1>Магазин товаров</h1>
+        <div className="profile-container">
+          <img
+            onClick={handleProfileButtonClick}
+            src={profile}
+            alt="Profile"
+            className="profile-image"
+          />
+        </div>
       </div>
+
+      {/* <div className="profile-button"> */}
+      {/* <img onClick={handleProfileButtonClick} src={profile} alt="Sample" /> */}
+      {/* <img src="/profile.png" alt=""></img> */}
+      {/* <button onClick={handleProfileButtonClick}>Профиль</button>{" "} */}
+      {/* </div> */}
 
       {/* Кнопка профиля */}
       <CategoryButtons
