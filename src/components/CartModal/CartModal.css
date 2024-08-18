@@ -17,29 +17,33 @@ body.no-scroll {
 
 .modal {
   background: white;
-  width: 100%;
-  height: 100%;
-  /* display: flex;
+  max-width: 600px; /* Установка максимальной ширины */
+  width: 100%; /* Это позволит модалке занимать всю ширину родителя, но не превышать его */
+  height: auto; /* Используйте auto, чтобы избежать переполнения по высоте */
+  display: flex;
   flex-direction: column;
-  position: relative; */
+  position: relative;
+  box-sizing: border-box; /* Учитывает padding и border в общей ширине и высоте элемента */
 }
 
 .modal-inner-content {
   padding: 20px;
-  overflow: auto;
-  /* display: flex;
+  overflow-y: auto; /* Вертикальная прокрутка если потребуется */
+  display: flex;
   flex-direction: column;
-  align-items: center; */
-  /* width: 100%;
-  height: 100%; */
+  align-items: center;
+  width: 100%;
+  max-height: calc(100vh - 40px); /* Ограничение высоты с учетом paddings */
+  box-sizing: border-box; /* Учитывает padding в высоте */
 }
 
 .cart-item {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 100%; /* Убедитесь, что это не превышает ширину родителя */
   padding: 10px;
   border-bottom: 1px solid #ddd;
+  box-sizing: border-box; /* Учитывает padding и border */
 }
 
 .modal-close-button {
