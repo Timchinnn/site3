@@ -17,14 +17,11 @@ body.no-scroll {
 
 .modal {
   background: white;
-  border-radius: 0;
-  padding: 0;
-  width: 100%; /* Полная ширина окна */
-  height: 100%; /* Полная высота окна */
-  box-shadow: none;
-  position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .modal-inner-content {
@@ -33,19 +30,16 @@ body.no-scroll {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%; /* Полная ширина внутреннего содержимого */
+  width: 100%;
+  height: 100%;
 }
 
 .cart-item {
   display: flex;
   justify-content: space-between;
-  width: 100%; /* Ширина 100% */
+  width: 100%;
   padding: 10px;
   border-bottom: 1px solid #ddd;
-}
-
-.modal-title {
-  margin: 20px 0;
 }
 
 .modal-close-button {
