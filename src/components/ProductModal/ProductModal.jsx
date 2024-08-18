@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ProductModal.css";
 
 const ProductModal = ({ product, onClose }) => {
   if (!product) return null;
+
+  useEffect(() => {
+    // Отключение прокрутки при монтировании компонента
+    document.body.classList.add("no-scroll");
+    return () => {
+      // Включение прокрутки при размонтировании компонента
+      document.body.classList.remove("no-scroll");
+    };
+  }, []);
 
   return (
     <div className="modal-overlay">
