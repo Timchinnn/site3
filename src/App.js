@@ -37,6 +37,7 @@ function App() {
         console.error("Ошибка при получении товаров:", error);
       });
   };
+  tg.expand();
 
   const fetchCategories = () => {
     axios
