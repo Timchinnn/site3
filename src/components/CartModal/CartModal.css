@@ -23,7 +23,7 @@ body.no-scroll {
   height: 100%; /* Полная высота */
   box-shadow: none;
   position: relative;
-  display: flex;
+  display: inline-block;
   flex-direction: column;
 }
 
