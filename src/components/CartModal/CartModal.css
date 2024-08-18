@@ -19,8 +19,8 @@ body.no-scroll {
   background: white;
   border-radius: 0;
   padding: 0;
-  width: 100vw; /* Устанавливаем полную ширину окна */
-  height: 100vh; /* Устанавливаем полную высоту окна */
+  width: 100%; /* Устанавливаем полную ширину окна */
+  height: 100%; /* Устанавливаем полную высоту окна */
   box-shadow: none;
   position: relative;
   display: flex;
