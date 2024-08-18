@@ -24,14 +24,14 @@ h1 {
   padding: 5px; /* Отступ вокруг изображения */
   overflow: hidden;
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent; /* Убираем синий контур при нажатии на мобильных устройствах *
+  -webkit-tap-highlight-color: transparent;
 }
 
 .profile-image {
-  width: 25px; /* Ширина изображения */
-  height: 20px; /* Высота изображения */
-  object-fit: cover; /* Сохранить пропорции и заполнить контейнер */
-  border-radius: 50%; /* Сгладить углы для круглого изображения */
+  width: 25px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 .profile-container:active {
   outline: none; /* Убираем стандартный контур при нажатии */
