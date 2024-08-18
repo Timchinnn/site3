@@ -136,18 +136,14 @@ function App() {
         </div>
       </div>
 
-      {/* <div className="profile-button"> */}
-      {/* <img onClick={handleProfileButtonClick} src={profile} alt="Sample" /> */}
-      {/* <img src="/profile.png" alt=""></img> */}
-      {/* <button onClick={handleProfileButtonClick}>Профиль</button>{" "} */}
-      {/* </div> */}
+      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
       {/* Кнопка профиля */}
       <CategoryButtons
         categories={categories}
         onSelect={handleCategorySelect}
       />
-      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      {/* <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} /> */}
       <ProductList
         products={filteredProducts}
         addedItems={addedItems}
