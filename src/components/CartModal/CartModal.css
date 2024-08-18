@@ -17,10 +17,10 @@ body.no-scroll {
 
 .modal {
   background: white;
-  border-radius: 0; /* Убираем скругления, чтобы окно занимало весь экран */
+  border-radius: 0; /* Убираем закругления, чтобы окно занимало весь экран */
   padding: 0;
-  width: 100%;
-  height: 100%;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
   box-shadow: none;
   position: relative;
   display: flex;
@@ -29,19 +29,23 @@ body.no-scroll {
 
 .modal-inner-content {
   padding: 20px;
-  overflow: auto; /* Добавьте прокрутку, если содержимое превышает высоту экрана */
+  overflow: auto; /* Прокрутка содержимого */
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-grow: 1; /* Дает возможность внутреннему содержимому расти */
+  height: 100%; /* Полная высота для внутреннего содержимого */
 }
 
 .cart-item {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 100%; /* Ширина 100% */
   padding: 10px;
   border-bottom: 1px solid #ddd;
+}
+
+.modal-title {
+  margin: 20px 0;
 }
 
 .modal-close-button {
