@@ -79,6 +79,7 @@
   cursor: pointer;
   padding: 5px 10px;
   background-color: transparent;
+  outline: none;
 }
 
 .add-to-cart-min {
@@ -88,6 +89,7 @@
   font-size: 14px;
   cursor: pointer;
   /* padding-top: 3px; */
+  outline: none;
 }
 
 .product-quantity {
