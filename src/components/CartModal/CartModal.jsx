@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import "./CartModal.css"; // Путь к стилям для модального окна
 
 const CartModal = ({ items, total, onClose }) => {
-  if (!items.length) return null; // Если корзина пуста, ничего не отображаем
-
   useEffect(() => {
     // Отключение прокрутки при монтировании компонента
     document.body.classList.add("no-scroll");
@@ -12,6 +10,8 @@ const CartModal = ({ items, total, onClose }) => {
       document.body.classList.remove("no-scroll");
     };
   }, []);
+
+  if (!items.length) return null; // Если корзина пуста, ничего не отображаем
 
   return (
     <div className="modal-overlay">
