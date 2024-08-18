@@ -20,7 +20,7 @@ const CartModal = ({ items, total, onClose }) => {
           <span className="icon">×</span>
         </button>
         <div className="modal-inner-content">
-          <h2>Ваша корзина</h2>
+          <h2 className="modal-title">Ваша корзина</h2>
           {items.map((item) => (
             <div key={item.id} className="cart-item">
               <span>{item.name}</span>
