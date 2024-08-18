@@ -10,6 +10,7 @@ import CartModal from "./components/CartModal/CartModal";
 import { getTotalPrice } from "./utils";
 import CategoryButtons from "./components/CategoryButtons/CategoryButtons";
 import ProfileModal from "./components/ProfileModal/ProfileModal";
+import profile from "./profile.png";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -125,7 +126,9 @@ function App() {
     <div className="App">
       <h1>Магазин товаров</h1>
       <div className="profile-button">
-        <button onClick={handleProfileButtonClick}>😎 Профиль</button>{" "}
+        <img src={profile} alt="Sample" />
+        {/* <img src="/profile.png" alt=""></img> */}
+        <button onClick={handleProfileButtonClick}>Профиль</button>{" "}
       </div>
 
       {/* Кнопка профиля */}
