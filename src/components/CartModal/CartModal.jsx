@@ -1,12 +1,10 @@
 import React, { useEffect } from "react";
-import "./CartModal.css"; // Путь к стилям для модального окна
+import "./CartModal.css"; // Импортируем стили
 
 const CartModal = ({ items, total, onClose }) => {
   useEffect(() => {
-    // Отключение прокрутки при монтировании компонента
     document.body.classList.add("no-scroll");
     return () => {
-      // Включение прокрутки при размонтировании компонента
       document.body.classList.remove("no-scroll");
     };
   }, []);
@@ -29,7 +27,7 @@ const CartModal = ({ items, total, onClose }) => {
               </span>
             </div>
           ))}
-          <h3>Итого: {total} ₽</h3>
+          <h3>Итого: {total ? total : "0"} ₽</h3>
           <button onClick={onClose}>Закрыть</button>
         </div>
       </div>

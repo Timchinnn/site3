@@ -1,5 +1,5 @@
 body.no-scroll {
-  overflow: hidden; /* Запрет прокрутки основного окна */
+  overflow: hidden;
 }
 
 .modal-overlay {
@@ -8,20 +8,20 @@ body.no-scroll {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Убедитесь, что модальное окно выше остального контента */
+  z-index: 1000;
 }
 
 .modal {
   background: white;
-  border-radius: 0; /* Убираем закругления у модального окна */
-  padding: 0; /* Убираем отступы */
-  width: 100vw; /* Полная ширина экрана */
-  height: 100vh; /* Полная высота экрана */
-  box-shadow: none; /* Убираем тень */
+  border-radius: 0;
+  padding: 0;
+  width: 100%; /* Полная ширина окна */
+  height: 100%; /* Полная высота окна */
+  box-shadow: none;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -29,19 +29,23 @@ body.no-scroll {
 
 .modal-inner-content {
   padding: 20px;
-  overflow: auto; /* Добавление прокрутки к внутреннему содержимому */
+  overflow: auto;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Центрируем содержимое */
-  height: 100%; /* Заполняет всю высоту модального окна */
+  align-items: center;
+  width: 100%; /* Полная ширина внутреннего содержимого */
 }
 
 .cart-item {
   display: flex;
   justify-content: space-between;
-  width: 100%; /* Ширина на 100% */
+  width: 100%; /* Ширина 100% */
   padding: 10px;
   border-bottom: 1px solid #ddd;
+}
+
+.modal-title {
+  margin: 20px 0;
 }
 
 .modal-close-button {
@@ -50,7 +54,7 @@ body.no-scroll {
   cursor: pointer;
   font-size: 24px;
   position: absolute;
-  top: 10px; /* Положение кнопки закрытия */
+  top: 10px;
   right: 10px;
 }
 
