@@ -95,3 +95,11 @@
 .product-quantity {
   margin: 0 10px;
 }
+
+.add-to-cart:active,
+.add-to-cart-min:active,
+.add-to-cart:focus,
+.add-to-cart-min:focus {
+  background-color: transparent; /* или любой другой цвет, который вам подходит */
+  color: inherit; /* наследовать цвет от родителя */
+}
