@@ -125,7 +125,7 @@ function App() {
   return (
     <div className="App">
       <div className="heaeder-top">
-        <h1>Магазин товаров</h1>
+        <h1>БЭНСИС</h1>
         <div className="profile-container">
           <img
             onClick={handleProfileButtonClick}
