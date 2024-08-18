@@ -126,9 +126,9 @@ function App() {
     <div className="App">
       <h1>Магазин товаров</h1>
       <div className="profile-button">
-        <img src={profile} alt="Sample" />
+        <img onClick={handleProfileButtonClick} src={profile} alt="Sample" />
         {/* <img src="/profile.png" alt=""></img> */}
-        <button onClick={handleProfileButtonClick}>Профиль</button>{" "}
+        {/* <button onClick={handleProfileButtonClick}>Профиль</button>{" "} */}
       </div>
 
       {/* Кнопка профиля */}
