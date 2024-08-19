@@ -53,7 +53,7 @@ const ProfileModal = ({
         <div className="profile-button">
           <h2>Регистрация</h2>
           <form onSubmit={handleSubmit}>
-            <div className="cartInput">
+            <div>
               <label>
                 Имя:
                 <input
@@ -65,7 +65,7 @@ const ProfileModal = ({
                 />
               </label>
             </div>
-            <div className="cartInput">
+            <div>
               <label>
                 Телефон:
                 <input
@@ -77,7 +77,7 @@ const ProfileModal = ({
                 />
               </label>
             </div>
-            <div className="cartInput">
+            <div>
               <label>
                 Email:
                 <input
