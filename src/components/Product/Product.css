@@ -51,7 +51,6 @@
   background-color: #f1f1f1;
   border-radius: 28px;
   padding: 5px 10px;
-  /* width: 100%; */
   box-sizing: border-box;
 }
 
@@ -80,16 +79,20 @@
   padding: 5px 10px;
   background-color: transparent;
   outline: none;
+  height: 40px; /* Установим фиксированную высоту */
+  display: flex; /* Это позволит выравнивать текст по центру */
+  align-items: center; /* Вертикальное выравнивание текста */
 }
 
 .add-to-cart-min {
   border: none;
   width: 24px;
-  height: 24px;
+  height: 40px; /* Установим фиксированную высоту */
   font-size: 14px;
   cursor: pointer;
-  /* padding-top: 3px; */
   outline: none;
+  display: flex; /* Это позволит выравнивать текст по центру */
+  align-items: center; /* Вертикальное выравнивание текста */
 }
 
 .product-quantity {
@@ -109,4 +112,9 @@
 .add-to-cart,
 .add-to-cart-min {
   -webkit-tap-highlight-color: transparent; /* Убирает эффект выделения при касании на мобильных */
+}
+
+.add-to-cart,
+.add-to-cart-min {
+  line-height: 40px; /* Убедитесь, что текст выровнен по центру */
 }
