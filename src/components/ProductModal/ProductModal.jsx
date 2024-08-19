@@ -12,6 +12,7 @@ const ProductModal = ({ product, onClose, onAdd, onRemove, quantity }) => {
   }, [product]);
 
   if (!product) return null;
+  console.log(quantity);
 
   return (
     <div className="modal-overlay">
