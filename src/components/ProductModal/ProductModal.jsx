@@ -55,9 +55,9 @@ const ProductModal = ({ product, onClose, onAdd, onRemove, addedItems }) => {
             {activeTab === "techSpecs" && (
               <div className="tech-specs">
                 {/* Пример: Здесь вы можете отображать технические характеристики */}
-                <p>Процессор: {product.specs.cpu}</p>
-                <p>Оперативная память: {product.specs.ram}</p>
-                <p>Хранение: {product.specs.storage}</p>
+                <p>Процессор:</p>
+                {/* <p>Оперативная память: {product.specs.ram}</p>
+                <p>Хранение: {product.specs.storage}</p> */}
               </div>
             )}
             {activeTab === "howToBuy" && (
