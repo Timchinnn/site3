@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./CartModal.css"; // Импортируем стили
 
 const CartModal = ({ items, total, onClose }) => {

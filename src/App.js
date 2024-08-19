@@ -20,9 +20,11 @@ function App() {
   const [isCartModalOpen, setIsCartModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const { tg } = useTelegram();
-  const { addedItems, onAdd, onRemove } = useCart(tg, () =>
-    setIsCartModalOpen(true)
-  );
+  const { addedItems, onAdd, onRemove } = useCart(tg, () => {
+    setIsProductModalOpen(false); // Закрываем модальное окно товара
+    setIsProfileModalOpen(false);
+    setIsCartModalOpen(true);
+  });
   const [selectedCategory, setSelectedCategory] = useState("");
   const [allProducts, setAllProducts] = useState([]);
   const [isCategorySelected, setIsCategorySelected] = useState(false);
