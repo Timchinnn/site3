@@ -21,6 +21,12 @@
   z-index: 999;
 }
 
+.profile-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .profile-button button {
   padding: 10px 15px;
   border: none;
