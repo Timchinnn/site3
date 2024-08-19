@@ -156,6 +156,8 @@ function App() {
         <ProductModal
           product={selectedProduct}
           onClose={closeProductModal}
+          onAdd={onAdd}
+          onRemove={onRemove}
           addedItems={addedItems}
         />
       )}
