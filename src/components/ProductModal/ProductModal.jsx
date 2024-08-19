@@ -30,29 +30,21 @@ const ProductModal = ({ product, onClose, onAdd, onRemove, quantity }) => {
           />
           <p className="modal-description">{product.description}</p>
           <div className="product-price-add">
-            {quantity > 0 ? (
-              <div className="price-controls">
-                <button
-                  className="add-to-cart-min"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onRemove(product);
-                  }}
-                >
-                  -
-                </button>
-                <div className="product-quantity">{quantity}</div>
-                <button
-                  className="add-to-cart"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onAdd(product);
-                  }}
-                >
-                  +
-                </button>
-              </div>
-            ) : (
+            <div className="price-controls">
+              {quantity > 0 && (
+                <>
+                  <button
+                    className="add-to-cart-min"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onRemove(product);
+                    }}
+                  >
+                    -
+                  </button>
+                  <div className="product-quantity">{quantity}</div>
+                </>
+              )}
               <button
                 className="add-to-cart"
                 onClick={(e) => {
@@ -62,7 +54,18 @@ const ProductModal = ({ product, onClose, onAdd, onRemove, quantity }) => {
               >
                 Купить
               </button>
-            )}
+              {quantity > 0 && (
+                <button
+                  className="add-to-cart"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onAdd(product);
+                  }}
+                >
+                  +
+                </button>
+              )}
+            </div>
           </div>
         </div>
       </div>
