@@ -36,31 +36,3 @@ h1 {
 .profile-container:active {
   outline: none; /* Убираем стандартный контур при нажатии */
 }
-.language-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem 0;
-}
-
-.flag-container {
-  margin: 0 10px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-}
-
-input[type="radio"] {
-  display: none;
-}
-
-.flag {
-  font-size: 2rem; /* Увеличиваем размер флагов */
-  transition: transform 0.3s;
-}
-
-input[type="radio"]:checked + .flag {
-  transform: scale(1.2); /* Увеличиваем флаг при выборе */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Добавляем тень */
-}

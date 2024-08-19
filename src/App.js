@@ -135,24 +135,8 @@ function App() {
   return (
     <div className="App">
       <div className="language-toggle">
-        <label className="flag-container">
-          <input
-            type="radio"
-            name="language"
-            value="ru"
-            onChange={() => toggleLanguage("ru")}
-          />
-          <span className="flag ru">🇷🇺</span>
-        </label>
-        <label className="flag-container">
-          <input
-            type="radio"
-            name="language"
-            value="en"
-            onChange={() => toggleLanguage("en")}
-          />
-          <span className="flag en">🇬🇧</span>
-        </label>
+        <button onClick={() => toggleLanguage("ru")}>Ru</button>
+        <button onClick={() => toggleLanguage("en")}>En</button>
       </div>
       <div className="heaeder-top">
         <h1>БЭНСИС</h1>
