@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios"; // Не забудьте установить axios, если он еще не установлен
 import "./ProfileModal.css";
+import { useTranslation } from "react-i18next";
+import "../i18n";
 
 const ProfileModal = ({
   userData,
@@ -9,6 +11,7 @@ const ProfileModal = ({
   onRegisterComplete,
   telegramUserId,
 }) => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -43,7 +46,7 @@ const ProfileModal = ({
       };
       updateUser(newUser);
     } else {
-      alert("Пожалуйста, заполните все поля.");
+      alert(t("please_fill_all"));
     }
   };
 
@@ -51,11 +54,11 @@ const ProfileModal = ({
     <div className="modal">
       {isRegisterFormOpen ? (
         <div className="profile-button">
-          <h2>Регистрация</h2>
+          <h2>{t("registration")}</h2>
           <form onSubmit={handleSubmit}>
             <div>
               <label>
-                Имя:
+                {t("name")}
                 <input
                   type="text"
                   name="name"
@@ -67,7 +70,7 @@ const ProfileModal = ({
             </div>
             <div>
               <label>
-                Телефон:
+                {t("phone")}
                 <input
                   type="tel"
                   name="phone"
@@ -79,7 +82,7 @@ const ProfileModal = ({
             </div>
             <div>
               <label>
-                Email:
+                {t("email")}
                 <input
                   type="email"
                   name="email"
@@ -89,23 +92,29 @@ const ProfileModal = ({
                 />
               </label>
             </div>
-            <button type="submit">Зарегистрироваться</button>
+            <button type="submit">{t("register")}</button>
           </form>
         </div>
       ) : (
         <div className="profile-button">
-          <h2>Профиль пользователя</h2>
+          <h2>{t("profile")}</h2>
           {userData ? (
             <>
-              <p>Имя: {userData.name}</p>
-              <p>Телефон: {userData.phone}</p>
-              <p>Email: {userData.email}</p>
+              <p>
+                {t("name")} {userData.name}
+              </p>
+              <p>
+                {t("phone")} {userData.phone}
+              </p>
+              <p>
+                {t("email")} {userData.email}
+              </p>
               <p>User ID: {telegramUserId}</p>
             </>
           ) : (
-            <p>Пользователь не найден.</p>
+            <p>{t("user_not_found")}</p>
           )}
-          <button onClick={onClose}>Закрыть</button>
+          <button onClick={onClose}>{t("close")}</button>
         </div>
       )}
     </div>
