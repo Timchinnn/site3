@@ -71,7 +71,8 @@ body.no-scroll {
   align-items: center;
   background-color: #f1f1f1;
   border-radius: 28px;
-  padding: 5px 10px;
-  /* width: 100%; */
-  box-sizing: border-box;
+  padding: 11px 10px;
+  margin-right: 5px;
+  margin-bottom: 3px;
+  border-style: none;
 }
