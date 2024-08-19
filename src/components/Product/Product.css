@@ -47,10 +47,11 @@
 .product-price-add {
   display: flex;
   justify-content: center;
-  align-items: stretch; /* Это позволит гарантировать, что все элементы имеют одинаковую высоту */
+  align-items: center;
   background-color: #f1f1f1;
   border-radius: 28px;
   padding: 5px 10px;
+  /* width: 100%; */
   box-sizing: border-box;
 }
 
@@ -79,20 +80,16 @@
   padding: 5px 10px;
   background-color: transparent;
   outline: none;
-  height: 40px; /* Установим фиксированную высоту */
-  display: flex; /* Это позволит выравнивать текст по центру */
-  align-items: center; /* Вертикальное выравнивание текста */
 }
 
 .add-to-cart-min {
   border: none;
   width: 24px;
-  height: 40px; /* Установим фиксированную высоту */
+  height: 24px;
   font-size: 14px;
   cursor: pointer;
+  /* padding-top: 3px; */
   outline: none;
-  display: flex; /* Это позволит выравнивать текст по центру */
-  align-items: center; /* Вертикальное выравнивание текста */
 }
 
 .product-quantity {
@@ -112,24 +109,4 @@
 .add-to-cart,
 .add-to-cart-min {
   -webkit-tap-highlight-color: transparent; /* Убирает эффект выделения при касании на мобильных */
-}
-
-.add-to-cart,
-.add-to-cart-min {
-  line-height: 40px; /* Убедитесь, что текст выровнен по центру */
-}
-
-.add-to-cart,
-.add-to-cart-min {
-  height: 40px; /* Установим фиксированную высоту */
-  line-height: 40px; /* Вертикальное выравнивание текста */
-  padding: 0; /* Убираем отступы */
-  border: none; /* Убираем границы */
-  background-color: transparent; /* Прозрачный фон */
-  color: inherit; /* Используем цвет текста родителя */
-  font-size: 14px; /* Одинаковый размер шрифта */
-  cursor: pointer; /* Указатель при наведении */
-  display: flex; /* Использование Flexbox для выравнивания */
-  align-items: center; /* Вертикальное выравнивание текста по центру */
-  justify-content: center; /* Горизонтальное выравнивание текста по центру */
 }
