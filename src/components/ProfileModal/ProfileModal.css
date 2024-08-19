@@ -41,3 +41,13 @@
 .profile-button button:hover {
   background-color: #0056b3;
 }
+
+.profile-button form {
+  display: flex;
+  flex-direction: column; /* Вертикальное выравнивание */
+  width: 100%; /* Занимает всю ширину контейнера */
+}
+
+.profile-button div {
+  margin-bottom: 12px; /* Отступы между полями формы */
+}
