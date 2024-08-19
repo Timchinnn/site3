@@ -1,3 +1,17 @@
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import ProductModal from "./components/ProductModal/ProductModal";
+import { useTelegram } from "./hooks/useTelegram";
+import ProductList from "./components/ProductList/ProductList";
+import useCart from "./useCart";
+import Search from "./components/Search/Search";
+import "./App.css";
+import CartModal from "./components/CartModal/CartModal";
+import { getTotalPrice } from "./utils";
+import CategoryButtons from "./components/CategoryButtons/CategoryButtons";
+import ProfileModal from "./components/ProfileModal/ProfileModal";
+import profile from "./profile.png";
+
 function App() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -12,8 +26,6 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [allProducts, setAllProducts] = useState([]);
   const [isCategorySelected, setIsCategorySelected] = useState(false);
-  const [productCount, setProductCount] = useState(0); // Добавляем state для подсчета товаров
-
   const fetchProducts = () => {
     axios
       .get("/api/products")
@@ -60,6 +72,7 @@ function App() {
   const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
   const handleCategorySelect = (categoryName) => {
     if (selectedCategory === categoryName && isCategorySelected) {
       setSelectedCategory("");
@@ -138,20 +151,10 @@ function App() {
         onAdd={onAdd}
         onRemove={onRemove}
         openModal={openProductModal}
-        productCount={productCount}
-        setProductCount={setProductCount} //
       />
       {isProductModalOpen && (
-        <ProductModal
-          product={selectedProduct}
-          onClose={closeProductModal}
-          onAdd={onAdd}
-          onRemove={onRemove}
-          productCount={productCount} // Передаем текущее количество товаров
-          setProductCount={setProductCount} // Передаем функцию для обновления счетчика
-        />
+        <ProductModal product={selectedProduct} onClose={closeProductModal} />
       )}
-
       {isCartModalOpen && (
         <CartModal
           items={addedItems}
