@@ -1,7 +1,10 @@
 import React, { useEffect } from "react";
 import "./ProductModal.css";
 
-const ProductModal = ({ product, onClose }) => {
+const ProductModal = ({ product, onClose, addedItems }) => {
+  const addedItem = addedItems.find((item) => item.id === product.id);
+  const quantity = addedItem ? addedItem.quantity : 0;
+  console.log(quantity);
   useEffect(() => {
     if (!product) return;
 

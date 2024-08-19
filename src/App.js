@@ -153,7 +153,11 @@ function App() {
         openModal={openProductModal}
       />
       {isProductModalOpen && (
-        <ProductModal product={selectedProduct} onClose={closeProductModal} />
+        <ProductModal
+          product={selectedProduct}
+          onClose={closeProductModal}
+          addedItems={addedItems}
+        />
       )}
       {isCartModalOpen && (
         <CartModal
