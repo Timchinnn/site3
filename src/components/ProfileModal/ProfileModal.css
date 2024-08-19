@@ -46,8 +46,21 @@
   display: flex;
   flex-direction: column; /* Вертикальное выравнивание */
   width: 100%; /* Занимает всю ширину контейнера */
+  align-items: center;
 }
 
 .profile-button div {
   margin-bottom: 12px; /* Отступы между полями формы */
+}
+
+.profile-button input {
+  width: -webkit-fill-available;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+  color: #6e7faa;
+  background-color: #f8f8ff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
 }
