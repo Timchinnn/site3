@@ -5,10 +5,8 @@ const ProductModal = ({ product, onClose, onAdd, onRemove, quantity }) => {
   useEffect(() => {
     if (!product) return;
 
-    // Отключение прокрутки при монтировании компонента
     document.body.classList.add("no-scroll");
     return () => {
-      // Включение прокрутки при размонтировании компонента
       document.body.classList.remove("no-scroll");
     };
   }, [product]);
