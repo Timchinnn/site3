@@ -11,8 +11,15 @@ import { getTotalPrice } from "./utils";
 import CategoryButtons from "./components/CategoryButtons/CategoryButtons";
 import ProfileModal from "./components/ProfileModal/ProfileModal";
 import profile from "./profile.png";
+import { useTranslation } from "react-i18next";
+import "./i18n";
 
 function App() {
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+  };
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -127,6 +134,10 @@ function App() {
 
   return (
     <div className="App">
+      <div className="language-toggle">
+        <button onClick={() => toggleLanguage("ru")}>Русский</button>
+        <button onClick={() => toggleLanguage("en")}>English</button>
+      </div>
       <div className="heaeder-top">
         <h1>БЭНСИС</h1>
         <div className="profile-container">
