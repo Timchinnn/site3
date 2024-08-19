@@ -12,7 +12,7 @@ import CategoryButtons from "./components/CategoryButtons/CategoryButtons";
 import ProfileModal from "./components/ProfileModal/ProfileModal";
 import profile from "./profile.png";
 import { useTranslation } from "react-i18next";
-import "./i18n";
+import "./components/ProfileModal/i18n";
 
 function App() {
   const { i18n } = useTranslation();
