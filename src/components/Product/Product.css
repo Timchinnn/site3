@@ -118,3 +118,18 @@
 .add-to-cart-min {
   line-height: 40px; /* Убедитесь, что текст выровнен по центру */
 }
+
+.add-to-cart,
+.add-to-cart-min {
+  height: 40px; /* Установим фиксированную высоту */
+  line-height: 40px; /* Вертикальное выравнивание текста */
+  padding: 0; /* Убираем отступы */
+  border: none; /* Убираем границы */
+  background-color: transparent; /* Прозрачный фон */
+  color: inherit; /* Используем цвет текста родителя */
+  font-size: 14px; /* Одинаковый размер шрифта */
+  cursor: pointer; /* Указатель при наведении */
+  display: flex; /* Использование Flexbox для выравнивания */
+  align-items: center; /* Вертикальное выравнивание текста по центру */
+  justify-content: center; /* Горизонтальное выравнивание текста по центру */
+}
