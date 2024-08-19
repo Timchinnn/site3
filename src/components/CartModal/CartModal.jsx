@@ -23,6 +23,7 @@ const CartModal = ({ items, total, onClose }) => {
           <h2>Ваша корзина</h2>
           {items.map((item) => (
             <div key={item.id} className="cart-item">
+              <img src={product.photo_url} alt={product.name} />
               <span>{item.name}</span>
               <span>
                 {item.quantity} × {item.price} ₽
