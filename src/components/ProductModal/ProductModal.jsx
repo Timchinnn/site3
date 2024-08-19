@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./ProductModal.css";
 
 const ProductModal = ({ product, onClose, onAdd, onRemove, addedItems }) => {
   const addedItem = addedItems.find((item) => item.id === product.id);
   const quantity = addedItem ? addedItem.quantity : 0;
-  console.log(quantity);
+
+  // Состояние для текущей активной вкладки
+  const [activeTab, setActiveTab] = useState("description");
+
   useEffect(() => {
     if (!product) return;
 
@@ -31,7 +34,43 @@ const ProductModal = ({ product, onClose, onAdd, onRemove, addedItems }) => {
             src={product.photo_url}
             alt={product.name}
           />
-          <p className="modal-description">{product.description}</p>
+          <div className="tab-buttons">
+            <button onClick={() => setActiveTab("description")}>
+              Описание
+            </button>
+            <button onClick={() => setActiveTab("techSpecs")}>
+              Тех. характеристики
+            </button>
+            <button onClick={() => setActiveTab("howToBuy")}>Как купить</button>
+            <button onClick={() => setActiveTab("additionalServices")}>
+              Доп. услуги
+            </button>
+            <button onClick={() => setActiveTab("brochure")}>Буклет</button>
+          </div>
+
+          <div className="tab-content">
+            {activeTab === "description" && (
+              <p className="modal-description">{product.description}</p>
+            )}
+            {activeTab === "techSpecs" && (
+              <div className="tech-specs">
+                {/* Пример: Здесь вы можете отображать технические характеристики */}
+                <p>Процессор: {product.specs.cpu}</p>
+                <p>Оперативная память: {product.specs.ram}</p>
+                <p>Хранение: {product.specs.storage}</p>
+              </div>
+            )}
+            {activeTab === "howToBuy" && (
+              <p>Информация о том, как купить этот продукт.</p>
+            )}
+            {activeTab === "additionalServices" && (
+              <p>Информация о дополнительных услугах.</p>
+            )}
+            {activeTab === "brochure" && (
+              <p>Ссылка или информация о буклете.</p>
+            )}
+          </div>
+
           <div className="product-price-add">
             {quantity > 0 ? (
               <div className="price-controls">
