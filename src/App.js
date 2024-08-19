@@ -15,7 +15,7 @@ import { useTranslation } from "react-i18next";
 import "./i18n";
 
 function App() {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   const toggleLanguage = (lang) => {
     i18n.changeLanguage(lang);
