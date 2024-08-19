@@ -158,12 +158,7 @@ function App() {
           onClose={closeProductModal}
           onAdd={onAdd}
           onRemove={onRemove}
-          // quantity={addedItem ? addedItem.quantity : 0}
-          quantity={
-            addedItems[selectedProduct?.id]
-              ? addedItems[selectedProduct.id].quantity
-              : 0
-          }
+          quantity={addedItems[selectedProduct.id] || 0} // Обратите внимание, что здесь необходимо обращаться к конкретному идентификатору продукта
         />
       )}
 
