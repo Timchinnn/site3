@@ -9,7 +9,7 @@ const ProductModal = ({
   productCount,
   setProductCount,
 }) => {
-  const [quantity, setQuantity] = useState(1); // State для количества товара
+  const [quantity, setQuantity] = useState(1); 
 
   const handleQuantityChange = (event) => {
     setQuantity(parseInt(event.target.value, 10) || 1); // Ограничиваем ввод только числами

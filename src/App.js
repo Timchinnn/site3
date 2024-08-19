@@ -139,7 +139,7 @@ function App() {
         onRemove={onRemove}
         openModal={openProductModal}
         productCount={productCount}
-        setProductCount={setProductCount} // Передаем функцию для обновления счетчика
+        setProductCount={setProductCount} //
       />
       {isProductModalOpen && (
         <ProductModal
