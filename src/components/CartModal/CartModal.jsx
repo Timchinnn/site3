@@ -25,9 +25,7 @@ const CartModal = ({ items, total, onClose }) => {
             <div key={item.id} className="cart-item">
               <img src={item.photo_url} alt={item.name} />
               <span>{item.name}</span>
-              <span>
-                {item.quantity} × {item.price} ₽
-              </span>
+              <span>{item.quantity} шт.</span>
             </div>
           ))}
           <h3>Итого: {total} ₽</h3>
