@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./ProductModal.css";
 
-const ProductModal = ({ product, onClose }) => {
+const ProductModal = ({ product, onClose, onAdd, onRemove, quantity }) => {
   useEffect(() => {
     if (!product) return;
 
@@ -29,6 +29,41 @@ const ProductModal = ({ product, onClose }) => {
             alt={product.name}
           />
           <p className="modal-description">{product.description}</p>
+          <div className="product-price-add">
+            {quantity > 0 ? (
+              <div className="price-controls">
+                <button
+                  className="add-to-cart-min"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onRemove(product);
+                  }}
+                >
+                  -
+                </button>
+                <div className="product-quantity">{quantity}</div>
+                <button
+                  className="add-to-cart"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onAdd(product);
+                  }}
+                >
+                  +
+                </button>
+              </div>
+            ) : (
+              <button
+                className="add-to-cart"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onAdd(product);
+                }}
+              >
+                Купить
+              </button>
+            )}
+          </div>
         </div>
       </div>
     </div>

@@ -155,13 +155,16 @@ function App() {
       {isProductModalOpen && (
         <ProductModal product={selectedProduct} onClose={closeProductModal} />
       )}
-      {isCartModalOpen && (
-        <CartModal
-          items={addedItems}
-          total={getTotalPrice(addedItems)}
-          onClose={closeCartModal}
+      {isProductModalOpen && (
+        <ProductModal
+          product={selectedProduct}
+          onClose={closeProductModal}
+          onAdd={onAdd}
+          onRemove={onRemove}
+          quantity={addedItems[selectedProduct.id] || 0} // Обратите внимание, что здесь необходимо обращаться к конкретному идентификатору продукта
         />
       )}
+
       {isProfileModalOpen && (
         <ProfileModal
           userData={userData}
