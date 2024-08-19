@@ -65,3 +65,13 @@ body.no-scroll {
 .icon {
   font-size: 24px;
 }
+.tab-buttons button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  border-radius: 28px;
+  padding: 5px 10px;
+  /* width: 100%; */
+  box-sizing: border-box;
+}
