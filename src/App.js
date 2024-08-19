@@ -153,9 +153,6 @@ function App() {
         openModal={openProductModal}
       />
       {isProductModalOpen && (
-        <ProductModal product={selectedProduct} onClose={closeProductModal} />
-      )}
-      {isProductModalOpen && (
         <ProductModal
           product={selectedProduct}
           onClose={closeProductModal}
@@ -165,6 +162,13 @@ function App() {
         />
       )}
 
+      {isCartModalOpen && (
+        <CartModal
+          items={addedItems}
+          total={getTotalPrice(addedItems)}
+          onClose={closeCartModal}
+        />
+      )}
       {isProfileModalOpen && (
         <ProfileModal
           userData={userData}
