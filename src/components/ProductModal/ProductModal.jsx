@@ -1,71 +1,60 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import "./ProductModal.css";
 
 const ProductModal = ({ product, onClose, onAdd, onRemove, quantity }) => {
-  useEffect(() => {
-    if (!product) return;
+  const [currentQuantity, setCurrentQuantity] = useState(quantity);
 
-    // Отключение прокрутки при монтировании компонента
-    document.body.classList.add("no-scroll");
-    return () => {
-      // Включение прокрутки при размонтировании компонента
-      document.body.classList.remove("no-scroll");
-    };
-  }, [product]);
+  const handleQuantityChange = (event) => {
+    const newQuantity = parseInt(event.target.value, 10);
+    setCurrentQuantity(newQuantity);
+  };
 
-  if (!product) return null;
+  const handleAdd = () => {
+    onAdd(product, currentQuantity);
+    onClose();
+  };
+
+  const handleRemove = () => {
+    onRemove(product);
+    setCurrentQuantity(0); // Обновляем количество в модальном окне после удаления из корзины
+  };
 
   return (
-    <div className="modal-overlay">
+    <div className="product-modal">
       <div className="modal-content">
-        <button className="modal-close-button" onClick={onClose}>
-          <span className="icon">×</span>
-        </button>
-        <div className="modal-inner-content">
-          <h2 className="modal-title">{product.name}</h2>
-          <img
-            className="modal-image"
-            src={product.photo_url}
-            alt={product.name}
-          />
-          <p className="modal-description">{product.description}</p>
-          <div className="product-price-add">
-            {/* Если количество товара больше 0, показываем только кнопку "Купить" */}
-            {quantity > 0 ? (
-              <button
-                className="add-to-cart"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onAdd(product);
-                }}
-              >
-                Купить
-              </button>
-            ) : (
-              <div className="price-controls">
-                <button
-                  className="add-to-cart-min"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onRemove(product);
-                  }}
-                >
-                  -
-                </button>
-                <div className="product-quantity">{quantity}</div>
-                <button
-                  className="add-to-cart"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onAdd(product);
-                  }}
-                >
-                  +
-                </button>
-              </div>
-            )}
-          </div>
+        <span className="close-button" onClick={onClose}>
+          &times;
+        </span>
+        <img src={product.image} alt={product.name} className="product-image" />
+        <h2 className="product-name">{product.name}</h2>
+        <p className="product-description">{product.description}</p>
+        <div className="price-container">
+          <span className="price">{product.price} ₽</span>
+          <span className="discount">{product.discount}</span>
         </div>
+        {quantity > 0 && (
+          <div className="quantity-control">
+            <button onClick={handleRemove} className="remove-button">
+              {/*  */}
+              Удалить из корзины
+              {/*  */}
+            </button>
+            <input
+              type="number"
+              min="1"
+              value={currentQuantity}
+              onChange={handleQuantityChange}
+              className="quantity-input"
+            />
+          </div>
+        )}
+        {quantity === 0 && (
+          <button onClick={handleAdd} className="add-button">
+            {/*  */}
+            Купить
+            {/*  */}
+          </button>
+        )}
       </div>
     </div>
   );
