@@ -8,9 +8,9 @@ i18n
       en: {
         translation: {
           registration: "Registration",
-          name: "Name",
-          phone: "Phone",
-          email: "Email",
+          name: "Name:",
+          phone: "Phone:",
+          email: "Email:",
           register: "Register",
           profile: "User Profile",
           userNotFound: "User not found.",
@@ -20,9 +20,9 @@ i18n
       ru: {
         translation: {
           registration: "Регистрация",
-          name: "Имя",
-          phone: "Телефон",
-          email: "Email",
+          name: "Имя:",
+          phone: "Телефон:",
+          email: "Email:",
           register: "Зарегистрироваться",
           profile: "Профиль пользователя",
           userNotFound: "Пользователь не найден.",
