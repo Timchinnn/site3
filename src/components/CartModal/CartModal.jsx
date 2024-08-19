@@ -29,7 +29,7 @@ const CartModal = ({ items, total, onClose }) => {
             </div>
           ))}
           <h3>Итого: {total} ₽</h3>
-          <button onClick={onClose}>Закрыть</button>
+          {/* <button onClick={onClose}>Закрыть</button> */}
         </div>
       </div>
     </div>
