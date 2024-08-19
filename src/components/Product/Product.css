@@ -47,7 +47,7 @@
 .product-price-add {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch; /* Это позволит гарантировать, что все элементы имеют одинаковую высоту */
   background-color: #f1f1f1;
   border-radius: 28px;
   padding: 5px 10px;
