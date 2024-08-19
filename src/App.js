@@ -158,11 +158,12 @@ function App() {
           onClose={closeProductModal}
           onAdd={onAdd}
           onRemove={onRemove}
-          quantity={
-            addedItems[selectedProduct?.id]
-              ? addedItems[selectedProduct.id].quantity
-              : 0
-          }
+          quantity={addedItem ? addedItem.quantity : 0}
+          // quantity={
+          //   addedItems[selectedProduct?.id]
+          //     ? addedItems[selectedProduct.id].quantity
+          //     : 0
+          // }
         />
       )}
 
