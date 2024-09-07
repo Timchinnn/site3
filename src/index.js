@@ -1,18 +1,41 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
-// import App from './App';
-import reportWebVitals from "./reportWebVitals";
-import Main from "./Main";
+import React, { useState } from "react";
+import App from "./App";
+import "./index.css"; // Убедитесь, что стили подключены
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <Main />
-  </React.StrictMode>
-);
+function Main() {
+  const [showApp, setShowApp] = useState(false);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+  const handleShopButtonClick = () => {
+    setShowApp(true);
+  };
+
+  return (
+    <div className="container">
+      {showApp ? (
+        <App />
+      ) : (
+        <>
+          <div className="header">
+            <a href="#" className="link">
+              ВХОД
+            </a>
+            <a href="#" className="link">
+              РЕГИСТРАЦИЯ
+            </a>
+          </div>
+          <div className="content">
+            <h1 className="title">BANSYS</h1>
+            <p className="subtitle">Bansys - Банкоматы - Терминалы</p>
+          </div>
+          <div className="footer">
+            <button className="shop-button" onClick={handleShopButtonClick}>
+              ЗА ПОКУПКАМИ
+            </button>
+          </div>
+        </>
+      )}
+    </div>
+  );
+}
+
+export default Main;

@@ -1,50 +1,51 @@
-import React, { useState } from "react";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  useHistory,
+} from "react-router-dom";
 import App from "./App";
 
 function Main() {
-  const [showApp, setShowApp] = useState(false);
+  const history = useHistory();
 
-  const handleButtonClick = () => {
-    setShowApp(true);
+  const handleShopButtonClick = () => {
+    history.push("/app");
   };
 
   return (
-    <div
-      style={{
-        margin: 0,
-        fontFamily: "Arial, sans-serif",
-        backgroundColor: "#3d6659",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-      }}
-    >
-      {showApp ? (
-        <App />
-      ) : (
-        <div className="container">
-          <div className="header">
-            <button className="link" onClick={() => alert("Вход")}>
-              ВХОД
-            </button>
-            <button className="link" onClick={() => alert("Регистрация")}>
-              РЕГИСТРАЦИЯ
-            </button>
-          </div>
-          <div className="content">
-            <h1 className="title">BANSYS</h1>
-            <p className="subtitle">Bansys - Банкоматы - Терминалы</p>
-          </div>
-          <div className="footer">
-            <button className="shop-button" onClick={handleButtonClick}>
-              ЗА ПОКУПКАМИ
-            </button>
-          </div>
-        </div>
-      )}
+    <div className="container">
+      <div className="header">
+        <a href="#" className="link">
+          ВХОД
+        </a>
+        <a href="#" className="link">
+          РЕГИСТРАЦИЯ
+        </a>
+      </div>
+      <div className="content">
+        <h1 className="title">BANSYS</h1>
+        <p className="subtitle">Bansys - Банкоматы - Терминалы</p>
+      </div>
+      <div className="footer">
+        <button className="shop-button" onClick={handleShopButtonClick}>
+          ЗА ПОКУПКАМИ
+        </button>
+      </div>
     </div>
   );
 }
 
-export default Main;
+function AppRouter() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/app" component={App} />
+        <Route path="/" component={Main} />
+      </Switch>
+    </Router>
+  );
+}
+
+export default AppRouter;
