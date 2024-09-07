@@ -20,7 +20,7 @@ function Main() {
   };
 
   return (
-    <div className="container">
+    <div className="menu-container">
       {showApp ? (
         <App />
       ) : (
