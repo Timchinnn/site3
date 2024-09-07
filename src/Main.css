@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #3d6659;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  text-align: center;
+  color: #e1b95b;
+}
+.header {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.link {
+  margin: 0 10px;
+  color: #e1b95b;
+  text-decoration: none;
+}
+.title {
+  font-size: 48px;
+  margin: 0;
+}
+.subtitle {
+  margin-top: 10px;
+  font-size: 14px;
+}
+.footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.shop-button {
+  background-color: #3d6659;
+  color: #e1b95b;
+  border: 1px solid #e1b95b;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.shop-button:hover {
+  background-color: #e1b95b;
+  color: #3d6659;
+}
