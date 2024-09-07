@@ -26,16 +26,16 @@ function Main() {
       ) : (
         <>
           <div className="header">
-            <a className="link" onClick={handleLoginClick}>
+            {/* <a className="link" onClick={handleLoginClick}>
               ВХОД
             </a>
-            {/* <a href=""></a>
+            <a href=""></a> */}
             <button className="link" onClick={handleLoginClick}>
               ВХОД
             </button>
             <button className="link" onClick={handleRegistrationClick}>
               РЕГИСТРАЦИЯ
-            </button> */}
+            </button>
           </div>
           <div className="content">
             <h1 className="title">BANSYS</h1>

@@ -7,7 +7,19 @@
   align-items: center;
   height: 100%;
 }
+.link {
+  background: none; /* Убираем фон */
+  border: none; /* Убираем рамку */
+  color: blue; /* Цвет текста */
+  text-decoration: underline; /* Подчеркивание текста */
+  cursor: pointer; /* Указатель при наведении */
+  padding: 0; /* Убираем отступы */
+  font: inherit; /* Унаследуем шрифт родителя */
+}
 
+.link:hover {
+  color: darkblue; /* Изменение цвета текста при наведении */
+}
 .container {
   text-align: center;
   color: #e1b95b;
