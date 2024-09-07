@@ -25,30 +25,10 @@ function Main() {
       ) : (
         <div className="container">
           <div className="header">
-            <button
-              className="link"
-              onClick={() => alert("Вход")}
-              style={{
-                background: "none",
-                border: "none",
-                color: "#e1b95b",
-                textDecoration: "underline",
-                cursor: "pointer",
-              }}
-            >
+            <button className="link" onClick={() => alert("Вход")}>
               ВХОД
             </button>
-            <button
-              className="link"
-              onClick={() => alert("Регистрация")}
-              style={{
-                background: "none",
-                border: "none",
-                color: "#e1b95b",
-                textDecoration: "underline",
-                cursor: "pointer",
-              }}
-            >
+            <button className="link" onClick={() => alert("Регистрация")}>
               РЕГИСТРАЦИЯ
             </button>
           </div>
