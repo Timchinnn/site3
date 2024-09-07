@@ -6,6 +6,7 @@ body {
   justify-content: center;
   align-items: center;
   /* height: 100vh; */
+  background: radial-gradient(#24695a, #17453b);
 }
 .container {
   text-align: center;
