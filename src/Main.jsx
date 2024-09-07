@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import App from "./App";
-import "./index.css"; // Убедитесь, что стили подключены
+import "./Main.css"; // Убедитесь, что стили подключены
 
 function Main() {
   const [showApp, setShowApp] = useState(false);
