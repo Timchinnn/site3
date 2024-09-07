@@ -26,10 +26,6 @@ function Main() {
       ) : (
         <>
           <div className="header">
-            {/* <a className="link" onClick={handleLoginClick}>
-              ВХОД
-            </a>
-            <a href=""></a> */}
             <button className="link" onClick={handleLoginClick}>
               ВХОД
             </button>
