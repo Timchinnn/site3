@@ -9,6 +9,16 @@ function Main() {
     setShowApp(true);
   };
 
+  const handleLoginClick = () => {
+    // Логика для обработки входа
+    console.log("Вход");
+  };
+
+  const handleRegistrationClick = () => {
+    // Логика для обработки регистрации
+    console.log("Регистрация");
+  };
+
   return (
     <div className="container">
       {showApp ? (
@@ -16,12 +26,12 @@ function Main() {
       ) : (
         <>
           <div className="header">
-            <a href="#" className="link">
+            <button className="link" onClick={handleLoginClick}>
               ВХОД
-            </a>
-            <a href="#" className="link">
+            </button>
+            <button className="link" onClick={handleRegistrationClick}>
               РЕГИСТРАЦИЯ
-            </a>
+            </button>
           </div>
           <div className="content">
             <h1 className="title">BANSYS</h1>
