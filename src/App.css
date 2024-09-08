@@ -8,9 +8,9 @@
 .App {
   /* text-align: center; */
   font-family: "Roboto", sans-serif;
-  background-color: white;
+  /* background-color: white; */
   min-height: 100vh;
-  background: radial-gradient(#24695a, #17453b);
+  /* background: radial-gradient(#24695a, #17453b); */
 }
 h1 {
   font-size: 18px; /* Установите нужный размер шрифта */
