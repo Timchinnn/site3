@@ -10,7 +10,7 @@ body {
   align-items: center;
   min-height: 100vh;
 }
-.link {
+/* .link {
   background: none;
   border: none;
   color: blue;
@@ -67,4 +67,4 @@ body {
 .shop-button:hover {
   background-color: #e1b95b;
   color: #3d6659;
-}
+} */
