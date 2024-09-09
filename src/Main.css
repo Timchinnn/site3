@@ -1,4 +1,4 @@
-body {
+/* body {
   background: radial-gradient(#24695a, #17453b);
 }
 .menu-container {
@@ -11,22 +11,20 @@ body {
   min-height: 100vh;
 }
 .link {
-  background: none; /* Убираем фон */
-  border: none; /* Убираем рамку */
-  color: blue; /* Цвет текста */
-  text-decoration: underline; /* Подчеркивание текста */
-  cursor: pointer; /* Указатель при наведении */
-  padding: 0; /* Убираем отступы */
-  font: inherit; /* Унаследуем шрифт родителя */
+  background: none; 
+  border: none; 
+  color: blue; 
+  text-decoration: underline; 
+  cursor: pointer; 
+  padding: 0; 
+  font: inherit; 
 }
 
 .link:hover {
-  color: darkblue; /* Изменение цвета текста при наведении */
-}
+  color: darkblue;}
 .container {
   text-align: center;
-  color: #e1b95b;
-}
+  color: #e1b95b;}
 .header {
   position: absolute;
   top: 10px;
@@ -67,4 +65,24 @@ body {
 .shop-button:hover {
   background-color: #e1b95b;
   color: #3d6659;
+} */
+.header {
+  display: flex;
+  justify-content: flex-end; /* Выравнивание кнопок по правому краю */
+  gap: 20px; /* Расстояние между кнопками */
+  padding: 10px 20px; /* Отступы внутри контейнера */
+  background-color: #004d00; /* Цвет фона главного контейнера */
+}
+
+.button {
+  background-color: #8b9a46; /* Цвет фона кнопок */
+  color: #fff; /* Цвет текста кнопок */
+  border: none; /* Убираем рамку */
+  padding: 10px 20px; /* Внутренние отступы кнопок */
+  cursor: pointer;
+  font-size: 16px; /* Размер шрифта текста кнопок */
+}
+
+.button:hover {
+  background-color: #6f7a37; /* Цвет фона кнопки при наведении */
 }
