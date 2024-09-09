@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import App from "./App";
 import "./Main.css"; // Убедитесь, что стили подключены
+import bansys from "./bansys.png";
 
 function Main() {
   const [showApp, setShowApp] = useState(false);
@@ -34,7 +35,8 @@ function Main() {
             </button>
           </div>
           <div className="content">
-            <h1 className="title">BANSYS</h1>
+            {/* <h1 className="title">BANSYS</h1> */}
+            <img src={bansys}></img>
             <p className="subtitle">Bansys - Банкоматы - Терминалы</p>
           </div>
           <div className="footer">
