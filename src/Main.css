@@ -55,11 +55,11 @@ body {
   text-align: center;
   color: #e1b95b;
 }
-.header {
+/* .header {
   position: absolute;
   top: 10px;
   right: 20px;
-}
+} */
 .link {
   margin: 0 10px;
   color: #e1b95b;
