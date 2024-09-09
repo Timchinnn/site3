@@ -1,7 +1,47 @@
 body {
   background: radial-gradient(#24695a, #17453b);
+  .header {
+    display: flex;
+    justify-content: flex-end; /* Выравнивание по правому краю */
+    padding: 10px; /* Отступы для приличия */
+    background-color: #f0f0f0; /* Цвет фона для хедера (по желанию) */
+  }
+  .menu-container {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Заставляет body и html занимать всю высоту окна */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .link {
+    margin-left: 10px; /* Отступы между кнопками */
+  }
+
+  .content {
+    flex: 1; /* Заставляет контент занимать оставшееся пространство */
+    display: flex;
+    justify-content: center; /* Выравнивание по центр по горизонтали */
+    align-items: center; /* Выравнивание по центр по вертикали */
+    flex-direction: column; /* Расположение элементов по вертикали */
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center; /* Выравнивание по центр по горизонтали */
+    padding: 20px; /* Отступы для футера */
+  }
+
+  .shop-button {
+    padding: 10px 20px; /* Внутренние отступы для кнопки */
+    background-color: #007bff; /* Цвет кнопки */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем рамку */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Указатель при наведении */
+  }
 }
-.menu-container {
+/* .menu-container {
   margin: 0;
   font-family: Arial, sans-serif;
 
@@ -9,7 +49,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-}
+} */
 /* .link {
   background: none;
   border: none;
