@@ -43,10 +43,13 @@ body {
 }
 .subtitle {
   font-family: "Asap";
-  margin-top: 10px;
-  font-size: 14px;
+  font-weight: 400;
+  /* margin-top: 10px; */
+  font-size: 11px;
+  line-height: 18px;
+  color: #baa36e;
 }
-.footer {
+#BAA36E .footer {
   position: absolute;
   bottom: 20px;
   width: 100%;
