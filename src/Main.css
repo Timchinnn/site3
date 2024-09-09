@@ -85,12 +85,13 @@ body {
   justify-content: center;
 }
 .shop-button {
-  background-color: #3d6659;
+  background-color: #173b33;
   color: #e1b95b;
   border: 1px solid #e1b95b;
   padding: 10px 20px;
   font-size: 14px;
   cursor: pointer;
+  border-radius: 7px;
 }
 .shop-button:hover {
   background-color: #e1b95b;
