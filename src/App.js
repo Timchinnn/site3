@@ -134,7 +134,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="language-toggle">
+      {/* <div className="language-toggle">
         <button onClick={() => toggleLanguage("ru")}>Ru</button>
         <button onClick={() => toggleLanguage("en")}>En</button>
       </div>
@@ -152,12 +152,12 @@ function App() {
 
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
-      {/* Кнопка профиля */}
+      
       <CategoryButtons
         categories={categories}
         onSelect={handleCategorySelect}
       />
-      {/* <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} /> */}
+      
       <ProductList
         products={filteredProducts}
         addedItems={addedItems}
@@ -187,12 +187,12 @@ function App() {
           onClose={() => setIsProfileModalOpen(false)}
           isRegisterFormOpen={isRegisterFormOpen}
           onRegisterComplete={(data) => {
-            setUserData(data); // Сохраняем нового пользователя
+            setUserData(data); 
             setIsRegisterFormOpen(false);
           }}
-          telegramUserId={tg?.initDataUnsafe?.user?.id} // Передаем user_id
+          telegramUserId={tg?.initDataUnsafe?.user?.id} 
         />
-      )}
+      )} */}
     </div>
   );
 }
