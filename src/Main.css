@@ -4,7 +4,7 @@ body {
 .menu-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; /* Распределяет элементы по высоте контейнера */
   height: 100vh; /* Занять всю высоту экрана */
 }
 
@@ -17,15 +17,16 @@ body {
 .content {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Выравнивание по центру по горизонтали */
-  justify-content: center; /* Выравнивание по центру по вертикали */
-  flex-grow: 1; /* Позволяет содержимому занимать оставшееся место */
+  align-items: center; /* Центрирует содержимое по горизонтали */
+  justify-content: center; /* Центрирует содержимое по вертикали */
+  flex-grow: 1; /* Позволяет содержимому занимать оставшееся пространство */
 }
 
-footer {
+.footer {
   display: flex;
   justify-content: center; /* Центрирование футера */
   padding: 20px; /* Отступы для удобства */
+  margin-bottom: 20px; /* Отступ снизу для создания пространства */
 }
 
 /* .menu-container {
