@@ -64,6 +64,7 @@ body {
   margin: 0 10px;
   color: #e1b95b;
   text-decoration: none;
+  font-size: small;
 }
 .title {
   font-size: 48px;
