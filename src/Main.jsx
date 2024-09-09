@@ -36,7 +36,7 @@ function Main() {
           </div>
           <div className="content">
             {/* <h1 className="title">BANSYS</h1> */}
-            <img src={bansys}></img>
+            <img src={bansys} alt="bans"></img>
             <p className="subtitle">Bansys - Банкоматы - Терминалы</p>
           </div>
           <div className="footer">
