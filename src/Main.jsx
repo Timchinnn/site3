@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import App from "./App";
 import "./Main.css"; // Убедитесь, что стили подключены
 import bansys from "./bansys.png";
+import toBuy from "./tobuy.png";
 
 function Main() {
   const [showApp, setShowApp] = useState(false);
@@ -42,9 +43,15 @@ function Main() {
             </div>
           </div>
           <div className="footer">
-            <button className="shop-button" onClick={handleShopButtonClick}>
+            {/* <button className="shop-button" onClick={handleShopButtonClick}>
               ЗА ПОКУПКАМИ
-            </button>
+            </button> */}
+            <img
+              src={toBuy}
+              alt="toBuy"
+              className="shop-button"
+              onClick={handleShopButtonClick}
+            ></img>
           </div>
         </>
       )}

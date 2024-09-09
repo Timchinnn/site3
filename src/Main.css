@@ -84,7 +84,7 @@ body {
   display: flex;
   justify-content: center;
 }
-.shop-button {
+/* .shop-button {
   background-color: #173b33;
   color: #e1b95b;
   border: 1px solid #e1b95b;
@@ -96,4 +96,4 @@ body {
 .shop-button:hover {
   background-color: #e1b95b;
   color: #3d6659;
-}
+} */
