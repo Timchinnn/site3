@@ -40,11 +40,11 @@ function Main() {
               <img src={bansys} alt="bans"></img>
               <p className="subtitle">Bansys - Банкоматы - Терминалы</p>
             </div>
-            <div className="footer">
-              <button className="shop-button" onClick={handleShopButtonClick}>
-                ЗА ПОКУПКАМИ
-              </button>
-            </div>
+          </div>
+          <div className="footer">
+            <button className="shop-button" onClick={handleShopButtonClick}>
+              ЗА ПОКУПКАМИ
+            </button>
           </div>
         </>
       )}
