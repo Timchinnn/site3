@@ -46,3 +46,9 @@ h1 {
   background: radial-gradient(#f1f1f1, #b7b7b7);
   height: 100%;
 }
+.tg-link-button {
+  display: flex;
+  justify-content: end;
+  width: 132px;
+  height: 54px;
+}
