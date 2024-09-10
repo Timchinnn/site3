@@ -61,7 +61,7 @@ h1 {
   display: flex; /* Добавьте flexbox */
   justify-content: flex-end; /* Выравнивание по правому краю */
   align-items: center; /* Вертикальное выравнивание по центру */
-  padding-right: 20px; /* Можно добавить отступ справа если нужно */
+  /* padding-right: 20px; Можно добавить отступ справа если нужно */
 }
 
 .main {
@@ -71,10 +71,14 @@ h1 {
 
 .tg-link-button {
   width: 132px;
-  height: 54px;
+  height: 24px;
   background-color: #d9d9d9;
   border-radius: 12px;
   display: flex; /* Flexbox для центрирования содержимого */
   justify-content: center; /* Центрирование по горизонтали */
   align-items: center; /* Центрирование по вертикали */
+}
+.tg-button {
+  text-decoration: none;
+  color: #216e5c;
 }
