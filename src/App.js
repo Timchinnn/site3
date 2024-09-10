@@ -5,7 +5,7 @@
 // import ProductList from "./components/ProductList/ProductList";
 // import useCart from "./useCart";
 // import Search from "./components/Search/Search";
-// import "./App.css";
+import "./App.css";
 // import CartModal from "./components/CartModal/CartModal";
 // import { getTotalPrice } from "./utils";
 // import CategoryButtons from "./components/CategoryButtons/CategoryButtons";
