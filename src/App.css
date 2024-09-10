@@ -37,7 +37,7 @@ h1 {
 .profile-container:active {
   outline: none; 
 } */
-.headerName {
+.header-name {
   width: 380px;
   height: 66px;
   background-color: #216e5c;

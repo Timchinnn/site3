@@ -196,7 +196,7 @@ function App() {
   //   </div>
   // );
   return (
-    <div className="headerName">
+    <div className="header-name">
       <img src={tgLink} alt="tglink"></img>
     </div>
   );
