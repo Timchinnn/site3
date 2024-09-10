@@ -13,8 +13,12 @@
 // import profile from "./profile.png";
 // import { useTranslation } from "react-i18next";
 // import "./components/ProfileModal/i18n";
+import tgLink from "./tgLink.png";
 
 function App() {
+  <div className="headerName">
+    <img src={tgLink} alt="tglink"></img>
+  </div>;
   // const { i18n } = useTranslation();
 
   // const toggleLanguage = (lang) => {

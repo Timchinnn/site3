@@ -1,28 +1,28 @@
-.heaeder-top {
-  display: flex; /* Включаем Flexbox для размещения дочерних элементов в строку */
-  justify-content: space-between; /* Распределяем элементы по краям */
-  align-items: center; /* Выравниваем элементы по центру по вертикали */
-  padding: 10px; /* Добавляем отступы для уюта */
+/* .heaeder-top {
+  display: flex; 
+  justify-content: space-between;
+  align-items: center; 
+  padding: 10px;
 }
 
 .App {
-  /* text-align: center; */
+  
   font-family: "Roboto", sans-serif;
-  /* background-color: white; */
+
   min-height: 100vh;
-  /* background: radial-gradient(#24695a, #17453b); */
+  
 }
 h1 {
-  font-size: 18px; /* Установите нужный размер шрифта */
-  font-weight: 400; /* Замените на 400 для уменьшенной жирности (400 - нормальный, 700 - жирный) */
+  font-size: 18px;
+  font-weight: 400;
   text-align: center;
 }
 
 .profile-container {
-  display: inline-block; /* Убедитесь, что контейнер занимает только нужное место */
-  border-radius: 50%; /* Сгладить углы для круглой рамки */
-  border: 1px solid #212224; /* Цвет и ширина рамки */
-  padding: 5px; /* Отступ вокруг изображения */
+  display: inline-block; 
+  border-radius: 50%; 
+  border: 1px solid #212224; 
+  padding: 5px;
   overflow: hidden;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
@@ -35,5 +35,10 @@ h1 {
   border-radius: 50%;
 }
 .profile-container:active {
-  outline: none; /* Убираем стандартный контур при нажатии */
+  outline: none; 
+} */
+.headerName {
+  width: 380px;
+  height: 66px;
+  background-color: #216e5c;
 }
