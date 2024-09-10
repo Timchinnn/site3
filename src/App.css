@@ -58,8 +58,10 @@ h1 {
   width: 100%;
   height: 66px;
   background-color: #216e5c;
-  display: flex; /* Используем flexbox */
-  align-items: center; /* Вертикально центрируем */
+  display: flex; /* Добавьте flexbox */
+  justify-content: flex-end; /* Выравнивание по правому краю */
+  align-items: center; /* Вертикальное выравнивание по центру */
+  padding-right: 20px; /* Можно добавить отступ справа если нужно */
 }
 
 .main {
@@ -72,12 +74,7 @@ h1 {
   height: 54px;
   background-color: #d9d9d9;
   border-radius: 12px;
-  display: flex; /* Используем flexbox для центрирования содержимого */
-  align-items: center; /* Вертикально центрируем содержимое */
-  justify-content: center; /* Горизонтально центрируем содержимое */
-  margin-left: 20px; /* Добавим отступ слева, если нужно */
-}
-
-.tg-link-button img {
-  margin-right: 5px; /* Добавим небольшой отступ между изображением и ссылкой */
+  display: flex; /* Flexbox для центрирования содержимого */
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
 }
