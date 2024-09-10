@@ -37,7 +37,8 @@ h1 {
 .profile-container:active {
   outline: none; 
 } */
-.header-name {
+
+/* .header-name {
   width: 100%;
   height: 66px;
   background-color: #216e5c;
@@ -47,8 +48,36 @@ h1 {
   height: 100%;
 }
 .tg-link-button {
-  display: flex;
-  justify-content: end;
   width: 132px;
   height: 54px;
+  background-color: #D9D9D9;
+  border-radius: 12px;
+} */
+
+.header-name {
+  width: 100%;
+  height: 66px;
+  background-color: #216e5c;
+  display: flex; /* Используем flexbox */
+  align-items: center; /* Вертикально центрируем */
+}
+
+.main {
+  background: radial-gradient(#f1f1f1, #b7b7b7);
+  height: 100%;
+}
+
+.tg-link-button {
+  width: 132px;
+  height: 54px;
+  background-color: #d9d9d9;
+  border-radius: 12px;
+  display: flex; /* Используем flexbox для центрирования содержимого */
+  align-items: center; /* Вертикально центрируем содержимое */
+  justify-content: center; /* Горизонтально центрируем содержимое */
+  margin-left: 20px; /* Добавим отступ слева, если нужно */
+}
+
+.tg-link-button img {
+  margin-right: 5px; /* Добавим небольшой отступ между изображением и ссылкой */
 }
