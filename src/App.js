@@ -13,7 +13,7 @@ import "./App.css";
 // import profile from "./profile.png";
 // import { useTranslation } from "react-i18next";
 // import "./components/ProfileModal/i18n";
-import tgLink from "./tgLink.png";
+import fly from "./fly.png";
 
 function App() {
   // const { i18n } = useTranslation();
@@ -197,9 +197,11 @@ function App() {
   // );
   return (
     <div className="main">
-      {" "}
       <div className="header-name">
-        <img src={tgLink} alt="tglink"></img>
+        <div className="tg-link-button">
+          <img src={fly} alt="tglink"></img>
+          <a href="https://t.me/Bansys_sale">@Bansys_sale</a>
+        </div>
       </div>
     </div>
   );

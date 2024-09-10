@@ -46,6 +46,3 @@ h1 {
   background: radial-gradient(#f1f1f1, #b7b7b7);
   height: 100%;
 }
-.header-name img {
-  transform: scaleX(-1);
-}
