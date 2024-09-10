@@ -70,7 +70,8 @@ h1 {
 }
 
 .tg-link-button {
-  width: 132px;
+  margin-right: 10px;
+  width: 139px;
   height: 24px;
   background-color: #d9d9d9;
   border-radius: 12px;
@@ -81,4 +82,8 @@ h1 {
 .tg-button {
   text-decoration: none;
   color: #216e5c;
+  padding-right: 12px;
+}
+.tglink {
+  padding-right: 5px;
 }

@@ -199,7 +199,7 @@ function App() {
     <div className="main">
       <div className="header-name">
         <div className="tg-link-button">
-          <img src={fly} alt="tglink"></img>
+          <img src={fly} alt="tglink" className="tglink"></img>
           <a href="https://t.me/Bansys_sale" className="tg-button">
             @Bansys_sale
           </a>
