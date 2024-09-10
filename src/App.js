@@ -16,9 +16,6 @@
 import tgLink from "./tgLink.png";
 
 function App() {
-  <div className="headerName">
-    <img src={tgLink} alt="tglink"></img>
-  </div>;
   // const { i18n } = useTranslation();
 
   // const toggleLanguage = (lang) => {
@@ -198,7 +195,11 @@ function App() {
   //     )}
   //   </div>
   // );
-  return <p>ghjj</p>;
+  return (
+    <div className="headerName">
+      <img src={tgLink} alt="tglink"></img>
+    </div>
+  );
 }
 
 export default App;
