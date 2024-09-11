@@ -20,6 +20,9 @@ import why from "./why.png";
 import garant from "./garant.png";
 import myLog from "./myLog.png";
 import sendRequest from "./sendRequest.png";
+import dn from "./dn.png";
+import hyosung from "./hyosung.png";
+import ncr from "./ncr.png";
 
 function App() {
   // const { i18n } = useTranslation();
@@ -221,6 +224,11 @@ function App() {
       <div className="log-help">
         <img src={myLog} alt=""></img>
         <img src={sendRequest} alt=""></img>
+      </div>
+      <div className="company">
+        <img src={hyosung} alt="why"></img>
+        <img src={dn} alt="how"></img>
+        <img src={ncr} alt="garant"></img>
       </div>
     </div>
   );
