@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import axios from "axios";
+import axios from "axios";
 // import ProductModal from "./components/ProductModal/ProductModal";
 // import { useTelegram } from "./hooks/useTelegram";
 // import ProductList from "./components/ProductList/ProductList";
@@ -91,21 +91,21 @@ function App() {
   //   product.name.toLowerCase().includes(searchQuery.toLowerCase())
   // );
 
-  // const handleCategorySelect = (categoryName) => {
-  //   if (selectedCategory === categoryName && isCategorySelected) {
-  //     setSelectedCategory("");
-  //     setProducts(allProducts);
-  //     setIsCategorySelected(false);
-  //   } else {
-  //     setSelectedCategory(categoryName);
-  //     setIsCategorySelected(true);
-  //     const filteredProducts = allProducts.filter(
-  //       (product) => product.category === categoryName
-  //     );
+  const handleCategorySelect = (categoryName) => {
+    if (selectedCategory === categoryName && isCategorySelected) {
+      setSelectedCategory("");
+      setProducts(allProducts);
+      setIsCategorySelected(false);
+    } else {
+      setSelectedCategory(categoryName);
+      setIsCategorySelected(true);
+      const filteredProducts = allProducts.filter(
+        (product) => product.category === categoryName
+      );
 
-  //     setProducts(filteredProducts);
-  //   }
-  // };
+      setProducts(filteredProducts);
+    }
+  };
 
   // const [userData, setUserData] = useState(null);
   // const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
