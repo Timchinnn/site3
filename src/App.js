@@ -4,7 +4,7 @@
 // import { useTelegram } from "./hooks/useTelegram";
 // import ProductList from "./components/ProductList/ProductList";
 // import useCart from "./useCart";
-// import Search from "./components/Search/Search";
+import Search from "./components/Search/Search";
 import "./App.css";
 // import CartModal from "./components/CartModal/CartModal";
 // import { getTotalPrice } from "./utils";
@@ -26,7 +26,7 @@ function App() {
   // const [selectedProduct, setSelectedProduct] = useState(null);
   // const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   // const [isCartModalOpen, setIsCartModalOpen] = useState(false);
-  // const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
   // const { tg } = useTelegram();
   // const { addedItems, onAdd, onRemove } = useCart(tg, () => {
   //   setIsProductModalOpen(false); // Закрываем модальное окно товара
@@ -195,6 +195,7 @@ function App() {
   //     )}
   //   </div>
   // );
+
   return (
     <div className="main">
       <div className="header-name">
@@ -205,6 +206,7 @@ function App() {
           </a>
         </div>
       </div>
+      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
     </div>
   );
 }
