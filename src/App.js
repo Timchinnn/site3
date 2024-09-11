@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 // import React, { useEffect, useState } from "react";
-// import axios from "axios";
+import axios from "axios";
 // import ProductModal from "./components/ProductModal/ProductModal";
 // import { useTelegram } from "./hooks/useTelegram";
 // import ProductList from "./components/ProductList/ProductList";
@@ -35,7 +35,7 @@ function App() {
   // const [selectedProduct, setSelectedProduct] = useState(null);
   // const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   // const [isCartModalOpen, setIsCartModalOpen] = useState(false);
-  // const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
   // const { tg } = useTelegram();
   // const { addedItems, onAdd, onRemove } = useCart(tg, () => {
   //   setIsProductModalOpen(false); // Закрываем модальное окно товара
