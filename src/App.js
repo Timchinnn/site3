@@ -30,7 +30,7 @@ function App() {
   // const toggleLanguage = (lang) => {
   //   i18n.changeLanguage(lang);
   // };
-  // const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   // const [selectedProduct, setSelectedProduct] = useState(null);
   // const [isProductModalOpen, setIsProductModalOpen] = useState(false);
@@ -68,8 +68,20 @@ function App() {
         console.error("Ошибка при получении категорий:", error);
       });
   };
+  const fetchProducts = () => {
+    axios
+      .get("/api/products")
+      .then((response) => {
+        setProducts(response.data);
+      })
+      .catch((error) => {
+        console.error("Ошибка при получении товаров:", error);
+      });
+  };
+
   useEffect(() => {
     fetchCategories();
+    fetchProducts();
   }, []);
   // useEffect(() => {
   //   fetchProducts();
@@ -234,7 +246,7 @@ function App() {
       </div>
       <h1>Каталог</h1>
 
-      {categories.length > 0 ? (
+      {/* {categories.length > 0 ? (
         <div className="category">
           {categories.map((category) => (
             <p className="category-text" key={category.id}>
@@ -244,7 +256,31 @@ function App() {
         </div>
       ) : (
         <p>Загрузка категорий...</p>
-      )}
+      )} */}
+      <div className="category">
+        {categories.length > 0 ? (
+          categories.map((category) => (
+            <div key={category.id}>
+              <h2>{category.name}</h2>
+              <div className="products">
+                {products
+                  .filter((product) => product.category === category.name)
+                  .map((product) => (
+                    <div key={product.id} className="product-item">
+                      <img src={product.photo_url} alt={product.name} />
+                      <p className="product-name">{product.name}</p>
+                      <p className="product-description">
+                        {product.description}
+                      </p>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          ))
+        ) : (
+          <p>Загрузка категорий...</p>
+        )}
+      </div>
     </div>
   );
 }
