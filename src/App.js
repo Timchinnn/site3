@@ -235,11 +235,11 @@ function App() {
       <h1>Каталог</h1>
       <div>
         {categories.length > 0 ? (
-          <ul>
+          
             {categories.map((category) => (
-              <li key={category.id}>{category.name}</li>
+              <p key={category.id}>{category.name}</p>
             ))}
-          </ul>
+          
         ) : (
           <p>Загрузка категорий...</p>
         )}
