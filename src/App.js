@@ -233,19 +233,18 @@ function App() {
         <img src={ncr} alt="ncr"></img>
       </div>
       <h1>Каталог</h1>
-      <div>
-        {categories.length > 0 ? (
-          <div className="category">
-            {categories.map((category) => (
-              <p className="category-text" key={category.id}>
-                {category.name}
-              </p>
-            ))}
-          </div>
-        ) : (
-          <p>Загрузка категорий...</p>
-        )}
-      </div>
+
+      {categories.length > 0 ? (
+        <div className="category">
+          {categories.map((category) => (
+            <p className="category-text" key={category.id}>
+              {category.name}
+            </p>
+          ))}
+        </div>
+      ) : (
+        <p>Загрузка категорий...</p>
+      )}
     </div>
   );
 }
