@@ -1,4 +1,4 @@
-// import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useState } from "react";
 // import axios from "axios";
 // import ProductModal from "./components/ProductModal/ProductModal";
@@ -9,7 +9,7 @@ import Search from "./components/Search/Search";
 import "./App.css";
 // import CartModal from "./components/CartModal/CartModal";
 // import { getTotalPrice } from "./utils";
-// import CategoryButtons from "./components/CategoryButtons/CategoryButtons";
+import CategoryButtons from "./components/CategoryButtons/CategoryButtons";
 // import ProfileModal from "./components/ProfileModal/ProfileModal";
 // import profile from "./profile.png";
 // import { useTranslation } from "react-i18next";
@@ -31,7 +31,7 @@ function App() {
   //   i18n.changeLanguage(lang);
   // };
   // const [products, setProducts] = useState([]);
-  // const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState([]);
   // const [selectedProduct, setSelectedProduct] = useState(null);
   // const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   // const [isCartModalOpen, setIsCartModalOpen] = useState(false);
@@ -58,21 +58,21 @@ function App() {
   // };
   // tg.expand();
 
-  // const fetchCategories = () => {
-  //   axios
-  //     .get("/api/categories")
-  //     .then((response) => {
-  //       setCategories(response.data);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Ошибка при получении категорий:", error);
-  //     });
-  // };
+  const fetchCategories = () => {
+    axios
+      .get("/api/categories")
+      .then((response) => {
+        setCategories(response.data);
+      })
+      .catch((error) => {
+        console.error("Ошибка при получении категорий:", error);
+      });
+  };
 
-  // useEffect(() => {
-  //   fetchProducts();
-  //   fetchCategories();
-  // }, []);
+  useEffect(() => {
+    fetchProducts();
+    fetchCategories();
+  }, []);
 
   // const openProductModal = (product) => {
   //   setSelectedProduct(product);
@@ -162,10 +162,10 @@ function App() {
 
   //     <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
-  //     <CategoryButtons
-  //       categories={categories}
-  //       onSelect={handleCategorySelect}
-  //     />
+  // <CategoryButtons
+  //   categories={categories}
+  //   onSelect={handleCategorySelect}
+  // />
 
   //     <ProductList
   //       products={filteredProducts}
@@ -231,6 +231,10 @@ function App() {
         <img src={ncr} alt="ncr"></img>
       </div>
       <h1>Каталог</h1>
+      <CategoryButtons
+        categories={categories}
+        onSelect={handleCategorySelect}
+      />
     </div>
   );
 }
