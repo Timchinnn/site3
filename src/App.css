@@ -87,3 +87,13 @@ h1 {
 .tglink {
   padding-right: 5px;
 }
+.info-buttons {
+  display: flex; /* Flexbox для центрирования содержимого */
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
+}
+.log-help {
+  display: flex; /* Flexbox для центрирования содержимого */
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
+}
