@@ -1,7 +1,8 @@
 .search-box {
   position: relative;
-  width: 300px;
+  width: 100%;
   margin: auto;
+  background-color: #292929;
 }
 
 .search-box input {
@@ -17,7 +18,8 @@
 }
 
 .search-box input::placeholder {
-  color: #6e7faa;
+  color: #ffffff;
+  font-weight: 400;
 }
 
 .search-box input:focus {
