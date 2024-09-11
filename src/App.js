@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import { useState, useEffect } from "react";
+// import React, { useEffect, useState } from "react";
+// import axios from "axios";
 // import ProductModal from "./components/ProductModal/ProductModal";
 // import { useTelegram } from "./hooks/useTelegram";
 // import ProductList from "./components/ProductList/ProductList";
@@ -29,12 +30,12 @@ function App() {
   // const toggleLanguage = (lang) => {
   //   i18n.changeLanguage(lang);
   // };
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   // const [selectedProduct, setSelectedProduct] = useState(null);
   // const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   // const [isCartModalOpen, setIsCartModalOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
+  // const [searchQuery, setSearchQuery] = useState("");
   // const { tg } = useTelegram();
   // const { addedItems, onAdd, onRemove } = useCart(tg, () => {
   //   setIsProductModalOpen(false); // Закрываем модальное окно товара
@@ -42,19 +43,19 @@ function App() {
   //   setIsCartModalOpen(true);
   // });
   // const [selectedCategory, setSelectedCategory] = useState("");
-  const [allProducts, setAllProducts] = useState([]);
+  // const [allProducts, setAllProducts] = useState([]);
   // const [isCategorySelected, setIsCategorySelected] = useState(false);
-  const fetchProducts = () => {
-    axios
-      .get("/api/products")
-      .then((response) => {
-        setProducts(response.data);
-        setAllProducts(response.data);
-      })
-      .catch((error) => {
-        console.error("Ошибка при получении товаров:", error);
-      });
-  };
+  // const fetchProducts = () => {
+  //   axios
+  //     .get("/api/products")
+  //     .then((response) => {
+  //       setProducts(response.data);
+  //       setAllProducts(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Ошибка при получении товаров:", error);
+  //     });
+  // };
   // tg.expand();
 
   const fetchCategories = () => {
@@ -67,11 +68,13 @@ function App() {
         console.error("Ошибка при получении категорий:", error);
       });
   };
-
   useEffect(() => {
-    fetchProducts();
     fetchCategories();
   }, []);
+  // useEffect(() => {
+  //   fetchProducts();
+  //   fetchCategories();
+  // }, []);
 
   // const openProductModal = (product) => {
   //   setSelectedProduct(product);
@@ -91,21 +94,21 @@ function App() {
   //   product.name.toLowerCase().includes(searchQuery.toLowerCase())
   // );
 
-  const handleCategorySelect = (categoryName) => {
-    if (selectedCategory === categoryName && isCategorySelected) {
-      setSelectedCategory("");
-      setProducts(allProducts);
-      setIsCategorySelected(false);
-    } else {
-      setSelectedCategory(categoryName);
-      setIsCategorySelected(true);
-      const filteredProducts = allProducts.filter(
-        (product) => product.category === categoryName
-      );
+  // const handleCategorySelect = (categoryName) => {
+  //   if (selectedCategory === categoryName && isCategorySelected) {
+  //     setSelectedCategory("");
+  //     setProducts(allProducts);
+  //     setIsCategorySelected(false);
+  //   } else {
+  //     setSelectedCategory(categoryName);
+  //     setIsCategorySelected(true);
+  //     const filteredProducts = allProducts.filter(
+  //       (product) => product.category === categoryName
+  //     );
 
-      setProducts(filteredProducts);
-    }
-  };
+  //     setProducts(filteredProducts);
+  //   }
+  // };
 
   // const [userData, setUserData] = useState(null);
   // const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
@@ -230,10 +233,17 @@ function App() {
         <img src={ncr} alt="ncr"></img>
       </div>
       <h1>Каталог</h1>
-      <CategoryButtons
-        categories={categories}
-        onSelect={handleCategorySelect}
-      />
+      <div>
+        {categories.length > 0 ? (
+          <ul>
+            {categories.map((category) => (
+              <li key={category.id}>{category.name}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>Загрузка категорий...</p>
+        )}
+      </div>
     </div>
   );
 }
