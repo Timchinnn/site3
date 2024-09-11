@@ -222,14 +222,15 @@ function App() {
         <img src={garant} alt="garant"></img>
       </div>
       <div className="log-help">
-        <img src={myLog} alt=""></img>
+        <img src={myLog} className="my-log" alt=""></img>
         <img src={sendRequest} alt=""></img>
       </div>
       <div className="company">
-        <img src={hyosung} alt="why"></img>
-        <img src={dn} alt="how"></img>
-        <img src={ncr} alt="garant"></img>
+        <img src={hyosung} alt="hyosung"></img>
+        <img src={dn} alt="dn"></img>
+        <img src={ncr} alt="ncr"></img>
       </div>
+      <h1>Каталог</h1>
     </div>
   );
 }
