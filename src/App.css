@@ -124,3 +124,8 @@ h1 {
 }
 .category {
 }
+.product-item {
+  width: 152px;
+  height: 207px;
+  border-radius: 8px;
+}
