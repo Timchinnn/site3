@@ -29,7 +29,7 @@ function App() {
   // const toggleLanguage = (lang) => {
   //   i18n.changeLanguage(lang);
   // };
-  // const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   // const [selectedProduct, setSelectedProduct] = useState(null);
   // const [isProductModalOpen, setIsProductModalOpen] = useState(false);
@@ -42,19 +42,19 @@ function App() {
   //   setIsCartModalOpen(true);
   // });
   // const [selectedCategory, setSelectedCategory] = useState("");
-  // const [allProducts, setAllProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState([]);
   // const [isCategorySelected, setIsCategorySelected] = useState(false);
-  // const fetchProducts = () => {
-  //   axios
-  //     .get("/api/products")
-  //     .then((response) => {
-  //       setProducts(response.data);
-  //       setAllProducts(response.data);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Ошибка при получении товаров:", error);
-  //     });
-  // };
+  const fetchProducts = () => {
+    axios
+      .get("/api/products")
+      .then((response) => {
+        setProducts(response.data);
+        setAllProducts(response.data);
+      })
+      .catch((error) => {
+        console.error("Ошибка при получении товаров:", error);
+      });
+  };
   // tg.expand();
 
   const fetchCategories = () => {
