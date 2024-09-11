@@ -235,9 +235,11 @@ function App() {
       <h1>Каталог</h1>
       <div>
         {categories.length > 0 ? (
-          <div>
+          <div className="category">
             {categories.map((category) => (
-              <p key={category.id}>{category.name}</p>
+              <p className="category-text" key={category.id}>
+                {category.name}
+              </p>
             ))}
           </div>
         ) : (
