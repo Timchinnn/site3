@@ -269,9 +269,9 @@ function App() {
                     <div key={product.id} className="product-item">
                       <img src={product.photo_url} alt={product.name} />
                       <p className="product-name">{product.name}</p>
-                      <p className="product-description">
+                      {/* <p className="product-description">
                         {product.description}
-                      </p>
+                      </p> */}
                     </div>
                   ))}
               </div>

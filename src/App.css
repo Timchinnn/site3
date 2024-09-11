@@ -129,3 +129,9 @@ h1 {
   height: 207px;
   border-radius: 8px;
 }
+
+.product-name {
+  width: 129px;
+  /* height: 56px; */
+  font-size: 7px;
+}
