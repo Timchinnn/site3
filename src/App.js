@@ -261,7 +261,7 @@ function App() {
         {categories.length > 0 ? (
           categories.map((category) => (
             <div key={category.id}>
-              <h2>{category.name}</h2>
+              <p className="category-text">{category.name}</p>
               <div className="products">
                 {products
                   .filter((product) => product.category === category.name)
