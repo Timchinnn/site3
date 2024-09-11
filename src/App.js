@@ -15,6 +15,9 @@ import "./App.css";
 // import { useTranslation } from "react-i18next";
 // import "./components/ProfileModal/i18n";
 import fly from "./fly.png";
+import how from "./howdy.png";
+import why from "./why.png";
+import garant from "./garant.png";
 
 function App() {
   // const { i18n } = useTranslation();
@@ -208,6 +211,11 @@ function App() {
         </div>
       </div>
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <div className="info-buttons">
+        <img src={why} alt="why"></img>
+        <img src={how} alt="how"></img>
+        <img src={garant} alt="garant"></img>
+      </div>
     </div>
   );
 }
