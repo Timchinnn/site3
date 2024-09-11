@@ -9,7 +9,7 @@ import Search from "./components/Search/Search";
 import "./App.css";
 // import CartModal from "./components/CartModal/CartModal";
 // import { getTotalPrice } from "./utils";
-import CategoryButtons from "./components/CategoryButtons/CategoryButtons";
+// import CategoryButtons from "./components/CategoryButtons/CategoryButtons";
 // import ProfileModal from "./components/ProfileModal/ProfileModal";
 // import profile from "./profile.png";
 // import { useTranslation } from "react-i18next";
