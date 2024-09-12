@@ -140,3 +140,8 @@ h1 {
   width: 128px;
   border-radius: 20px;
 }
+.products {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
