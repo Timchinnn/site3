@@ -267,7 +267,11 @@ function App() {
                   .filter((product) => product.category === category.name)
                   .map((product) => (
                     <div key={product.id} className="product-item">
-                      <img src={product.photo_url} alt={product.name} />
+                      <img
+                        src={product.photo_url}
+                        alt={product.name}
+                        className="img-product"
+                      />
                       <p className="product-name">{product.name}</p>
                       {/* <p className="product-description">
                         {product.description}

@@ -135,3 +135,7 @@ h1 {
   /* height: 56px; */
   font-size: 7px;
 }
+.img-product {
+  width: 128px;
+  border-radius: 20px;
+}
