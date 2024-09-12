@@ -129,6 +129,12 @@ h1 {
   width: 152px;
   height: 207px;
   border-radius: 8px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15px;
+  margin-bottom: 15px;
 }
 
 .product-name {
@@ -139,6 +145,7 @@ h1 {
 .img-product {
   width: 128px;
   border-radius: 20px;
+  margin-top: 7px;
 }
 .products {
   align-items: center;
