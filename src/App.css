@@ -153,3 +153,15 @@ h1 {
   justify-content: center;
   flex-wrap: wrap;
 }
+.ordertext-cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ordertext-cart p {
+  margin-right: auto; /* Убедитесь, что текст не имеет автоматического отступа справа */
+}
+
+.img-cart {
+  margin-left: auto; /* Это также поможет, если у вас есть отступы */
+}
