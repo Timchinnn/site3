@@ -23,6 +23,7 @@ import sendRequest from "./sendRequest.png";
 import dn from "./dn.png";
 import hyosung from "./hyosung.png";
 import ncr from "./ncr.png";
+import cart from "./cart.png";
 
 function App() {
   // const { i18n } = useTranslation();
@@ -273,6 +274,10 @@ function App() {
                         className="img-product"
                       />
                       <p className="product-name">{product.name}</p>
+                      <div className="ordertext-cart">
+                        <p>Под заказ</p>
+                        <img src={cart} alt={cart} className="img-cart" />
+                      </div>
                       {/* <p className="product-description">
                         {product.description}
                       </p> */}
