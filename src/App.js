@@ -252,10 +252,14 @@ function App() {
             <div key={category.id}>
               <p className="category-text">{category.name}</p>
               <div className="products">
-                {products
+                {filteredProducts
                   .filter((product) => product.category === category.name)
                   .map((product) => (
-                    <div key={product.id} className="product-item">
+                    <div
+                      key={product.id}
+                      className="product-item"
+                      onClick={() => openProductModal(product)}
+                    >
                       <img
                         src={product.photo_url}
                         alt={product.name}
