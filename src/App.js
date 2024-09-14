@@ -37,6 +37,8 @@ function App() {
   // const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   // const [isCartModalOpen, setIsCartModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [loading, setLoading] = useState(true);
+
   // const { tg } = useTelegram();
   // const { addedItems, onAdd, onRemove } = useCart(tg, () => {
   //   setIsProductModalOpen(false); // Закрываем модальное окно товара
@@ -59,31 +61,42 @@ function App() {
   // };
   // tg.expand();
 
-  const fetchCategories = () => {
+  const fetchCategories = useCallback(() => {
     axios
       .get("/api/categories")
       .then((response) => {
         setCategories(response.data);
+        if (products.length > 0) {
+          setLoading(false);
+        }
       })
       .catch((error) => {
         console.error("Ошибка при получении категорий:", error);
+        setLoading(false);
       });
-  };
-  const fetchProducts = () => {
+  }, [products]); // Добавьте необходимые зависимости
+
+  const fetchProducts = useCallback(() => {
     axios
       .get("/api/products")
       .then((response) => {
         setProducts(response.data);
+        if (categories.length > 0) {
+          setLoading(false);
+        }
       })
       .catch((error) => {
         console.error("Ошибка при получении товаров:", error);
+        setLoading(false);
       });
-  };
+  }, [categories]); // Добавьте необходимые зависимости
 
   useEffect(() => {
+    setLoading(true);
     fetchCategories();
     fetchProducts();
-  }, []);
+  }, [fetchCategories, fetchProducts]); // Добавьте функции в зависимости
+
   // useEffect(() => {
   //   fetchProducts();
   //   fetchCategories();
@@ -222,59 +235,65 @@ function App() {
 
   return (
     <div className="main">
-      <div className="header-name">
-        <div className="tg-link-button">
-          <img src={fly} alt="tglink" className="tglink"></img>
-          <a href="https://t.me/Bansys_sale" className="tg-button">
-            @Bansys_sale
-          </a>
-        </div>
-      </div>
-      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-      <div className="info-buttons">
-        <img src={why} alt="why"></img>
-        <img src={how} alt="how"></img>
-        <img src={garant} alt="garant"></img>
-      </div>
-      <div className="log-help">
-        <img src={myLog} className="my-log" alt=""></img>
-        <img src={sendRequest} alt=""></img>
-      </div>
-      <div className="company">
-        <img src={hyosung} alt="hyosung"></img>
-        <img src={dn} alt="dn"></img>
-        <img src={ncr} alt="ncr"></img>
-      </div>
-      <h1>Каталог</h1>
-      <div className="category">
-        {categories.length > 0 ? (
-          categories.map((category) => (
-            <div key={category.id}>
-              <p className="category-text">{category.name}</p>
-              <div className="products">
-                {products
-                  .filter((product) => product.category === category.name)
-                  .map((product) => (
-                    <div key={product.id} className="product-item">
-                      <img
-                        src={product.photo_url}
-                        alt={product.name}
-                        className="img-product"
-                      />
-                      <p className="product-name">{product.name}</p>
-                      <div className="ordertext-cart">
-                        <p>Под заказ</p>
-                        <img src={cart} alt={cart} className="img-cart" />
-                      </div>
-                    </div>
-                  ))}
-              </div>
+      {loading ? (
+        <p>Загрузка...</p>
+      ) : (
+        <>
+          <div className="header-name">
+            <div className="tg-link-button">
+              <img src={fly} alt="tglink" className="tglink"></img>
+              <a href="https://t.me/Bansys_sale" className="tg-button">
+                @Bansys_sale
+              </a>
             </div>
-          ))
-        ) : (
-          <p>Загрузка категорий...</p>
-        )}
-      </div>
+          </div>
+          <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+          <div className="info-buttons">
+            <img src={why} alt="why"></img>
+            <img src={how} alt="how"></img>
+            <img src={garant} alt="garant"></img>
+          </div>
+          <div className="log-help">
+            <img src={myLog} className="my-log" alt=""></img>
+            <img src={sendRequest} alt=""></img>
+          </div>
+          <div className="company">
+            <img src={hyosung} alt="hyosung"></img>
+            <img src={dn} alt="dn"></img>
+            <img src={ncr} alt="ncr"></img>
+          </div>
+          <h1>Каталог</h1>
+          <div className="category">
+            {categories.length > 0 ? (
+              categories.map((category) => (
+                <div key={category.id}>
+                  <p className="category-text">{category.name}</p>
+                  <div className="products">
+                    {products
+                      .filter((product) => product.category === category.name)
+                      .map((product) => (
+                        <div key={product.id} className="product-item">
+                          <img
+                            src={product.photo_url}
+                            alt={product.name}
+                            className="img-product"
+                          />
+                          <p className="product-name">{product.name}</p>
+                          <div className="ordertext-cart">
+                            <p>Под заказ</p>
+                            <img src={cart} alt={cart} className="img-cart" />
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              ))
+            ) : (
+              <p>Загрузка категорий...</p>
+            )}
+          </div>
+        </>
+      )}
     </div>
   );
 }
