@@ -94,7 +94,7 @@ function App() {
     setLoading(true); // Устанавливаем флаг загрузки перед началом загрузки данных
     fetchCategories();
     fetchProducts();
-  }, []);
+  }, [fetchCategories, fetchProducts]);
 
   // useEffect(() => {
   //   fetchProducts();
