@@ -37,6 +37,7 @@ function App() {
   // const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   // const [isCartModalOpen, setIsCartModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
   // const { tg } = useTelegram();
   // const { addedItems, onAdd, onRemove } = useCart(tg, () => {
   //   setIsProductModalOpen(false); // Закрываем модальное окно товара
@@ -81,9 +82,23 @@ function App() {
   };
 
   useEffect(() => {
-    fetchCategories();
-    fetchProducts();
+    // Используем Promise.all для параллельной загрузки данных
+    Promise.all([fetchCategories(), fetchProducts()])
+      .then(([categoriesResponse, productsResponse]) => {
+        setCategories(categoriesResponse.data);
+        setProducts(productsResponse.data);
+      })
+      .catch((error) => {
+        console.error("Ошибка при получении данных:", error);
+      })
+      .finally(() => {
+        setIsLoading(false); // Устанавливаем состояние загрузки в false
+      });
   }, []);
+
+  if (isLoading) {
+    return <div>Загрузка...</div>; // Индикатор загрузки
+  }
   // useEffect(() => {
   //   fetchProducts();
   //   fetchCategories();
@@ -222,42 +237,8 @@ function App() {
 
   return (
     <div className="main">
-      <div className="header-name">
-        <div className="tg-link-button">
-          <img src={fly} alt="tglink" className="tglink"></img>
-          <a href="https://t.me/Bansys_sale" className="tg-button">
-            @Bansys_sale
-          </a>
-        </div>
-      </div>
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-      <div className="info-buttons">
-        <img src={why} alt="why"></img>
-        <img src={how} alt="how"></img>
-        <img src={garant} alt="garant"></img>
-      </div>
-      <div className="log-help">
-        <img src={myLog} className="my-log" alt=""></img>
-        <img src={sendRequest} alt=""></img>
-      </div>
-      <div className="company">
-        <img src={hyosung} alt="hyosung"></img>
-        <img src={dn} alt="dn"></img>
-        <img src={ncr} alt="ncr"></img>
-      </div>
       <h1>Каталог</h1>
-
-      {/* {categories.length > 0 ? (
-        <div className="category">
-          {categories.map((category) => (
-            <p className="category-text" key={category.id}>
-              {category.name}
-            </p>
-          ))}
-        </div>
-      ) : (
-        <p>Загрузка категорий...</p>
-      )} */}
       <div className="category">
         {categories.length > 0 ? (
           categories.map((category) => (
@@ -278,16 +259,13 @@ function App() {
                         <p>Под заказ</p>
                         <img src={cart} alt={cart} className="img-cart" />
                       </div>
-                      {/* <p className="product-description">
-                        {product.description}
-                      </p> */}
                     </div>
                   ))}
               </div>
             </div>
           ))
         ) : (
-          <p>Загрузка категорий...</p>
+          <p>Нет доступных категорий.</p>
         )}
       </div>
     </div>
