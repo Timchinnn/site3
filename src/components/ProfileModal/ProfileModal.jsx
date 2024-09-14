@@ -1,15 +1,18 @@
 import React from "react";
 import "./ProfileModal.css";
+import buy from ".../buy.png";
 
 const ProfileModal = ({ onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <h2>Личный кабинет</h2>
-        <p>Здесь вы можете управлять своим профилем.</p>
-        {/* Добавьте здесь дополнительные элементы, такие как форма или информация о пользователе */}
-        <button onClick={onClose}>Закрыть</button>{" "}
-        {/* Кнопка для закрытия модального окна */}
+        <img src={buy} alt="buy"></img>
+        <div className="buttonsMainProfile">
+          <img src={buy} alt="buy"></img>
+          <img src={buy} alt="buy"></img>
+          <button></button>t<button></button>t
+        </div>
+        <button></button>
       </div>
     </div>
   );
