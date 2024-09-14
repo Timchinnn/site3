@@ -31,8 +31,8 @@ function App() {
   // const toggleLanguage = (lang) => {
   //   i18n.changeLanguage(lang);
   // };
-  const [products, setProducts] = useState([]);
-  const [categories, setCategories] = useState([]);
+  // const [products, setProducts] = useState([]);
+  // const [categories, setCategories] = useState([]);
   // const [selectedProduct, setSelectedProduct] = useState(null);
   // const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   // const [isCartModalOpen, setIsCartModalOpen] = useState(false);
