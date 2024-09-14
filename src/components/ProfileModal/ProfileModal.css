@@ -17,4 +17,7 @@
   border-radius: 8px;
   width: 100%;
   text-align: center;
+  background: radial-gradient(#cdcdcd, #8a8a8a);
+  /* height: 100%; */
+  overflow-x: hidden;
 }
