@@ -237,7 +237,29 @@ function App() {
 
   return (
     <div className="main">
+      <div className="header-name">
+        <div className="tg-link-button">
+          <img src={fly} alt="tglink" className="tglink"></img>
+          <a href="https://t.me/Bansys_sale" className="tg-button">
+            @Bansys_sale
+          </a>
+        </div>
+      </div>
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <div className="info-buttons">
+        <img src={why} alt="why"></img>
+        <img src={how} alt="how"></img>
+        <img src={garant} alt="garant"></img>
+      </div>
+      <div className="log-help">
+        <img src={myLog} className="my-log" alt=""></img>
+        <img src={sendRequest} alt=""></img>
+      </div>
+      <div className="company">
+        <img src={hyosung} alt="hyosung"></img>
+        <img src={dn} alt="dn"></img>
+        <img src={ncr} alt="ncr"></img>
+      </div>
       <h1>Каталог</h1>
       <div className="category">
         {categories.length > 0 ? (
@@ -265,7 +287,7 @@ function App() {
             </div>
           ))
         ) : (
-          <p>Нет доступных категорий.</p>
+          <p>Загрузка категорий...</p>
         )}
       </div>
     </div>
