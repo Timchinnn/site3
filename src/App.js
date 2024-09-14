@@ -232,9 +232,9 @@ function App() {
       </div>
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <div className="info-buttons">
-        <img src={why} alt="why"></img>
-        <img src={how} alt="how"></img>
-        <img src={garant} alt="garant"></img>
+        <img src={why} alt="why" loading="eager"></img>
+        <img src={how} alt="how" loading="eager"></img>
+        <img src={garant} alt="garant" loading="eager"></img>
       </div>
       <div className="log-help">
         <img src={myLog} className="my-log" alt=""></img>
