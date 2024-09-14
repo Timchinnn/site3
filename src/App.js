@@ -237,8 +237,8 @@ function App() {
         <img src={garant} alt="garant" loading="eager"></img>
       </div>
       <div className="log-help">
-        <img src={myLog} className="my-log" alt=""></img>
-        <img src={sendRequest} alt=""></img>
+        <img src={myLog} className="my-log" alt="" loading="eager"></img>
+        <img src={sendRequest} alt="" loading="eager"></img>
       </div>
       <div className="company">
         <img src={hyosung} alt="hyosung"></img>
