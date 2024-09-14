@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 // import React, { useEffect, useState } from "react";
-// import axios from "axios";
+import axios from "axios";
 // import ProductModal from "./components/ProductModal/ProductModal";
 // import { useTelegram } from "./hooks/useTelegram";
 // import ProductList from "./components/ProductList/ProductList";
@@ -23,7 +23,7 @@ import sendRequest from "./sendRequest.png";
 import dn from "./dn.png";
 import hyosung from "./hyosung.png";
 import ncr from "./ncr.png";
-// import cart from "./cart.png";
+import cart from "./cart.png";
 
 function App() {
   // const { i18n } = useTranslation();
@@ -31,8 +31,8 @@ function App() {
   // const toggleLanguage = (lang) => {
   //   i18n.changeLanguage(lang);
   // };
-  // const [products, setProducts] = useState([]);
-  // const [categories, setCategories] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [categories, setCategories] = useState([]);
   // const [selectedProduct, setSelectedProduct] = useState(null);
   // const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   // const [isCartModalOpen, setIsCartModalOpen] = useState(false);
@@ -59,31 +59,31 @@ function App() {
   // };
   // tg.expand();
 
-  // const fetchCategories = () => {
-  //   axios
-  //     .get("/api/categories")
-  //     .then((response) => {
-  //       setCategories(response.data);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Ошибка при получении категорий:", error);
-  //     });
-  // };
-  // const fetchProducts = () => {
-  //   axios
-  //     .get("/api/products")
-  //     .then((response) => {
-  //       setProducts(response.data);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Ошибка при получении товаров:", error);
-  //     });
-  // };
+  const fetchCategories = () => {
+    axios
+      .get("/api/categories")
+      .then((response) => {
+        setCategories(response.data);
+      })
+      .catch((error) => {
+        console.error("Ошибка при получении категорий:", error);
+      });
+  };
+  const fetchProducts = () => {
+    axios
+      .get("/api/products")
+      .then((response) => {
+        setProducts(response.data);
+      })
+      .catch((error) => {
+        console.error("Ошибка при получении товаров:", error);
+      });
+  };
 
-  // useEffect(() => {
-  //   fetchCategories();
-  //   fetchProducts();
-  // }, []);
+  useEffect(() => {
+    fetchCategories();
+    fetchProducts();
+  }, []);
   // useEffect(() => {
   //   fetchProducts();
   //   fetchCategories();
@@ -246,7 +246,7 @@ function App() {
         <img src={ncr} alt="ncr"></img>
       </div>
       <h1>Каталог</h1>
-      {/* <div className="category">
+      <div className="category">
         {categories.length > 0 ? (
           categories.map((category) => (
             <div key={category.id}>
@@ -274,7 +274,7 @@ function App() {
         ) : (
           <p>Загрузка категорий...</p>
         )}
-      </div> */}
+      </div>
     </div>
   );
 }
