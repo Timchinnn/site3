@@ -38,6 +38,7 @@ function App() {
   const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   // const [isCartModalOpen, setIsCartModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [isSendRequestModalOpen, setIsSendRequestModalOpen] = useState(false);
   // const { tg } = useTelegram();
   // const { addedItems, onAdd, onRemove } = useCart(tg, () => {
   //   setIsProductModalOpen(false); // Закрываем модальное окно товара
@@ -113,6 +114,13 @@ function App() {
 
   const closeProfileModal = () => {
     setIsProfileModalOpen(false); // Закрываем модальное окно профиля
+  };
+  const openSendRequestModal = () => {
+    setIsSendRequestModalOpen(true); // Открываем модальное окно отправки запроса
+  };
+
+  const closeSendRequestModal = () => {
+    setIsSendRequestModalOpen(false); // Закрываем модальное окно отправки запроса
   };
 
   // const handleCategorySelect = (categoryName) => {
@@ -252,7 +260,12 @@ function App() {
           loading="eager"
           onClick={openProfileModal}
         ></img>
-        <img src={sendRequest} alt="" loading="eager"></img>
+        <img
+          src={sendRequest}
+          alt=""
+          loading="eager"
+          onClick={openSendRequestModal}
+        ></img>
       </div>
       <div className="company">
         <img src={hyosung} alt="hyosung"></img>
@@ -297,6 +310,9 @@ function App() {
         <ProductModal product={selectedProduct} onClose={closeProductModal} />
       )}
       {isProfileModalOpen && <ProfileModal onClose={closeProfileModal} />}
+      {isSendRequestModalOpen && (
+        <SendRequestModal onClose={closeSendRequestModal} /> // Отображаем модальное окно отправки запроса
+      )}
     </div>
   );
 }
