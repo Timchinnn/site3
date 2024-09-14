@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ProfileModal.css";
 
 // import ".";
-import "./i18n";
+// import "./i18n";
 
 const ProfileModal = () => {
   return (
