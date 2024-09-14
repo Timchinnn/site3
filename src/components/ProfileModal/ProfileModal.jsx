@@ -1,15 +1,17 @@
 import React from "react";
 import "./ProfileModal.css";
 import buy from "./buy.png";
+import cartButton from "./cartButton.png";
+import arrow from "./arrow.png";
 
 const ProfileModal = ({ onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <img src={buy} alt="buy"></img>
+        <img src={arrow} alt="arrow"></img>
         <div className="buttonsMainProfile">
           <img src={buy} alt="buy"></img>
-          <img src={buy} alt="buy"></img>
+          <img src={cartButton} alt="cartButton"></img>
           <button></button>t<button></button>t
         </div>
         <button></button>
