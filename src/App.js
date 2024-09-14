@@ -11,6 +11,7 @@ import "./App.css";
 // import { getTotalPrice } from "./utils";
 // import CategoryButtons from "./components/CategoryButtons/CategoryButtons";
 import ProfileModal from "./components/ProfileModal/ProfileModal";
+import SendRequestModal from "./components/SendRequestModal/SendRequestModal";
 // import profile from "./profile.png";
 // import { useTranslation } from "react-i18next";
 // import "./components/ProfileModal/i18n";
