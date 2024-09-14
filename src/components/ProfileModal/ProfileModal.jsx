@@ -12,7 +12,8 @@ const ProfileModal = ({ onClose }) => {
         <div className="buttonsMainProfile">
           <img src={buy} alt="buy"></img>
           <img src={cartButton} alt="cartButton"></img>
-          <button></button>t<button></button>t
+          <button></button>t<button></button>t<button></button>t
+          <button></button>t
         </div>
         <button></button>
       </div>
