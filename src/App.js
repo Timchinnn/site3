@@ -37,6 +37,7 @@ function App() {
   // const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   // const [isCartModalOpen, setIsCartModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [loading, setLoading] = useState(true);
   // const { tg } = useTelegram();
   // const { addedItems, onAdd, onRemove } = useCart(tg, () => {
   //   setIsProductModalOpen(false); // Закрываем модальное окно товара
