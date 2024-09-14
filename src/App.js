@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 // import React, { useEffect, useState } from "react";
 import axios from "axios";
-// import ProductModal from "./components/ProductModal/ProductModal";
+import ProductModal from "./components/ProductModal/ProductModal";
 // import { useTelegram } from "./hooks/useTelegram";
 // import ProductList from "./components/ProductList/ProductList";
 // import useCart from "./useCart";
@@ -33,8 +33,8 @@ function App() {
   // };
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
-  // const [selectedProduct, setSelectedProduct] = useState(null);
-  // const [isProductModalOpen, setIsProductModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   // const [isCartModalOpen, setIsCartModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   // const { tg } = useTelegram();
@@ -89,23 +89,23 @@ function App() {
   //   fetchCategories();
   // }, []);
 
-  // const openProductModal = (product) => {
-  //   setSelectedProduct(product);
-  //   setIsProductModalOpen(true);
-  // };
+  const openProductModal = (product) => {
+    setSelectedProduct(product);
+    setIsProductModalOpen(true);
+  };
 
-  // const closeProductModal = () => {
-  //   setSelectedProduct(null);
-  //   setIsProductModalOpen(false);
-  // };
+  const closeProductModal = () => {
+    setSelectedProduct(null);
+    setIsProductModalOpen(false);
+  };
 
   // const closeCartModal = () => {
   //   setIsCartModalOpen(false);
   // };
 
-  // const filteredProducts = products.filter((product) =>
-  //   product.name.toLowerCase().includes(searchQuery.toLowerCase())
-  // );
+  const filteredProducts = products.filter((product) =>
+    product.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   // const handleCategorySelect = (categoryName) => {
   //   if (selectedCategory === categoryName && isCategorySelected) {
@@ -275,6 +275,9 @@ function App() {
           <p>Загрузка категорий...</p>
         )}
       </div>
+      {isProductModalOpen && (
+        <ProductModal product={selectedProduct} onClose={closeProductModal} />
+      )}
     </div>
   );
 }
