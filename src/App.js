@@ -37,7 +37,6 @@ function App() {
   // const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   // const [isCartModalOpen, setIsCartModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const [loading, setLoading] = useState(true);
   // const { tg } = useTelegram();
   // const { addedItems, onAdd, onRemove } = useCart(tg, () => {
   //   setIsProductModalOpen(false); // Закрываем модальное окно товара
@@ -84,17 +83,7 @@ function App() {
   useEffect(() => {
     fetchCategories();
     fetchProducts();
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000); // Задержка 2000 мс (2 секунды)
-
-    // Очистка таймера при размонтировании компонента
-    return () => clearTimeout(timer);
   }, []);
-  if (loading) {
-    return <div>Загрузка...</div>; // Отображение сообщения загрузки
-  }
-
   // useEffect(() => {
   //   fetchProducts();
   //   fetchCategories();
