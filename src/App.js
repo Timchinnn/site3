@@ -10,7 +10,7 @@ import "./App.css";
 // import CartModal from "./components/CartModal/CartModal";
 // import { getTotalPrice } from "./utils";
 // import CategoryButtons from "./components/CategoryButtons/CategoryButtons";
-// import ProfileModal from "./components/ProfileModal/ProfileModal";
+import ProfileModal from "./components/ProfileModal/ProfileModal";
 // import profile from "./profile.png";
 // import { useTranslation } from "react-i18next";
 // import "./components/ProfileModal/i18n";
@@ -31,6 +31,7 @@ function App() {
   // const toggleLanguage = (lang) => {
   //   i18n.changeLanguage(lang);
   // };
+  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -106,6 +107,13 @@ function App() {
   const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
+  const openProfileModal = () => {
+    setIsProfileModalOpen(true); // Открываем модальное окно профиля
+  };
+
+  const closeProfileModal = () => {
+    setIsProfileModalOpen(false); // Закрываем модальное окно профиля
+  };
 
   // const handleCategorySelect = (categoryName) => {
   //   if (selectedCategory === categoryName && isCategorySelected) {
@@ -237,7 +245,13 @@ function App() {
         <img src={garant} alt="garant" loading="eager"></img>
       </div>
       <div className="log-help">
-        <img src={myLog} className="my-log" alt="" loading="eager"></img>
+        <img
+          src={myLog}
+          className="my-log"
+          alt=""
+          loading="eager"
+          onClick={openProfileModal}
+        ></img>
         <img src={sendRequest} alt="" loading="eager"></img>
       </div>
       <div className="company">
@@ -282,6 +296,7 @@ function App() {
       {isProductModalOpen && (
         <ProductModal product={selectedProduct} onClose={closeProductModal} />
       )}
+      {isProfileModalOpen && <ProfileModal onClose={closeProfileModal} />}
     </div>
   );
 }
