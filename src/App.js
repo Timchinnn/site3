@@ -83,7 +83,17 @@ function App() {
   useEffect(() => {
     fetchCategories();
     fetchProducts();
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Задержка 2000 мс (2 секунды)
+
+    // Очистка таймера при размонтировании компонента
+    return () => clearTimeout(timer);
   }, []);
+  if (loading) {
+    return <div>Загрузка...</div>; // Отображение сообщения загрузки
+  }
+
   // useEffect(() => {
   //   fetchProducts();
   //   fetchCategories();
@@ -246,7 +256,7 @@ function App() {
         <img src={ncr} alt="ncr"></img>
       </div>
       <h1>Каталог</h1>
-      {/* <div className="category">
+      <div className="category">
         {categories.length > 0 ? (
           categories.map((category) => (
             <div key={category.id}>
@@ -273,8 +283,8 @@ function App() {
           ))
         ) : (
           <p>Загрузка категорий...</p>
-        )} */}
-      {/* </div> */}
+        )}
+      </div>
     </div>
   );
 }
