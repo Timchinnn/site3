@@ -1,6 +1,6 @@
 import React from "react";
 import "./ProfileModal.css";
-import buy from "../buy.png";
+import buy from ".../buy.png";
 
 const ProfileModal = ({ onClose }) => {
   return (
