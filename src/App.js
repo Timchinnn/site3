@@ -60,37 +60,38 @@ function App() {
   //     });
   // };
   // tg.expand();
-  const fetchCategories = () => {
-    axios
-      .get("/api/categories")
-      .then((response) => {
-        setCategories(response.data);
-        if (products.length > 0) {
-          setLoading(false); // Установка флага загрузки в false, когда категории загружены
-        }
-      })
-      .catch((error) => {
-        console.error("Ошибка при получении категорий:", error);
-        setLoading(false); // Установка флага загрузки в false в случае ошибки
-      });
-  };
-
-  const fetchProducts = () => {
-    axios
-      .get("/api/products")
-      .then((response) => {
-        setProducts(response.data);
-        if (categories.length > 0) {
-          setLoading(false); // Установка флага загрузки в false, когда продукты загружены
-        }
-      })
-      .catch((error) => {
-        console.error("Ошибка при получении товаров:", error);
-        setLoading(false); // Установка флага загрузки в false в случае ошибки
-      });
-  };
   useEffect(() => {
-    setLoading(true); // Устанавливаем флаг загрузки перед началом загрузки данных
+    const fetchCategories = () => {
+      axios
+        .get("/api/categories")
+        .then((response) => {
+          setCategories(response.data);
+          if (products.length > 0) {
+            setLoading(false);
+          }
+        })
+        .catch((error) => {
+          console.error("Ошибка при получении категорий:", error);
+          setLoading(false);
+        });
+    };
+
+    const fetchProducts = () => {
+      axios
+        .get("/api/products")
+        .then((response) => {
+          setProducts(response.data);
+          if (categories.length > 0) {
+            setLoading(false);
+          }
+        })
+        .catch((error) => {
+          console.error("Ошибка при получении товаров:", error);
+          setLoading(false);
+        });
+    };
+
+    setLoading(true);
     fetchCategories();
     fetchProducts();
   }, []);
