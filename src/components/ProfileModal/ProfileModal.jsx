@@ -9,9 +9,13 @@ const ProfileModal = ({ onClose }) => {
     <div className="modal-overlay">
       <div className="modal-content">
         <img src={arrow} alt="arrow"></img>
+        
+        
         <div className="buttonsMainProfile">
-          <img src={buy} alt="buy"></img>
-          <img src={cartButton} alt="cartButton"></img>
+          {/* <img src={buy} alt="buy"></img>
+          <img src={cartButton} alt="cartButton"></img> */}
+          <button>t</button>
+          <button>t</button>
           <button>t</button>
           <button>t</button>
         </div>
