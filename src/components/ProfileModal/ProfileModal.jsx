@@ -1,7 +1,7 @@
 import React from "react";
 import "./ProfileModal.css";
-import buy from "./buy.png";
-import cartButton from "./cartButton.png";
+// import buy from "./buy.png";
+// import cartButton from "./cartButton.png";
 import arrow from "./arrow.png";
 
 const ProfileModal = ({ onClose }) => {
