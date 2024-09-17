@@ -27,8 +27,21 @@
     border-radius: 11px;
     border-color: #17453B;
     border-width: 3px;
+    height: 380px;
+    width: 316px;
   }
   .arrow {
     width: 33px; ;
     height: 33px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .parent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    flex-direction: column;
+    position: relative;
   }
