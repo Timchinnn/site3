@@ -3,6 +3,7 @@ import "./ProfileModal.css";
 // import buy from "./buy.png";
 // import cartButton from "./cartButton.png";
 import arrow from "./arrow.png";
+import b from './B.png'
 
 const ProfileModal = ({ onClose }) => {
   return (
@@ -14,7 +15,7 @@ const ProfileModal = ({ onClose }) => {
         <div className="buttonsMainProfile">
           {/* <img src={buy} alt="buy"></img>
           <img src={cartButton} alt="cartButton"></img> */}
-          <button>t</button>
+          <button><img src={b} alt='b'></img></button>
           <button>t</button>
           <button>t</button>
           <button>t</button>
