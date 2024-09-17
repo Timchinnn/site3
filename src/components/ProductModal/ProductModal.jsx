@@ -113,52 +113,81 @@
 // };
 
 // export default ProductModal;
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import "./ProductModal.css";
 
-function ProductDetailPage() {
-  const { id } = useParams(); // Получаем id из параметров маршрута
-  const [product, setProduct] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+const ProductModal = ({ product, onClose}) => {
+  // const addedItem = addedItems.find((item) => item.id === product.id);
+  // const quantity = addedItem ? addedItem.quantity : 0;
+  console.log(product);
+
+  // Состояние для текущей активной вкладки
+  const [activeTab, setActiveTab] = useState("description");
 
   useEffect(() => {
-    const fetchProduct = async () => {
-      try {
-        const response = await axios.get(`/api/products/${id}`); // Запрос к API для получения продукта по id
-        setProduct(response.data);
-      } catch (error) {
-        setError('Ошибка при загрузке продукта');
-        console.error("Ошибка при получении продукта:", error);
-      } finally {
-        setLoading(false);
-      }
+    if (!product) return;
+    // Отключение прокрутки при монтировании компонента
+    document.body.classList.add("no-scroll");
+    return () => {
+      // Включение прокрутки при размонтировании компонента
+      document.body.classList.remove("no-scroll");
     };
+  }, [product]);
 
-    fetchProduct();
-  }, [id]);
-
-  if (loading) {
-    return <p>Загрузка...</p>; // Показываем индикатор загрузки
-  }
-
-  if (error) {
-    return <p>{error}</p>; // Показываем сообщение об ошибке
-  }
-
-  if (!product) {
-    return <p>Продукт не найден</p>; // Если продукт не найден
-  }
+  if (!product) return null;
 
   return (
-    <div>
-      <h1>{product.name}</h1>
-      <img src={product.photo_url} alt={product.name} />
-      <p>{product.description}</p>
-      {/* Добавьте другие необходимые детали о продукте */}
+    <div className="modal-overlay">
+      <div className="modal-content">
+        <button className="modal-close-button" onClick={onClose}>
+          <span className="icon">×</span>
+        </button>
+        <div className="modal-inner-content">
+          <h2 className="modal-title">{product.name}</h2>
+          <img
+            className="modal-image"
+            src={product.photo_url}
+            alt={product.name}
+          />
+          <div className="tab-buttons">
+            <button onClick={() => setActiveTab("description")}>
+              Описание
+            </button>
+            <button onClick={() => setActiveTab("techSpecs")}>
+              Тех. характеристики
+            </button>
+            <button onClick={() => setActiveTab("howToBuy")}>Как купить</button>
+            <button onClick={() => setActiveTab("additionalServices")}>
+              Доп. услуги
+            </button>
+            <button onClick={() => setActiveTab("brochure")}>Буклет</button>
+          </div>
+          <div className="tab-content">
+            {activeTab === "description" && (
+              <p className="modal-description">{product.description}</p>
+            )}
+            {activeTab === "techSpecs" && (
+              <div className="tech-specs">
+                {/* Пример: Здесь вы можете отображать технические характеристики */}
+                <p>Процессор:</p>
+                {/* <p>Оперативная память: {product.specs.ram}</p>
+                <p>Хранение: {product.specs.storage}</p> */}
+              </div>
+            )}
+            {activeTab === "howToBuy" && (
+              <p>Информация о том, как купить этот продукт.</p>
+            )}
+            {activeTab === "additionalServices" && (
+              <p>Информация о дополнительных услугах.</p>
+            )}
+            {activeTab === "brochure" && (
+              <p>Ссылка или информация о буклете.</p>
+            )}
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
-export default ProductDetailPage;
+export default ProductModal;
