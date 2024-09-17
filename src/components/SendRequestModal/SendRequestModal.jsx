@@ -12,10 +12,7 @@ const SendRequestModal = ({ onClose }) => {
         <img src={bigBContray} alt="bigBContray"></img>
 
       </div>
-      <div className="modal-content">
- 
-        <button onClick={onClose}>Close</button>
-      </div>
+      
     </div>
   );
 };
