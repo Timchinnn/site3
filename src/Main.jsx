@@ -48,6 +48,9 @@ function Main() {
         </div>
       } />
       <Route path="/app" element={<App />} />
+      <Route path="/profile" element={<ProfilePage />} /> {/* Новый маршрут для профиля */}
+      <Route path="/send-request" element={<SendRequestPage />} /> {/* Новый маршрут для отправки запроса */}
+      <Route path="/product/:id" element={<ProductDetailPage />} /> {/* Новый маршрут для деталей продукта */}
     </Routes>
   );
 }
