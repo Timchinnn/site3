@@ -11,7 +11,7 @@ const SendRequestModal = ({ onClose }) => {
         <img src={bigB} alt="bigB" className="top-left" />
         <img src={bigBContray} alt="bigBContray" className="bottom-right" />
         <div className="parent">
-          <img src={arrow} alt="arrow" />
+          <img className="arrow" src={arrow} alt="arrow" />
           <div className="window-reg"></div>
       </div>
       </div>
