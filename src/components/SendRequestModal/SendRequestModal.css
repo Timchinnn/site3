@@ -28,3 +28,7 @@
     border-color: #17453B;
     border-width: 3px;
   }
+  .arrow {
+    width: 33px; ;
+    height: 33px;
+  }
