@@ -1,3 +1,6 @@
-.modal-overlay{
-    background: radial-gradient(#CDCDCD, #8A8A8A);
+body {
+    background-image: url('./background.png');
+    background-size: cover; /* или contain, в зависимости от ваших нужд */
+    background-repeat: no-repeat; /* чтобы избежать повторения картинки */
+    background-position: center; /* чтобы картинка была по центру */
 }
