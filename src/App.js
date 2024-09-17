@@ -60,6 +60,7 @@ function App() {
   };
 
   const openProductPage = (product) => {
+    console.log(product)
     navigate(`/product/${product.id}`); // Переход на страницу продукта
   };
 
