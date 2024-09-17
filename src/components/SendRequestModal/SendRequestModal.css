@@ -1,6 +1,8 @@
 .modal-overlay1{
     background: radial-gradient(#CDCDCD, #8A8A8A);
-    min-height: 590px;
-    /* overflow: auto; */
-    /* overflow: hidden; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
