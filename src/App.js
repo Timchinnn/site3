@@ -264,7 +264,7 @@ function App() {
         <img
           src={sendRequest}
           alt=""
-          loading="eager"
+          
           onClick={openSendRequestModal}
         ></img>
       </div>
