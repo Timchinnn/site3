@@ -60,10 +60,10 @@ function App() {
     navigate('/send-request'); // Переход на страницу отправки запроса
   };
 
-  const openProductPage = (product) => {
-    console.log(product)
-    navigate(`/product/${product.id}`); // Переход на страницу продукта
-  };
+  // const openProductPage = (product) => {
+  //   console.log(product)
+  //   navigate(`/product/${product.id}`); // Переход на страницу продукта
+  // };
   const openProductModal = (product) => {
     setSelectedProduct(product);
     setIsProductModalOpen(true);
