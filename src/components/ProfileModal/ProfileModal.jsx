@@ -16,9 +16,9 @@ const ProfileModal = ({ onClose }) => {
           {/* <img src={buy} alt="buy"></img>
           <img src={cartButton} alt="cartButton"></img> */}
           <button><img src={b} alt='b' className="b"></img></button>
-          <button>t</button>
-          <button>t</button>
-          <button>t</button>
+          <button><img src={b} alt='b' className="b"></img></button>
+          <button><img src={b} alt='b' className="b"></img></button>
+          <button><img src={b} alt='b' className="b"></img></button>
         </div>
         <button className="delivery">t</button>
       </div>
