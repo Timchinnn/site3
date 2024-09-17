@@ -1,13 +1,13 @@
 import React from "react";
 import "./SendRequestModal.css"; // Добавьте стили, если необходимо
+import background from './background.png'
 
 const SendRequestModal = ({ onClose }) => {
   return (
-    <div className="modal-overlay">
+    <div className="modal-overlay1">
+      <img src={background} alt="background"></img>
       <div className="modal-content">
-        <h2>Отправить запрос</h2>
-        <p>Здесь вы можете отправить свой запрос.</p>
-        {/* Добавьте форму или другую необходимую информацию */}
+ 
         <button onClick={onClose}>Закрыть</button>
       </div>
     </div>
