@@ -19,7 +19,8 @@ function App() {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
-
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   const fetchCategories = () => {
     axios
       .get("/api/categories")
@@ -63,7 +64,15 @@ function App() {
     console.log(product)
     navigate(`/product/${product.id}`); // Переход на страницу продукта
   };
+  const openProductModal = (product) => {
+    setSelectedProduct(product);
+    setIsProductModalOpen(true);
+  };
 
+  const closeProductModal = () => {
+    setSelectedProduct(null);
+    setIsProductModalOpen(false);
+  };
   return (
     <div className="main">
       <div className="header-name">
@@ -112,7 +121,7 @@ function App() {
                     <div
                       key={product.id}
                       className="product-item"
-                      onClick={() => openProductPage(product)} // Переход на страницу продукта
+                      onClick={() => openProductModal(product)} // Переход на страницу продукта
                     >
                       <img
                         src={product.photo_url}
@@ -133,6 +142,13 @@ function App() {
           <p>Загрузка категорий...</p>
         )}
       </div>
+      {isProductModalOpen && (
+        <ProductModal product={selectedProduct} onClose={closeProductModal} />
+      )}
+      {isProfileModalOpen && <ProfileModal onClose={closeProfileModal} />}
+      {isSendRequestModalOpen && (
+        <SendRequestModal onClose={closeSendRequestModal} /> // Отображаем модальное окно отправки запроса
+      )}
     </div>
   );
 }
