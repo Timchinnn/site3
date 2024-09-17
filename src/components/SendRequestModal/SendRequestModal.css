@@ -22,3 +22,9 @@
     bottom: 0;
 /* Установите максимальную ширину по необходимости */
   }
+  .window-reg{
+    background-color: #D9D9D9;
+    border-radius: 11px;
+    border-color: #17453B;
+    border-width: 3px;
+  }
