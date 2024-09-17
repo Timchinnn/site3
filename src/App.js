@@ -13,7 +13,7 @@ import dn from "./dn.png";
 import hyosung from "./hyosung.png";
 import ncr from "./ncr.png";
 import cart from "./cart.png";
-
+import ProductModal from "./components/ProductModal/ProductModal";
 function App() {
   const navigate = useNavigate(); // Используем хук для навигации
   const [products, setProducts] = useState([]);
@@ -145,10 +145,7 @@ function App() {
       {isProductModalOpen && (
         <ProductModal product={selectedProduct} onClose={closeProductModal} />
       )}
-      {isProfileModalOpen && <ProfileModal onClose={closeProfileModal} />}
-      {isSendRequestModalOpen && (
-        <SendRequestModal onClose={closeSendRequestModal} /> // Отображаем модальное окно отправки запроса
-      )}
+
     </div>
   );
 }

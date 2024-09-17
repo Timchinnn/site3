@@ -5,7 +5,7 @@ import "./Main.css";
 import bansys from "./bansys.png";
 import toBuy from "./tobuy.png";
 
-import ProductDetailPage from "./components/ProductModal/ProductModal";
+// import ProductDetailPage from "./components/ProductModal/ProductModal";
 import SendRequestPage from "./components/SendRequestModal/SendRequestModal";
 import ProfilePage from "./components/ProfileModal/ProfileModal";
 function Main() {
@@ -53,7 +53,7 @@ function Main() {
       <Route path="/app" element={<App />} />
       <Route path="/profile" element={<ProfilePage />} /> {/* Новый маршрут для профиля */}
       <Route path="/send-request" element={<SendRequestPage />} /> {/* Новый маршрут для отправки запроса */}
-      <Route path="/product/:id" element={<ProductDetailPage />} /> {/* Новый маршрут для деталей продукта */}
+      
     </Routes>
   );
 }
