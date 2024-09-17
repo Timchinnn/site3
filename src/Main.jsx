@@ -5,6 +5,9 @@ import "./Main.css";
 import bansys from "./bansys.png";
 import toBuy from "./tobuy.png";
 
+import ProductDetailPage from "./components/ProductModal/ProductModal";
+import SendRequestPage from "./components/SendRequestModal/SendRequestModal";
+import ProfilePage from "./components/ProfileModal/ProfileModal";
 function Main() {
   const navigate = useNavigate(); // Используем хук для навигации
   const handleLoginClick = () => {
