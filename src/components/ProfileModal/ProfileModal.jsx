@@ -8,7 +8,7 @@ const ProfileModal = ({ onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <img src={arrow} alt="arrow"></img>
+        <img className="arrow" src={arrow} alt="arrow"></img>
         
         
         <div className="buttonsMainProfile">
@@ -19,7 +19,7 @@ const ProfileModal = ({ onClose }) => {
           <button>t</button>
           <button>t</button>
         </div>
-        <button>t</button>
+        <button className="delivery">t</button>
       </div>
     </div>
   );
