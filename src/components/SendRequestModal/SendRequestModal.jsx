@@ -6,11 +6,9 @@ import bigBContray from './bigbContrary.png'
 const SendRequestModal = ({ onClose }) => {
   return (
     <div className="modal-overlay1">
-      {/* <img src={background} alt="background"></img> */}
-      <div>
-        <img src={bigB} alt="bigB"></img> 
-        <img src={bigBContray} alt="bigBContray"></img>
-
+      <div className="images-container">
+        <img src={bigB} alt="bigB" className="top-left" />
+        <img src={bigBContray} alt="bigBContray" className="bottom-right" />
       </div>
       
     </div>

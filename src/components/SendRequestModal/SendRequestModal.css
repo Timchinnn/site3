@@ -6,3 +6,22 @@
     width: 100%;
     height: 100%;
 }
+.images-container {
+    position: relative; /* Для позиционирования дочерних элементов */
+    width: 100%;
+    height: 100%;
+  }
+  
+  .top-left {
+    position: absolute; /* Позиционирование абсолютное */
+    top: 0;
+    left: 0;
+    max-width: 100px; /* Установите максимальную ширину по необходимости */
+  }
+  
+  .bottom-right {
+    position: absolute; /* Позиционирование абсолютное */
+    bottom: 0;
+    right: 0;
+    max-width: 100px; /* Установите максимальную ширину по необходимости */
+  }
