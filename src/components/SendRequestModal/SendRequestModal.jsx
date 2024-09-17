@@ -8,7 +8,7 @@ const SendRequestModal = ({ onClose }) => {
       <img src={background} alt="background"></img>
       <div className="modal-content">
  
-        <button onClick={onClose}>Закрыть</button>
+        <button onClick={onClose}>Close</button>
       </div>
     </div>
   );
