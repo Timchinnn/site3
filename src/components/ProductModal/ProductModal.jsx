@@ -142,7 +142,7 @@ const ProductModal = ({ product, onClose, onAdd, onRemove, addedItems }) => {
           <span className="icon">×</span>
         </button>
         <div className="modal-inner-content">
-          <h2 className="modal-title">{product.name}</h2>
+          
           <img
             className="modal-image"
             src={product.photo_url}
