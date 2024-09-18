@@ -108,7 +108,7 @@ function App() {
         <img src={dn} alt="dn"></img>
         <img src={ncr} alt="ncr"></img>
       </div>
-      <h1>Каталог</h1>
+      <h1 className="catalog">Каталог</h1>
       <div className="category">
         {categories.length > 0 ? (
           categories.map((category) => (
