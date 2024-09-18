@@ -46,4 +46,14 @@
     flex-direction: column;
     position: relative;
   }
+
+  .input-container{
+    display: grid;
+    grid-template-columns: auto minmax(0, 200px);
+    align-content: center;
+    margin: 0px 20px;
+  }
+  .input-container{max-height: 30px;
+    /* padding: 5px; */
+    border-radius: 10px;}
   

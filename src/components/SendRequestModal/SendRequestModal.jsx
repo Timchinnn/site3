@@ -14,21 +14,21 @@ const SendRequestModal = ({ onClose }) => {
           <img className="arrow" src={arrow} alt="arrow" />
           <div className="window-reg">
             <h1>ЗАЯВКА</h1>
-            <div>
+            <div className="input-container">
               <p>Имя</p>
-              <input></input>
+              <input className="input-order-profile"></input>
             </div>
-            <div>
+            <div className="input-container">
               <p>Телефон</p>
-              <input></input>
+              <input className="input-container"></input>
             </div>
-            <div>
+            <div className="input-container">
               <p>Страна</p>
-              <input></input>
+              <input className="input-container"></input>
             </div>
-            <div>
+            <div className="input-container">
               <p>Город</p>
-              <input></input>
+              <input className="input-container"></input>
             </div>
             <input></input>
             <button>Отправить заявку</button>
