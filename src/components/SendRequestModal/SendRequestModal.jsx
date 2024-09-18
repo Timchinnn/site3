@@ -30,8 +30,8 @@ const SendRequestModal = ({ onClose }) => {
               <p>Город</p>
               <input className="input-order-profile"></input>
             </div>
-            <input></input>
-            <button>Отправить заявку</button>
+            <input className="msg"></input>
+            <button className="send-msg"> Отправить заявку</button>
           </div>
       </div>
       </div>
