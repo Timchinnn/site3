@@ -56,8 +56,12 @@
   .input-order-profile{max-height: 30px;
     /* padding: 5px; */
     border-radius: 10px;}
-  .application {margin:0px 20px}
+  .application {margin:0px 20px;
+    margin-bottom: 5px;}
+  
   .msg{margin-left: 20px;
-    max-height: 30px;
-    border-radius: 10px;}
+    height: 70px;
+    width: 270px;
+    border-radius: 10px;
+    margin-bottom: 6px;}
   .send-msg{margin-left: 20px;}
