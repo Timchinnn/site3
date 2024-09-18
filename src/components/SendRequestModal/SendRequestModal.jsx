@@ -12,7 +12,27 @@ const SendRequestModal = ({ onClose }) => {
         <img src={bigBContray} alt="bigBContray" className="bottom-right" />
         <div className="parent">
           <img className="arrow" src={arrow} alt="arrow" />
-          <div className="window-reg"></div>
+          <div className="window-reg">
+            <h1>ЗАЯВКА</h1>
+            <div>
+              <p>Имя</p>
+              <input></input>
+            </div>
+            <div>
+              <p>Телефон</p>
+              <input></input>
+            </div>
+            <div>
+              <p>Страна</p>
+              <input></input>
+            </div>
+            <div>
+              <p>Город</p>
+              <input></input>
+            </div>
+            <input></input>
+            <button>Отправить заявку</button>
+          </div>
       </div>
       </div>
 
