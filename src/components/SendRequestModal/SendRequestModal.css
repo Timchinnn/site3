@@ -57,5 +57,7 @@
     /* padding: 5px; */
     border-radius: 10px;}
   .application {margin:0px 20px}
-  .msg{margin-left: 20px;}
+  .msg{margin-left: 20px;
+    max-height: 30px;
+    border-radius: 10px;}
   .send-msg{margin-left: 20px;}
