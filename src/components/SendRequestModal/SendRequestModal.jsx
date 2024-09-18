@@ -13,7 +13,7 @@ const SendRequestModal = ({ onClose }) => {
         <div className="parent">
           <img className="arrow" src={arrow} alt="arrow" />
           <div className="window-reg">
-            <h1>ЗАЯВКА</h1>
+            <h1 className="application">ЗАЯВКА</h1>
             <div className="input-container">
               <p>Имя</p>
               <input className="input-order-profile"></input>
