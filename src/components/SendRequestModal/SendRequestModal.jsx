@@ -20,15 +20,15 @@ const SendRequestModal = ({ onClose }) => {
             </div>
             <div className="input-container">
               <p>Телефон</p>
-              <input className="input-container"></input>
+              <input className="input-order-profile"></input>
             </div>
             <div className="input-container">
               <p>Страна</p>
-              <input className="input-container"></input>
+              <input className="input-order-profile"></input>
             </div>
             <div className="input-container">
               <p>Город</p>
-              <input className="input-container"></input>
+              <input className="input-order-profile"></input>
             </div>
             <input></input>
             <button>Отправить заявку</button>
