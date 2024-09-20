@@ -149,41 +149,7 @@ const ProductModal = ({ product, onClose}) => {
             src={product.photo_url}
             alt={product.name}
           />
-          <div className="tab-buttons">
-            <button onClick={() => setActiveTab("description")}>
-              Описание
-            </button>
-            <button onClick={() => setActiveTab("techSpecs")}>
-              Тех. характеристики
-            </button>
-            <button onClick={() => setActiveTab("howToBuy")}>Как купить</button>
-            <button onClick={() => setActiveTab("additionalServices")}>
-              Доп. услуги
-            </button>
-            <button onClick={() => setActiveTab("brochure")}>Буклет</button>
-          </div>
-          <div className="tab-content">
-            {activeTab === "description" && (
-              <p className="modal-description">{product.description}</p>
-            )}
-            {activeTab === "techSpecs" && (
-              <div className="tech-specs">
-                {/* Пример: Здесь вы можете отображать технические характеристики */}
-                <p>Процессор:</p>
-                {/* <p>Оперативная память: {product.specs.ram}</p>
-                <p>Хранение: {product.specs.storage}</p> */}
-              </div>
-            )}
-            {activeTab === "howToBuy" && (
-              <p>Информация о том, как купить этот продукт.</p>
-            )}
-            {activeTab === "additionalServices" && (
-              <p>Информация о дополнительных услугах.</p>
-            )}
-            {activeTab === "brochure" && (
-              <p>Ссылка или информация о буклете.</p>
-            )}
-          </div>
+   
         </div>
       </div>
     </div>
