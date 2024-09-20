@@ -142,15 +142,33 @@ const ProductModal = ({ product, onClose}) => {
         <button className="modal-close-button" onClick={onClose}>
           <span className="icon">×</span>
         </button>
-        <div className="modal-inner-content">
-          <h2 className="modal-title">{product.name}</h2>
-          <img
-            className="modal-image"
-            src={product.photo_url}
-            alt={product.name}
-          />
-   
+        <img
+          className="modal-image"
+          src={product.photo_url}
+          alt={product.name}
+        />
+        <div>
+          <p></p>
+          <button>Подробнее</button>
         </div>
+        <div> <p></p></div>
+    
+        <p>Полезная информация</p>
+        <div>
+          <p>Почему BANSYS?</p>
+          <p>
+            Как купить?
+          </p>
+          <p>Гарантия</p>
+          <p>Наша программа лояльности</p>
+        </div>
+        <p>Отзывы</p>
+        <div className="grey-box">
+          <p>Ваш текст здесь</p>
+        </div>
+        <button>Добавить в корзину</button>
+   
+        
       </div>
     </div>
   );
