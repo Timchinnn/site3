@@ -113,7 +113,7 @@
 // };
 
 // export default ProductModal;
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./ProductModal.css";
 
 const ProductModal = ({ product, onClose}) => {
