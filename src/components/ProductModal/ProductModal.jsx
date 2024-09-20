@@ -116,13 +116,12 @@
 import React, { useEffect } from "react";
 import "./ProductModal.css";
 
-const ProductModal = ({ product, onClose}) => {
+const ProductModal = ({ product, onClose }) => {
   // const addedItem = addedItems.find((item) => item.id === product.id);
   // const quantity = addedItem ? addedItem.quantity : 0;
   console.log(product);
 
   // Состояние для текущей активной вкладки
-  
 
   useEffect(() => {
     if (!product) return;
@@ -151,22 +150,31 @@ const ProductModal = ({ product, onClose}) => {
           <p></p>
           <button>Подробнее</button>
         </div>
-        <div> <p></p></div>
-    
+        <div>
+          {" "}
+          <p></p>
+        </div>
+
         <p>Полезная информация</p>
         <div>
-  <p className="why">Почему BANSYS?</p>
-  <p className="how">Как купить?</p>
-  <p className="garant">Гарантия</p>
-  <p className="loyal">Наша программа лояльности</p>
-</div>
+          <div>
+            <p className="why">Почему BANSYS?</p>
+          </div>
+          <div>
+            <p className="how">Как купить?</p>
+          </div>
+          <div>
+            <p className="garant">Гарантия</p>
+          </div>
+          <div>
+            <p className="loyal">Наша программа лояльности</p>
+          </div>
+        </div>
         <p>Отзывы</p>
         <div className="grey-box">
           <p>Ваш текст здесь</p>
         </div>
         <button>Добавить в корзину</button>
-   
-        
       </div>
     </div>
   );
