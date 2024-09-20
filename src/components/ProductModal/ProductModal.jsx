@@ -161,10 +161,10 @@ const ProductModal = ({ product, onClose }) => {
 
         <p>Полезная информация</p>
         <div>
-          <div className="why">Почему BANSYS?</div>
+          {/* <div className="why">Почему BANSYS?</div>
           <div className="how">Как купить?</div>
           <div className="garante">Гарантия</div>
-          <div className="loyal">Наша программа лояльности</div>
+          <div className="loyal">Наша программа лояльности</div> */}
         </div>
         <button>Добавить в корзину</button>
       </div>
