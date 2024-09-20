@@ -54,3 +54,15 @@ body.no-scroll {
 
 
 
+
+
+.background-image {
+  background-image: url('why.png'); 
+  background-size: cover; 
+  background-position: center; 
+  color: white; /* Цвет текста */
+  padding: 20px; /* Отступ внутри элемента */
+  border-radius: 8px; /* Закругление углов */
+  max-width: 500px; /* Максимальная ширина элемента */
+  font-size: 20px; 
+}
