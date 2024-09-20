@@ -115,6 +115,10 @@
 // export default ProductModal;
 import React, { useEffect } from "react";
 import "./ProductModal.css";
+import why from "./why.png";
+import how from "./how.png";
+import garant from "./garant.png";
+import loyal from "./loyal.png";
 
 const ProductModal = ({ product, onClose }) => {
   // const addedItem = addedItems.find((item) => item.id === product.id);
@@ -157,22 +161,10 @@ const ProductModal = ({ product, onClose }) => {
 
         <p>Полезная информация</p>
         <div>
-          <div>
-            <p className="why">Почему BANSYS?</p>
-          </div>
-          <div>
-            <p className="how">Как купить?</p>
-          </div>
-          <div>
-            <p className="garant">Гарантия</p>
-          </div>
-          <div>
-            <p className="loyal">Наша программа лояльности</p>
-          </div>
-        </div>
-        <p>Отзывы</p>
-        <div className="grey-box">
-          <p>Ваш текст здесь</p>
+          <img src={why} alt="why" />
+          <img src={how} alt="how" />
+          <img src={garant} alt="garant" />
+          <img src={loyal} alt="loyal" />
         </div>
         <button>Добавить в корзину</button>
       </div>
