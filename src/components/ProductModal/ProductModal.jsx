@@ -161,6 +161,11 @@ const ProductModal = ({ product, onClose }) => {
 
         <p>Полезная информация</p>
         <div>
+          <div className="container121">
+            <img src={why} alt="why" className="img-buttons-about" />
+            <p className="text-on-image">Почему BANSYS?</p>
+          </div>
+
           <div>
             <img src={why} alt="why" className="img-buttons-about" />
             <p>Почему BANSYS?</p>
