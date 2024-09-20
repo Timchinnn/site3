@@ -56,8 +56,57 @@ body.no-scroll {
 
 
 
-.background-image {
+.why {
   background-image: url('why.png'); 
+  background-size: cover; 
+  background-position: center; 
+  color: white; /* Цвет текста */
+  border-radius: 8px; /* Закругление углов */
+
+  font-size: 16px; 
+  width: 110px;
+    height: 110px;
+    display: flex; 
+  justify-content: flex-start; 
+  align-items: center;
+  text-align: center;
+  background-position: -200%;
+}
+
+.how {
+  background-image: url('how.png'); 
+  background-size: cover; 
+  background-position: center; 
+  color: white; /* Цвет текста */
+  border-radius: 8px; /* Закругление углов */
+
+  font-size: 16px; 
+  width: 110px;
+    height: 110px;
+    display: flex; 
+  justify-content: flex-start; 
+  align-items: center;
+  text-align: center;
+  background-position: -200%;
+}
+.garant {
+  background-image: url('garant.png'); 
+  background-size: cover; 
+  background-position: center; 
+  color: white; /* Цвет текста */
+  border-radius: 8px; /* Закругление углов */
+
+  font-size: 16px; 
+  width: 110px;
+    height: 110px;
+    display: flex; 
+  justify-content: flex-start; 
+  align-items: center;
+  text-align: center;
+  background-position: -200%;
+}
+.loyal {
+  background-image: url('loyal.png'); 
   background-size: cover; 
   background-position: center; 
   color: white; /* Цвет текста */
