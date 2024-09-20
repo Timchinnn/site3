@@ -80,7 +80,7 @@ body.no-scroll {
   font-size: 1em; /* Размер текста */
   text-align: center; /* Выравнивание текста */
 }
-.garant {
+.garante {
   width: 100px; /* Задайте ширину элемента */
   height: 110px; /* Задайте высоту элемента */
   background-image: url("garant.png"); /* Путь к вашему фону */
