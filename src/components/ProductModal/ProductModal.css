@@ -65,4 +65,6 @@ body.no-scroll {
   border-radius: 8px; /* Закругление углов */
   max-width: 500px; /* Максимальная ширина элемента */
   font-size: 20px; 
+  width: 130px;
+    height: 130px;
 }
