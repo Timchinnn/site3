@@ -161,24 +161,10 @@ const ProductModal = ({ product, onClose }) => {
 
         <p>Полезная информация</p>
         <div>
-          <div class="custom-element">Гарантия</div>
-
-          <div>
-            <img src={why} alt="why" className="img-buttons-about"></img>
-            <p>Почему BANSYS?</p>
-          </div>
-          <div>
-            <img src={how} alt="how" className="img-buttons-about" />
-            <p>Как купить?</p>
-          </div>
-          <div>
-            <img src={garant} alt="garant" className="img-buttons-about" />
-            <p>Гарантия</p>
-          </div>
-          <div>
-            <img src={loyal} alt="loyal" className="img-buttons-about" />
-            <p>Наша программа лояльности</p>
-          </div>
+          <div className="why">Почему BANSYS?</div>
+          <div className="how">Как купить?</div>
+          <div className="garante">Гарантия</div>
+          <div className="loyal">Наша программа лояльности</div>
         </div>
         <button>Добавить в корзину</button>
       </div>

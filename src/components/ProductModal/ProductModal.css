@@ -52,10 +52,52 @@ body.no-scroll {
   text-align: center;
 }
 
-.custom-element {
+.why {
   width: 100px; /* Задайте ширину элемента */
   height: 110px; /* Задайте высоту элемента */
   background-image: url("why.png"); /* Путь к вашему фону */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Цвет текста */
+  font-size: 1em; /* Размер текста */
+  text-align: center; /* Выравнивание текста */
+}
+.how {
+  width: 100px; /* Задайте ширину элемента */
+  height: 110px; /* Задайте высоту элемента */
+  background-image: url("how.png"); /* Путь к вашему фону */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Цвет текста */
+  font-size: 1em; /* Размер текста */
+  text-align: center; /* Выравнивание текста */
+}
+.garant {
+  width: 100px; /* Задайте ширину элемента */
+  height: 110px; /* Задайте высоту элемента */
+  background-image: url("garant.png"); /* Путь к вашему фону */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Цвет текста */
+  font-size: 1em; /* Размер текста */
+  text-align: center; /* Выравнивание текста */
+}
+.loyal {
+  width: 100px; /* Задайте ширину элемента */
+  height: 110px; /* Задайте высоту элемента */
+  background-image: url("loyal.png"); /* Путь к вашему фону */
   background-size: cover;
   background-position: center;
   border-radius: 10px;
