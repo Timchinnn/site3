@@ -51,18 +51,18 @@ body.no-scroll {
   margin: 15px 0;
   text-align: center;
 }
-.container121 {
+
+.custom-element {
+  width: 100px; /* Задайте ширину элемента */
+  height: 110px; /* Задайте высоту элемента */
+  background-image: url("why.png"); /* Путь к вашему фону */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
   display: flex;
-  flex-direction: column; /* Устанавливаем элементы в столбец */
-  align-items: flex-start; /* Выравниваем элементы по левому краю */
-}
-
-.img-buttons-about {
-  width: 100%; /* Занимаем всю ширину контейнера */
-}
-
-.text-on-image {
+  align-items: center;
+  justify-content: center;
   color: white; /* Цвет текста */
-  margin-top: -20px; /* Отступ сверху, чтобы текст перекрывал изображение */
-  padding: 10px; /* Отступы для текста */
+  font-size: 1em; /* Размер текста */
+  text-align: center; /* Выравнивание текста */
 }
