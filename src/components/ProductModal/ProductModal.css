@@ -70,4 +70,5 @@ body.no-scroll {
   justify-content: flex-start; 
   align-items: center;
   text-align: center;
+  background-position: -50%;
 }
