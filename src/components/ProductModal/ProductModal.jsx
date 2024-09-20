@@ -122,7 +122,7 @@ const ProductModal = ({ product, onClose}) => {
   console.log(product);
 
   // Состояние для текущей активной вкладки
-  const [activeTab, setActiveTab] = useState("description");
+  
 
   useEffect(() => {
     if (!product) return;
