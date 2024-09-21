@@ -115,7 +115,7 @@
 // export default ProductModal;
 import React, { useEffect } from "react";
 import "./ProductModal.css";
-import "./arrow.png";
+import arrow from "./arrow.png";
 // import why from "./why.png";
 // import how from "./how.png";
 // import garant from "./garant.png";
