@@ -115,6 +115,7 @@
 // export default ProductModal;
 import React, { useEffect } from "react";
 import "./ProductModal.css";
+import "./arrow.png";
 // import why from "./why.png";
 // import how from "./how.png";
 // import garant from "./garant.png";
@@ -142,9 +143,8 @@ const ProductModal = ({ product, onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <button className="modal-close-button" onClick={onClose}>
-          <span className="icon">×</span>
-        </button>
+        <img className="arrow" src={arrow} alt="arrow" onClick={onClose} />
+
         <img
           className="modal-image"
           src={product.photo_url}
