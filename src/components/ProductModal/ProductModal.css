@@ -53,21 +53,63 @@ body.no-scroll {
 }
 
 .why {
+  width: 100px; /* Задайте ширину элемента */
+  height: 110px; /* Задайте высоту элемента */
   background-image: url("why.png"); /* Путь к вашему фону */
-  display: inline-block;
-  background-size: auto; /* использовать автоматический размер */
-  background-repeat: no-repeat; /* запретить повторение изображения */
-  width: auto; /* ширина подстраивается под содержание */
-  height: auto;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Цвет текста */
+  font-size: 1em; /* Размер текста */
+  text-align: center; /* Выравнивание текста */
+  margin-right: 18px;
 }
 .how {
+  width: 100px; /* Задайте ширину элемента */
+  height: 110px; /* Задайте высоту элемента */
   background-image: url("how.png"); /* Путь к вашему фону */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Цвет текста */
+  font-size: 1em; /* Размер текста */
+  text-align: center; /* Выравнивание текста */
+  margin-right: 18px;
 }
 .garante {
+  width: 100px; /* Задайте ширину элемента */
+  height: 110px; /* Задайте высоту элемента */
   background-image: url("garant.png"); /* Путь к вашему фону */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Цвет текста */
+  font-size: 1em; /* Размер текста */
+  text-align: center; /* Выравнивание текста */
+  margin-right: 18px;
 }
 .loyal {
+  width: 100px; /* Задайте ширину элемента */
+  height: 110px; /* Задайте высоту элемента */
   background-image: url("loyal.png"); /* Путь к вашему фону */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Цвет текста */
+  font-size: 1em; /* Размер текста */
+  text-align: center; /* Выравнивание текста */
 }
 .about-buttons-question {
   display: flex;
