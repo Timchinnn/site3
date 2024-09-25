@@ -65,6 +65,7 @@ body.no-scroll {
   color: white; /* Цвет текста */
   font-size: 1em; /* Размер текста */
   text-align: center; /* Выравнивание текста */
+  margin-right: 8px;
 }
 .how {
   width: 100px; /* Задайте ширину элемента */
@@ -79,6 +80,7 @@ body.no-scroll {
   color: white; /* Цвет текста */
   font-size: 1em; /* Размер текста */
   text-align: center; /* Выравнивание текста */
+  margin-right: 8px;
 }
 .garante {
   width: 100px; /* Задайте ширину элемента */
@@ -93,6 +95,7 @@ body.no-scroll {
   color: white; /* Цвет текста */
   font-size: 1em; /* Размер текста */
   text-align: center; /* Выравнивание текста */
+  margin-right: 8px;
 }
 .loyal {
   width: 100px; /* Задайте ширину элемента */
