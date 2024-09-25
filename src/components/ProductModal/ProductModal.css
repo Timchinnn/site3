@@ -108,3 +108,6 @@ body.no-scroll {
   font-size: 1em; /* Размер текста */
   text-align: center; /* Выравнивание текста */
 }
+.about-buttons-question {
+  display: flex;
+}
