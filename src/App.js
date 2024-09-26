@@ -3,8 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom"; // Импортируем useNavigate
 import Search from "./components/Search/Search";
 import "./App.css";
-
-import garant from "./garant.png";
+import fly from "./fly.png";
 import myLog from "./myLog.png";
 import sendRequest from "./sendRequest.png";
 import dn from "./dn.png";
