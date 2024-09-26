@@ -129,6 +129,10 @@ body.no-scroll {
   background-color: #173b33;
   border-radius: 6px;
   color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .add-cart {
   color: white;
@@ -136,6 +140,10 @@ body.no-scroll {
   border-radius: 20px;
   width: 344px;
   height: 36px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .block-about {
   width: 344px;

@@ -152,7 +152,7 @@ const ProductModal = ({ product, onClose }) => {
         />
         <div className="card">
           <p className="card-title">Название</p>
-          <button className="details-button">Подробнее</button>
+          <p className="details-button">Подробнее</p>
         </div>
         <div className="block-about">
           {" "}
