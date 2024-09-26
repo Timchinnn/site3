@@ -127,24 +127,21 @@ const ProductModal = ({ product, onClose }) => {
     };
   }, [product]);
 
-  if (!product) return null;
-
+  // Обработчики свайпа
   const handlers = useSwipeable({
     onSwipedLeft: () => {
-      if (product) {
-        console.log("Swiped left!");
-        // Здесь можно добавить логику для обработки свайпа влево
-      }
+      console.log("Swiped left!");
+      // Здесь можно добавить логику для обработки свайпа влево
     },
     onSwipedRight: () => {
-      if (product) {
-        console.log("Swiped right!");
-        // Здесь можно добавить логику для обработки свайпа вправо
-      }
+      console.log("Swiped right!");
+      // Здесь можно добавить логику для обработки свайпа вправо
     },
     preventDefaultTouchmoveEvent: true,
     trackMouse: true, // Для тестирования на десктопе
   });
+
+  if (!product) return null;
 
   return (
     <div className="modal-overlay">
