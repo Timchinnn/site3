@@ -61,8 +61,8 @@
 }
 
 .why {
-  width: 100px; /* Задайте ширину элемента */
-  height: 110px; /* Задайте высоту элемента */
+  min-width: 100px; /* Задайте ширину элемента */
+  min-height: 110px; /* Задайте высоту элемента */
   background-image: url("why.png"); /* Путь к вашему фону */
   background-size: cover;
   background-position: center;
@@ -76,8 +76,8 @@
   margin-right: 18px;
 }
 .how {
-  width: 100px; /* Задайте ширину элемента */
-  height: 110px; /* Задайте высоту элемента */
+  min-width: 100px; /* Задайте ширину элемента */
+  min-height: 110px; /* Задайте высоту элемента */
   background-image: url("how.png"); /* Путь к вашему фону */
   background-size: cover;
   background-position: center;
@@ -91,8 +91,8 @@
   margin-right: 18px;
 }
 .garante {
-  width: 100px; /* Задайте ширину элемента */
-  height: 110px; /* Задайте высоту элемента */
+  min-width: 100px; /* Задайте ширину элемента */
+  min-height: 110px; /* Задайте высоту элемента */
   background-image: url("garant.png"); /* Путь к вашему фону */
   background-size: cover;
   background-position: center;
@@ -106,8 +106,8 @@
   margin-right: 18px;
 }
 .loyal {
-  width: 100px; /* Задайте ширину элемента */
-  height: 110px; /* Задайте высоту элемента */
+  min-width: 100px; /* Задайте ширину элемента */
+  min-height: 110px; /* Задайте высоту элемента */
   background-image: url("loyal.png"); /* Путь к вашему фону */
   background-size: cover;
   background-position: center;
@@ -127,8 +127,8 @@
   justify-content: space-between;
 }
 .details-button {
-  width: 94px;
-  height: 29px;
+  min-width: 94px;
+  min-height: 29px;
   background-color: #173b33;
   border-radius: 6px;
   color: white;
@@ -141,16 +141,16 @@
   color: white;
   background-color: #3d6159;
   border-radius: 20px;
-  width: 344px;
-  height: 36px;
+  min-width: 344px;
+  min-height: 36px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .block-about {
-  width: 344px;
-  height: 266px;
+  min-width: 344px;
+  min-height: 266px;
   background-color: #d9d9d9;
   border-radius: 11px;
 }
