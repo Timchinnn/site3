@@ -151,7 +151,7 @@ const ProductModal = ({ product, onClose }) => {
           alt={product.name}
         />
         <div>
-          <p></p>
+          <p>Название</p>
           <button>Подробнее</button>
         </div>
         <div>
