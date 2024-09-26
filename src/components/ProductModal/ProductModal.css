@@ -134,7 +134,9 @@ body.no-scroll {
   scroll-snap-type: x mandatory; /* Для плавного прокручивания */
   min-height: 125px;
 }
-
+.about-buttons-question::-webkit-scrollbar {
+  display: none; /* Скрывает полосу прокрутки */
+}
 /* .about-buttons-question div {
   scroll-snap-align: start; /* Выравнивание элементов при прокрутке */
 /* flex: 0 0 auto; Элементы не будут сжиматься */
