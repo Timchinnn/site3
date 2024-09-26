@@ -4,7 +4,7 @@ import App from "./App";
 import "./Main.css";
 import bansys from "./bansys.png";
 import toBuy from "./tobuy.png";
-
+import { useState, useEffect } from "react";
 // import ProductDetailPage from "./components/ProductModal/ProductModal";
 import SendRequestPage from "./components/SendRequestModal/SendRequestModal";
 import ProfilePage from "./components/ProfileModal/ProfileModal";
