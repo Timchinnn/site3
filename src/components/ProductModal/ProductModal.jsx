@@ -166,7 +166,7 @@ const ProductModal = ({ product, onClose }) => {
           <div className="garante">Гарантия</div>
           <div className="loyal">Наша программа лояльности</div>
         </div>
-        <button className="add-cart">Добавить в корзину</button>
+        <p className="add-cart">Добавить в корзину</p>
       </div>
     </div>
   );
