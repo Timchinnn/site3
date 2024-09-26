@@ -1,6 +1,9 @@
 body.no-scroll {
   overflow: hidden;
 }
+.main {
+  overflow-x: hidden;
+}
 
 .modal-overlay {
   position: fixed;
