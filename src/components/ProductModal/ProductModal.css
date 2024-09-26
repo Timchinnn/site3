@@ -132,9 +132,9 @@ body.no-scroll {
 
 /* .about-buttons-question div {
   scroll-snap-align: start; /* Выравнивание элементов при прокрутке */
-  flex: 0 0 auto; /* Элементы не будут сжиматься */
-  margin-right: 18px; /* Отступ между элементами */
-} */
+/* flex: 0 0 auto; Элементы не будут сжиматься */
+/* margin-right: 18px; Отступ между элементами */
+/* } */
 .card {
   display: flex;
   justify-content: space-between;
