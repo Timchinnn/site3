@@ -119,3 +119,7 @@ body.no-scroll {
 .about-buttons-question {
   display: flex;
 }
+.card {
+  display: flex;
+  justify-content: space-between;
+}

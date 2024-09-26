@@ -150,9 +150,9 @@ const ProductModal = ({ product, onClose }) => {
           src={product.photo_url}
           alt={product.name}
         />
-        <div>
-          <p>Название</p>
-          <button>Подробнее</button>
+        <div className="card">
+          <p className="card-title">Название</p>
+          <button className="details-button">Подробнее</button>
         </div>
         <div>
           {" "}
