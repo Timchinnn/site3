@@ -13,47 +13,61 @@ function Main() {
   const handleLoginClick = () => {
     console.log("Вход");
   };
-  
+
   const handleRegistrationClick = () => {
     console.log("Регистрация");
   };
 
   const handleShopButtonClick = () => {
-    navigate('/app'); // Переход на новую страницу
+    navigate("/app"); // Переход на новую страницу
   };
+  const [userProfilePhoto, setUserProfilePhoto] = useState("");
 
+  useEffect(() => {
+    const user = window.Telegram.WebApp.initDataUnsafe.user;
+    if (user) {
+      setUserProfilePhoto(user.photo_url); // Предполагается, что photo_url доступен
+    }
+  }, []);
   return (
     <Routes>
-      <Route path="/" element={
-        <div className="menu-container">
-          <div className="header">
-            <button className="link" onClick={handleLoginClick}>
-              ВХОД
-            </button>
-            <button className="link" onClick={handleRegistrationClick}>
-              РЕГИСТРАЦИЯ
-            </button>
-          </div>
-          <div>
-            <div className="content">
-              <img src={bansys} alt="bans"></img>
-              <p className="subtitle">Bansys - Банкоматы - Терминалы</p>
+      <Route
+        path="/"
+        element={
+          <div className="menu-container">
+            <div>
+              {userProfilePhoto && <img src={userProfilePhoto} alt="Profile" />}
+            </div>
+            <div className="header">
+              <button className="link" onClick={handleLoginClick}>
+                ВХОД
+              </button>
+              <button className="link" onClick={handleRegistrationClick}>
+                РЕГИСТРАЦИЯ
+              </button>
+            </div>
+            <div>
+              <div className="content">
+                <img src={bansys} alt="bans"></img>
+                <p className="subtitle">Bansys - Банкоматы - Терминалы</p>
+              </div>
+            </div>
+            <div className="footer">
+              <img
+                src={toBuy}
+                alt="toBuy"
+                className="shop-button"
+                onClick={handleShopButtonClick}
+              ></img>
             </div>
           </div>
-          <div className="footer">
-            <img
-              src={toBuy}
-              alt="toBuy"
-              className="shop-button"
-              onClick={handleShopButtonClick}
-            ></img>
-          </div>
-        </div>
-      } />
+        }
+      />
       <Route path="/app" element={<App />} />
-      <Route path="/profile" element={<ProfilePage />} /> {/* Новый маршрут для профиля */}
-      <Route path="/send-request" element={<SendRequestPage />} /> {/* Новый маршрут для отправки запроса */}
-      
+      <Route path="/profile" element={<ProfilePage />} />{" "}
+      {/* Новый маршрут для профиля */}
+      <Route path="/send-request" element={<SendRequestPage />} />{" "}
+      {/* Новый маршрут для отправки запроса */}
     </Routes>
   );
 }
