@@ -21,16 +21,7 @@ function Main() {
   const handleShopButtonClick = () => {
     navigate("/app"); // Переход на новую страницу
   };
-  const [userProfilePhoto, setUserProfilePhoto] = useState("");
 
-  useEffect(() => {
-    const user = window.Telegram.WebApp.initDataUnsafe.user;
-    console.log(user);
-    if (user) {
-      console.log(user.photo_url);
-      setUserProfilePhoto(user.photo_url); // Предполагается, что photo_url доступен
-    }
-  }, []);
   return (
     <Routes>
       <Route
