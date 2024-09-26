@@ -1,9 +1,6 @@
 body.no-scroll {
   overflow: hidden;
 }
-/* .main {
-  overflow-x: auto;
-} */
 
 .modal-overlay {
   position: fixed;
@@ -121,6 +118,14 @@ body.no-scroll {
 }
 .about-buttons-question {
   display: flex;
+  overflow-x: auto; /* Позволяет прокручивать элементы по оси X */
+  scroll-snap-type: x mandatory; /* Для плавного прокручивания */
+}
+
+.about-buttons-question div {
+  scroll-snap-align: start; /* Выравнивание элементов при прокрутке */
+  flex: 0 0 auto; /* Элементы не будут сжиматься */
+  margin-right: 18px; /* Отступ между элементами */
 }
 .card {
   display: flex;
