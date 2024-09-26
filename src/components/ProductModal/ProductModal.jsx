@@ -154,7 +154,7 @@ const ProductModal = ({ product, onClose }) => {
           <p className="card-title">Название</p>
           <button className="details-button">Подробнее</button>
         </div>
-        <div>
+        <div className="block-about">
           {" "}
           <p></p>
         </div>
@@ -166,7 +166,7 @@ const ProductModal = ({ product, onClose }) => {
           <div className="garante">Гарантия</div>
           <div className="loyal">Наша программа лояльности</div>
         </div>
-        <button>Добавить в корзину</button>
+        <button className="add-cart">Добавить в корзину</button>
       </div>
     </div>
   );
