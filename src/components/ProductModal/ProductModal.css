@@ -2,7 +2,7 @@
   overflow: hidden;
 } */
 .main {
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 .modal-overlay {
