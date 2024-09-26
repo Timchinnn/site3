@@ -58,8 +58,10 @@ body.no-scroll {
 }
 
 .why {
-  min-width: 100px; /* Задайте ширину элемента */
-  min-height: 110px; /* Задайте высоту элемента */
+  min-height: 110px;
+  max-height: 110px;
+  min-width: 100px;
+  max-width: 100px;
   background-image: url("why.png"); /* Путь к вашему фону */
   background-size: cover;
   background-position: center;
@@ -109,8 +111,10 @@ body.no-scroll {
   flex: 0 0 auto; /* Элементы не будут сжиматься */
 }
 .loyal {
-  min-width: 100px; /* Задайте ширину элемента */
-  min-height: 110px; /* Задайте высоту элемента */
+  min-height: 110px;
+  max-height: 110px;
+  min-width: 100px;
+  max-width: 100px;
   background-image: url("loyal.png"); /* Путь к вашему фону */
   background-size: cover;
   background-position: center;
@@ -128,6 +132,7 @@ body.no-scroll {
   display: flex;
   overflow-x: auto; /* Позволяет прокручивать элементы по оси X */
   scroll-snap-type: x mandatory; /* Для плавного прокручивания */
+  min-height: 125px;
 }
 
 /* .about-buttons-question div {
