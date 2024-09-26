@@ -113,14 +113,12 @@
 // };
 
 // export default ProductModal;
-
 import React, { useEffect } from "react";
 import { useSwipeable } from "react-swipeable";
 import "./ProductModal.css";
 import arrow from "./arrow.png";
 
 const ProductModal = ({ product, onClose }) => {
-  console.log(product);
   useEffect(() => {
     if (!product) return;
     document.body.classList.add("no-scroll");
@@ -132,15 +130,25 @@ const ProductModal = ({ product, onClose }) => {
   if (!product) return null;
 
   const handlers = useSwipeable({
-    onSwipedLeft: () => console.log("Swiped left!"),
-    onSwipedRight: () => console.log("Swiped right!"),
+    onSwipedLeft: () => {
+      if (product) {
+        console.log("Swiped left!");
+        // Здесь можно добавить логику для обработки свайпа влево
+      }
+    },
+    onSwipedRight: () => {
+      if (product) {
+        console.log("Swiped right!");
+        // Здесь можно добавить логику для обработки свайпа вправо
+      }
+    },
     preventDefaultTouchmoveEvent: true,
     trackMouse: true, // Для тестирования на десктопе
   });
 
   return (
     <div className="modal-overlay">
-      <div className="modal-content">
+      <div className="modal-content" {...handlers}>
         <img className="arrow" src={arrow} alt="arrow" onClick={onClose} />
         <img
           className="modal-image"
@@ -155,7 +163,7 @@ const ProductModal = ({ product, onClose }) => {
           <p></p>
         </div>
         <p>Полезная информация</p>
-        <div className="about-buttons-question" {...handlers}>
+        <div className="about-buttons-question">
           <div className="why">Почему BANSYS?</div>
           <div className="how">Как купить?</div>
           <div className="garante">Гарантия</div>
