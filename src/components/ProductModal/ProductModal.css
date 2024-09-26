@@ -71,6 +71,8 @@ body.no-scroll {
   font-size: 1em; /* Размер текста */
   text-align: center; /* Выравнивание текста */
   margin-right: 18px;
+  scroll-snap-align: start; /* Выравнивание элементов при прокрутке */
+  flex: 0 0 auto; /* Элементы не будут сжиматься */
 }
 .how {
   min-width: 100px; /* Задайте ширину элемента */
@@ -86,6 +88,8 @@ body.no-scroll {
   font-size: 1em; /* Размер текста */
   text-align: center; /* Выравнивание текста */
   margin-right: 18px;
+  scroll-snap-align: start; /* Выравнивание элементов при прокрутке */
+  flex: 0 0 auto; /* Элементы не будут сжиматься */
 }
 .garante {
   min-width: 100px; /* Задайте ширину элемента */
@@ -101,6 +105,8 @@ body.no-scroll {
   font-size: 1em; /* Размер текста */
   text-align: center; /* Выравнивание текста */
   margin-right: 18px;
+  scroll-snap-align: start; /* Выравнивание элементов при прокрутке */
+  flex: 0 0 auto; /* Элементы не будут сжиматься */
 }
 .loyal {
   min-width: 100px; /* Задайте ширину элемента */
@@ -115,6 +121,8 @@ body.no-scroll {
   color: white; /* Цвет текста */
   font-size: 1em; /* Размер текста */
   text-align: center; /* Выравнивание текста */
+  scroll-snap-align: start; /* Выравнивание элементов при прокрутке */
+  flex: 0 0 auto; /* Элементы не будут сжиматься */
 }
 .about-buttons-question {
   display: flex;
@@ -122,11 +130,11 @@ body.no-scroll {
   scroll-snap-type: x mandatory; /* Для плавного прокручивания */
 }
 
-.about-buttons-question div {
+/* .about-buttons-question div {
   scroll-snap-align: start; /* Выравнивание элементов при прокрутке */
   flex: 0 0 auto; /* Элементы не будут сжиматься */
   margin-right: 18px; /* Отступ между элементами */
-}
+} */
 .card {
   display: flex;
   justify-content: space-between;
