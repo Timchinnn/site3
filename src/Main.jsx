@@ -25,6 +25,7 @@ function Main() {
 
   useEffect(() => {
     const user = window.Telegram.WebApp.initDataUnsafe.user;
+    console.log(user);
     if (user) {
       console.log(user.photo_url);
       setUserProfilePhoto(user.photo_url); // Предполагается, что photo_url доступен
