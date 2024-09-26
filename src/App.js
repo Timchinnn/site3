@@ -3,9 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom"; // Импортируем useNavigate
 import Search from "./components/Search/Search";
 import "./App.css";
-import fly from "./fly.png";
-import how from "./howdy.png";
-import why from "./why.png";
+
 import garant from "./garant.png";
 import myLog from "./myLog.png";
 import sendRequest from "./sendRequest.png";
@@ -53,11 +51,11 @@ function App() {
   );
 
   const openProfilePage = () => {
-    navigate('/profile'); // Переход на страницу профиля
+    navigate("/profile"); // Переход на страницу профиля
   };
 
   const openSendRequestPage = () => {
-    navigate('/send-request'); // Переход на страницу отправки запроса
+    navigate("/send-request"); // Переход на страницу отправки запроса
   };
 
   // const openProductPage = (product) => {
@@ -84,10 +82,11 @@ function App() {
         </div>
       </div>
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-      <div className="info-buttons">
-        <img src={why} alt="why" loading="eager"></img>
-        <img src={how} alt="how" loading="eager"></img>
-        <img src={garant} alt="garant" loading="eager"></img>
+      <div className="about-buttons-question">
+        <div className="why">Почему BANSYS?</div>
+        <div className="how">Как купить?</div>
+        <div className="garante">Гарантия</div>
+        <div className="loyal">Наша программа лояльности</div>
       </div>
       <div className="log-help">
         <img
@@ -97,11 +96,7 @@ function App() {
           loading="eager"
           onClick={openProfilePage}
         ></img>
-        <img
-          src={sendRequest}
-          alt=""
-          onClick={openSendRequestPage}
-        ></img>
+        <img src={sendRequest} alt="" onClick={openSendRequestPage}></img>
       </div>
       <div className="company">
         <img src={hyosung} alt="hyosung"></img>
@@ -145,7 +140,6 @@ function App() {
       {isProductModalOpen && (
         <ProductModal product={selectedProduct} onClose={closeProductModal} />
       )}
-
     </div>
   );
 }
