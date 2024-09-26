@@ -123,3 +123,10 @@ body.no-scroll {
   display: flex;
   justify-content: space-between;
 }
+.details-button {
+  width: 94px;
+  height: 29px;
+  background-color: #173b33;
+  border-radius: 6px;
+  color: white;
+}
