@@ -77,8 +77,10 @@ body.no-scroll {
   flex: 0 0 auto; /* Элементы не будут сжиматься */
 }
 .how {
-  min-width: 100px; /* Задайте ширину элемента */
-  min-height: 110px; /* Задайте высоту элемента */
+  min-height: 110px;
+  max-height: 110px;
+  min-width: 100px;
+  max-width: 100px;
   background-image: url("how.png"); /* Путь к вашему фону */
   background-size: cover;
   background-position: center;
@@ -94,8 +96,10 @@ body.no-scroll {
   flex: 0 0 auto; /* Элементы не будут сжиматься */
 }
 .garante {
-  min-width: 100px; /* Задайте ширину элемента */
-  min-height: 110px; /* Задайте высоту элемента */
+  min-height: 110px;
+  max-height: 110px;
+  min-width: 100px;
+  max-width: 100px;
   background-image: url("garant.png"); /* Путь к вашему фону */
   background-size: cover;
   background-position: center;
