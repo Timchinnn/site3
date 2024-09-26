@@ -28,9 +28,6 @@ function Main() {
         path="/"
         element={
           <div className="menu-container">
-            <div>
-              {userProfilePhoto && <img src={userProfilePhoto} alt="Profile" />}
-            </div>
             <div className="header">
               <button className="link" onClick={handleLoginClick}>
                 ВХОД
