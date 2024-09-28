@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./CartModal.css"; // Импортируем стили
 
-const CartModal = ({ items, onClose }) => {
+const CartModal = ({ items = [], onClose }) => {
   useEffect(() => {
     // Отключение прокрутки
     document.body.classList.add("no-scroll");
