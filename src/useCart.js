@@ -15,9 +15,14 @@ const useCart = (tg, openModal) => {
     }
 
     // Добавляем обработчик клика для MainButton, который открывает модальное окно
-    tg.MainButton.onClick(() => {
-      openModal();
-    });
+    // tg.MainButton.onClick(() => {
+    //   openModal();
+      if (tg && tg.MainButton) {
+        tg.MainButton.onClick(() => {
+          openModal();
+        });
+      }
+    };
   };
 
   const onAdd = (product) => {
