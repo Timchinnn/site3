@@ -11,8 +11,6 @@ import hyosung from "./hyosung.png";
 import ncr from "./ncr.png";
 import cart from "./cart.png";
 import ProductModal from "./components/ProductModal/ProductModal";
-import CartModal from "./components/CartModal/CartModal"; // Import the CartModal component
-
 function App() {
   const navigate = useNavigate(); // Используем хук для навигации
   const [products, setProducts] = useState([]);
@@ -29,16 +27,6 @@ function App() {
       .catch((error) => {
         console.error("Ошибка при получении категорий:", error);
       });
-  };
-  const [isCartOpen, setIsCartOpen] = useState(false); // State to manage cart modal visibility
-  const [cartItems] = useState([]); // State to manage items in the cart
-
-  const openCart = () => {
-    setIsCartOpen(true);
-  };
-
-  const closeCart = () => {
-    setIsCartOpen(false);
   };
 
   const fetchProducts = () => {
@@ -114,9 +102,6 @@ function App() {
         <img src={dn} alt="dn" className="dn"></img>
         <img src={ncr} alt="ncr"></img>
       </div>
-      <button className="cart-button" onClick={openCart}>
-        Корзина
-      </button>
       <h1 className="catalog">Каталог</h1>
       <div className="category">
         {categories.length > 0 ? (
@@ -153,9 +138,6 @@ function App() {
       </div>
       {isProductModalOpen && (
         <ProductModal product={selectedProduct} onClose={closeProductModal} />
-      )}
-      {isCartOpen && (
-        <CartModal items={cartItems} total={0} onClose={closeCart} />
       )}
     </div>
   );
