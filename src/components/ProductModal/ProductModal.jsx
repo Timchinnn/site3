@@ -118,10 +118,7 @@ import { useSwipeable } from "react-swipeable";
 import "./ProductModal.css";
 import arrow from "./arrow.png";
 
-const ProductModal = ({ product, onClose, onAdd, onRemove, addedItems }) => {
-  const addedItem = addedItems.find((item) => item.id === product.id);
-  const quantity = addedItem ? addedItem.quantity : 0;
-
+const ProductModal = ({ product, onClose }) => {
   useEffect(() => {
     if (!product) return;
     document.body.classList.add("no-scroll");
@@ -130,15 +127,18 @@ const ProductModal = ({ product, onClose, onAdd, onRemove, addedItems }) => {
     };
   }, [product]);
 
+  // Обработчики свайпа
   const handlers = useSwipeable({
     onSwipedLeft: () => {
       console.log("Swiped left!");
+      // Здесь можно добавить логику для обработки свайпа влево
     },
     onSwipedRight: () => {
       console.log("Swiped right!");
+      // Здесь можно добавить логику для обработки свайпа вправо
     },
     preventDefaultTouchmoveEvent: true,
-    trackMouse: true,
+    trackMouse: true, // Для тестирования на десктопе
   });
 
   if (!product) return null;
@@ -153,47 +153,20 @@ const ProductModal = ({ product, onClose, onAdd, onRemove, addedItems }) => {
           alt={product.name}
         />
         <div className="card">
-          <p className="card-title">{product.name}</p>
+          <p className="card-title">Название</p>
           <p className="details-button">Подробнее</p>
         </div>
         <div className="block-about">
-          <p>{product.description}</p>
+          <p></p>
         </div>
-        <div className="product-price-add">
-          {quantity > 0 ? (
-            <div className="price-controls">
-              <button
-                className="add-to-cart-min"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onRemove(product);
-                }}
-              >
-                -
-              </button>
-              <div className="product-quantity">{quantity}</div>
-              <button
-                className="add-to-cart"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onAdd(product);
-                }}
-              >
-                +
-              </button>
-            </div>
-          ) : (
-            <button
-              className="add-to-cart"
-              onClick={(e) => {
-                e.stopPropagation();
-                onAdd(product);
-              }}
-            >
-              Купить
-            </button>
-          )}
+        <p>Полезная информация</p>
+        <div className="about-buttons-question">
+          <div className="why">Почему BANSYS?</div>
+          <div className="how">Как купить?</div>
+          <div className="garante">Гарантия</div>
+          <div className="loyal">Наша программа лояльности</div>
         </div>
+        <p className="add-cart">Добавить в корзину</p>
       </div>
     </div>
   );
