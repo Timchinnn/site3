@@ -45,6 +45,7 @@ function App() {
     fetchCategories();
     fetchProducts();
     const handleBackButton = (event) => {
+      console.log("dss");
       if (location.pathname !== "/") {
         event.preventDefault(); // предотвращаем переход
         navigate(-1); // переходим на предыдущую страницу
