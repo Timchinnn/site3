@@ -43,7 +43,20 @@ function App() {
   useEffect(() => {
     fetchCategories();
     fetchProducts();
-  }, []);
+    const handlePopState = (event) => {
+      // Здесь можно добавить логику, если нужно
+      console.log("Назад нажали");
+      // Например, можно перенаправить на главную страницу
+      navigate("/");
+    };
+
+    window.addEventListener("popstate", handlePopState);
+
+    // Убираем обработчик при размонтировании компонента
+    return () => {
+      window.removeEventListener("popstate", handlePopState);
+    };
+  }, [navigate]);
 
   const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(searchQuery.toLowerCase())

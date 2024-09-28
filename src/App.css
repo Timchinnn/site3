@@ -87,6 +87,7 @@ h1 {
 }
 .tglink {
   padding-right: 5px;
+  margin-left: 10px;
 }
 .info-buttons {
   display: flex; /* Flexbox для центрирования содержимого */
