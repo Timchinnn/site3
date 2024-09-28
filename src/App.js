@@ -6,7 +6,8 @@ import ProductModal from "./components/ProductModal/ProductModal";
 import CartModal from "./components/CartModal/CartModal";
 import useCart from "./useCart";
 import "./App.css";
-
+import { getTotalPrice } from "./utils";
+import cart from "./path/to/cart.png";
 function App() {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
