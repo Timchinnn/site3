@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; // Импортируем useNavigate
 import Search from "./components/Search/Search";
 import "./App.css";
 import fly from "./fly.png";
@@ -11,23 +11,13 @@ import hyosung from "./hyosung.png";
 import ncr from "./ncr.png";
 import cart from "./cart.png";
 import ProductModal from "./components/ProductModal/ProductModal";
-import CartModal from "./components/CartModal/CartModal";
-import useCart from "./useCart";
-import { getTotalPrice } from "./utils";
-
 function App() {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Используем хук для навигации
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isProductModalOpen, setIsProductModalOpen] = useState(false);
-  const [isCartModalOpen, setIsCartModalOpen] = useState(false);
-
-  const { addedItems, onAdd, onRemove } = useCart(() =>
-    setIsCartModalOpen(true)
-  );
-
   const fetchCategories = () => {
     axios
       .get("/api/categories")
@@ -60,13 +50,17 @@ function App() {
   );
 
   const openProfilePage = () => {
-    navigate("/profile");
+    navigate("/profile"); // Переход на страницу профиля
   };
 
   const openSendRequestPage = () => {
-    navigate("/send-request");
+    navigate("/send-request"); // Переход на страницу отправки запроса
   };
 
+  // const openProductPage = (product) => {
+  //   console.log(product)
+  //   navigate(`/product/${product.id}`); // Переход на страницу продукта
+  // };
   const openProductModal = (product) => {
     setSelectedProduct(product);
     setIsProductModalOpen(true);
@@ -76,18 +70,12 @@ function App() {
     setSelectedProduct(null);
     setIsProductModalOpen(false);
   };
-
-  const closeCartModal = () => {
-    setIsCartModalOpen(false);
-  };
-
   return (
     <div className="main">
       <div className="header-name">
-        {/* Removed Telegram button logic */}
-        <div className="page-link-button">
-          <img src={fly} alt="page-link" className="page-link"></img>
-          <a href="https://t.me/Bansys_sale" className="page-button">
+        <div className="tg-link-button">
+          <img src={fly} alt="tglink" className="tglink"></img>
+          <a href="https://t.me/Bansys_sale" className="tg-button">
             @Bansys_sale
           </a>
         </div>
@@ -127,7 +115,7 @@ function App() {
                     <div
                       key={product.id}
                       className="product-item"
-                      onClick={() => openProductModal(product)}
+                      onClick={() => openProductModal(product)} // Переход на страницу продукта
                     >
                       <img
                         src={product.photo_url}
@@ -149,20 +137,7 @@ function App() {
         )}
       </div>
       {isProductModalOpen && (
-        <ProductModal
-          product={selectedProduct}
-          onClose={closeProductModal}
-          onAdd={onAdd}
-          onRemove={onRemove}
-          addedItems={addedItems}
-        />
-      )}
-      {isCartModalOpen && (
-        <CartModal
-          items={addedItems}
-          total={getTotalPrice(addedItems)}
-          onClose={closeCartModal}
-        />
+        <ProductModal product={selectedProduct} onClose={closeProductModal} />
       )}
     </div>
   );
