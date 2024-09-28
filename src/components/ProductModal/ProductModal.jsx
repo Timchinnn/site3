@@ -113,8 +113,7 @@
 // };
 
 // export default ProductModal;
-jsx;
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useSwipeable } from "react-swipeable";
 import "./ProductModal.css";
 import arrow from "./arrow.png";
