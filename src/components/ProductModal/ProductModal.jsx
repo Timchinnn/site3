@@ -113,12 +113,16 @@
 // };
 
 // export default ProductModal;
-import React, { useEffect } from "react";
+jsx;
+import React, { useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import "./ProductModal.css";
 import arrow from "./arrow.png";
 
-const ProductModal = ({ product, onClose }) => {
+const ProductModal = ({ product, onClose, onAdd, onRemove, addedItems }) => {
+  const addedItem = addedItems.find((item) => item.id === product.id);
+  const quantity = addedItem ? addedItem.quantity : 0;
+
   useEffect(() => {
     if (!product) return;
     document.body.classList.add("no-scroll");
@@ -127,18 +131,15 @@ const ProductModal = ({ product, onClose }) => {
     };
   }, [product]);
 
-  // Обработчики свайпа
   const handlers = useSwipeable({
     onSwipedLeft: () => {
       console.log("Swiped left!");
-      // Здесь можно добавить логику для обработки свайпа влево
     },
     onSwipedRight: () => {
       console.log("Swiped right!");
-      // Здесь можно добавить логику для обработки свайпа вправо
     },
     preventDefaultTouchmoveEvent: true,
-    trackMouse: true, // Для тестирования на десктопе
+    trackMouse: true,
   });
 
   if (!product) return null;
@@ -153,20 +154,47 @@ const ProductModal = ({ product, onClose }) => {
           alt={product.name}
         />
         <div className="card">
-          <p className="card-title">Название</p>
+          <p className="card-title">{product.name}</p>
           <p className="details-button">Подробнее</p>
         </div>
         <div className="block-about">
-          <p></p>
+          <p>{product.description}</p>
         </div>
-        <p>Полезная информация</p>
-        <div className="about-buttons-question">
-          <div className="why">Почему BANSYS?</div>
-          <div className="how">Как купить?</div>
-          <div className="garante">Гарантия</div>
-          <div className="loyal">Наша программа лояльности</div>
+        <div className="product-price-add">
+          {quantity > 0 ? (
+            <div className="price-controls">
+              <button
+                className="add-to-cart-min"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onRemove(product);
+                }}
+              >
+                -
+              </button>
+              <div className="product-quantity">{quantity}</div>
+              <button
+                className="add-to-cart"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onAdd(product);
+                }}
+              >
+                +
+              </button>
+            </div>
+          ) : (
+            <button
+              className="add-to-cart"
+              onClick={(e) => {
+                e.stopPropagation();
+                onAdd(product);
+              }}
+            >
+              Купить
+            </button>
+          )}
         </div>
-        <p className="add-cart">Добавить в корзину</p>
       </div>
     </div>
   );
