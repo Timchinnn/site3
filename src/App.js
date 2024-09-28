@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Search from "./components/Search/Search";
 import ProductModal from "./components/ProductModal/ProductModal";
 import CartModal from "./components/CartModal/CartModal";
-import useCart from "./useCart"; // Хук для управления корзиной
+import useCart from "./useCart"; // Импортируем хук для корзины
 import "./App.css";
 import fly from "./fly.png";
 import myLog from "./myLog.png";
@@ -66,6 +66,10 @@ function App() {
 
   const closeCartModal = () => {
     setIsCartModalOpen(false);
+  };
+
+  const getTotalPrice = (items) => {
+    return items.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
   return (

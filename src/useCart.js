@@ -1,61 +1,39 @@
 import { useState } from "react";
-import { getTotalPrice } from "./utils";
 
-const useCart = (tg, openModal) => {
-  const [addedItems, setAddedItems] = useState([]);
+const useCart = () => {
+  const [cartItems, setCartItems] = useState([]);
 
-  const updateMainButton = (items) => {
-    if (items.length === 0) {
-      tg.MainButton.hide();
-    } else {
-      tg.MainButton.show();
-      tg.MainButton.setParams({
-        text: `Купить ${getTotalPrice(items)}`,
-      });
-    }
-
-    if (tg && tg.MainButton) {
-      tg.MainButton.onClick(() => {
-        openModal();
-      });
-    }
-  }; // Закрываем функцию updateMainButton здесь
-
-  const onAdd = (product) => {
-    const existingItemIndex = addedItems.findIndex(
-      (item) => item.id === product.id
-    );
-    let newItems = [...addedItems];
-
-    if (existingItemIndex > -1) {
-      newItems[existingItemIndex].quantity += 1;
-    } else {
-      newItems.push({ ...product, quantity: 1 });
-    }
-
-    setAddedItems(newItems);
-    updateMainButton(newItems);
-  };
-
-  const onRemove = (product) => {
-    const existingItemIndex = addedItems.findIndex(
-      (item) => item.id === product.id
-    );
-
-    if (existingItemIndex > -1) {
-      let newItems = [...addedItems];
-      newItems[existingItemIndex].quantity -= 1;
-
-      if (newItems[existingItemIndex].quantity <= 0) {
-        newItems.splice(existingItemIndex, 1);
+  const addToCart = (product) => {
+    setCartItems((prevItems) => {
+      const existingItem = prevItems.find((item) => item.id === product.id);
+      if (existingItem) {
+        return prevItems.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
       }
-
-      setAddedItems(newItems);
-      updateMainButton(newItems);
-    }
+      return [...prevItems, { ...product, quantity: 1 }];
+    });
   };
 
-  return { addedItems, onAdd, onRemove }; // Теперь return находится внутри функции useCart
+  const removeFromCart = (product) => {
+    setCartItems((prevItems) => {
+      const existingItem = prevItems.find((item) => item.id === product.id);
+      if (existingItem.quantity === 1) {
+        return prevItems.filter((item) => item.id !== product.id);
+      }
+      return prevItems.map((item) =>
+        item.id === product.id ? { ...item, quantity: item.quantity - 1 } : item
+      );
+    });
+  };
+
+  return {
+    cartItems,
+    addToCart,
+    removeFromCart,
+  };
 };
 
 export default useCart;
