@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Search from "./components/Search/Search";
 import ProductModal from "./components/ProductModal/ProductModal";
 import CartModal from "./components/CartModal/CartModal";
-import useCart from "./useCart"; // Предполагается, что вы создали этот хук
+import useCart from "./useCart"; // Хук для управления корзиной
 import "./App.css";
 import fly from "./fly.png";
 import myLog from "./myLog.png";
