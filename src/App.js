@@ -9,7 +9,7 @@ import "./App.css";
 import { getTotalPrice } from "./utils";
 import cart from "./cart.png";
 function App() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
