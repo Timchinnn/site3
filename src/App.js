@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom"; // Импортируем useNavigate
+import { useNavigate } from "react-router-dom";
 import Search from "./components/Search/Search";
+import ProductModal from "./components/ProductModal/ProductModal";
+import CartModal from "./components/CartModal/CartModal";
+import useCart from "./useCart"; // Предполагается, что вы создали этот хук
 import "./App.css";
 import fly from "./fly.png";
 import myLog from "./myLog.png";
@@ -10,34 +13,32 @@ import dn from "./dn.png";
 import hyosung from "./hyosung.png";
 import ncr from "./ncr.png";
 import cart from "./cart.png";
-import ProductModal from "./components/ProductModal/ProductModal";
+
 function App() {
-  const navigate = useNavigate(); // Используем хук для навигации
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isProductModalOpen, setIsProductModalOpen] = useState(false);
+  const [isCartModalOpen, setIsCartModalOpen] = useState(false);
+
+  const { cartItems, addToCart, removeFromCart } = useCart();
+
   const fetchCategories = () => {
     axios
       .get("/api/categories")
-      .then((response) => {
-        setCategories(response.data);
-      })
-      .catch((error) => {
-        console.error("Ошибка при получении категорий:", error);
-      });
+      .then((response) => setCategories(response.data))
+      .catch((error) =>
+        console.error("Ошибка при получении категорий:", error)
+      );
   };
 
   const fetchProducts = () => {
     axios
       .get("/api/products")
-      .then((response) => {
-        setProducts(response.data);
-      })
-      .catch((error) => {
-        console.error("Ошибка при получении товаров:", error);
-      });
+      .then((response) => setProducts(response.data))
+      .catch((error) => console.error("Ошибка при получении товаров:", error));
   };
 
   useEffect(() => {
@@ -49,18 +50,6 @@ function App() {
     product.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const openProfilePage = () => {
-    navigate("/profile"); // Переход на страницу профиля
-  };
-
-  const openSendRequestPage = () => {
-    navigate("/send-request"); // Переход на страницу отправки запроса
-  };
-
-  // const openProductPage = (product) => {
-  //   console.log(product)
-  //   navigate(`/product/${product.id}`); // Переход на страницу продукта
-  // };
   const openProductModal = (product) => {
     setSelectedProduct(product);
     setIsProductModalOpen(true);
@@ -70,6 +59,19 @@ function App() {
     setSelectedProduct(null);
     setIsProductModalOpen(false);
   };
+
+  const openCartModal = () => {
+    setIsCartModalOpen(true);
+  };
+
+  const closeCartModal = () => {
+    setIsCartModalOpen(false);
+  };
+
+  const getTotalPrice = (items) => {
+    return items.reduce((total, item) => total + item.price * item.quantity, 0);
+  };
+
   return (
     <div className="main">
       <div className="header-name">
@@ -79,6 +81,9 @@ function App() {
             @Bansys_sale
           </a>
         </div>
+        <button className="cart-button" onClick={openCartModal}>
+          Корзина
+        </button>
       </div>
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <div className="about-buttons-question">
@@ -93,9 +98,13 @@ function App() {
           className="my-log"
           alt=""
           loading="eager"
-          onClick={openProfilePage}
+          onClick={() => navigate("/profile")}
         ></img>
-        <img src={sendRequest} alt="" onClick={openSendRequestPage}></img>
+        <img
+          src={sendRequest}
+          alt=""
+          onClick={() => navigate("/send-request")}
+        ></img>
       </div>
       <div className="company">
         <img src={hyosung} alt="hyosung" className="hyosung"></img>
@@ -115,7 +124,7 @@ function App() {
                     <div
                       key={product.id}
                       className="product-item"
-                      onClick={() => openProductModal(product)} // Переход на страницу продукта
+                      onClick={() => openProductModal(product)}
                     >
                       <img
                         src={product.photo_url}
@@ -125,7 +134,7 @@ function App() {
                       <p className="product-name">{product.name}</p>
                       <div className="ordertext-cart">
                         <p>Под заказ</p>
-                        <img src={cart} alt={cart} className="img-cart" />
+                        <img src={cart} alt="cart" className="img-cart" />
                       </div>
                     </div>
                   ))}
@@ -137,7 +146,20 @@ function App() {
         )}
       </div>
       {isProductModalOpen && (
-        <ProductModal product={selectedProduct} onClose={closeProductModal} />
+        <ProductModal
+          product={selectedProduct}
+          onClose={closeProductModal}
+          onAdd={addToCart}
+          onRemove={removeFromCart}
+          addedItems={cartItems}
+        />
+      )}
+      {isCartModalOpen && (
+        <CartModal
+          items={cartItems}
+          total={getTotalPrice(cartItems)}
+          onClose={closeCartModal}
+        />
       )}
     </div>
   );
