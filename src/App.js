@@ -13,7 +13,7 @@ import cart from "./cart.png";
 import ProductModal from "./components/ProductModal/ProductModal";
 import CartModal from "./components/CartModal/CartModal";
 import useCart from "./useCart";
-
+import { getTotalPrice } from "./utils";
 function App() {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
