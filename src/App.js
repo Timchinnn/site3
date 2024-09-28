@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom"; // Импортируем useNavigate
+import { useNavigate } from "react-router-dom";
 import Search from "./components/Search/Search";
 import "./App.css";
 import fly from "./fly.png";
@@ -11,13 +11,18 @@ import hyosung from "./hyosung.png";
 import ncr from "./ncr.png";
 import cart from "./cart.png";
 import ProductModal from "./components/ProductModal/ProductModal";
+import CartModal from "./components/CartModal/CartModal"; // Import CartModal
+
 function App() {
-  const navigate = useNavigate(); // Используем хук для навигации
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isProductModalOpen, setIsProductModalOpen] = useState(false);
+  const [isCartModalOpen, setIsCartModalOpen] = useState(false); // State for cart modal
+  const [cartItems, setCartItems] = useState([]); // State for cart items
+
   const fetchCategories = () => {
     axios
       .get("/api/categories")
@@ -50,17 +55,13 @@ function App() {
   );
 
   const openProfilePage = () => {
-    navigate("/profile"); // Переход на страницу профиля
+    navigate("/profile");
   };
 
   const openSendRequestPage = () => {
-    navigate("/send-request"); // Переход на страницу отправки запроса
+    navigate("/send-request");
   };
 
-  // const openProductPage = (product) => {
-  //   console.log(product)
-  //   navigate(`/product/${product.id}`); // Переход на страницу продукта
-  // };
   const openProductModal = (product) => {
     setSelectedProduct(product);
     setIsProductModalOpen(true);
@@ -70,6 +71,15 @@ function App() {
     setSelectedProduct(null);
     setIsProductModalOpen(false);
   };
+
+  const openCartModal = () => {
+    setIsCartModalOpen(true);
+  };
+
+  const closeCartModal = () => {
+    setIsCartModalOpen(false);
+  };
+
   return (
     <div className="main">
       <div className="header-name">
@@ -79,6 +89,9 @@ function App() {
             @Bansys_sale
           </a>
         </div>
+        <button className="cart-button" onClick={openCartModal}>
+          Корзина
+        </button>
       </div>
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <div className="about-buttons-question">
@@ -115,7 +128,7 @@ function App() {
                     <div
                       key={product.id}
                       className="product-item"
-                      onClick={() => openProductModal(product)} // Переход на страницу продукта
+                      onClick={() => openProductModal(product)}
                     >
                       <img
                         src={product.photo_url}
@@ -138,6 +151,9 @@ function App() {
       </div>
       {isProductModalOpen && (
         <ProductModal product={selectedProduct} onClose={closeProductModal} />
+      )}
+      {isCartModalOpen && (
+        <CartModal items={cartItems} total={0} onClose={closeCartModal} />
       )}
     </div>
   );
