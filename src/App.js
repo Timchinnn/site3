@@ -98,8 +98,8 @@ function App() {
         <img src={sendRequest} alt="" onClick={openSendRequestPage}></img>
       </div>
       <div className="company">
-        <img src={hyosung} alt="hyosung"></img>
-        <img src={dn} alt="dn"></img>
+        <img src={hyosung} alt="hyosung" className="hyosung"></img>
+        <img src={dn} alt="dn" className="dn"></img>
         <img src={ncr} alt="ncr"></img>
       </div>
       <h1 className="catalog">Каталог</h1>

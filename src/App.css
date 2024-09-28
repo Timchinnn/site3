@@ -166,3 +166,13 @@ h1 {
 .img-cart {
   margin-left: auto; /* Это также поможет, если у вас есть отступы */
 }
+.about-buttons-question {
+  margin-left: 25px;
+  margin-top: 20px;
+}
+.hyosung {
+  margin-right: 7px;
+}
+.dn {
+  margin-right: 7px;
+}

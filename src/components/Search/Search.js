@@ -10,6 +10,7 @@ const Search = ({ searchQuery, setSearchQuery }) => {
         placeholder="Найти товар"
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)} // Обновляем состояние поискового запроса
+        className="find-input"
       />
     </div>
   );
