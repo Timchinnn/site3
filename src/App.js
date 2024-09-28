@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom"; // Импортируем useNavigate
+import { useNavigate, useLocation } from "react-router-dom"; // Импортируем useNavigate
 import Search from "./components/Search/Search";
 import "./App.css";
 import fly from "./fly.png";
@@ -13,6 +13,7 @@ import cart from "./cart.png";
 import ProductModal from "./components/ProductModal/ProductModal";
 function App() {
   const navigate = useNavigate(); // Используем хук для навигации
+  const location = useLocation();
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
@@ -43,20 +44,19 @@ function App() {
   useEffect(() => {
     fetchCategories();
     fetchProducts();
-    const handlePopState = (event) => {
-      // Здесь можно добавить логику, если нужно
-      console.log("Назад нажали");
-      // Например, можно перенаправить на главную страницу
-      navigate("/");
+    const handleBackButton = (event) => {
+      if (location.pathname !== "/") {
+        event.preventDefault(); // предотвращаем переход
+        navigate(-1); // переходим на предыдущую страницу
+      }
     };
 
-    window.addEventListener("popstate", handlePopState);
+    window.addEventListener("popstate", handleBackButton);
 
-    // Убираем обработчик при размонтировании компонента
     return () => {
-      window.removeEventListener("popstate", handlePopState);
+      window.removeEventListener("popstate", handleBackButton);
     };
-  }, [navigate]);
+  }, [location, navigate]);
 
   const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(searchQuery.toLowerCase())
