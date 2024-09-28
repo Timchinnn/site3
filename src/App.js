@@ -31,7 +31,7 @@ function App() {
       });
   };
   const [isCartOpen, setIsCartOpen] = useState(false); // State to manage cart modal visibility
-  const [cartItems, setCartItems] = useState([]); // State to manage items in the cart
+  const [cartItems] = useState([]); // State to manage items in the cart
 
   const openCart = () => {
     setIsCartOpen(true);
