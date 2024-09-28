@@ -68,10 +68,6 @@ function App() {
     setIsCartModalOpen(false);
   };
 
-  const getTotalPrice = (items) => {
-    return items.reduce((total, item) => total + item.price * item.quantity, 0);
-  };
-
   return (
     <div className="main">
       <div className="header-name">
@@ -155,11 +151,7 @@ function App() {
         />
       )}
       {isCartModalOpen && (
-        <CartModal
-          items={cartItems}
-          total={getTotalPrice(cartItems)}
-          onClose={closeCartModal}
-        />
+        <CartModal items={cartItems} onClose={closeCartModal} />
       )}
     </div>
   );

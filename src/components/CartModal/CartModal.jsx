@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./CartModal.css"; // Импортируем стили
 
-const CartModal = ({ items, total, onClose }) => {
+const CartModal = ({ items, onClose }) => {
   useEffect(() => {
     // Отключение прокрутки
     document.body.classList.add("no-scroll");
@@ -28,7 +28,7 @@ const CartModal = ({ items, total, onClose }) => {
               <span>{item.quantity} шт.</span>
             </div>
           ))}
-          <h3>Итого: {total} ₽</h3>
+
           {/* <button onClick={onClose}>Закрыть</button> */}
         </div>
       </div>
