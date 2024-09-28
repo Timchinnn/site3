@@ -14,16 +14,12 @@ const useCart = (tg, openModal) => {
       });
     }
 
-    // Добавляем обработчик клика для MainButton, который открывает модальное окно
-    // tg.MainButton.onClick(() => {
-    //   openModal();
-      if (tg && tg.MainButton) {
-        tg.MainButton.onClick(() => {
-          openModal();
-        });
-      }
-    };
-  };
+    if (tg && tg.MainButton) {
+      tg.MainButton.onClick(() => {
+        openModal();
+      });
+    }
+  }; // Закрываем функцию updateMainButton здесь
 
   const onAdd = (product) => {
     const existingItemIndex = addedItems.findIndex(
@@ -58,11 +54,8 @@ const useCart = (tg, openModal) => {
       updateMainButton(newItems);
     }
   };
-  tg.MainButton.onClick(() => {
-    openModal(); // Открываем модальное окно
-  });
 
-  return { addedItems, onAdd, onRemove };
+  return { addedItems, onAdd, onRemove }; // Теперь return находится внутри функции useCart
 };
 
 export default useCart;
