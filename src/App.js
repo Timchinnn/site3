@@ -14,6 +14,7 @@ import ProductModal from "./components/ProductModal/ProductModal";
 import CartModal from "./components/CartModal/CartModal";
 import useCart from "./useCart";
 import { getTotalPrice } from "./utils";
+
 function App() {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
@@ -83,9 +84,10 @@ function App() {
   return (
     <div className="main">
       <div className="header-name">
-        <div className="tg-link-button">
-          <img src={fly} alt="tglink" className="tglink"></img>
-          <a href="https://t.me/Bansys_sale" className="tg-button">
+        {/* Removed Telegram button logic */}
+        <div className="page-link-button">
+          <img src={fly} alt="page-link" className="page-link"></img>
+          <a href="https://t.me/Bansys_sale" className="page-button">
             @Bansys_sale
           </a>
         </div>
