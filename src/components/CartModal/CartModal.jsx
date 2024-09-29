@@ -7,9 +7,9 @@ const CartModal = ({ items = [], onClose }) => {
     <div className="modal-overlay">
       <div className="modal-content">
         <img className="arrow" src={arrow} alt="arrow" onClick={onClose} />
-        <button className="modal-close-button" onClick={onClose}>
-          <span className="icon">×</span>
-        </button>
+        {/* <button className="modal-close-button" onClick={onClose}> */}
+          {/* <span className="icon">×</span>
+        </button> */}
         <h2>Корзина</h2>
         {items.length === 0 ? (
           <p>Ваша корзина пуста</p>
