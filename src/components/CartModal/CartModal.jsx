@@ -17,7 +17,7 @@ const CartModal = ({ items = [], onClose }) => {
           <ul>
             {items.map((item) => (
               <li key={item.id} className="cart-item">
-                <img src={item.photo_url} alt={item.name} />
+                <img src={item.photo_url} alt={item.name} className="min-product-img" />
                 <div>
                   <p>{item.name}</p>
                   <p>Количество: {item.quantity}</p>
