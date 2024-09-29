@@ -201,3 +201,9 @@ body.no-scroll {
   justify-content: center;
   align-items: center;
 }
+.price-controls{
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
