@@ -54,7 +54,8 @@
     margin: 0px 20px;
   }
   .input-order-profile{max-height: 30px;
-    /* padding: 5px; */
+    border: none;
+    background-color: #E6E6E6;
     border-radius: 10px;}
   .application {margin:0px 20px;
     margin-bottom: 5px;}
@@ -63,5 +64,21 @@
     height: 70px;
     width: 270px;
     border-radius: 10px;
-    margin-bottom: 6px;}
-  .send-msg{margin-left: 20px;}
+    margin-bottom: 6px;
+    border: none;
+    background-color: #E6E6E6;}
+  .send-msg{
+    margin-left: 20px;
+    color: white;
+    background-color: #3d6159;
+    border-radius: 11px;
+    width: 128px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    margin-bottom: 10px;
+    height: 28px;
+    margin-left: 90px;
+  }

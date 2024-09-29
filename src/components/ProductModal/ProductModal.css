@@ -182,13 +182,13 @@ body.no-scroll {
   color: white;
   background-color: #3d6159;
   border-radius: 20px;
-  width: 100%; /* Make the button full-width */
+  width: 100%; 
   min-height: 36px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: none; /* Remove any border */
+  border: none; 
   margin-bottom: 10px;
 }
 .add-to-cart, .add-to-cart-min {
