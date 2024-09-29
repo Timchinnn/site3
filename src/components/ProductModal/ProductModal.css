@@ -19,7 +19,7 @@ body.no-scroll {
   margin-left: 10px;
 }
 
-.modal-content {
+/* .modal-content {
   background-color: white;
   border-radius: 0;
   padding: 0;
@@ -29,19 +29,19 @@ body.no-scroll {
   position: relative;
   display: flex;
   flex-direction: column;
-}
+} */
 
-.modal-inner-content {
+/* .modal-inner-content {
   padding: 20px;
   overflow: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
+} */
+/* 
 .modal-title {
   margin: 20px 0;
-}
+} */
 
 .modal-image {
   max-width: 100%;
@@ -52,10 +52,10 @@ body.no-scroll {
   margin-top: 70px;
 }
 
-.modal-description {
+/* .modal-description {
   margin: 15px 0;
   text-align: center;
-}
+} */
 
 .why {
   min-height: 110px;
