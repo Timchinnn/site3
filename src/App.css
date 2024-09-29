@@ -177,3 +177,11 @@ h1 {
 .dn {
   margin-right: 7px;
 }
+.header-cart{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cartgl{
+  margin-right: 10px;
+}
