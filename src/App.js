@@ -32,8 +32,15 @@ function App() {
       axios.get("/api/products"),
     ])
       .then(([categoriesResponse, productsResponse]) => {
-        setCategories(categoriesResponse.data);
-        setProducts(productsResponse.data);
+        const allCategories = categoriesResponse.data;
+        const allProducts = productsResponse.data;
+        setProducts(allProducts);
+
+        // Filter categories to include only those with products
+        const categoriesWithProducts = allCategories.filter(category =>
+          allProducts.some(product => product.category === category.name)
+        );
+        setCategories(categoriesWithProducts);
       })
       .catch((error) => console.error("Ошибка при получении данных:", error));
   }, []);
