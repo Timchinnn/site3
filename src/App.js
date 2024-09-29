@@ -144,8 +144,13 @@ function App() {
         />
       )}
       {isCartModalOpen && (
-        <CartModal items={cartItems} onClose={closeCartModal} />
-      )}
+     <CartModal
+       items={cartItems}
+       onClose={closeCartModal}
+       onAdd={addToCart}
+       onRemove={removeFromCart}
+     />
+   )}
     </div>
   );
 }
