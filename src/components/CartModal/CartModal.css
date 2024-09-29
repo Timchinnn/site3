@@ -47,15 +47,13 @@ body.no-scroll {
 } */
 
 .cart-item {
-  display: flex;
-  /* justify-content: space-between; */
-  /* padding: 10px; */
-  width: 346.93px;
-  height: 88.39px;
-  background-color: #CCCCCC;
-  border-radius: 11px;
   align-items: center;
+  background-color: #ccc;
+  border-radius: 11px;
+  display: flex;
+  height: 120.39px;
   margin-bottom: 10px;
+  width: 346.93px;
 }
 
 .modal-close-button {
@@ -95,4 +93,10 @@ ul {
 }
 li .add-to-cart{
   background-color: #D9D9D9;
+  width: 76px;
+}
+
+li .add-to-cart-min{
+  background-color: #D9D9D9;
+  width: 76px;
 }
