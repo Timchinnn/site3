@@ -189,6 +189,7 @@ body.no-scroll {
   justify-content: center;
   align-items: center;
   border: none; /* Remove any border */
+  margin-bottom: 10px;
 }
 .add-to-cart, .add-to-cart-min {
   background-color: #3D6159;

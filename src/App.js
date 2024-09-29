@@ -13,6 +13,7 @@ import dn from "./dn.png";
 import hyosung from "./hyosung.png";
 import ncr from "./ncr.png";
 import cart from "./cart.png";
+import cartgl from "./cartgl.png";
 
 function App() {
   const navigate = useNavigate();
@@ -77,9 +78,9 @@ function App() {
             @Bansys_sale
           </a>
         </div>
-        <button className="cart-button" onClick={openCartModal}>
+        {/* <button className="cart-button" onClick={openCartModal}>
           Корзина
-        </button>
+        </button> */}
       </div>
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <div className="about-buttons-question">
@@ -107,7 +108,11 @@ function App() {
         <img src={dn} alt="dn" className="dn"></img>
         <img src={ncr} alt="ncr"></img>
       </div>
-      <h1 className="catalog">Каталог</h1>
+      <div className="header-cart">
+        <h1 className="catalog">Каталог</h1>
+        <img src={cartgl} alt="cartgl" onClick={openCartModal}></img>
+      </div>
+      
       <div className="category">
         {categories.length > 0 ? (
           categories.map((category) => (
