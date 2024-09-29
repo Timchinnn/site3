@@ -38,7 +38,7 @@ const ProductModal = ({ product, onClose, onAdd, onRemove, addedItems }) => {
           <p className="details-button">Подробнее</p>
         </div>
         <div className="block-about">
-          <p></p>
+          <p>{product.description}</p>
         </div>
         <p>Полезная информация</p>
         <div className="about-buttons-question-from">
