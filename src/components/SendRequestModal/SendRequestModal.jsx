@@ -1,43 +1,66 @@
-import React from "react";
-import "./SendRequestModal.css"; // Добавьте стили, если необходимо
-import bigB from './bigb.png'
-import bigBContray from './bigbContrary.png'
-import arrow from './arrow.png'
+import React, { useState } from "react";
+import axios from "axios";
+import "./SendRequestModal.css";
+import bigB from './bigb.png';
+import bigBContray from './bigbContrary.png';
+import arrow from './arrow.png';
 import { useNavigate } from "react-router-dom";
+
 const SendRequestModal = ({ onClose }) => {
   const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    country: '',
+    city: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async () => {
+    try {
+      const response = await axios.post('/api/send-request', formData);
+      console.log(response.data);
+      // Optionally close the modal or show a success message
+    } catch (error) {
+      console.error('Error sending request:', error);
+    }
+  };
+
   return (
     <div className="modal-overlay1">
       <div className="images-container">
         <img src={bigB} alt="bigB" className="top-left" />
         <img src={bigBContray} alt="bigBContray" className="bottom-right" />
         <div className="parent">
-          <img className="arrow" src={arrow} alt="arrow" onClick={() => navigate(-1)}/>
+          <img className="arrow" src={arrow} alt="arrow" onClick={() => navigate(-1)} />
           <div className="window-reg">
             <h1 className="application">ЗАЯВКА</h1>
             <div className="input-container">
               <p>Имя</p>
-              <input className="input-order-profile"></input>
+              <input name="name" className="input-order-profile" onChange={handleChange} />
             </div>
             <div className="input-container">
               <p>Телефон</p>
-              <input className="input-order-profile"></input>
+              <input name="phone" className="input-order-profile" onChange={handleChange} />
             </div>
             <div className="input-container">
               <p>Страна</p>
-              <input className="input-order-profile"></input>
+              <input name="country" className="input-order-profile" onChange={handleChange} />
             </div>
             <div className="input-container">
               <p>Город</p>
-              <input className="input-order-profile"></input>
+              <input name="city" className="input-order-profile" onChange={handleChange} />
             </div>
-            <input className="msg"></input>
-            <button className="send-msg"> Отправить заявку</button>
+            <input name="message" className="msg" onChange={handleChange} />
+            <button className="send-msg" onClick={handleSubmit}>Отправить заявку</button>
           </div>
+        </div>
       </div>
-      </div>
-
-      
     </div>
   );
 };
