@@ -180,6 +180,11 @@ body.no-scroll {
   border-radius: 11px;
   overflow-y: auto;
 }
+
+.block-about::-webkit-scrollbar{
+  display: none; 
+}
+
 .block-about p{
   margin-left: 15px;
   margin-bottom: 15px;
