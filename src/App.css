@@ -175,6 +175,9 @@ h1 {
   scroll-snap-type: x mandatory; /* Для плавного прокручивания */
   min-height: 125px;
 }
+.about-buttons-question::-webkit-scrollbar {
+  display: none; /* Скрывает полосу прокрутки */
+}
 .hyosung {
   margin-right: 7px;
 }
