@@ -34,19 +34,17 @@ body.no-scroll {
   flex-direction: column;
   position: relative;
   box-sizing: border-box; Учитывает padding и border в общей ширине и высоте элемента */
-*/
-
 
 /* .modal-inner-content {
   padding: 20px;
   overflow-y: auto; /* Вертикальная прокрутка если потребуется */
-  /* display: flex;
+/* display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 100%; /* Высота на 100% относительно родителя */
-  /* box-sizing: border-box;
-} */ 
+/* box-sizing: border-box;
+} */
 
 .cart-item {
   display: flex;
