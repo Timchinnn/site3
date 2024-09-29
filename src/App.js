@@ -110,7 +110,7 @@ function App() {
       </div>
       <div className="header-cart">
         <h1 className="catalog">Каталог</h1>
-        <img src={cartgl} alt="cartgl" onClick={openCartModal}></img>
+        <img src={cartgl} alt="cartgl" onClick={openCartModal} className="cartgl"></img>
       </div>
       
       <div className="category">
