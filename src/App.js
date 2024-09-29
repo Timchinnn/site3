@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Search from "./components/Search/Search";
 import ProductModal from "./components/ProductModal/ProductModal";
 import CartModal from "./components/CartModal/CartModal";
-import useCart from "./useCart"; // Импортируем хук для корзины
+import useCart from "./useCart";
 import "./App.css";
 import fly from "./fly.png";
 import myLog from "./myLog.png";
@@ -26,25 +26,16 @@ function App() {
 
   const { cartItems, addToCart, removeFromCart } = useCart();
 
-  const fetchCategories = () => {
-    axios
-      .get("/api/categories")
-      .then((response) => setCategories(response.data))
-      .catch((error) =>
-        console.error("Ошибка при получении категорий:", error)
-      );
-  };
-
-  const fetchProducts = () => {
-    axios
-      .get("/api/products")
-      .then((response) => setProducts(response.data))
-      .catch((error) => console.error("Ошибка при получении товаров:", error));
-  };
-
   useEffect(() => {
-    fetchCategories();
-    fetchProducts();
+    Promise.all([
+      axios.get("/api/categories"),
+      axios.get("/api/products"),
+    ])
+      .then(([categoriesResponse, productsResponse]) => {
+        setCategories(categoriesResponse.data);
+        setProducts(productsResponse.data);
+      })
+      .catch((error) => console.error("Ошибка при получении данных:", error));
   }, []);
 
   const filteredProducts = products.filter((product) =>
@@ -78,9 +69,6 @@ function App() {
             @Bansys_sale
           </a>
         </div>
-        {/* <button className="cart-button" onClick={openCartModal}>
-          Корзина
-        </button> */}
       </div>
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <div className="about-buttons-question">
