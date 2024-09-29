@@ -24,12 +24,14 @@
 /* Установите максимальную ширину по необходимости */
   }
   .window-reg{
-    background-color: #D9D9D9;
+    background-color: #d9d9d9;
+    border-color: #17453b;
     border-radius: 11px;
-    border-color: #17453B;
     border-width: 3px;
-    height: 380px;
+    height: 420px;
     width: 316px;
+    /* border-width: 100px; */
+    border-style: groove;
   }
   .arrow {
     width: 33px; ;
@@ -57,8 +59,14 @@
     border: none;
     background-color: #E6E6E6;
     border-radius: 10px;}
-  .application {margin:0px 20px;
-    margin-bottom: 5px;}
+  .application {
+    color: #173B33;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin:0px 20px;
+    margin-bottom: 5px;
+  }
   
   .msg{margin-left: 20px;
     height: 70px;
@@ -70,7 +78,7 @@
   .send-msg{
     margin-left: 20px;
     color: white;
-    background-color: #3d6159;
+    background-color: #17453B;
     border-radius: 11px;
     width: 128px;
     text-align: center;
