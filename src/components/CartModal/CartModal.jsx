@@ -1,5 +1,5 @@
 import React from "react";
-import "./CartModal.css"; // Import styles
+import "./CartModal.css"; // Import stylesэ
 
 const CartModal = ({ items = [], onClose }) => {
   return (
