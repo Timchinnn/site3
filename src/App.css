@@ -170,6 +170,10 @@ h1 {
 .about-buttons-question {
   margin-left: 25px;
   margin-top: 20px;
+  display: flex;
+  overflow-x: auto; /* Позволяет прокручивать элементы по оси X */
+  scroll-snap-type: x mandatory; /* Для плавного прокручивания */
+  min-height: 125px;
 }
 .hyosung {
   margin-right: 7px;
