@@ -32,21 +32,19 @@ function App() {
       axios.get("/api/products"),
     ])
       .then(([categoriesResponse, productsResponse]) => {
-        const allCategories = categoriesResponse.data;
-        const allProducts = productsResponse.data;
-        setProducts(allProducts);
-
-        // Filter categories to include only those with products
-        const categoriesWithProducts = allCategories.filter(category =>
-          allProducts.some(product => product.category === category.name)
-        );
-        setCategories(categoriesWithProducts);
+        setCategories(categoriesResponse.data);
+        setProducts(productsResponse.data);
       })
       .catch((error) => console.error("Ошибка при получении данных:", error));
   }, []);
 
   const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  // Фильтруем категории, чтобы оставить только те, в которых есть отфильтрованные продукты
+  const categoriesWithFilteredProducts = categories.filter(category =>
+    filteredProducts.some(product => product.category === category.name)
   );
 
   const openProductModal = (product) => {
@@ -109,8 +107,8 @@ function App() {
       </div>
       
       <div className="category">
-        {categories.length > 0 ? (
-          categories.map((category) => (
+        {categoriesWithFilteredProducts.length > 0 ? (
+          categoriesWithFilteredProducts.map((category) => (
             <div key={category.id}>
               <p className="category-text">{category.name}</p>
               <div className="products">
@@ -138,7 +136,7 @@ function App() {
             </div>
           ))
         ) : (
-          <p>Загрузка категорий...</p>
+          <p>Нет категорий с подходящими товарами...</p>
         )}
       </div>
       {isProductModalOpen && (
@@ -151,13 +149,13 @@ function App() {
         />
       )}
       {isCartModalOpen && (
-     <CartModal
-       items={cartItems}
-       onClose={closeCartModal}
-       onAdd={addToCart}
-       onRemove={removeFromCart}
-     />
-   )}
+        <CartModal
+          items={cartItems}
+          onClose={closeCartModal}
+          onAdd={addToCart}
+          onRemove={removeFromCart}
+        />
+      )}
     </div>
   );
 }
