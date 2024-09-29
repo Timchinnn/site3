@@ -47,13 +47,15 @@ body.no-scroll {
 } */
 
 .cart-item {
-  display: ruby;
+  display: flex;
   /* justify-content: space-between; */
   /* padding: 10px; */
   width: 346.93px;
   height: 88.39px;
   background-color: #CCCCCC;
   border-radius: 11px;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .modal-close-button {
