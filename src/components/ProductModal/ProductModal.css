@@ -161,7 +161,7 @@ body.no-scroll {
   justify-content: center;
   align-items: center;
 }
-.add-cart {
+/* .add-cart {
   color: white;
   background-color: #3d6159;
   border-radius: 20px;
@@ -171,10 +171,22 @@ body.no-scroll {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 .block-about {
   min-width: 344px;
   min-height: 266px;
   background-color: #d9d9d9;
   border-radius: 11px;
+}
+.add-cart {
+  color: white;
+  background-color: #3d6159;
+  border-radius: 20px;
+  width: 100%; /* Make the button full-width */
+  min-height: 36px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none; /* Remove any border */
 }

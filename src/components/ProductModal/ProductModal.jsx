@@ -72,7 +72,7 @@ const ProductModal = ({ product, onClose, onAdd, onRemove, addedItems }) => {
             </div>
           ) : (
             <button
-              className="add-to-cart"
+              className="add-cart" // Use the new class for styling
               onClick={(e) => {
                 e.stopPropagation();
                 onAdd(product);
