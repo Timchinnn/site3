@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./CartModal.css"; // Import stylesэ
 import arrow from './arrow.png'
 
