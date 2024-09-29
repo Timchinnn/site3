@@ -10,7 +10,7 @@ const CartModal = ({ items = [], onClose }) => {
         {/* <button className="modal-close-button" onClick={onClose}> */}
           {/* <span className="icon">×</span>
         </button> */}
-        <h2>Корзина</h2>
+        <h2 className="cart-head">Корзина</h2>
         {items.length === 0 ? (
           <p>Ваша корзина пуста</p>
         ) : (
