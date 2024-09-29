@@ -3,6 +3,12 @@ import "./CartModal.css"; // Import stylesэ
 import arrow from './arrow.png'
 
 const CartModal = ({ items = [], onClose }) => {
+  useEffect(() => {
+    document.body.classList.add("no-scroll");
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, []);
   return (
     <div className="modal-overlay">
       <div className="modal-content">
