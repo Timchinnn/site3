@@ -197,3 +197,8 @@ h1 {
 .cartgl{
   margin-right: 10px;
 }
+@media (width: 374px) {
+  .about-buttons-question {
+    margin-left: 10px;
+  }
+}
