@@ -53,9 +53,9 @@
 .company img{
   margin-right: 17px;
 }
-.my-log {
+/* .my-log {
   width: 189px;
-}
+} */
 .catalog {
   color: #ffffff;
   width: 122px;
@@ -138,4 +138,8 @@
 }
 .cartgl{
   margin-right: 10px;
+}
+@media (max-width: 430px) {
+  .about-buttons-question{margin-left: 35px;}
+  
 }
