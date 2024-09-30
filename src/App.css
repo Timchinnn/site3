@@ -98,13 +98,13 @@ h1 {
   display: flex; /* Flexbox для центрирования содержимого */
   justify-content: center; /* Центрирование по горизонтали */
   align-items: center; /* Центрирование по вертикали */
-
-margin-top: 15px;}
+ }
 .company {
   display: flex; /* Flexbox для центрирования содержимого */
   justify-content: center; /* Центрирование по горизонтали */
   align-items: center; /* Центрирование по вертикали */
   margin-top: 20px;
+  margin-left: 35px;
 }
 .company img{
   margin-right: 17px;
@@ -173,7 +173,7 @@ margin-top: 15px;}
   margin-left: auto; /* Это также поможет, если у вас есть отступы */
 }
 .about-buttons-question {
-  margin-left: 25px;
+  margin-left: 35px;
   margin-top: 20px;
   display: flex;
   overflow-x: auto; /* Позволяет прокручивать элементы по оси X */
