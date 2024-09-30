@@ -75,8 +75,7 @@ function App() {
           </a>
         </div>
       </div>
-      <div className="common-container"></div>
-      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <div className="common-container">      <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <div className="about-buttons-question">
         <div className="why">Почему BANSYS?</div>
         <div className="how">Как купить?</div>
@@ -101,7 +100,8 @@ function App() {
         <img src={hyosung} alt="hyosung" className="hyosung"></img>
         <img src={dn} alt="dn" className="dn"></img>
         <img src={ncr} alt="ncr"></img>
-      </div>
+      </div></div>
+
       <div className="header-cart">
         <h1 className="catalog">Каталог</h1>
         <img src={cartgl} alt="cartgl" onClick={openCartModal} className="cartgl"></img>
