@@ -69,13 +69,6 @@ h1 {
   /* height: 100%; */
   overflow-x: hidden;
 }
-.common-container {
-  margin-left: 25px; /* Пример отступа слева */
-  margin-top: 20px;  /* Пример отступа сверху */
-  display: flex;
-  flex-direction: column; /* Расположите элементы вертикально */
-  align-items: flex-start; /* Выравнивание по левому краю */
-}
 
 .tg-link-button {
   margin-right: 10px;
