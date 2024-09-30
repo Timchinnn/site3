@@ -75,6 +75,7 @@ function App() {
           </a>
         </div>
       </div>
+      <div className="common-container"></div>
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <div className="about-buttons-question">
         <div className="why">Почему BANSYS?</div>
