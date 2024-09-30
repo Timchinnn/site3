@@ -139,8 +139,3 @@
 .cartgl{
   margin-right: 10px;
 }
-@media (max-width: 374) {
-  .about-buttons-question {
-    margin-left: 10px;
-  }
-}
