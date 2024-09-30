@@ -98,11 +98,16 @@ h1 {
   display: flex; /* Flexbox для центрирования содержимого */
   justify-content: center; /* Центрирование по горизонтали */
   align-items: center; /* Центрирование по вертикали */
-}
+
+margin-top: 15px;}
 .company {
   display: flex; /* Flexbox для центрирования содержимого */
   justify-content: center; /* Центрирование по горизонтали */
   align-items: center; /* Центрирование по вертикали */
+  margin-top: 20px;
+}
+.company img{
+  margin-right: 17px;
 }
 .my-log {
   width: 189px;
