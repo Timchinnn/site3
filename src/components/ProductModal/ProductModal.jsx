@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import "./ProductModal.css";
@@ -48,7 +47,7 @@ const ProductModal = ({ product, onClose, onAdd, onRemove, addedItems }) => {
         </div>
         {showDetails && (
           <div className="block-about">
-            <p>{product.description}</p>
+            <p></p> {/* Пустой тег <p> */}
           </div>
         )}
         <p>Полезная информация</p>
