@@ -5,6 +5,7 @@ import "./ProfileModal.css";
 import arrow from "./arrow.png";
 import b from "./B.png";
 import car from "./car.png";
+import book from "./book.png";
 import { useNavigate } from "react-router-dom";
 const ProfileModal = ({ onClose }) => {
   const navigate = useNavigate();
@@ -21,6 +22,13 @@ const ProfileModal = ({ onClose }) => {
         <div className="buttonsMainProfile">
           <button>
             <img src={b} alt="b" className="b"></img>
+            <div>
+              <img src={book} alt="book" />
+              <div>
+                <p>Покупки</p>
+                <p>Подробнее</p>
+              </div>
+            </div>
           </button>
           <button>
             <img src={b} alt="b" className="b"></img>
