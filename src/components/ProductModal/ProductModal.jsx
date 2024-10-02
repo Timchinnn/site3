@@ -34,7 +34,7 @@ const ProductModal = ({ product, onClose, onAdd, onRemove, addedItems }) => {
     <div className="modal-overlay">
       <div className="modal-content" {...handlers}>
         {showDetails ? (
-          <p></p> // Здесь отображается пустой элемент
+          <img className="arrow" alt="arrow" onClick={onClose} />
         ) : (
           <>
             <img className="arrow" alt="arrow" onClick={onClose} />
@@ -48,6 +48,11 @@ const ProductModal = ({ product, onClose, onAdd, onRemove, addedItems }) => {
               <p className="details-button" onClick={handleDetailsClick}>
                 Подробнее
               </p>
+            
+            </div>
+            
+            <div className="block-about">
+              <p>{product.description}</p>
             </div>
             <p>Полезная информация</p>
             <div className="about-buttons-question-from">
