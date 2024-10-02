@@ -70,3 +70,8 @@
   margin-left: 20px;
   text-align: justify;
 }
+.buy-about {
+  display: flex;
+  align-items: center;
+  margin-left: 1px;
+}
