@@ -23,7 +23,7 @@ const ProfileModal = ({ onClose }) => {
           <button>
             <div>
               <img src={book} alt="book" />
-              <div>
+              <div className="buy-and-more">
                 <p>Покупки</p>
                 <p>Подробнее</p>
               </div>

@@ -27,6 +27,9 @@
   height: 88px;
   border-radius: 11px;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .delivery {
   background-color: #c7b385;
@@ -41,7 +44,8 @@
 .b {
   width: 102px;
   height: 100%;
-  margin-left: 278px;
+  /* margin-left: 278px; */
+  margin-left: 143px;
 }
 .car {
   margin-right: 100px;
@@ -51,7 +55,8 @@
   margin-bottom: 70px;
 }
 
-.buttonsMainProfile button:first-child {
+.buttonsMainProfile button:first-child img {
+  margin-left: 143px;
 }
 
 .buttonsMainProfile button:nth-child(2) {
@@ -60,4 +65,8 @@
 
 .buttonsMainProfile button:last-child {
   height: 120px;
+}
+.buy-and-more {
+  margin-left: 20px;
+  text-align: justify;
 }
