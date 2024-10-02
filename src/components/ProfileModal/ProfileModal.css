@@ -49,16 +49,14 @@
 .buttonsMainProfile {
   margin-top: 70px;
 }
-.buttonsMainProfile > div:first-child {
-  /* Стили для первого элемента */
+
+.buttonsMainProfile button:first-child {
 }
 
-.buttonsMainProfile > div:nth-child(2) {
-  /* Стили для среднего элемента */
+.buttonsMainProfile button:nth-child(2) {
   height: 102px;
 }
 
-.buttonsMainProfile > div:last-child {
-  /* Стили для последнего элемента */
+.buttonsMainProfile button:last-child {
   height: 120px;
 }
