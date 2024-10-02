@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import "./ProductModal.css";
+import arrow from './arrow.png'
 
 const ProductModal = ({ product, onClose, onAdd, onRemove, addedItems }) => {
   const [showDetails, setShowDetails] = useState(false);
@@ -34,10 +35,10 @@ const ProductModal = ({ product, onClose, onAdd, onRemove, addedItems }) => {
     <div className="modal-overlay">
       <div className="modal-content" {...handlers}>
         {showDetails ? (
-          <img className="arrow" alt="arrow" onClick={onClose} />
+          <img src={arrow} className="arrow" alt="arrow" onClick={onClose} />
         ) : (
           <>
-            <img className="arrow" alt="arrow" onClick={onClose} />
+            <img src={arrow} className="arrow" alt="arrow" onClick={onClose} />
             <img
               className="modal-image"
               src={product.photo_url}
