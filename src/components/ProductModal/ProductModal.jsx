@@ -34,7 +34,7 @@ const ProductModal = ({ product, onClose, onAdd, onRemove, addedItems }) => {
     <div className="modal-overlay">
       <div className="modal-content" {...handlers}>
         {showDetails ? (
-          <div>
+          <div className="more">
             <img src={arrow} className="arrow" alt="arrow" onClick={onClose} />
             <div className="block-about">
               <p>{product.description}</p>

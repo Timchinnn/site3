@@ -19,30 +19,6 @@ body.no-scroll {
   margin-left: 10px;
 }
 
-/* .modal-content {
-  background-color: white;
-  border-radius: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  box-shadow: none;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-} */
-
-/* .modal-inner-content {
-  padding: 20px;
-  overflow: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-/* 
-.modal-title {
-  margin: 20px 0;
-} */
-
 .modal-image {
   max-width: 100%;
   max-height: 60vh;
@@ -51,11 +27,6 @@ body.no-scroll {
   margin-bottom: 20px;
   margin-top: 70px;
 }
-
-/* .modal-description {
-  margin: 15px 0;
-  text-align: center;
-} */
 
 .why {
   min-height: 110px;
@@ -142,11 +113,7 @@ body.no-scroll {
 .about-buttons-question-from::-webkit-scrollbar {
   display: none; /* Скрывает полосу прокрутки */
 }
-/* .about-buttons-question div {
-  scroll-snap-align: start; /* Выравнивание элементов при прокрутке */
-/* flex: 0 0 auto; Элементы не будут сжиматься */
-/* margin-right: 18px; Отступ между элементами */
-/* } */
+
 .card {
   display: flex;
   justify-content: space-between;
@@ -162,17 +129,7 @@ body.no-scroll {
   justify-content: center;
   align-items: center;
 }
-/* .add-cart {
-  color: white;
-  background-color: #3d6159;
-  border-radius: 20px;
-  min-width: 344px;
-  min-height: 36px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+
 .block-about {
   min-width: 344px;
   min-height: 266px;
@@ -181,11 +138,11 @@ body.no-scroll {
   overflow-y: auto;
 }
 
-.block-about::-webkit-scrollbar{
-  display: none; 
+.block-about::-webkit-scrollbar {
+  display: none;
 }
 
-.block-about p{
+.block-about p {
   margin-left: 15px;
   margin-bottom: 15px;
   font-size: 13px;
@@ -196,17 +153,18 @@ body.no-scroll {
   color: white;
   background-color: #3d6159;
   border-radius: 20px;
-  width: 100%; 
+  width: 100%;
   min-height: 36px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: none; 
+  border: none;
   margin-bottom: 10px;
 }
-.add-to-cart, .add-to-cart-min {
-  background-color: #3D6159;
+.add-to-cart,
+.add-to-cart-min {
+  background-color: #3d6159;
   color: white;
   border-radius: 20px;
   border: none; /* Убираем обводку */
@@ -216,9 +174,12 @@ body.no-scroll {
   justify-content: center;
   align-items: center;
 }
-.price-controls{
+.price-controls {
   display: flex;
   justify-content: space-around;
   align-items: baseline;
   margin-bottom: 10px;
+}
+.more .block-about {
+  margin-top: 110px;
 }
