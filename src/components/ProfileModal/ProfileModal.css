@@ -55,7 +55,7 @@
   margin-bottom: 70px;
 }
 
-.buttonsMainProfile button:first-child img {
+.buttonsMainProfile button:first-child img:last-child {
   margin-left: 143px;
 }
 
