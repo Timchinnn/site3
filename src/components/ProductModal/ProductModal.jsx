@@ -1,4 +1,4 @@
-jsx
+
 import React, { useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import "./ProductModal.css";
