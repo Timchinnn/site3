@@ -21,7 +21,6 @@ const ProfileModal = ({ onClose }) => {
 
         <div className="buttonsMainProfile">
           <button>
-            <img src={b} alt="b" className="b"></img>
             <div>
               <img src={book} alt="book" />
               <div>
@@ -29,6 +28,7 @@ const ProfileModal = ({ onClose }) => {
                 <p>Подробнее</p>
               </div>
             </div>
+            <img src={b} alt="b" className="b"></img>
           </button>
           <button>
             <img src={b} alt="b" className="b"></img>
