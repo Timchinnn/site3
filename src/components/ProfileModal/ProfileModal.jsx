@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ProfileModal.css";
 // import buy from "./buy.png";
 // import cartButton from "./cartButton.png";
@@ -9,11 +9,6 @@ import book from "./book.png";
 import { useNavigate } from "react-router-dom";
 const ProfileModal = ({ onClose }) => {
   const navigate = useNavigate();
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleButtonClick = () => {
-    setIsModalOpen(true);
-  };
   return (
     <div className="modal-overlay">
       <div className="modal-content">
@@ -25,7 +20,7 @@ const ProfileModal = ({ onClose }) => {
         ></img>
 
         <div className="buttonsMainProfile">
-          <button onClick={handleButtonClick}>
+          <button>
             <div className="buy-about">
               <img src={book} alt="book" />
               <div className="buy-and-more">
@@ -71,12 +66,6 @@ const ProfileModal = ({ onClose }) => {
           </div>
           <img src={car} alt="car" className="car"></img>
         </button>
-        {isModalOpen && (
-          <div className="new-modal">
-            <p>Новое модальное окно</p>
-            <button onClick={() => setIsModalOpen(false)}>Закрыть</button>
-          </div>
-        )}
       </div>
     </div>
   );
