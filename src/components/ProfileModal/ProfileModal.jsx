@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ProfileModal.css";
 // import buy from "./buy.png";
 // import cartButton from "./cartButton.png";
