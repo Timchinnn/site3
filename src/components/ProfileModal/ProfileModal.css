@@ -117,7 +117,7 @@
   text-align: justify;
   padding-left: 22px;
 }
-.about-user p:first-child {
+.about-user .name {
   font-weight: 800;
   font-size: 15px;
 }
