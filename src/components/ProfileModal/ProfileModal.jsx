@@ -64,15 +64,18 @@ const ProfileModal = ({ onClose }) => {
                 <p>Посмотреть все данные</p>
               </button>
             </div>
-            <button className="delivery">
-              <p>Доставка</p>
-              <p>Ближайшая: не ожидается</p>
-              <div className="about-delivery">
-                <button>Подробнее</button>
-                <button>Пожаловаться на доставку</button>
-              </div>
-              {/* <img src={car} alt="car" className="car"></img> */}
-            </button>
+            <div>
+              {" "}
+              <button className="delivery">
+                <p>Доставка</p>
+                <p>Ближайшая: не ожидается</p>
+                <div className="about-delivery">
+                  <button>Подробнее</button>
+                  <button>Пожаловаться на доставку</button>
+                </div>
+                {/* <img src={car} alt="car" className="car"></img> */}
+              </button>
+            </div>
           </div>
         </div>
       ) : (
