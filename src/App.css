@@ -121,7 +121,7 @@
   margin-left: auto; /* Это также поможет, если у вас есть отступы */
 }
 .about-buttons-question {
-  margin-left: 35px;
+  margin-left: 10px;
   margin-top: 20px;
   display: flex;
   overflow-x: auto; /* Позволяет прокручивать элементы по оси X */
