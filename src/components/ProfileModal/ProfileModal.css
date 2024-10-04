@@ -73,7 +73,7 @@
   height: 102px;
 }
 .buttonsMainProfile button:nth-child(2) img:last-child {
-  margin-left: 168px;
+  margin-left: 148px;
   border-radius: 11px;
 }
 .buttonsMainProfile button:last-child {
@@ -110,6 +110,14 @@
   font-weight: 900;
 }
 .discount-and-more p:first-child {
+  font-weight: 800;
+  font-size: 15px;
+}
+.discount-and-more {
+  text-align: justify;
+  padding-left: 22px;
+}
+.about-user p:first-child {
   font-weight: 800;
   font-size: 15px;
 }
