@@ -64,8 +64,7 @@ const ProfileModal = ({ onClose }) => {
                 <p>Посмотреть все данные</p>
               </button>
             </div>
-            <div>
-              {" "}
+            <div className="end-delivery">
               <button className="delivery">
                 <p>Доставка</p>
                 <p>Ближайшая: не ожидается</p>

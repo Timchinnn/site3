@@ -158,5 +158,9 @@
   }
   .delivery {
     background-position: top;
+    height: 145px;
+  }
+  .end-delivery {
+    padding-bottom: 30px;
   }
 }
