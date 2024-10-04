@@ -4,7 +4,7 @@ import "./ProfileModal.css";
 // import cartButton from "./cartButton.png";
 import arrow from "./arrow.png";
 import b from "./B.png";
-import car from "./car.png";
+// import car from "./car.png";
 import book from "./book.png";
 import { useNavigate } from "react-router-dom";
 const ProfileModal = ({ onClose }) => {
@@ -71,7 +71,7 @@ const ProfileModal = ({ onClose }) => {
                 <button>Подробнее</button>
                 <button>Пожаловаться на доставку</button>
               </div>
-              <img src={car} alt="car" className="car"></img>
+              {/* <img src={car} alt="car" className="car"></img> */}
             </button>
           </div>
         </div>
