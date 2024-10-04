@@ -96,6 +96,10 @@
   font-weight: 900;
   font-size: 18px;
 }
+
+.about-user {
+  text-align: justify;
+}
 @media (max-width: 420px) {
   .buttonsMainProfile button:first-child img:last-child {
     margin-left: 99px;

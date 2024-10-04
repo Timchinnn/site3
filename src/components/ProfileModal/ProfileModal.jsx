@@ -38,9 +38,9 @@ const ProfileModal = ({ onClose }) => {
                 <img src={b} alt="b" className="b"></img>
               </button>
               <button>
-                <div className="buy-about">
+                <div className="discount">
                   <p>3%</p>
-                  <div className="buy-and-more">
+                  <div className="discount-and-more">
                     <p>Скидка</p>
                     <p>Сумма выкупа</p>
                     <p>Подробнее</p>
@@ -50,7 +50,7 @@ const ProfileModal = ({ onClose }) => {
               </button>
               <button>
                 <img alt="user-photo" />
-                <div>
+                <div className="about-user">
                   <p>Иван Владимирович </p>
                   <div>
                     <p>Телефон</p>
