@@ -76,9 +76,11 @@ const ProfileModal = ({ onClose }) => {
           </div>
         </div>
       ) : (
-        <div className="modal-content">
-          <p>Новое содержимое страницы</p>
-          <button onClick={() => setIsModalVisible(false)}>Назад</button>
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <p>Новое содержимое страницы</p>
+            <button onClick={() => setIsModalVisible(false)}>Назад</button>
+          </div>
         </div>
       )}
     </div>
