@@ -40,8 +40,14 @@
 }
 .log-help {
   display: flex; /* Flexbox для центрирования содержимого */
-  justify-content: center; /* Центрирование по горизонтали */
+  justify-content: space-between; /* Центрирование по горизонтали */
   align-items: center; /* Центрирование по вертикали */
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.log-help img {
+  width: 194px;
+  height: 110px;
 }
 .company {
   display: flex; /* Flexbox для центрирования содержимого */
