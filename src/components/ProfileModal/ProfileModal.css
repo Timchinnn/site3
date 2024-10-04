@@ -64,13 +64,17 @@
 }
 
 .buttonsMainProfile button:first-child img:last-child {
+  border-radius: 11px;
   margin-left: 143px;
 }
 
 .buttonsMainProfile button:nth-child(2) {
   height: 102px;
 }
-
+.buttonsMainProfile button:nth-child(2) img:last-child {
+  margin-left: 168px;
+  border-radius: 11px;
+}
 .buttonsMainProfile button:last-child {
   height: 120px;
 }
