@@ -83,13 +83,13 @@
   align-items: center;
   margin-left: 1px;
 }
-@media (max-width: 430px) {
+@media (max-width: 420px) {
   .buttonsMainProfile button:first-child img:last-child {
     margin-left: 99px;
     border-radius: 11px;
   }
   .buttonsMainProfile button:nth-child(2) img:last-child {
-    margin-left: 103px;
+    margin-left: 122px;
     border-radius: 11px;
   }
 }
