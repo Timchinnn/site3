@@ -44,6 +44,7 @@
   width: 100%;
   height: 152px;
   border-radius: 11px;
+  text-align: justify;
 }
 .arrow {
   width: 33px;
