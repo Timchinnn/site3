@@ -67,7 +67,7 @@ const ProfileModal = ({ onClose }) => {
             <button className="delivery">
               <p>Доставка</p>
               <p>Ближайшая: не ожидается</p>
-              <div>
+              <div className="about-delivery">
                 <button>Подробнее</button>
                 <button>Пожаловаться на доставку</button>
               </div>

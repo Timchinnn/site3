@@ -125,6 +125,26 @@
 .user-photo {
   width: 40px;
 }
+.about-delivery {
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+}
+.about-delivery button:first-child {
+  width: 113px;
+  height: 29px;
+  border-radius: 22px;
+  border-style: none;
+  background-color: #ece0c6;
+}
+.about-delivery button:last-child {
+  width: 203px;
+  height: 29px;
+  border-radius: 22px;
+  border-style: none;
+  background-color: #ece0c6;
+}
+
 @media (max-width: 420px) {
   .buttonsMainProfile button:first-child img:last-child {
     margin-left: 99px;
