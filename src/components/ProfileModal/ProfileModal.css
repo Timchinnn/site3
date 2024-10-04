@@ -30,6 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-style: none;
 }
 /* .delivery {
   background-color: #c7b385;
@@ -42,9 +43,10 @@
   background-size: cover; /* Это свойство заставляет картинку занимать весь элемент */
   background-position: center; /* Центрирует картинку в элементе */
   width: 100%;
-  height: 152px;
+  height: 167px;
   border-radius: 11px;
   text-align: justify;
+  border-style: none;
 }
 .arrow {
   width: 33px;
