@@ -109,6 +109,10 @@
   font-size: 24px;
   font-weight: 900;
 }
+.discount-and-more p:first-child {
+  font-weight: 800;
+  font-size: 15px;
+}
 @media (max-width: 420px) {
   .buttonsMainProfile button:first-child img:last-child {
     margin-left: 99px;
