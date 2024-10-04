@@ -152,4 +152,12 @@
   .company {
     margin-left: 20px;
   }
+  .log-help {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .log-help img {
+    height: 100px;
+    width: 174px;
+  }
 }
