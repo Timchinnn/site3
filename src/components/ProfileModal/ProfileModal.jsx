@@ -49,7 +49,7 @@ const ProfileModal = ({ onClose }) => {
                 <img src={b} alt="b" className="b"></img>
               </button>
               <button>
-                <img alt="user-photo" />
+                <img alt="user-photo" className="user-photo" />
                 <div className="about-user">
                   <p className="name">Иван Владимирович </p>
                   <div>

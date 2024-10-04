@@ -99,6 +99,7 @@
 
 .about-user {
   text-align: justify;
+  margin-left: 20px;
 }
 .discount {
   align-items: center;
@@ -120,6 +121,9 @@
 .about-user .name {
   font-weight: 800;
   font-size: 15px;
+}
+.user-photo {
+  width: 40px;
 }
 @media (max-width: 420px) {
   .buttonsMainProfile button:first-child img:last-child {
