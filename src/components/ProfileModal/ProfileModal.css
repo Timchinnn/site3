@@ -149,11 +149,11 @@
 
 @media (max-width: 420px) {
   .buttonsMainProfile button:first-child img:last-child {
-    margin-left: 99px;
+    margin-left: 89px;
     border-radius: 11px;
   }
   .buttonsMainProfile button:nth-child(2) img:last-child {
-    margin-left: 122px;
+    margin-left: 94px;
     border-radius: 11px;
   }
 }
