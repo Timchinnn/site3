@@ -27,10 +27,7 @@ function App() {
   const { cartItems, addToCart, removeFromCart } = useCart();
 
   useEffect(() => {
-    Promise.all([
-      axios.get("/api/categories"),
-      axios.get("/api/products"),
-    ])
+    Promise.all([axios.get("/api/categories"), axios.get("/api/products")])
       .then(([categoriesResponse, productsResponse]) => {
         setCategories(categoriesResponse.data);
         setProducts(productsResponse.data);
@@ -43,8 +40,8 @@ function App() {
   );
 
   // Фильтруем категории, чтобы оставить только те, в которых есть отфильтрованные продукты
-  const categoriesWithFilteredProducts = categories.filter(category =>
-    filteredProducts.some(product => product.category === category.name)
+  const categoriesWithFilteredProducts = categories.filter((category) =>
+    filteredProducts.some((product) => product.category === category.name)
   );
 
   const openProductModal = (product) => {
@@ -75,7 +72,7 @@ function App() {
           </a>
         </div>
       </div>
-      
+
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <div className="about-buttons-question">
         <div className="why">Почему BANSYS?</div>
@@ -101,12 +98,46 @@ function App() {
         <img src={hyosung} alt="hyosung" className="hyosung"></img>
         <img src={dn} alt="dn" className="dn"></img>
         <img src={ncr} alt="ncr"></img>
+        <div>
+          <img src="" alt=""></img>
+          <button></button>
+        </div>
+        <div>
+          {" "}
+          <img src="" alt=""></img>
+          <button></button>
+        </div>
+        <div>
+          {" "}
+          <img src="" alt=""></img>
+          <button></button>
+        </div>
+        <div>
+          {" "}
+          <img src="" alt=""></img>
+          <button></button>
+        </div>
+        <div>
+          {" "}
+          <img src="" alt=""></img>
+          <button></button>
+        </div>
+        <div>
+          {" "}
+          <img src="" alt=""></img>
+          <button></button>
+        </div>
       </div>
       <div className="header-cart">
         <h1 className="catalog">Каталог</h1>
-        <img src={cartgl} alt="cartgl" onClick={openCartModal} className="cartgl"></img>
+        <img
+          src={cartgl}
+          alt="cartgl"
+          onClick={openCartModal}
+          className="cartgl"
+        ></img>
       </div>
-      
+
       <div className="category">
         {categoriesWithFilteredProducts.length > 0 ? (
           categoriesWithFilteredProducts.map((category) => (
