@@ -31,36 +31,41 @@ const CartModal = ({ items = [], onClose, onAdd, onRemove }) => {
           {items.length === 0 ? (
             <p>Ваша корзина пуста</p>
           ) : (
-            <ul>
-              {items.map((item) => (
-                <li key={item.id} className="cart-item">
-                  <img
-                    src={item.photo_url}
-                    alt={item.name}
-                    className="min-product-img"
-                  />
-                  <div>
-                    <p>{item.name}</p>
-                    <div className="price-controls">
-                      <button
-                        className="add-to-cart-min"
-                        onClick={() => onRemove(item)}
-                      >
-                        -
-                      </button>
-                      <div className="product-quantity">{item.quantity}</div>
-                      <button
-                        className="add-to-cart"
-                        onClick={() => onAdd(item)}
-                      >
-                        +
-                      </button>
+            <div>
+              <ul>
+                {items.map((item) => (
+                  <li key={item.id} className="cart-item">
+                    <img
+                      src={item.photo_url}
+                      alt={item.name}
+                      className="min-product-img"
+                    />
+                    <div>
+                      <p>{item.name}</p>
+                      <div className="price-controls">
+                        <button
+                          className="add-to-cart-min"
+                          onClick={() => onRemove(item)}
+                        >
+                          -
+                        </button>
+                        <div className="product-quantity">{item.quantity}</div>
+                        <button
+                          className="add-to-cart"
+                          onClick={() => onAdd(item)}
+                        >
+                          +
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
+                  </li>
+                ))}
+              </ul>
+              <div></div>
+              <div></div>
+            </div>
           )}
+
           {items.length > 0 && (
             <button className="checkout-button" onClick={handleCheckout}>
               Оформить заказ

@@ -105,3 +105,16 @@ li .add-to-cart-min {
   background-color: #d9d9d9;
   width: 76px;
 }
+.checkout-button {
+  color: white;
+  background-color: #3d6159;
+  border-radius: 20px;
+  width: 100%;
+  min-height: 36px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin-bottom: 10px;
+}
