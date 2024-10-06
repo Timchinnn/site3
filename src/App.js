@@ -9,9 +9,9 @@ import "./App.css";
 import fly from "./fly.png";
 import myLog from "./myLog.png";
 import sendRequest from "./sendRequest.png";
-import dn from "./dn.png";
-import hyosung from "./hyosung.png";
-import ncr from "./ncr.png";
+// import dn from "./dn.png";
+// import hyosung from "./hyosung.png";
+// import ncr from "./ncr.png";
 import cart from "./cart.png";
 import cartgl from "./cartgl.png";
 
