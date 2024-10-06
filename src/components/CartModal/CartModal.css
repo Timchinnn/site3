@@ -116,5 +116,6 @@ li .add-to-cart-min {
   justify-content: center;
   align-items: center;
   border: none;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
+  margin-top: auto;
 }
