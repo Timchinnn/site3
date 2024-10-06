@@ -95,37 +95,34 @@ function App() {
         ></img>
       </div>
       <div className="company">
-        <img src={hyosung} alt="hyosung" className="hyosung"></img>
-        <img src={dn} alt="dn" className="dn"></img>
-        <img src={ncr} alt="ncr"></img>
         <div>
           <img src="" alt=""></img>
-          <button></button>
+          <button className="more-detailed">Подробнее</button>
         </div>
         <div>
           {" "}
           <img src="" alt=""></img>
-          <button></button>
+          <button className="more-detailed">Подробнее</button>
         </div>
         <div>
           {" "}
           <img src="" alt=""></img>
-          <button></button>
+          <button className="more-detailed">Подробнее</button>
         </div>
         <div>
           {" "}
           <img src="" alt=""></img>
-          <button></button>
+          <button className="more-detailed">Подробнее</button>
         </div>
         <div>
           {" "}
           <img src="" alt=""></img>
-          <button></button>
+          <button className="more-detailed">Подробнее</button>
         </div>
         <div>
           {" "}
           <img src="" alt=""></img>
-          <button></button>
+          <button className="more-detailed">Подробнее</button>
         </div>
       </div>
       <div className="header-cart">
