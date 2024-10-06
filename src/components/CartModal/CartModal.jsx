@@ -25,8 +25,9 @@ const CartModal = ({ items = [], onClose, onAdd, onRemove }) => {
     <div className="modal-overlay">
       <div className="modal-content">
         <img className="arrow" src={arrow} alt="arrow" onClick={onClose} />
-        <h2 className="cart-head">Корзина</h2>
+
         <div>
+          <h2 className="cart-head">Корзина</h2>
           {items.length === 0 ? (
             <p>Ваша корзина пуста</p>
           ) : (
