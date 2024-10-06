@@ -65,13 +65,12 @@ const CartModal = ({ items = [], onClose, onAdd, onRemove }) => {
               <div></div>
             </div>
           )}
-
-          {items.length > 0 && (
-            <button className="checkout-button" onClick={handleCheckout}>
-              Оформить заказ
-            </button>
-          )}
         </div>
+        {items.length > 0 && (
+          <button className="checkout-button" onClick={handleCheckout}>
+            Оформить заказ
+          </button>
+        )}
       </div>
     </div>
   );
