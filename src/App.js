@@ -68,7 +68,11 @@ function App() {
   };
 
   const handleCategoryClick = (categoryName) => {
-    setSelectedCategory(categoryName);
+    if (selectedCategory === categoryName) {
+      setSelectedCategory(null); // Сбрасываем категорию, если она уже выбрана
+    } else {
+      setSelectedCategory(categoryName); // Устанавливаем выбранную категорию
+    }
   };
 
   return (
@@ -116,7 +120,7 @@ function App() {
           <img src={dn} alt="dn"></img>
           <button
             className="more-detailed"
-            onClick={() => handleCategoryClick("Банкоматы Diebold")}
+            onClick={() => handleCategoryClick("dn")}
           >
             Подробнее
           </button>
@@ -125,7 +129,7 @@ function App() {
           <img src={grg} alt="grg"></img>
           <button
             className="more-detailed"
-            onClick={() => handleCategoryClick("Банкоматы GRG")}
+            onClick={() => handleCategoryClick("grg")}
           >
             Подробнее
           </button>
@@ -134,7 +138,7 @@ function App() {
           <img src={hyosung} alt="hyosung"></img>
           <button
             className="more-detailed"
-            onClick={() => handleCategoryClick("Банкоматы Nautilus Huosyng")}
+            onClick={() => handleCategoryClick("hyosung")}
           >
             Подробнее
           </button>
@@ -143,7 +147,7 @@ function App() {
           <img src={ncr} alt="ncr"></img>
           <button
             className="more-detailed"
-            onClick={() => handleCategoryClick("Банкоматы NCR")}
+            onClick={() => handleCategoryClick("ncr")}
           >
             Подробнее
           </button>
@@ -161,7 +165,7 @@ function App() {
           <img src={wincor} alt="wincor"></img>
           <button
             className="more-detailed"
-            onClick={() => handleCategoryClick("Банкоматы Wincor Nixdorf")}
+            onClick={() => handleCategoryClick("wincor")}
           >
             Подробнее
           </button>
