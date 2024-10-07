@@ -35,8 +35,8 @@ const CartModal = ({ items = [], onClose, onAdd, onRemove, onResetCart }) => {
         <img className="arrow" src={arrow} alt="arrow" onClick={onClose} />
 
         {orderPlaced ? (
-          <div className="cart-media">
-            <h2>Заказ оформлен</h2>
+          <div className="cart-media-good">
+            <p>Заказ оформлен</p>
             <img src={vector} alt="vector" />
             <button onClick={handleOk}>OK</button>
           </div>
