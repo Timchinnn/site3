@@ -4,10 +4,10 @@ import App from "./App";
 import "./Main.css";
 import bansys from "./bansys.png";
 import toBuy from "./tobuy.png";
-import WhyBansysPage from "./components/WhyBansysPage";
-import HowToBuyPage from "./components/HowToBuyPage";
-import GuaranteePage from "./components/GuaranteePage";
-import LoyaltyProgramPage from "./components/LoyaltyProgramPage";
+import WhyBansysPage from "./components/WhyBansysPage/WhyBansysPage";
+import HowToBuyPage from "./components/HowToBuyPage/HowToBuyPage";
+import GuaranteePage from "./components/GuaranteePage/GuaranteePage";
+import LoyaltyProgramPage from "./components/LoyaltyProgramPage/LoyaltyProgramPage";
 
 // import ProductDetailPage from "./components/ProductModal/ProductModal";
 import SendRequestPage from "./components/SendRequestModal/SendRequestModal";
