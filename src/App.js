@@ -66,7 +66,9 @@ function App() {
   const closeCartModal = () => {
     setIsCartModalOpen(false);
   };
-
+  const resetCart = () => {
+    setCartItems([]); // Очистка корзины
+  };
   const handleCategoryClick = (categoryName) => {
     if (selectedCategory === categoryName) {
       setSelectedCategory(null); // Сбрасываем категорию, если она уже выбрана
@@ -229,6 +231,7 @@ function App() {
           onClose={closeCartModal}
           onAdd={addToCart}
           onRemove={removeFromCart}
+          onResetCart={resetCart} // Убедитесь, что эта строка присутствует
         />
       )}
     </div>
