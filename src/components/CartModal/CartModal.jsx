@@ -3,7 +3,7 @@ import axios from "axios";
 import "./CartModal.css";
 import arrow from "./arrow.png";
 
-const CartModal = ({ items = [], onClose, onAdd, onRemove }) => {
+const CartModal = ({ items = [], onClose, onAdd, onRemove, onResetCart }) => {
   const [orderPlaced, setOrderPlaced] = useState(false);
 
   useEffect(() => {
@@ -17,10 +17,15 @@ const CartModal = ({ items = [], onClose, onAdd, onRemove }) => {
     try {
       const response = await axios.post("/api/checkout", { items });
       console.log("Order placed successfully:", response.data);
-      setOrderPlaced(true); // Set the orderPlaced state to true
+      setOrderPlaced(true); // Устанавливаем состояние заказа в true
     } catch (error) {
       console.error("Error placing order:", error);
     }
+  };
+
+  const handleOk = () => {
+    onResetCart(); // Сбрасываем содержимое корзины
+    onClose(); // Закрываем модальное окно
   };
 
   return (
@@ -31,7 +36,7 @@ const CartModal = ({ items = [], onClose, onAdd, onRemove }) => {
         {orderPlaced ? (
           <div className="cart-media">
             <h2>Заказ оформлен</h2>
-            <button onClick={onClose}>OK</button>
+            <button onClick={handleOk}>OK</button>
           </div>
         ) : (
           <div className="cart-media">
