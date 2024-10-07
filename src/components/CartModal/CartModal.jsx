@@ -26,6 +26,7 @@ const CartModal = ({ items = [], onClose, onAdd, onRemove, onResetCart }) => {
   const handleOk = () => {
     onResetCart(); // Сбрасываем содержимое корзины
     onClose(); // Закрываем модальное окно
+    window.location.reload();
   };
 
   return (
