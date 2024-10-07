@@ -28,12 +28,15 @@ const useCart = () => {
       );
     });
   };
+  const removeAll = () => {
+    setCartItems([]);
+  };
 
   return {
     cartItems,
     addToCart,
     removeFromCart,
-    setCartItems,
+    removeAll,
   };
 };
 

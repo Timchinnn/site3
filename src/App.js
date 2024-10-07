@@ -29,7 +29,7 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const { cartItems, addToCart, removeFromCart } = useCart();
-  const { setCartItems } = useCart();
+  const { removeAll } = useCart();
   useEffect(() => {
     Promise.all([axios.get("/api/categories"), axios.get("/api/products")])
       .then(([categoriesResponse, productsResponse]) => {
@@ -67,7 +67,7 @@ function App() {
     setIsCartModalOpen(false);
   };
   const resetCart = () => {
-    setCartItems([]); // Очистка корзины
+    removeAll(); // Очистка корзины
     console.log(cartItems);
   };
   const handleCategoryClick = (categoryName) => {
