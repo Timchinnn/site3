@@ -49,13 +49,7 @@
   width: 194px;
   height: 110px;
 }
-.company {
-  display: flex; /* Flexbox для центрирования содержимого */
-  justify-content: center; /* Центрирование по горизонтали */
-  align-items: center; /* Центрирование по вертикали */
-  margin-top: 20px;
-  margin-left: 35px;
-}
+/* / */
 .company img {
   margin-right: 17px;
 }
