@@ -9,9 +9,12 @@ import "./App.css";
 import fly from "./fly.png";
 import myLog from "./myLog.png";
 import sendRequest from "./sendRequest.png";
-// import dn from "./dn.png";
-// import hyosung from "./hyosung.png";
-// import ncr from "./ncr.png";
+import dn from "./dn1.png";
+import hyosung from "./hyosung2.png";
+import ncr from "./ncr1.png";
+import grg from "./Grg.png";
+import oki from "./Oki.png";
+import wincor from "./Wincor.png";
 import cart from "./cart.png";
 import cartgl from "./cartgl.png";
 
@@ -104,32 +107,32 @@ function App() {
       </div>
       <div className="company">
         <div>
-          <img src="" alt=""></img>
+          <img src={dn} alt="dn"></img>
           <button className="more-detailed">Подробнее</button>
         </div>
         <div>
           {" "}
-          <img src="" alt=""></img>
+          <img src={grg} alt="grg"></img>
           <button className="more-detailed">Подробнее</button>
         </div>
         <div>
           {" "}
-          <img src="" alt=""></img>
+          <img src={hyosung} alt="hyosung"></img>
           <button className="more-detailed">Подробнее</button>
         </div>
         <div>
           {" "}
-          <img src="" alt=""></img>
+          <img src={ncr} alt="ncr"></img>
           <button className="more-detailed">Подробнее</button>
         </div>
         <div>
           {" "}
-          <img src="" alt=""></img>
+          <img src={oki} alt="oki"></img>
           <button className="more-detailed">Подробнее</button>
         </div>
         <div>
           {" "}
-          <img src="" alt=""></img>
+          <img src={wincor} alt="wincor"></img>
           <button className="more-detailed">Подробнее</button>
         </div>
       </div>
