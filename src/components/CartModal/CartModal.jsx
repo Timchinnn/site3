@@ -17,7 +17,7 @@ const CartModal = ({ items = [], onClose, onAdd, onRemove, onResetCart }) => {
     try {
       const response = await axios.post("/api/checkout", { items });
       console.log("Order placed successfully:", response.data);
-      setOrderPlaced(true);
+      setOrderPlaced(true); // Устанавливаем состояние заказа в true
     } catch (error) {
       console.error("Error placing order:", error);
     }
@@ -26,7 +26,6 @@ const CartModal = ({ items = [], onClose, onAdd, onRemove, onResetCart }) => {
   const handleOk = () => {
     onResetCart(); // Сбрасываем содержимое корзины
     onClose(); // Закрываем модальное окно
-    window.history.back(); // Возвращаемся на предыдущую страницу
   };
 
   return (
