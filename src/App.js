@@ -68,6 +68,7 @@ function App() {
   };
   const resetCart = () => {
     setCartItems([]); // Очистка корзины
+    console.log(cartItems);
   };
   const handleCategoryClick = (categoryName) => {
     if (selectedCategory === categoryName) {
