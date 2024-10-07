@@ -28,15 +28,15 @@ const useCart = () => {
       );
     });
   };
-  const removeAll = () => {
-    cartItems = [];
+  const clearCart = () => {
+    setCartItems([]);
   };
 
   return {
     cartItems,
     addToCart,
     removeFromCart,
-    removeAll,
+    clearCart,
   };
 };
 

@@ -28,8 +28,8 @@ function App() {
   const [isCartModalOpen, setIsCartModalOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(null);
 
-  const { cartItems, addToCart, removeFromCart } = useCart();
-  const { removeAll } = useCart();
+  const { cartItems, addToCart, removeFromCart, clearCart } = useCart();
+
   useEffect(() => {
     Promise.all([axios.get("/api/categories"), axios.get("/api/products")])
       .then(([categoriesResponse, productsResponse]) => {
@@ -67,7 +67,7 @@ function App() {
     setIsCartModalOpen(false);
   };
   const resetCart = () => {
-    removeAll(); // Очистка корзины
+    clearCart(); // Очистка корзины
     console.log(cartItems);
   };
   const handleCategoryClick = (categoryName) => {
