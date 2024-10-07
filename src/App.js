@@ -116,7 +116,7 @@ function App() {
           <img src={dn} alt="dn"></img>
           <button
             className="more-detailed"
-            onClick={() => handleCategoryClick("dn")}
+            onClick={() => handleCategoryClick("Банкоматы Diebold")}
           >
             Подробнее
           </button>
@@ -125,7 +125,7 @@ function App() {
           <img src={grg} alt="grg"></img>
           <button
             className="more-detailed"
-            onClick={() => handleCategoryClick("grg")}
+            onClick={() => handleCategoryClick("Банкоматы GRG")}
           >
             Подробнее
           </button>
@@ -134,7 +134,7 @@ function App() {
           <img src={hyosung} alt="hyosung"></img>
           <button
             className="more-detailed"
-            onClick={() => handleCategoryClick("hyosung")}
+            onClick={() => handleCategoryClick("Банкоматы Nautilus Huosyng")}
           >
             Подробнее
           </button>
@@ -143,7 +143,7 @@ function App() {
           <img src={ncr} alt="ncr"></img>
           <button
             className="more-detailed"
-            onClick={() => handleCategoryClick("ncr")}
+            onClick={() => handleCategoryClick("Банкоматы NCR")}
           >
             Подробнее
           </button>
@@ -161,7 +161,7 @@ function App() {
           <img src={wincor} alt="wincor"></img>
           <button
             className="more-detailed"
-            onClick={() => handleCategoryClick("wincor")}
+            onClick={() => handleCategoryClick("Банкоматы Wincor Nixdorf")}
           >
             Подробнее
           </button>
