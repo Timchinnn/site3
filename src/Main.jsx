@@ -4,6 +4,11 @@ import App from "./App";
 import "./Main.css";
 import bansys from "./bansys.png";
 import toBuy from "./tobuy.png";
+import WhyBansysPage from "./components/WhyBansysPage";
+import HowToBuyPage from "./components/HowToBuyPage";
+import GuaranteePage from "./components/GuaranteePage";
+import LoyaltyProgramPage from "./components/LoyaltyProgramPage";
+
 // import ProductDetailPage from "./components/ProductModal/ProductModal";
 import SendRequestPage from "./components/SendRequestModal/SendRequestModal";
 import ProfilePage from "./components/ProfileModal/ProfileModal";
@@ -57,6 +62,10 @@ function Main() {
       {/* Новый маршрут для профиля */}
       <Route path="/send-request" element={<SendRequestPage />} />{" "}
       {/* Новый маршрут для отправки запроса */}
+      <Route path="/why-bansys" element={<WhyBansysPage />} />
+      <Route path="/how-to-buy" element={<HowToBuyPage />} />
+      <Route path="/guarantee" element={<GuaranteePage />} />
+      <Route path="/loyalty-program" element={<LoyaltyProgramPage />} />
     </Routes>
   );
 }

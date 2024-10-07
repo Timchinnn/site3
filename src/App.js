@@ -75,10 +75,18 @@ function App() {
 
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <div className="about-buttons-question">
-        <div className="why">Почему BANSYS?</div>
-        <div className="how">Как купить?</div>
-        <div className="garante">Гарантия</div>
-        <div className="loyal">Наша программа лояльности</div>
+        <div className="why" onClick={() => navigate("/why-bansys")}>
+          Почему BANSYS?
+        </div>
+        <div className="how" onClick={() => navigate("/how-to-buy")}>
+          Как купить?
+        </div>
+        <div className="garante" onClick={() => navigate("/guarantee")}>
+          Гарантия
+        </div>
+        <div className="loyal" onClick={() => navigate("/loyalty-program")}>
+          Наша программа лояльности
+        </div>
       </div>
       <div className="log-help">
         <img
