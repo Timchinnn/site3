@@ -26,6 +26,7 @@ function App() {
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   const [isCartModalOpen, setIsCartModalOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
   const { cartItems, addToCart, removeFromCart } = useCart();
 
@@ -38,11 +39,12 @@ function App() {
       .catch((error) => console.error("Ошибка при получении данных:", error));
   }, []);
 
-  const filteredProducts = products.filter((product) =>
-    product.name.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredProducts = products.filter(
+    (product) =>
+      product.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
+      (!selectedCategory || product.category === selectedCategory)
   );
 
-  // Фильтруем категории, чтобы оставить только те, в которых есть отфильтрованные продукты
   const categoriesWithFilteredProducts = categories.filter((category) =>
     filteredProducts.some((product) => product.category === category.name)
   );
@@ -63,6 +65,10 @@ function App() {
 
   const closeCartModal = () => {
     setIsCartModalOpen(false);
+  };
+
+  const handleCategoryClick = (categoryName) => {
+    setSelectedCategory(categoryName);
   };
 
   return (
@@ -108,32 +114,57 @@ function App() {
       <div className="company">
         <div className="companya">
           <img src={dn} alt="dn"></img>
-          <button className="more-detailed">Подробнее</button>
+          <button
+            className="more-detailed"
+            onClick={() => handleCategoryClick("dn")}
+          >
+            Подробнее
+          </button>
         </div>
         <div className="companya">
-          {" "}
           <img src={grg} alt="grg"></img>
-          <button className="more-detailed">Подробнее</button>
+          <button
+            className="more-detailed"
+            onClick={() => handleCategoryClick("grg")}
+          >
+            Подробнее
+          </button>
         </div>
         <div className="companya">
-          {" "}
           <img src={hyosung} alt="hyosung"></img>
-          <button className="more-detailed">Подробнее</button>
+          <button
+            className="more-detailed"
+            onClick={() => handleCategoryClick("hyosung")}
+          >
+            Подробнее
+          </button>
         </div>
         <div className="companya">
-          {" "}
           <img src={ncr} alt="ncr"></img>
-          <button className="more-detailed">Подробнее</button>
+          <button
+            className="more-detailed"
+            onClick={() => handleCategoryClick("ncr")}
+          >
+            Подробнее
+          </button>
         </div>
         <div className="companya">
-          {" "}
           <img src={oki} alt="oki"></img>
-          <button className="more-detailed">Подробнее</button>
+          <button
+            className="more-detailed"
+            onClick={() => handleCategoryClick("oki")}
+          >
+            Подробнее
+          </button>
         </div>
         <div className="companya">
-          {" "}
           <img src={wincor} alt="wincor"></img>
-          <button className="more-detailed">Подробнее</button>
+          <button
+            className="more-detailed"
+            onClick={() => handleCategoryClick("wincor")}
+          >
+            Подробнее
+          </button>
         </div>
       </div>
       <div className="header-cart">
