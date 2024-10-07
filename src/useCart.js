@@ -29,7 +29,7 @@ const useCart = () => {
     });
   };
   const removeAll = () => {
-    setCartItems([]);
+    cartItems = [];
   };
 
   return {
