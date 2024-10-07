@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./CartModal.css";
 import arrow from "./arrow.png";
+import vector from "./Vector.png";
 
 const CartModal = ({ items = [], onClose, onAdd, onRemove, onResetCart }) => {
   const [orderPlaced, setOrderPlaced] = useState(false);
@@ -36,6 +37,7 @@ const CartModal = ({ items = [], onClose, onAdd, onRemove, onResetCart }) => {
         {orderPlaced ? (
           <div className="cart-media">
             <h2>Заказ оформлен</h2>
+            <img src={vector} alt="vector" />
             <button onClick={handleOk}>OK</button>
           </div>
         ) : (
