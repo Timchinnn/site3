@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./CartModal.css";
 import arrow from "./arrow.png";
 
 const CartModal = ({ items = [], onClose, onAdd, onRemove }) => {
+  const [orderPlaced, setOrderPlaced] = useState(false);
+
   useEffect(() => {
     document.body.classList.add("no-scroll");
     return () => {
@@ -15,7 +17,7 @@ const CartModal = ({ items = [], onClose, onAdd, onRemove }) => {
     try {
       const response = await axios.post("/api/checkout", { items });
       console.log("Order placed successfully:", response.data);
-      // Optionally close the modal or show a success message
+      setOrderPlaced(true); // Set the orderPlaced state to true
     } catch (error) {
       console.error("Error placing order:", error);
     }
@@ -26,47 +28,54 @@ const CartModal = ({ items = [], onClose, onAdd, onRemove }) => {
       <div className="modal-content">
         <img className="arrow" src={arrow} alt="arrow" onClick={onClose} />
 
-        <div className="cart-media">
-          <h2 className="cart-head">Корзина</h2>
-          {items.length === 0 ? (
-            <p>Ваша корзина пуста</p>
-          ) : (
-            <div>
-              <ul>
-                {items.map((item) => (
-                  <li key={item.id} className="cart-item">
-                    <img
-                      src={item.photo_url}
-                      alt={item.name}
-                      className="min-product-img"
-                    />
-                    <div>
-                      <p>{item.name}</p>
-                      <div className="price-controls">
-                        <button
-                          className="add-to-cart-min"
-                          onClick={() => onRemove(item)}
-                        >
-                          -
-                        </button>
-                        <div className="product-quantity">{item.quantity}</div>
-                        <button
-                          className="add-to-cart"
-                          onClick={() => onAdd(item)}
-                        >
-                          +
-                        </button>
+        {orderPlaced ? (
+          <div className="cart-media">
+            <h2>Заказ оформлен</h2>
+            <button onClick={onClose}>OK</button>
+          </div>
+        ) : (
+          <div className="cart-media">
+            <h2 className="cart-head">Корзина</h2>
+            {items.length === 0 ? (
+              <p>Ваша корзина пуста</p>
+            ) : (
+              <div>
+                <ul>
+                  {items.map((item) => (
+                    <li key={item.id} className="cart-item">
+                      <img
+                        src={item.photo_url}
+                        alt={item.name}
+                        className="min-product-img"
+                      />
+                      <div>
+                        <p>{item.name}</p>
+                        <div className="price-controls">
+                          <button
+                            className="add-to-cart-min"
+                            onClick={() => onRemove(item)}
+                          >
+                            -
+                          </button>
+                          <div className="product-quantity">
+                            {item.quantity}
+                          </div>
+                          <button
+                            className="add-to-cart"
+                            onClick={() => onAdd(item)}
+                          >
+                            +
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-              <div></div>
-              <div></div>
-            </div>
-          )}
-        </div>
-        {items.length > 0 && (
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        )}
+        {items.length > 0 && !orderPlaced && (
           <button className="checkout-button" onClick={handleCheckout}>
             Оформить заказ
           </button>
