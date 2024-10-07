@@ -29,7 +29,7 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   const { cartItems, addToCart, removeFromCart } = useCart();
-
+  const { setCartItems } = useCart();
   useEffect(() => {
     Promise.all([axios.get("/api/categories"), axios.get("/api/products")])
       .then(([categoriesResponse, productsResponse]) => {

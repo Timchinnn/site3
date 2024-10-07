@@ -33,6 +33,7 @@ const useCart = () => {
     cartItems,
     addToCart,
     removeFromCart,
+    setCartItems,
   };
 };
 
