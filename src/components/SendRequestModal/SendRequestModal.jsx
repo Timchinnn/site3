@@ -48,7 +48,7 @@ const SendRequestModal = ({ onClose }) => {
           />
           {requestSent ? (
             <div className="cart-media-good">
-              <p>Заказ оформлен</p>
+              <p>Заявка принята</p>
               <img src={vector} alt="vector" />
               <button onClick={onClose}>OK</button>
             </div>
