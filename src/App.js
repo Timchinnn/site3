@@ -106,31 +106,31 @@ function App() {
         ></img>
       </div>
       <div className="company">
-        <div>
+        <div className="companya">
           <img src={dn} alt="dn"></img>
           <button className="more-detailed">Подробнее</button>
         </div>
-        <div>
+        <div className="companya">
           {" "}
           <img src={grg} alt="grg"></img>
           <button className="more-detailed">Подробнее</button>
         </div>
-        <div>
+        <div className="companya">
           {" "}
           <img src={hyosung} alt="hyosung"></img>
           <button className="more-detailed">Подробнее</button>
         </div>
-        <div>
+        <div className="companya">
           {" "}
           <img src={ncr} alt="ncr"></img>
           <button className="more-detailed">Подробнее</button>
         </div>
-        <div>
+        <div className="companya">
           {" "}
           <img src={oki} alt="oki"></img>
           <button className="more-detailed">Подробнее</button>
         </div>
-        <div>
+        <div className="companya">
           {" "}
           <img src={wincor} alt="wincor"></img>
           <button className="more-detailed">Подробнее</button>

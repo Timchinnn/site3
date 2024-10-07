@@ -50,9 +50,9 @@
   height: 110px;
 }
 /* / */
-.company img {
+/* .company img {
   margin-right: 17px;
-}
+} */
 .company button {
   color: white;
   background-color: #3d6159;
@@ -69,6 +69,9 @@
 /* .my-log {
   width: 189px;
 } */
+.companya {
+  margin-right: 15px;
+}
 .catalog {
   color: #ffffff;
   width: 122px;
