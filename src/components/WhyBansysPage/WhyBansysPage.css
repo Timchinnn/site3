@@ -9,7 +9,6 @@
 
 .window-reg1 p {
   overflow: hidden; /* Ensures content is clipped if it overflows */
-  text-overflow: ellipsis; /* Adds ellipsis (...) for overflowed text */
-  white-space: nowrap; /* Prevents text from wrapping to the next line */
+
   max-width: 100%; /* Ensures the text does not exceed the block's width */
 }
