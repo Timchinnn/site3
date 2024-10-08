@@ -21,6 +21,7 @@ const HowToBuyPage = ({ onClose }) => {
             alt="arrow"
             onClick={() => navigate(-1)}
           />
+          <div className="window-reg"></div>
         </div>
       </div>
     </div>
