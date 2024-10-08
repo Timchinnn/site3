@@ -1,0 +1,15 @@
+.window-reg1 {
+  width: 316px; /* Example width, adjust as necessary */
+  height: 420px;
+  background-color: #d9d9d9;
+  border-radius: 11px;
+  border: 3px groove #17453b;
+  overflow: hidden;
+}
+
+.window-reg1 p {
+  overflow: hidden; /* Ensures content is clipped if it overflows */
+  text-overflow: ellipsis; /* Adds ellipsis (...) for overflowed text */
+  white-space: nowrap; /* Prevents text from wrapping to the next line */
+  max-width: 100%; /* Ensures the text does not exceed the block's width */
+}

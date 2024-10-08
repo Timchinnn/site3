@@ -21,7 +21,7 @@ const WhyBansysPage = ({ onClose }) => {
             alt="arrow"
             onClick={() => navigate(-1)}
           />
-          <div className="window-reg">
+          <div className="window-reg1">
             <p>
               Компания работает с оборудованием таких брендов как Hyosung, GRG,
               NCR, Diebold Nixdorf и OKI и специализируется на продаже и аренде
