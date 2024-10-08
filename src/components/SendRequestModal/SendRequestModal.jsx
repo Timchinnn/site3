@@ -50,7 +50,7 @@ const SendRequestModal = ({ onClose }) => {
             <div className="cart-media-good">
               <p>Заявка принята</p>
               <img src={vector} alt="vector" />
-              <button onClick={onClose}>OK</button>
+              <button onClick={() => navigate(-1)}>OK</button>
             </div>
           ) : (
             <div className="window-reg">
