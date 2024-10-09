@@ -1,37 +1,21 @@
-
-
-.window-block-about p {
-  overflow: hidden; /* Ensures content is clipped if it overflows */
-
-  max-width: 100%; /* Ensures the text does not exceed the block's width */
-}
-.window-block-about{
+.window-block-about {
   background-color: #d9d9d9;
   border-color: #17453b;
   border-radius: 11px;
   border-width: 3px;
-  height: 420px;
   width: 316px;
-  /* border-width: 100px; */
   border-style: groove;
   padding: 10px;
   overflow: hidden;
-  overflow-y: auto; 
+  max-height: 420px; /* Максимальная высота */
 }
+
+.window-block-about p {
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0; /* Убираем отступы у параграфов */
+}
+
 .window-block-about p:last-child {
   padding-bottom: 0;
-}
-
-/* Добавляем стили для полосы прокрутки */
-.window-block-about::-webkit-scrollbar {
-  width: 8px;
-}
-
-.window-block-about::-webkit-scrollbar-thumb {
-  background-color: #17453b;
-  border-radius: 4px;
-}
-
-.window-block-about::-webkit-scrollbar-track {
-  background-color: #d9d9d9;
 }
