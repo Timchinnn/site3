@@ -16,3 +16,11 @@
 .arrow-group:last-child{
     height: 115px;
 }
+.about-sale{display: flex;
+    overflow-x: auto; /* Позволяет прокручивать элементы по оси X */
+    scroll-snap-type: x mandatory; /* Для плавного прокручивания */
+    min-height: 125px;
+}
+.about-sale::-webkit-scrollbar {
+    display: none; /* Скрывает полосу прокрутки */
+  }
