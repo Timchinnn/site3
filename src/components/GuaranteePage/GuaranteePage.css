@@ -1,2 +1,10 @@
-.arrow-group{width: 120px;}
-.arrow-groups{display: flex;}
+.arrow-group{width: 120px;
+    display: flex;
+    align-items: flex-start;}
+.arrow-groups{display: flex;
+}
+.arrow-group p {
+    align-self: flex-end;
+    margin-top: auto;
+    font-size: 11px;
+}
