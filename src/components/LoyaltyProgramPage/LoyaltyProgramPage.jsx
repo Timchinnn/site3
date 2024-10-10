@@ -21,7 +21,7 @@ const LoyaltyProgramPage = ({ onClose }) => {
             alt="arrow"
             onClick={() => navigate(-1)}
           />
-          <div className="block-about">
+          <div className="window-block-about">
             <p>Складские и производственные помещения компании соответствуют всем техническим требованиям 
             и необходимым условиям для хранения и подготовки банковского оборудования.</p>
           </div>
