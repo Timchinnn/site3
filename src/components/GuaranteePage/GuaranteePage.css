@@ -24,3 +24,4 @@
 .about-sale::-webkit-scrollbar {
     display: none; /* Скрывает полосу прокрутки */
   }
+.share{display: inline-grid;}

@@ -27,7 +27,7 @@ const GuaranteePage = ({ onClose }) => {
             onClick={() => navigate(-1)}
           />
           {/* <div className="window-block-about"></div> */}
-          <div>
+          <div className="share">
             <p>Зови друзей </p>
             <div>
               <img src={arrowLong} alt="arrowLong" />
