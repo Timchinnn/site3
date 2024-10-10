@@ -50,7 +50,7 @@ const GuaranteePage = ({ onClose }) => {
             </div>
             <hr />
             <p>Каждый месяц самые активные участники получают ценные призы:</p>
-            <div>
+            <div className="arrow-groups">
               <div className="arrow-group"><img src={arrowDownL} alt="arrowDownL" />
               <p>1 место: скидка 15%</p></div>
               <div className="arrow-group"><img src={arrowDownM} alt="arrowDownM" />
