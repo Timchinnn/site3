@@ -26,3 +26,4 @@
     display: none; /* Скрывает полосу прокрутки */
   }
 .share{display: inline-grid;}
+.parent{overflow-x: hidden;}
