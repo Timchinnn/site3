@@ -8,3 +8,10 @@
     margin-top: auto;
     font-size: 11px;
 }
+.arrow-group:first-child{height: 280px;}
+.arrow-group:nth-child(2){
+    height: 215px;
+}
+.arrow-group:last-child{
+    height: 165px;
+}
