@@ -20,6 +20,7 @@
     overflow-x: auto; /* Позволяет прокручивать элементы по оси X */
     scroll-snap-type: x mandatory; /* Для плавного прокручивания */
     min-height: 125px;
+    background:linear-gradient(#F1FFF787,#00000087)
 }
 .about-sale::-webkit-scrollbar {
     display: none; /* Скрывает полосу прокрутки */
