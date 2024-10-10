@@ -51,11 +51,11 @@ const GuaranteePage = ({ onClose }) => {
             <hr />
             <p>Каждый месяц самые активные участники получают ценные призы:</p>
             <div>
-              <div><img src={arrowDownL} alt="arrowDownL" />
+              <div className="arrow-group"><img src={arrowDownL} alt="arrowDownL" />
               <p>1 место: скидка 15%</p></div>
-              <div><img src={arrowDownM} alt="arrowDownM" />
+              <div className="arrow-group"><img src={arrowDownM} alt="arrowDownM" />
               <p>2 место: скидка 10%</p></div>
-              <div><img src={arrowDownS} alt="arrowDownS" />
+              <div  className="arrow-group"><img src={arrowDownS} alt="arrowDownS" />
               <p>3 место: скидка 3%</p></div>
               
             </div>
