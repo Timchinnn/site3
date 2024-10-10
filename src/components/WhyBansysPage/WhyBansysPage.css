@@ -15,9 +15,10 @@
   max-width: 100%;
   margin: 0; /* Убираем отступы у параграфов */
   font-size: 13px;
-  width: 316px;
+  
 }
 
 .window-block-about p:last-child {
   padding-bottom: 0;
 }
+.parent p{width: 316px;}
