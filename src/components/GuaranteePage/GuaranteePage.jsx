@@ -33,8 +33,8 @@ const GuaranteePage = ({ onClose }) => {
               <img src={arrowLong} alt="arrowLong" />
               <p className="share-header-p">и зарабатывай</p>
             </div>
-            <hr />
-            <p className="all-p">Получайте 10% от каждого заказа по твоей рекомендации!
+            <hr className="hr1"/>
+            <p className="all-p1">Получайте 10% от каждого заказа по твоей рекомендации!
             </p>
             <p className="all-p">Как это работает:</p>
             <div className="about-sales">
@@ -48,7 +48,7 @@ const GuaranteePage = ({ onClose }) => {
                 <p>Зарабатывайте вместе с нами — когда по вашей ссылке оформят заказ, вы получите 10% от первого чека.</p>
               </div>
             </div>
-            <hr />
+            <hr className="hr2"/>
             <p className="all-p">Каждый месяц самые активные участники получают ценные призы:</p>
             <div className="arrow-groups">
               <div className="arrow-group"><img src={arrowDownL} alt="arrowDownL" />

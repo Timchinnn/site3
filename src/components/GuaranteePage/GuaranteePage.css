@@ -70,3 +70,19 @@
     margin-bottom: 0px;
 }
 .all-p{font-size: 13px;}
+.all-p1{
+    width: 196px;
+    /* text-align: right; */
+    margin-right: 0;
+    margin-left: auto;
+}
+.hr1{margin-left: auto;
+    margin-right: 0;
+    width: 190px;
+    border: none;
+    border-top: 2px solid black;}
+
+.hr2{
+    /* width: 190px; */
+    border: none;
+    border-top: 2px solid black;}
