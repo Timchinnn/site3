@@ -30,7 +30,10 @@
     margin-right: 10px;
     margin-top: 350px;
 }
-.parent{overflow-x: hidden;}
+.parent{
+    overflow-x: hidden;
+    width:auto
+}
 .about-sale{
     background:linear-gradient(#F1FFF787,#00000087);
     width: 154px;
