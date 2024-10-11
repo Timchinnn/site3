@@ -29,7 +29,7 @@ const GuaranteePage = ({ onClose }) => {
           {/* <div className="window-block-about"></div> */}
           <div className="share">
             <p className="share-header-p">Зови друзей </p>
-            <div>
+            <div className="earn">
               <img src={arrowLong} alt="arrowLong" />
               <p className="share-header-p">и зарабатывай</p>
             </div>

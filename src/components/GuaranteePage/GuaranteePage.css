@@ -46,4 +46,11 @@
     margin-left: 3px;
 }
 .share-header-p{font-size: 27px;
-    font-weight: 700;}
+    font-weight: 700;
+    margin-top: 22px;}
+.earn{
+    display: flex;
+    justify-content: space-between;
+    /* align-content: center; */
+    align-items: center;
+}
