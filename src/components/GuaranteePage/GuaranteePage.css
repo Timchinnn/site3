@@ -34,6 +34,9 @@
     overflow-x: hidden;
     
 }
+.share p{
+    font-size: 13px;
+}
 .parent p{
     width:auto
 }
@@ -55,7 +58,14 @@
     margin-top: 22px;}
 .earn{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     /* align-content: center; */
     align-items: center;
+    height: 30px;
+}
+.earn img{
+    width: 140px;
+}
+.share p:first-child{
+    margin-bottom: 0px;
 }
