@@ -25,5 +25,17 @@
 .about-sale::-webkit-scrollbar {
     display: none; /* Скрывает полосу прокрутки */
   }
-.share{display: inline-grid;}
+.share{display: inline-grid;
+    margin-top: 350px;
+    /* width: 400px; */
+    margin-left: 10px;
+    margin-right: 10px;
+}
 .parent{overflow-x: hidden;}
+.bout-sale{
+    background:linear-gradient(#F1FFF787,#00000087);
+    width: 154px;
+    height: 154px;
+    border-radius: 18px;
+    
+}
