@@ -28,7 +28,7 @@
 .share{    display: inline-grid;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 350px;
+    margin-top: 120px;
 }
 .parent{
     overflow-x: hidden;
@@ -53,7 +53,7 @@
     width: 142px;
     margin-left: 3px;
 }
-.share-header-p{font-size: 27px;
+.share-header-p{
     font-weight: 700;
     margin-top: 22px;}
 .earn{
@@ -69,3 +69,4 @@
 .share p:first-child{
     margin-bottom: 0px;
 }
+.all-p{font-size: 13px;}
