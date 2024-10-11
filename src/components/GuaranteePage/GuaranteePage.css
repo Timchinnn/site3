@@ -40,6 +40,9 @@
     margin-right: 10px;
 }
 .about-sale p{
+    margin-right: 3px;
     font-size: 13px;
     width: 142px;
+    margin-left: 3px;
 }
+.share-header-p{font-size: 27px;}
