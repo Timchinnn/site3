@@ -25,11 +25,10 @@
 .about-sale::-webkit-scrollbar {
     display: none; /* Скрывает полосу прокрутки */
   }
-.share{display: inline-grid;
-    margin-top: 350px;
-    /* width: 400px; */
+.share{    display: inline-grid;
     margin-left: 10px;
     margin-right: 10px;
+    margin-top: 350px;
 }
 .parent{overflow-x: hidden;}
 .about-sale{
