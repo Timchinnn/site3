@@ -55,7 +55,9 @@
 }
 .share-header-p{
     font-weight: 700;
-    margin-top: 22px;}
+    margin-top: 22px;
+    font-size: 26px
+}
 .earn{
     display: flex;
     justify-content: space-around;
