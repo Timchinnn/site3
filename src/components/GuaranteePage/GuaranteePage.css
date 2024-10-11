@@ -32,6 +32,9 @@
 }
 .parent{
     overflow-x: hidden;
+    
+}
+.parent p{
     width:auto
 }
 .about-sale{
