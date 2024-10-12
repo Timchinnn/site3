@@ -64,7 +64,8 @@ const GuaranteePage = ({ onClose }) => {
               и заработанных денег в личном кабинете.</p>
             </div>
             <p className="all-p">Нажмите на кнопку ниже, чтобы получить свою уникальную ссылку и начать зарабатывать уже сегодня.</p>
-            <img src={arrowXs} alt="arrowXs" />
+            
+            <div><img src={arrowXs} alt="arrowXs" /></div>
             <p className="all-p"> [Получить ссылку и начать зарабатывать]</p>
             <div>
               <p className="all-p">Твоя ссылка на приглашение</p>
