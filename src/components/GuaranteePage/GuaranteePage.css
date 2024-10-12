@@ -34,12 +34,12 @@
     overflow-x: hidden;
     
 }
-.share p{
+/* .share p{
     font-size: 13px;
-}
-/* .parent p{
-    width:auto
 } */
+.parent p{
+    width:auto
+}
 .about-sale{
     background:linear-gradient(#F1FFF787,#00000087);
     width: 154px;
