@@ -95,13 +95,13 @@ function App() {
           Почему BANSYS?
         </div>
         <div className="how" onClick={() => navigate("/how-to-buy")}>
-          Как купить?
+          Поделись с другом
         </div>
         <div className="garante" onClick={() => navigate("/guarantee")}>
           Гарантия
         </div>
         <div className="loyal" onClick={() => navigate("/loyalty-program")}>
-          Наша программа лояльности
+          Склад и производство
         </div>
       </div>
       <div className="log-help">

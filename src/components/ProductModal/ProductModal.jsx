@@ -61,9 +61,9 @@ const ProductModal = ({ product, onClose, onAdd, onRemove, addedItems }) => {
             <p>Полезная информация</p>
             <div className="about-buttons-question-from">
               <div className="why">Почему BANSYS?</div>
-              <div className="how">Как купить?</div>
+              <div className="how">Поделись с другом</div>
               <div className="garante">Гарантия</div>
-              <div className="loyal">Наша программа лояльности</div>
+              <div className="loyal">Склад и производство</div>
             </div>
             <div className="product-price-add">
               {quantity > 0 ? (
