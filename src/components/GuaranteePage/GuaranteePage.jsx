@@ -60,7 +60,7 @@ const GuaranteePage = ({ onClose }) => {
               
             </div>
             <div className="statistic-hrad"><div className="statistic">
-              <p className="all-p">Статистика в реальном времени — отслеживайте количество переходов 
+              <p className="all-p4">Статистика в реальном времени — отслеживайте количество переходов 
               и заработанных денег в личном кабинете.</p>
             </div></div>
             
