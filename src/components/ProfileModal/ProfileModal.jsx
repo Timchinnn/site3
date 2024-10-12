@@ -3,11 +3,11 @@ import "./ProfileModal.css";
 // import arrow from "./arrow.png";
 // import b from "./B.png";
 // import book from "./book.png";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import axios from "axios"; // Добавьте импорт axios
 
 const ProfileModal = ({ onClose }) => {
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  // const [isModalVisible, setIsModalVisible] = useState(false);
   const [products, setProducts] = useState([]); // Добавьте состояние для хранения товаров
   // const navigate = useNavigate();
 
@@ -24,7 +24,6 @@ const ProfileModal = ({ onClose }) => {
 
   return (
     <div>
-      {!isModalVisible ? (
         <div className="modal-overlay">
           <div className="modal-content">
             {/* ... (остальной код остается без изменений) ... */}
@@ -40,10 +39,7 @@ const ProfileModal = ({ onClose }) => {
             </div>
           </div>
         </div>
-      ) : (
-        // ... (остальной код остается без изменений) ...
-        <div></div>
-      )}
+
     </div>
   );
 };
