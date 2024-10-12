@@ -114,9 +114,10 @@ background: linear-gradient(178.54deg, #BAA36E -56.24%, rgba(255, 255, 255, 0.2)
     display: flex;
     margin-top: 50px;
 }
-.invitation-head{
+.innovation-head{
     justify-content: center;
     display: flex;
+    border-radius: 11px;
     /* margin-top: 50px; */
 }
     
