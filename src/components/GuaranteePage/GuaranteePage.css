@@ -98,4 +98,13 @@
     display: flex;
     justify-content: center;
 }
+.statistic{
+    background-image: url('buttonsale.png');
+    width: 300px;
+    height: 100px;
+}
+.invitation{
+width: 300px;
+height: 155px;
+}
     

@@ -59,7 +59,7 @@ const GuaranteePage = ({ onClose }) => {
               <p>3 место: скидка 3%</p></div>
               
             </div>
-            <div>
+            <div className="statistic">
               <p className="all-p">Статистика в реальном времени — отслеживайте количество переходов 
               и заработанных денег в личном кабинете.</p>
             </div>
@@ -67,7 +67,7 @@ const GuaranteePage = ({ onClose }) => {
             
             <div className="arrowxs"><img src={arrowXs} alt="arrowXs" /></div>
             <p className="all-p2"> [Получить ссылку и начать зарабатывать]</p>
-            <div>
+            <div className="invitation">
               <p className="all-p">Твоя ссылка на приглашение</p>
               <p className="all-p">https://t.me......................</p>
               <button>Скопировать ссылку</button>
