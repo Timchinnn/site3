@@ -59,20 +59,22 @@ const GuaranteePage = ({ onClose }) => {
               <p>3 место: скидка 3%</p></div>
               
             </div>
-            <div className="statistic">
+            <div className="statistic-hrad"><div className="statistic">
               <p className="all-p">Статистика в реальном времени — отслеживайте количество переходов 
               и заработанных денег в личном кабинете.</p>
-            </div>
+            </div></div>
+            
             <p className="all-p2">Нажмите на кнопку ниже, чтобы получить свою уникальную ссылку и начать зарабатывать уже сегодня.</p>
             
             <div className="arrowxs"><img src={arrowXs} alt="arrowXs" /></div>
             <p className="all-p2"> [Получить ссылку и начать зарабатывать]</p>
-            <div className="invitation">
+            <div className="innovation-head">         <div className="invitation">
               <p className="all-p">Твоя ссылка на приглашение</p>
               <p className="all-p">https://t.me......................</p>
               <button>Скопировать ссылку</button>
               <p className="all-p"></p>
-            </div>
+            </div></div>
+   
           </div>
         </div>
       </div>
