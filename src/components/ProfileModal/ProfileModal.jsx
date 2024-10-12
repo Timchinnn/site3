@@ -1,35 +1,47 @@
 import React, { useState, useEffect } from "react";
 import "./ProfileModal.css";
-import axios from "axios";
+// import arrow from "./arrow.png";
+// import b from "./B.png";
+// import book from "./book.png";
+// import { useNavigate } from "react-router-dom";
+import axios from "axios"; // Добавьте импорт axios
 
 const ProfileModal = ({ onClose }) => {
-  const [products, setProducts] = useState([]);
+  // const [isModalVisible, setIsModalVisible] = useState(false);
+  const [products, setProducts] = useState([]); // Добавьте состояние для хранения товаров
+  // const navigate = useNavigate();
 
   useEffect(() => {
+    // Загрузка товаров при монтировании компонента
     axios.get("/api/products")
       .then(response => setProducts(response.data))
       .catch(error => console.error("Ошибка при получении товаров:", error));
   }, []);
 
+  // const handleButtonClick = () => {
+  //   setIsModalVisible(true);
+  // };
+
   return (
     <div>
-      <div className="modal-overlay">
-        <div className="modal-content">
-          {/* ... (остальной код остается без изменений) ... */}
-          
-          {/* Новый блок для отображения названий товаров */}
-          <div className="product-names">
-            <h3>Названия товаров:</h3>
-            <ul>
+        <div className="modal-overlay">
+          <div className="modal-content">
+            {/* ... (остальной код остается без изменений) ... */}
+            
+            {/* Добавьте новый блок для отображения названий товаров */}
+            <div className="product-names">
+              <h3>Названия товаров:</h3>
               {products.map(product => (
-                <li key={product.id}>{product.name}</li>
+                <div key={product.id} className="product-name-item">
+                  {product.name}
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
-      </div>
+
     </div>
   );
 };
 
-export default ProfileModal;
+export default ProfileModal
