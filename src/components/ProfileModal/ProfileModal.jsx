@@ -9,7 +9,7 @@ import axios from "axios"; // Добавьте импорт axios
 const ProfileModal = ({ onClose }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [products, setProducts] = useState([]); // Добавьте состояние для хранения товаров
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   useEffect(() => {
     // Загрузка товаров при монтировании компонента
@@ -18,9 +18,9 @@ const ProfileModal = ({ onClose }) => {
       .catch(error => console.error("Ошибка при получении товаров:", error));
   }, []);
 
-  const handleButtonClick = () => {
-    setIsModalVisible(true);
-  };
+  // const handleButtonClick = () => {
+  //   setIsModalVisible(true);
+  // };
 
   return (
     <div>
