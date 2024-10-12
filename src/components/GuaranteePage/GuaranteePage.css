@@ -22,7 +22,7 @@
     min-height: 125px;
     
 }
-.about-sale::-webkit-scrollbar {
+.about-sales::-webkit-scrollbar {
     display: none; /* Скрывает полосу прокрутки */
   }
 .share{    display: inline-grid;
