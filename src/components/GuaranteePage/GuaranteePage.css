@@ -106,7 +106,8 @@
 .invitation{
 width: 300px;
 height: 155px;
-background:radial-gradient(#BAA36E 100%,#FFFFFF33 20%);
+background: linear-gradient(178.54deg, #BAA36E -56.24%, rgba(255, 255, 255, 0.2) 227.44%);
+
 }
 .statistic-hrad{
     justify-content: center;
