@@ -72,7 +72,15 @@ const GuaranteePage = ({ onClose }) => {
               <p className="all-p">Твоя ссылка на приглашение</p>
               <p className="all-p">https://t.me......................</p>
               <button>Скопировать ссылку</button>
-              <p className="all-p"></p>
+              <div>
+                <p className="all-p">Переходов по ссылке</p>
+                <p className="all-p">0</p>
+              </div>
+              <div>
+                <p className="all-p">Ваша скидка</p>
+                <p className="all-p">0</p>
+              </div>
+              
             </div></div>
    
           </div>
