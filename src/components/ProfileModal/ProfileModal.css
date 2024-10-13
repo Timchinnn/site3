@@ -36,6 +36,18 @@
 .product-name-item {
   transition: all 0.3s ease;
 } */
+.highlight-input {
+  background: transparent;
+  border: none;
+  color: white;
+  width: 30px;
+  text-align: right;
+  margin-right: 5px;
+}
+
+.highlight-input::placeholder {
+  color: white;
+}
 .product-name-item p {
   width: 200px;
 }

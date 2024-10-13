@@ -57,17 +57,19 @@ const ProfileModal = ({ onClose }) => {
                   <div className="additional-elements">
                     {/* Добавьте здесь новые элементы */}
                     <div className="input-container">
-                      <div className="highlight">
-                        <div>
-                          <p>10</p>
-                          <img src={union} alt="union" />
-                        </div>
-                      </div>
                       <input
                         type="text"
                         className="input-field"
                         placeholder="Введите текст..."
                       />
+                      <div className="highlight">
+                        <input
+                          type="text"
+                          className="highlight-input"
+                          placeholder="10"
+                        />
+                        <img src={union} alt="union" />
+                      </div>
                     </div>
                     <button>Подробнее</button>
                     <button>Добавить в корзину</button>
