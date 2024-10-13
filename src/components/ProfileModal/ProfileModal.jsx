@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./ProfileModal.css";
-// import arrow from "./arrow.png";
+import arrow from "./arrow.png";
 // import b from "./B.png";
 // import book from "./book.png";
 // import { useNavigate } from "react-router-dom";
-import axios from "axios"; // Добавьте импорт axios
+import axios from "axios"; // Добавьте импорт axiosimport
+import arrowDown from "./arrowDown.png";
 
 const ProfileModal = ({ onClose }) => {
   // const [isModalVisible, setIsModalVisible] = useState(false);
@@ -28,6 +29,12 @@ const ProfileModal = ({ onClose }) => {
     <div>
       <div className="modal-overlay">
         <div className="modal-content">
+          <img
+            className="arrow"
+            src={arrow}
+            alt="arrow"
+            onClick={() => navigate(-1)}
+          />
           {/* ... (остальной код остается без изменений) ... */}
 
           {/* Добавьте новый блок для отображения названий товаров */}
@@ -41,6 +48,7 @@ const ProfileModal = ({ onClose }) => {
                 onClick={() => setActiveItem(product.id)}
               >
                 <p>{product.name}</p>
+                <img src={arrowDown} alt="arrowDown" />
                 {activeItem === product.id && (
                   <div className="additional-elements">
                     {/* Добавьте здесь новые элементы */}
