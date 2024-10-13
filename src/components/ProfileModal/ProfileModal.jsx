@@ -56,13 +56,10 @@ const ProfileModal = ({ onClose }) => {
                     {/* Добавьте здесь новые элементы */}
                     <div className="input-container">
                       <div className="highlight">
-                        j
-                        <span className="highlight-text">
-                          <div>
-                            <p>10</p>
-                            <img src={union} alt="union" />
-                          </div>
-                        </span>
+                        <div>
+                          <p>10</p>
+                          <img src={union} alt="union" />
+                        </div>
                       </div>
                       <input
                         type="text"
