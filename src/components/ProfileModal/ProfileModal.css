@@ -73,11 +73,24 @@
   z-index: 0;
   margin-top: 1px;
   border-radius: 6px;
-  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
 }
 
-.highlight-text {
-  color: black; /* цвет текста */
-  padding: 10px; /* отступы, чтобы текст не прилипал к границам */
-  pointer-events: none; /* игнорируем события */
+.highlight div {
+  display: flex;
+  align-items: center;
+}
+
+.highlight p {
+  color: white;
+  margin: 0;
+  margin-right: 5px;
+}
+
+.highlight img {
+  width: 20px; /* Установите подходящий размер для вашей иконки */
+  height: auto;
 }
