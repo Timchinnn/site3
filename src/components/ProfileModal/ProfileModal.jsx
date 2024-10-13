@@ -1,31 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "./ProfileModal.css";
 import arrow from "./arrow.png";
-// import b from "./B.png";
-// import book from "./book.png";
-// import { useNavigate } from "react-router-dom";
-import axios from "axios"; // Добавьте импорт axiosimport
+import axios from "axios";
 import arrowDown from "./arrowDown.png";
 import { useNavigate } from "react-router-dom";
 import union from "./Union.png";
+
 const ProfileModal = ({ onClose }) => {
   const navigate = useNavigate();
-  // const [isModalVisible, setIsModalVisible] = useState(false);
-  const [products, setProducts] = useState([]); // Добавьте состояние для хранения товаров
-  // const navigate = useNavigate();
+  const [products, setProducts] = useState([]);
   const [activeItem, setActiveItem] = useState(null);
 
   useEffect(() => {
-    // Загрузка товаров при монтировании компонента
     axios
       .get("/api/products")
       .then((response) => setProducts(response.data))
       .catch((error) => console.error("Ошибка при получении товаров:", error));
   }, []);
-
-  // const handleButtonClick = () => {
-  //   setIsModalVisible(true);
-  // };
 
   return (
     <div>
@@ -37,9 +28,6 @@ const ProfileModal = ({ onClose }) => {
             alt="arrow"
             onClick={() => navigate(-1)}
           />
-          {/* ... (остальной код остается без изменений) ... */}
-
-          {/* Добавьте новый блок для отображения названий товаров */}
           <div className="product-names">
             {products.map((product) => (
               <div
@@ -55,7 +43,6 @@ const ProfileModal = ({ onClose }) => {
                 </div>
                 {activeItem === product.id && (
                   <div className="additional-elements">
-                    {/* Добавьте здесь новые элементы */}
                     <div className="input-container">
                       <input
                         type="text"
@@ -63,11 +50,7 @@ const ProfileModal = ({ onClose }) => {
                         placeholder="Введите текст..."
                       />
                       <div className="highlight">
-                        <input
-                          type="text"
-                          className="highlight-input"
-                          placeholder="Введите число"
-                        />
+                        <p>Выделить</p>
                         <img src={union} alt="union" />
                       </div>
                     </div>
