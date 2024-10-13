@@ -55,7 +55,9 @@ const ProfileModal = ({ onClose }) => {
                       </div>
                     </div>
 
-                    <button>сделать предложение</button>
+                    <button className="submit-button">
+                      сделать предложение
+                    </button>
                   </div>
                 )}
               </div>

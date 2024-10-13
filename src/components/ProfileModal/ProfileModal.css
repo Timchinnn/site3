@@ -33,7 +33,17 @@
   border: none;
   border-radius: 6px;
 }
-
+.submit-button {
+  width: 137px;
+  margin-left: 60%;
+  height: 23px;
+  overflow: hidden;
+  font-size: 10px;
+  border-radius: 11px;
+  border: none;
+  margin-top: 10px;
+  background-color: #173b33;
+}
 .highlight {
   position: absolute;
   right: 0;
