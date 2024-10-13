@@ -54,8 +54,8 @@ const ProfileModal = ({ onClose }) => {
                         <img src={union} alt="union" />
                       </div>
                     </div>
-                    <button>Подробнее</button>
-                    <button>Добавить в корзину</button>
+
+                    <button>сделать предложение</button>
                   </div>
                 )}
               </div>
