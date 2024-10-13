@@ -30,10 +30,11 @@ const ProfileModal = ({ onClose }) => {
             
             {/* Добавьте новый блок для отображения названий товаров */}
             <div className="product-names">
-              <h3>Названия товаров:</h3>
+              
               {products.map(product => (
                 <div key={product.id} className="product-name-item">
-                  {product.name}
+                  <p>{product.name}</p>
+                  <button></button>
                 </div>
               ))}
             </div>
