@@ -43,7 +43,7 @@ const ProfileModal = ({ onClose }) => {
                 </div>
                 {activeItem === product.id && (
                   <div className="additional-elements">
-                    <div className="input-container">
+                    <div className="input-container1">
                       <input
                         type="text"
                         className="input-field"
