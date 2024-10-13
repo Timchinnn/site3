@@ -94,10 +94,13 @@ function App() {
         <div className="why" onClick={() => navigate("/why-bansys")}>
           <p>
             Почему
-            <br />
+            <br></br>
           </p>
+          <br></br>
 
-          <span className="bansys-highlight">BANSYS?</span>
+          <span className="bansys-highlight">
+            <br></br>BANSYS?
+          </span>
         </div>
         <div className="how" onClick={() => navigate("/how-to-buy")}>
           Поделись с другом
