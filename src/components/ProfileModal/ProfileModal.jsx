@@ -54,15 +54,15 @@ const ProfileModal = ({ onClose }) => {
                 {activeItem === product.id && (
                   <div className="additional-elements">
                     {/* Добавьте здесь новые элементы */}
-                    <div className="input-wrapper">
+                    <div className="input-container">
+                      <div className="highlight">
+                        <span className="highlight-text">Текст слева</span>
+                      </div>
                       <input
                         type="text"
-                        placeholder="Цена"
-                        className="input-text"
-                        disabled
-                      ></input>
-                      <div className="input-number">10</div>
-                      <div className="icon"></div>
+                        className="input-field"
+                        placeholder="Введите текст..."
+                      />
                     </div>
                     <button>Подробнее</button>
                     <button>Добавить в корзину</button>

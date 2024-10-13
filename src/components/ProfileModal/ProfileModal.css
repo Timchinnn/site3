@@ -44,41 +44,35 @@
 .product-name-item.active .additional-elements {
   display: block;
 }
-.input-wrapper {
-  display: flex;
-  align-items: center;
-  background-color: #ccc;
-  border-radius: 50px;
-  padding: 5px;
-  width: 200px;
+.input-container {
+  position: relative;
+  width: 300px; /* задайте ширину контейнера */
 }
 
-.input-text {
-  border: none;
-  background: none;
-  padding-left: 10px;
-  flex: 1;
-  color: #888;
-  font-size: 16px;
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 }
 
-.input-number {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #264a3f;
-  color: white;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  font-size: 16px;
-  border: none;
+.highlight {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* 50% ширины от родительского контейнера */
+  height: 100%;
+  background-color: yellow; /* цвет фона */
+  z-index: 0; /* помещаем за элементом ввода */
+  overflow: hidden;
+  pointer-events: none; /* игнорируем события */
 }
 
-.icon {
-  margin-left: 10px;
-  width: 24px;
-  height: 24px;
-  background-color: white;
-  border-radius: 50%;
+.highlight-text {
+  color: black; /* цвет текста */
+  padding: 10px; /* отступы, чтобы текст не прилипал к границам */
+  pointer-events: none; /* игнорируем события */
 }
