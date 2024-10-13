@@ -56,7 +56,7 @@ const ProfileModal = ({ onClose }) => {
                     {/* Добавьте здесь новые элементы */}
                     <div className="input-container">
                       <div className="highlight">
-                        <span className="highlight-text">Текст слева</span>
+                        j<span className="highlight-text">Текст слева</span>
                       </div>
                       <input
                         type="text"
