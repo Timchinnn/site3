@@ -75,7 +75,7 @@ const ProfileModal = ({ onClose }) => {
         </div>
       </div>
       {isModalOpen && (
-        <div className="modal">
+        <div className="modal-overlay">
           <div className="modal-content">
             <h2>Модальное окно</h2>
             <p>Содержимое модального окна</p>
