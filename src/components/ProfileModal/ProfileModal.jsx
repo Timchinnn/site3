@@ -10,6 +10,8 @@ const ProfileModal = ({ onClose }) => {
   // const [isModalVisible, setIsModalVisible] = useState(false);
   const [products, setProducts] = useState([]); // Добавьте состояние для хранения товаров
   // const navigate = useNavigate();
+  const [activeItem, setActiveItem] = useState(null);
+
 
   useEffect(() => {
     // Загрузка товаров при монтировании компонента
@@ -31,12 +33,22 @@ const ProfileModal = ({ onClose }) => {
             {/* Добавьте новый блок для отображения названий товаров */}
             <div className="product-names">
               
-              {products.map(product => (
-                <div key={product.id} className="product-name-item">
-                  <p>{product.name}</p>
-                  <button></button>
-                </div>
-              ))}
+            {products.map(product => (
+  <div 
+    key={product.id} 
+    className={`product-name-item ${activeItem === product.id ? 'active' : ''}`}
+    onClick={() => setActiveItem(product.id)}
+  >
+    <p>{product.name}</p>
+    {activeItem === product.id && (
+      <div className="additional-elements">
+        {/* Добавьте здесь новые элементы */}
+        <button>Подробнее</button>
+        <button>Добавить в корзину</button>
+      </div>
+    )}
+  </div>
+))}
             </div>
           </div>
         </div>
