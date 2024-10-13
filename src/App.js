@@ -92,15 +92,9 @@ function App() {
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <div className="about-buttons-question">
         <div className="why" onClick={() => navigate("/why-bansys")}>
-          <p>
-            Почему
-            <br></br>
-          </p>
-          <br></br>
+          <p>Почему</p>
 
-          <span className="bansys-highlight">
-            <br></br>BANSYS?
-          </span>
+          <p className="bansys-highlight">BANSYS?</p>
         </div>
         <div className="how" onClick={() => navigate("/how-to-buy")}>
           Поделись с другом
