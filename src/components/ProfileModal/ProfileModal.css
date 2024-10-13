@@ -21,7 +21,7 @@
   /* height: 100%; */
   overflow-x: hidden;
 }
-.product-name-item {
+/* .product-name-item {
   background-color: #d9d9d9;
   border-radius: 11px;
   font-size: 12px;
@@ -35,26 +35,40 @@
 }
 .product-name-item {
   transition: all 0.3s ease;
-}
+} */
 .product-name-item p {
   width: 200px;
 }
+.product-name-item {
+  background-color: #d9d9d9;
+  border-radius: 11px;
+  font-size: 12px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 10px;
+}
+
 .product-name-item.active {
-  height: 150px; /* Увеличенный размер */
+  height: auto;
 }
 
 .additional-elements {
   display: none;
+  padding: 10px;
 }
 
 .product-name-item.active .additional-elements {
   display: block;
-}
-.input-container {
-  position: relative;
-  width: 200px; /* задайте ширину контейнера */
-  grid-template-columns: auto minmax(0, 50px);
-  text-align: left;
 }
 
 .input-field {

@@ -49,8 +49,10 @@ const ProfileModal = ({ onClose }) => {
                 }`}
                 onClick={() => setActiveItem(product.id)}
               >
-                <p>{product.name}</p>
-                <img src={arrowDown} alt="arrowDown" />
+                <div className="product-main-content">
+                  <p>{product.name}</p>
+                  <img src={arrowDown} alt="arrowDown" />
+                </div>
                 {activeItem === product.id && (
                   <div className="additional-elements">
                     {/* Добавьте здесь новые элементы */}
