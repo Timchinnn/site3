@@ -93,7 +93,7 @@
   width: 152px;
   height: 275px;
   border-radius: 8px;
-  background-color:#CECECE;
+  background-color: #cecece;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -177,8 +177,8 @@
     margin-left: 6px;
     margin-right: 6px;
   }
-  .log-help img {
+  /* .log-help img {
     height: 100px;
     width: 174px;
-  }
+  } */
 }

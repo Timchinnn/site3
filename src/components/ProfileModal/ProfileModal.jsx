@@ -12,12 +12,12 @@ const ProfileModal = ({ onClose }) => {
   // const navigate = useNavigate();
   const [activeItem, setActiveItem] = useState(null);
 
-
   useEffect(() => {
     // Загрузка товаров при монтировании компонента
-    axios.get("/api/products")
-      .then(response => setProducts(response.data))
-      .catch(error => console.error("Ошибка при получении товаров:", error));
+    axios
+      .get("/api/products")
+      .then((response) => setProducts(response.data))
+      .catch((error) => console.error("Ошибка при получении товаров:", error));
   }, []);
 
   // const handleButtonClick = () => {
@@ -26,35 +26,35 @@ const ProfileModal = ({ onClose }) => {
 
   return (
     <div>
-        <div className="modal-overlay">
-          <div className="modal-content">
-            {/* ... (остальной код остается без изменений) ... */}
-            
-            {/* Добавьте новый блок для отображения названий товаров */}
-            <div className="product-names">
-              
-            {products.map(product => (
-  <div 
-    key={product.id} 
-    className={`product-name-item ${activeItem === product.id ? 'active' : ''}`}
-    onClick={() => setActiveItem(product.id)}
-  >
-    <p>{product.name}</p>
-    {activeItem === product.id && (
-      <div className="additional-elements">
-        {/* Добавьте здесь новые элементы */}
-        <button>Подробнее</button>
-        <button>Добавить в корзину</button>
-      </div>
-    )}
-  </div>
-))}
-            </div>
+      <div className="modal-overlay">
+        <div className="modal-content">
+          {/* ... (остальной код остается без изменений) ... */}
+
+          {/* Добавьте новый блок для отображения названий товаров */}
+          <div className="product-names">
+            {products.map((product) => (
+              <div
+                key={product.id}
+                className={`product-name-item ${
+                  activeItem === product.id ? "active" : ""
+                }`}
+                onClick={() => setActiveItem(product.id)}
+              >
+                <p>{product.name}</p>
+                {activeItem === product.id && (
+                  <div className="additional-elements">
+                    {/* Добавьте здесь новые элементы */}
+                    <button>Подробнее</button>
+                    <button>Добавить в корзину</button>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
-
+      </div>
     </div>
   );
 };
 
-export default ProfileModal
+export default ProfileModal;
