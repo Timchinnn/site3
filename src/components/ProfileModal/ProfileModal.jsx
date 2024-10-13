@@ -7,7 +7,7 @@ import arrow from "./arrow.png";
 import axios from "axios"; // Добавьте импорт axiosimport
 import arrowDown from "./arrowDown.png";
 import { useNavigate } from "react-router-dom";
-
+import union from "./Union.png";
 const ProfileModal = ({ onClose }) => {
   const navigate = useNavigate();
   // const [isModalVisible, setIsModalVisible] = useState(false);
@@ -56,7 +56,13 @@ const ProfileModal = ({ onClose }) => {
                     {/* Добавьте здесь новые элементы */}
                     <div className="input-container">
                       <div className="highlight">
-                        j<span className="highlight-text">Текст слева</span>
+                        j
+                        <span className="highlight-text">
+                          <div>
+                            <p>10</p>
+                            <img src={union} alt="union" />
+                          </div>
+                        </span>
                       </div>
                       <input
                         type="text"

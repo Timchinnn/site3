@@ -62,15 +62,18 @@
 }
 
 .highlight {
+  background-color: #173b33;
+  height: 97%;
+  right: 0;
+  overflow: hidden;
+  pointer-events: none;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 50%; /* 50% ширины от родительского контейнера */
-  height: 100%;
-  background-color: yellow; /* цвет фона */
-  z-index: 0; /* помещаем за элементом ввода */
-  overflow: hidden;
-  pointer-events: none; /* игнорируем события */
+  width: 50%;
+  z-index: 0;
+  margin-top: 1px;
+  border-radius: 6px;
+  text-align: right;
 }
 
 .highlight-text {
