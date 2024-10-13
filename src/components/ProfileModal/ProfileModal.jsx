@@ -6,8 +6,10 @@ import arrow from "./arrow.png";
 // import { useNavigate } from "react-router-dom";
 import axios from "axios"; // Добавьте импорт axiosimport
 import arrowDown from "./arrowDown.png";
+import { useNavigate } from "react-router-dom";
 
 const ProfileModal = ({ onClose }) => {
+  const navigate = useNavigate();
   // const [isModalVisible, setIsModalVisible] = useState(false);
   const [products, setProducts] = useState([]); // Добавьте состояние для хранения товаров
   // const navigate = useNavigate();
