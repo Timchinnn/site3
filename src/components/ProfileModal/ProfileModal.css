@@ -46,7 +46,9 @@
 }
 .input-container {
   position: relative;
-  width: 300px; /* задайте ширину контейнера */
+  width: 200px; /* задайте ширину контейнера */
+  grid-template-columns: auto minmax(0, 50px);
+  text-align: left;
 }
 
 .input-field {
