@@ -50,7 +50,7 @@ const ProfileModal = ({ onClose }) => {
                         placeholder="Введите текст..."
                       />
                       <div className="highlight">
-                        <p>Выделить</p>
+                        <p>10</p>
                         <img src={union} alt="union" />
                       </div>
                     </div>
