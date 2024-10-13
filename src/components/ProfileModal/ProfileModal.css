@@ -25,13 +25,13 @@
   align-items: center;
 }
 
-.input-field {
+/* .input-field {
   width: 100%;
   padding: 10px;
   padding-right: 80px;
   border: none;
   border-radius: 6px;
-}
+} */
 
 .highlight {
   position: absolute;
@@ -44,6 +44,7 @@
   pointer-events: none;
   top: 0;
   /* width: 50%; */
+  width: 20%;
   z-index: 0;
   /* margin-top: 1px; */
   border-radius: 6px;
