@@ -155,5 +155,6 @@
 @media (max-width: 420px) {
   .share {
     margin-top: 500px;
+    width: 340px;
   }
 }
