@@ -66,7 +66,7 @@ const ProfileModal = ({ onClose }) => {
                         <input
                           type="text"
                           className="highlight-input"
-                          placeholder="10"
+                          placeholder="Введите число"
                         />
                         <img src={union} alt="union" />
                       </div>

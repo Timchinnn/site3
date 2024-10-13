@@ -36,20 +36,43 @@
 .product-name-item {
   transition: all 0.3s ease;
 } */
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  padding-right: 80px; /* Увеличим отступ справа для размещения highlight */
+}
+
+.highlight {
+  position: absolute;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #007bff; /* или любой другой цвет */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
 .highlight-input {
   background: transparent;
   border: none;
   color: white;
-  width: 30px;
+  width: 60px; /* Увеличим ширину для удобства ввода */
   text-align: right;
   margin-right: 5px;
 }
 
 .highlight-input::placeholder {
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
 }
-.product-name-item p {
-  width: 200px;
+
+.highlight img {
+  margin-left: 5px;
 }
 .product-name-item {
   background-color: #d9d9d9;
@@ -122,10 +145,6 @@
   margin-right: 5px;
 }
 
-.highlight img {
-  width: 20px; /* Установите подходящий размер для вашей иконки */
-  height: auto;
-}
 .product-names {
   margin-top: 60px;
   display: grid;
