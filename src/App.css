@@ -168,6 +168,10 @@ body {
 .company::-webkit-scrollbar {
   display: none; /* Скрывает полосу прокрутки */
 }
+.bansys-highlight {
+  font-weight: bold;
+  color: #baa36e; /* или любой другой цвет по вашему выбору */
+}
 @media (max-width: 420px) {
   .about-buttons-question {
     margin-left: 6px;
