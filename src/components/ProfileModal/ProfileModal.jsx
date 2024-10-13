@@ -75,9 +75,8 @@ const ProfileModal = ({ onClose }) => {
         </div>
       </div>
       {isModalOpen && (
-        <div className="window-reg">
-          <h1 className="application">ЗАЯВКА</h1>
-          <div className="input-container">
+        <div className="modal-overlay">
+          <div className="modal-content">
             <h2>Модальное окно</h2>
             <p>Содержимое модального окна</p>
             <button onClick={closeModal}>Закрыть</button>
