@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./SendRequestModal.css";
 import bigB from "./bigb.png";
@@ -34,7 +34,15 @@ const SendRequestModal = ({ onClose }) => {
       console.error("Error sending request:", error);
     }
   };
-
+  useEffect(() => {
+    const preventDefault = (e) => e.preventDefault();
+    document.body.addEventListener("touchmove", preventDefault, {
+      passive: false,
+    });
+    return () => {
+      document.body.removeEventListener("touchmove", preventDefault);
+    };
+  }, []);
   return (
     <div className="modal-overlay1">
       <div className="images-container">
@@ -62,7 +70,6 @@ const SendRequestModal = ({ onClose }) => {
               <div className="input-container">
                 <p>Имя</p>
                 <input
-                  inputMode="none"
                   name="name"
                   className="input-order-profile"
                   onChange={handleChange}
@@ -72,7 +79,6 @@ const SendRequestModal = ({ onClose }) => {
                 <p>Телефон</p>
                 <input
                   name="phone"
-                  inputMode="none"
                   className="input-order-profile"
                   onChange={handleChange}
                 />
