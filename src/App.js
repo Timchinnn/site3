@@ -243,6 +243,11 @@ function App() {
           <p>Нет категорий с подходящими товарами...</p>
         )}
       </div>
+      {cartItemsCount > 0 && (
+        <div className="bottom-cart-button">
+          <button onClick={openCartModal}>Корзина ({cartItemsCount})</button>
+        </div>
+      )}
       {isProductModalOpen && (
         <ProductModal
           product={selectedProduct}
@@ -260,11 +265,6 @@ function App() {
           onRemove={removeFromCart}
           onResetCart={resetCart} // Убедитесь, что эта строка присутствует
         />
-      )}
-      {cartItemsCount > 0 && (
-        <div className="bottom-cart-button">
-          <button onClick={openCartModal}>Корзина ({cartItemsCount})</button>
-        </div>
       )}
     </div>
   );
