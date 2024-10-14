@@ -161,3 +161,12 @@
     width: 100px;
   }
 }
+@media (max-width: 420px) and (max-height: 591px) {
+  .share {
+    margin-top: 500px;
+    /* width: 340px; */
+  }
+  .arrow-group {
+    width: 100px;
+  }
+}
