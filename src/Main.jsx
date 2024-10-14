@@ -14,13 +14,13 @@ import SendRequestPage from "./components/SendRequestModal/SendRequestModal";
 import ProfilePage from "./components/ProfileModal/ProfileModal";
 function Main() {
   const navigate = useNavigate(); // Используем хук для навигации
-  const handleLoginClick = () => {
-    console.log("Вход");
-  };
+  // const handleLoginClick = () => {
+  //   console.log("Вход");
+  // };
 
-  const handleRegistrationClick = () => {
-    console.log("Регистрация");
-  };
+  // const handleRegistrationClick = () => {
+  //   console.log("Регистрация");
+  // };
 
   const handleShopButtonClick = () => {
     navigate("/app"); // Переход на новую страницу
