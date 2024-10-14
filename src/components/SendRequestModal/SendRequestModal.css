@@ -123,3 +123,6 @@
   /* size: 37px; */
   font-size: 37px;
 }
+input {
+  touch-action: manipulation;
+}
