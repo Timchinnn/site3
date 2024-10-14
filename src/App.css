@@ -79,6 +79,23 @@ body {
   height: 100px;
   font-size: 15px;
 }
+.help {
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(106.16deg, #173b33 48.89%, #3d6159 78.14%);
+  color: white;
+  width: 194px;
+  height: 100px;
+  font-size: 15px;
+}
+.my-log p {
+  width: 100px;
+}
+.help p {
+  width: 100px;
+}
 .companya {
   margin-right: 15px;
 }
