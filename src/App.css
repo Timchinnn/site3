@@ -70,6 +70,10 @@ body {
   border: none;
   margin-bottom: 10px;
 }
+.log-help img {
+  width: 46px;
+  height: 46px;
+}
 .my-log {
   border-radius: 11px;
   display: flex;
