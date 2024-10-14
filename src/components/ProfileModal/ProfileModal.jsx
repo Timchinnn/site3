@@ -5,6 +5,7 @@ import axios from "axios";
 import arrowDown from "./arrowDown.png";
 import { useNavigate } from "react-router-dom";
 import union from "./Union.png";
+import vector from "./Vector.png";
 
 const ProfileModal = ({ onClose }) => {
   const navigate = useNavigate();
