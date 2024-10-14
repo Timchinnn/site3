@@ -6,6 +6,7 @@ import bigBContray from "./bigbContrary.png";
 import arrow from "./arrow.png";
 import { useNavigate } from "react-router-dom";
 import vector from "./Vector.png";
+import arrowimg from "./Arrow 15.png";
 
 const SendRequestModal = ({ onClose }) => {
   const navigate = useNavigate();
@@ -40,6 +41,9 @@ const SendRequestModal = ({ onClose }) => {
         <img src={bigB} alt="bigB" className="top-left" />
         <img src={bigBContray} alt="bigBContray" className="bottom-right" />
         <div className="parent">
+          <div className="arrowimg-head">
+            <img src={arrowimg} alt="arrowimg" />
+          </div>
           <img
             className="arrow"
             src={arrow}
