@@ -59,7 +59,7 @@ function App() {
     setSelectedProduct(product);
     setIsProductModalOpen(true);
   };
-  const [cartItemsCount, setCartItemsCount] = useState(0);
+  const [cartItemsCount] = useState(0);
 
   const closeProductModal = () => {
     setSelectedProduct(null);
