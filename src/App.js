@@ -59,6 +59,7 @@ function App() {
     setSelectedProduct(product);
     setIsProductModalOpen(true);
   };
+  const [cartItemsCount, setCartItemsCount] = useState(0);
 
   const closeProductModal = () => {
     setSelectedProduct(null);
@@ -259,6 +260,11 @@ function App() {
           onRemove={removeFromCart}
           onResetCart={resetCart} // Убедитесь, что эта строка присутствует
         />
+      )}
+      {cartItemsCount > 0 && (
+        <div className="bottom-cart-button">
+          <button onClick={openCartModal}>Корзина ({cartItemsCount})</button>
+        </div>
       )}
     </div>
   );
