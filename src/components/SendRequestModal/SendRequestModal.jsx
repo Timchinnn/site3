@@ -62,6 +62,7 @@ const SendRequestModal = ({ onClose }) => {
               <div className="input-container">
                 <p>Имя</p>
                 <input
+                  inputMode="none"
                   name="name"
                   className="input-order-profile"
                   onChange={handleChange}
@@ -71,6 +72,7 @@ const SendRequestModal = ({ onClose }) => {
                 <p>Телефон</p>
                 <input
                   name="phone"
+                  inputMode="none"
                   className="input-order-profile"
                   onChange={handleChange}
                 />
