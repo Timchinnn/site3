@@ -98,3 +98,23 @@
   display: grid;
   justify-items: center;
 }
+
+.cart-media-good button {
+  margin-top: 20px;
+  margin-right: 15px;
+  color: white;
+  background-color: #3d6159;
+  border-radius: 20px;
+  width: 60px;
+  min-height: 36px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+.cart-media-good p {
+  font-weight: 300;
+  /* size: 37px; */
+  font-size: 37px;
+}
