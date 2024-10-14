@@ -124,12 +124,12 @@ function App() {
       </div>
       <div className="log-help">
         <div className="my-log" onClick={() => navigate("/profile")}>
-          <img src={right} alt="right"></img>
+          <img src={left} alt="right"></img>
           <p>Для поставщиков</p>
         </div>
         <div className="help" onClick={() => navigate("/send-request")}>
           <p>Оставить заявку</p>
-          <img src={left} alt="left"></img>
+          <img src={right} alt="left"></img>
         </div>
         {/* <img
           src={myLog}
