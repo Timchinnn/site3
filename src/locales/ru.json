@@ -1,0 +1,21 @@
+{
+  "catalog": "Почему",
+  "whyBansys": "Почему BANSYS?",
+  "shareWithFriend": "Поделись с другом",
+  "guarantee": "Гарантия",
+  "warehouseAndProduction": "Склад и производство",
+  "forSuppliers": "Для поставщиков",
+  "leaveRequest": "Оставить заявку",
+  "moreDetails": "Подробнее",
+  "cart": "Корзина",
+  "orderPlaced": "Заказ оформлен",
+  "emptyCart": "Ваша корзина пуста",
+  "checkout": "Оформить заказ",
+  "application": "ЗАЯВКА",
+  "name": "Имя",
+  "phone": "Телефон",
+  "country": "Страна",
+  "city": "Город",
+  "sendRequest": "Отправить заявку",
+  "requestAccepted": "Заявка принята"
+}
