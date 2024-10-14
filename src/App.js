@@ -94,7 +94,6 @@ function App() {
           </a>
         </div>
         <button onClick={changeLanguage}>
-          //{" "}
           {i18n.language === "ru"
             ? "Switch to English"
             : "Переключить на русский"}
