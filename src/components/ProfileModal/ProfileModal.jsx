@@ -6,6 +6,8 @@ import arrowDown from "./arrowDown.png";
 import { useNavigate } from "react-router-dom";
 import union from "./Union.png";
 import vector from "./Vector.png";
+import bigB from "./bigb.png";
+import bigBContray from "./bigbContrary.png";
 
 const ProfileModal = ({ onClose }) => {
   const navigate = useNavigate();
@@ -100,55 +102,69 @@ const ProfileModal = ({ onClose }) => {
         </div>
       </div>
       {isModalOpen && (
-        <div className="modal-overlay">
-          <div className="modal-content">
-            {requestSent ? (
-              <div className="cart-media-good">
-                <p>Заявка принята</p>
-                <img src={vector} alt="vector" />
-                <button onClick={() => navigate(-1)}>OK</button>
-              </div>
-            ) : (
-              <div className="window-reg">
-                <h1 className="application">ЗАЯВКА</h1>
-                <div className="input-container">
-                  <p>Имя</p>
+        <div className="modal-overlay1">
+          <div className="images-container">
+            <img src={bigB} alt="bigB" className="top-left" />
+            <img src={bigBContray} alt="bigBContray" className="bottom-right" />
+            <div className="parent">
+              <img
+                className="arrow"
+                src={arrow}
+                alt="arrow"
+                onClick={() => navigate(-1)}
+              />
+              {requestSent ? (
+                <div className="cart-media-good">
+                  <p>Заявка принята</p>
+                  <img src={vector} alt="vector" />
+                  <button onClick={() => navigate(-1)}>OK</button>
+                </div>
+              ) : (
+                <div className="window-reg">
+                  <h1 className="application">ЗАЯВКА</h1>
+                  <div className="input-container">
+                    <p>Имя</p>
+                    <input
+                      name="name"
+                      className="input-order-profile"
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="input-container">
+                    <p>Телефон</p>
+                    <input
+                      name="phone"
+                      className="input-order-profile"
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="input-container">
+                    <p>Страна</p>
+                    <input
+                      name="country"
+                      className="input-order-profile"
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="input-container">
+                    <p>Город</p>
+                    <input
+                      name="city"
+                      className="input-order-profile"
+                      onChange={handleChange}
+                    />
+                  </div>
                   <input
-                    name="name"
-                    className="input-order-profile"
+                    name="message"
+                    className="msg"
                     onChange={handleChange}
                   />
+                  <button className="send-msg" onClick={handleSubmit}>
+                    Отправить заявку
+                  </button>
                 </div>
-                <div className="input-container">
-                  <p>Телефон</p>
-                  <input
-                    name="phone"
-                    className="input-order-profile"
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="input-container">
-                  <p>Страна</p>
-                  <input
-                    name="country"
-                    className="input-order-profile"
-                    onChange={handleChange}
-                  />
-                </div>
-                <div className="input-container">
-                  <p>Город</p>
-                  <input
-                    name="city"
-                    className="input-order-profile"
-                    onChange={handleChange}
-                  />
-                </div>
-                <input name="message" className="msg" onChange={handleChange} />
-                <button className="send-msg" onClick={handleSubmit}>
-                  Отправить заявку
-                </button>
-              </div>
-            )}
+              )}
+            </div>
           </div>
         </div>
       )}
