@@ -6,7 +6,7 @@ import bigBContray from "./bigbContrary.png";
 import arrow from "./arrow.png";
 import { useNavigate } from "react-router-dom";
 import vector from "./Vector.png";
-import arrowimg from "./Arrow 15.png";
+import arrowimg from "./Arrow 15 (2).png";
 
 const SendRequestModal = ({ onClose }) => {
   const navigate = useNavigate();
