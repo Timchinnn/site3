@@ -227,7 +227,7 @@ body {
   color: white;
   border-radius: 20px;
   border: none; /* Убираем обводку */
-  width: 76px; /* Установите ширину по вашему усмотрению */
+  width: -webkit-fill-available;
   height: 36px; /* Установите высоту по вашему усмотрению */
   display: flex;
   justify-content: center;
