@@ -47,7 +47,7 @@ const SendRequestModal = ({ onClose }) => {
             onClick={() => navigate(-1)}
           />
           {requestSent ? (
-            <div className="cart-media-good">
+            <div className="cart-media-good1">
               <p>Заявка принята</p>
               <img src={vector} alt="vector" />
               <button onClick={() => navigate(-1)}>OK</button>
