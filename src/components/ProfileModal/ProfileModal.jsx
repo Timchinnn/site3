@@ -121,7 +121,7 @@ const ProfileModal = ({ onClose }) => {
                 </div>
               ) : (
                 <div className="window-reg">
-                  <h1 className="application">ЗАЯВКА</h1>
+                  <h1 className="application">ПРЕДЛОЖЕНИЕ</h1>
                   <div className="input-container">
                     <p>Имя</p>
                     <input
@@ -138,7 +138,7 @@ const ProfileModal = ({ onClose }) => {
                       onChange={handleChange}
                     />
                   </div>
-                  <div className="input-container">
+                  {/* <div className="input-container">
                     <p>Страна</p>
                     <input
                       name="country"
@@ -153,14 +153,14 @@ const ProfileModal = ({ onClose }) => {
                       className="input-order-profile"
                       onChange={handleChange}
                     />
-                  </div>
+                  </div> */}
                   <input
                     name="message"
                     className="msg"
                     onChange={handleChange}
                   />
                   <button className="send-msg" onClick={handleSubmit}>
-                    Отправить заявку
+                    Сделать предложение
                   </button>
                 </div>
               )}
