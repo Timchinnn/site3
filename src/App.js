@@ -29,7 +29,11 @@ function App() {
   const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   const [isCartModalOpen, setIsCartModalOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = () => {
+    i18n.changeLanguage(i18n.language === "ru" ? "en" : "ru");
+  };
   const { cartItems, addToCart, removeFromCart, clearCart } = useCart();
 
   useEffect(() => {
@@ -88,6 +92,11 @@ function App() {
           <a href="https://t.me/Bansys_sale" className="tg-button">
             @Bansys_sale
           </a>
+          <button onClick={changeLanguage}>
+            {i18n.language === "ru"
+              ? "Switch to English"
+              : "Переключить на русский"}
+          </button>
         </div>
       </div>
 
@@ -104,7 +113,7 @@ function App() {
           Поделись с другом
         </div>
         <div className="garante" onClick={() => navigate("/guarantee")}>
-          Гарантия
+          {t("guarantee")}
         </div>
         <div className="loyal" onClick={() => navigate("/loyalty-program")}>
           Склад и производство
