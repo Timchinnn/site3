@@ -33,12 +33,12 @@ function Main() {
         element={
           <div className="menu-container">
             <div className="header">
-              <button className="link" onClick={handleLoginClick}>
+              {/* <button className="link" onClick={handleLoginClick}>
                 ВХОД
               </button>
               <button className="link" onClick={handleRegistrationClick}>
                 РЕГИСТРАЦИЯ
-              </button>
+              </button> */}
             </div>
             <div>
               <div className="content">
