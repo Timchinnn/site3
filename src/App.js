@@ -243,7 +243,7 @@ function App() {
           <p>Нет категорий с подходящими товарами...</p>
         )}
       </div>
-      {cartItemsCount > 0 && (
+      {cartItems > 0 && (
         <div className="bottom-cart-button">
           <button onClick={openCartModal}>Корзина ({cartItemsCount})</button>
         </div>
