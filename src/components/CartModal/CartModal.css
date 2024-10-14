@@ -54,7 +54,7 @@ body.no-scroll {
 .cart-media-good {
   display: grid;
   justify-items: center;
-  margin-top: 150px;
+  /* margin-top: 150px; */
 }
 .cart-media-good button {
   margin-top: 20px;
