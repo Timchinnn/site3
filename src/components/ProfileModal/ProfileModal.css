@@ -108,3 +108,15 @@
   display: grid;
   justify-content: center;
 }
+.send-msg1 {
+  background-color: #17453b;
+  border: none;
+  border-radius: 11px;
+  color: #fff;
+  height: 28px;
+  margin-bottom: 10px;
+  margin-left: 90px;
+  margin-top: 10px;
+  text-align: center;
+  width: 168px;
+}
