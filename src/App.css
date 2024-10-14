@@ -101,6 +101,10 @@ body {
 .companya {
   margin-right: 15px;
 }
+.companya img {
+  width: 109px;
+  height: 109px;
+}
 .catalog {
   color: #ffffff;
   width: 122px;
