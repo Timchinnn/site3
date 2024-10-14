@@ -93,11 +93,12 @@ function App() {
             @Bansys_sale
           </a>
         </div>
-        {/* <button onClick={changeLanguage}>
-            {i18n.language === "ru"
-              ? "Switch to English"
-              : "Переключить на русский"}
-          </button> */}
+        <button onClick={changeLanguage}>
+          //{" "}
+          {i18n.language === "ru"
+            ? "Switch to English"
+            : "Переключить на русский"}
+        </button>
       </div>
 
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
