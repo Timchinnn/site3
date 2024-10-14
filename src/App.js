@@ -243,11 +243,7 @@ function App() {
           <p>Нет категорий с подходящими товарами...</p>
         )}
       </div>
-      {cartItems > 0 && (
-        <div className="bottom-cart-button">
-          <button onClick={openCartModal}>Корзина ({cartItems})</button>
-        </div>
-      )}
+
       {isProductModalOpen && (
         <ProductModal
           product={selectedProduct}
