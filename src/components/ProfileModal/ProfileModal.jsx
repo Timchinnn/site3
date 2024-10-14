@@ -36,6 +36,7 @@ const ProfileModal = ({ onClose }) => {
     country: "",
     city: "",
     message: "",
+    tgLink: "",
   });
 
   const handleChange = (e) => {
@@ -45,12 +46,15 @@ const ProfileModal = ({ onClose }) => {
 
   const handleSubmit = async () => {
     try {
-      // Предполагаем, что у нас есть поле tgLink в formData
+      const tgLink = window.Telegram?.WebApp?.initDataUnsafe?.user?.username
+        ? `https://t.me/${window.Telegram.WebApp.initDataUnsafe.user.username}`
+        : null;
+
+      setFormData((prevData) => ({ ...prevData, tgLink }));
+
       const response = await axios.post("/api/send-request", {
         ...formData,
-        tgLink: window.Telegram?.WebApp?.initDataUnsafe?.user?.username
-          ? `https://t.me/${window.Telegram.WebApp.initDataUnsafe.user.username}`
-          : null,
+        tgLink,
       });
       console.log(response.data);
       setRequestSent(true);
@@ -58,7 +62,6 @@ const ProfileModal = ({ onClose }) => {
       console.error("Error sending request:", error);
     }
   };
-
   return (
     <div>
       <div className="modal-overlay">
