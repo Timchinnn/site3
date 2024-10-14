@@ -45,10 +45,15 @@ const ProfileModal = ({ onClose }) => {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post("/api/send-request", formData);
+      // Предполагаем, что у нас есть поле tgLink в formData
+      const response = await axios.post("/api/send-request", {
+        ...formData,
+        tgLink: window.Telegram?.WebApp?.initDataUnsafe?.user?.username
+          ? `https://t.me/${window.Telegram.WebApp.initDataUnsafe.user.username}`
+          : null,
+      });
       console.log(response.data);
       setRequestSent(true);
-      // Optionally close the modal or show a success message
     } catch (error) {
       console.error("Error sending request:", error);
     }

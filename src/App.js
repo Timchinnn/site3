@@ -92,12 +92,12 @@ function App() {
           <a href="https://t.me/Bansys_sale" className="tg-button">
             @Bansys_sale
           </a>
-          <button onClick={changeLanguage}>
+        </div>
+        {/* <button onClick={changeLanguage}>
             {i18n.language === "ru"
               ? "Switch to English"
               : "Переключить на русский"}
-          </button>
-        </div>
+          </button> */}
       </div>
 
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
