@@ -19,7 +19,7 @@ import cart from "./cart.png";
 import cartgl from "./cartgl.png";
 import right from "./right.png";
 import left from "./left.png";
-
+import { useTranslation } from "react-i18next";
 function App() {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
@@ -29,7 +29,7 @@ function App() {
   const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   const [isCartModalOpen, setIsCartModalOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(null);
-
+  const { t } = useTranslation();
   const { cartItems, addToCart, removeFromCart, clearCart } = useCart();
 
   useEffect(() => {
@@ -95,7 +95,7 @@ function App() {
       <div className="about-buttons-question">
         <div className="why" onClick={() => navigate("/why-bansys")}>
           <div>
-            <p>Почему</p>
+            <p>{t("catalog")}</p>
 
             <p className="bansys-highlight">BANSYS?</p>
           </div>
