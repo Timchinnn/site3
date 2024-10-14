@@ -99,7 +99,7 @@
   justify-items: center;
 }
 
-.cart-media-good button {
+.cart-media-good1 button {
   margin-top: 20px;
   margin-right: 15px;
   color: white;
@@ -113,7 +113,7 @@
   align-items: center;
   border: none;
 }
-.cart-media-good p {
+.cart-media-good1 p {
   font-weight: 300;
   /* size: 37px; */
   font-size: 37px;
