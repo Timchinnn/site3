@@ -208,6 +208,12 @@ body {
     margin-left: 6px;
     margin-right: 6px;
   }
+  .my-log {
+    width: 175px;
+  }
+  .help {
+    width: 175px;
+  }
   /* .log-help img {
     height: 100px;
     width: 174px;
