@@ -15,7 +15,7 @@
 
 .top-left {
   position: absolute; /* Позиционирование абсолютное */
-  right: 0;
+  /* right: 0; */
   width: 288px;
   height: 229px;
   margin-left: 35%;
