@@ -70,7 +70,11 @@ body {
   border: none;
   margin-bottom: 10px;
 }
-.log-help img {
+.my-log img {
+  width: 46px;
+  height: 46px;
+}
+.help img {
   width: 46px;
   height: 46px;
 }
