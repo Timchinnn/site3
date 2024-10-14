@@ -245,7 +245,7 @@ function App() {
       </div>
       {cartItems > 0 && (
         <div className="bottom-cart-button">
-          <button onClick={openCartModal}>Корзина ({cartItemsCount})</button>
+          <button onClick={openCartModal}>Корзина ({cartItems})</button>
         </div>
       )}
       {isProductModalOpen && (
