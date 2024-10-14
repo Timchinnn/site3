@@ -244,7 +244,7 @@ function App() {
         )}
       </div>
       {cartItems.length > 0 && (
-        <button className="cartgl" onClick={openCartModal}>
+        <button className="cart-button" onClick={openCartModal}>
           Корзина ({cartItems.length})
         </button>
       )}
