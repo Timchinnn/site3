@@ -6,7 +6,7 @@
   width: 316px;
   border-style: groove;
   padding: 10px;
-  overflow: hidden;
+  /* overflow: hidden; */
   margin-top: 110px;
 }
 
@@ -15,10 +15,11 @@
   max-width: 100%;
   margin: 0; /* Убираем отступы у параграфов */
   font-size: 13px;
-  
 }
 
 .window-block-about p:last-child {
   padding-bottom: 0;
 }
-.parent p{width: 316px;}
+.parent p {
+  width: 316px;
+}
