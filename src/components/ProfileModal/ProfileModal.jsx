@@ -77,9 +77,45 @@ const ProfileModal = ({ onClose }) => {
       {isModalOpen && (
         <div className="modal-overlay">
           <div className="modal-content">
-            <h2>Модальное окно</h2>
-            <p>Содержимое модального окна</p>
-            <button onClick={closeModal}>Закрыть</button>
+            <div className="window-reg">
+              <h1 className="application">ЗАЯВКА</h1>
+              <div className="input-container">
+                <p>Имя</p>
+                <input
+                  name="name"
+                  className="input-order-profile"
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="input-container">
+                <p>Телефон</p>
+                <input
+                  name="phone"
+                  className="input-order-profile"
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="input-container">
+                <p>Страна</p>
+                <input
+                  name="country"
+                  className="input-order-profile"
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="input-container">
+                <p>Город</p>
+                <input
+                  name="city"
+                  className="input-order-profile"
+                  onChange={handleChange}
+                />
+              </div>
+              <input name="message" className="msg" onChange={handleChange} />
+              <button className="send-msg" onClick={handleSubmit}>
+                Отправить заявку
+              </button>
+            </div>
           </div>
         </div>
       )}
