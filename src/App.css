@@ -47,10 +47,10 @@ body {
   margin-left: 10px;
   margin-right: 10px;
 }
-.log-help img {
+/* .log-help img {
   width: 194px;
   height: 110px;
-}
+} */
 /* / */
 /* .company img {
   margin-right: 17px;
@@ -68,9 +68,17 @@ body {
   border: none;
   margin-bottom: 10px;
 }
-/* .my-log {
-  width: 189px;
-} */
+.my-log {
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: linear-gradient(106.16deg, #173b33 48.89%, #3d6159 78.14%);
+  color: white;
+  width: 194px;
+  height: 100px;
+  font-size: 15px;
+}
 .companya {
   margin-right: 15px;
 }
