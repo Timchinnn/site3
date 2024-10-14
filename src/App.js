@@ -19,7 +19,7 @@ import cart from "./cart.png";
 import cartgl from "./cartgl.png";
 import right from "./right.png";
 import left from "./left.png";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
 function App() {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
@@ -29,11 +29,11 @@ function App() {
   const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   const [isCartModalOpen, setIsCartModalOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(null);
-  const { t, i18n } = useTranslation();
+  // const { t, i18n } = useTranslation();
 
-  const changeLanguage = () => {
-    i18n.changeLanguage(i18n.language === "ru" ? "en" : "ru");
-  };
+  // const changeLanguage = () => {
+  //   i18n.changeLanguage(i18n.language === "ru" ? "en" : "ru");
+  // };
   const { cartItems, addToCart, removeFromCart, clearCart } = useCart();
 
   useEffect(() => {
@@ -93,18 +93,19 @@ function App() {
             @Bansys_sale
           </a>
         </div>
-        <button onClick={changeLanguage}>
+        {/* <button onClick={changeLanguage}>
           {i18n.language === "ru"
             ? "Switch to English"
             : "Переключить на русский"}
-        </button>
+        </button> */}
       </div>
 
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <div className="about-buttons-question">
         <div className="why" onClick={() => navigate("/why-bansys")}>
           <div>
-            <p>{t("catalog")}</p>
+            {/* <p>{t("catalog")}</p> */}
+            <p>Почему</p>
 
             <p className="bansys-highlight">BANSYS?</p>
           </div>
@@ -113,7 +114,8 @@ function App() {
           Поделись с другом
         </div>
         <div className="garante" onClick={() => navigate("/guarantee")}>
-          {t("guarantee")}
+          {/* {t("guarantee")} */}
+          Гарантия
         </div>
         <div className="loyal" onClick={() => navigate("/loyalty-program")}>
           Склад и производство
