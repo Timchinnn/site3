@@ -7,8 +7,8 @@ import CartModal from "./components/CartModal/CartModal";
 import useCart from "./useCart";
 import "./App.css";
 import fly from "./fly.png";
-import myLog from "./myLog.png";
-import sendRequest from "./sendRequest.png";
+// import myLog from "./myLog.png";
+// import sendRequest from "./sendRequest.png";
 import dn from "./dn1.png";
 import hyosung from "./hyosung2.png";
 import ncr from "./ncr1.png";
@@ -17,6 +17,8 @@ import oki from "./Oki.png";
 import wincor from "./Wincor.png";
 import cart from "./cart.png";
 import cartgl from "./cartgl.png";
+import right from "./right.png";
+import left from "./left.png";
 
 function App() {
   const navigate = useNavigate();
@@ -109,7 +111,15 @@ function App() {
         </div>
       </div>
       <div className="log-help">
-        <img
+        <div className="my-log" onClick={() => navigate("/profile")}>
+          <img src={right} alt="right"></img>
+          <p>Для поставщиков</p>
+        </div>
+        <div className="help" onClick={() => navigate("/send-request")}>
+          <p>Оставить заявку</p>
+          <img src={left} alt="left"></img>
+        </div>
+        {/* <img
           src={myLog}
           className="my-log"
           alt=""
@@ -120,7 +130,7 @@ function App() {
           src={sendRequest}
           alt=""
           onClick={() => navigate("/send-request")}
-        ></img>
+        ></img> */}
       </div>
       <div className="company">
         <div className="companya">
