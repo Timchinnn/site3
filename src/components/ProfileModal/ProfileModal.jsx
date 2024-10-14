@@ -159,7 +159,7 @@ const ProfileModal = ({ onClose }) => {
                     className="msg"
                     onChange={handleChange}
                   />
-                  <button className="send-msg" onClick={handleSubmit}>
+                  <button className="send-msg1" onClick={handleSubmit}>
                     Сделать предложение
                   </button>
                 </div>
