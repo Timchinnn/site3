@@ -31,7 +31,7 @@ const ProductModal = ({
 
   if (!product) return null;
 
-  const addedItem = addedItems.find((item) => item.id === product.id);
+  // const addedItem = addedItems.find((item) => item.id === product.id);
   // const quantity = addedItem ? addedItem.quantity : 0;
 
   const handleDetailsClick = () => {
