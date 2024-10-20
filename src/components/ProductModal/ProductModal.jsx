@@ -16,9 +16,13 @@ const ProductModal = ({
   const [isInCart, setIsInCart] = useState(false);
   useEffect(() => {
     if (!product) return;
-    document.body.classList.add("no-scroll");
+    const scrollY = window.scrollY;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
     return () => {
-      document.body.classList.remove("no-scroll");
+      document.body.style.position = "";
+      document.body.style.top = "";
+      window.scrollTo(0, scrollY);
     };
   }, [product]);
 
