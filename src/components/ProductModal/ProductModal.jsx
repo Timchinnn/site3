@@ -3,7 +3,14 @@ import { useSwipeable } from "react-swipeable";
 import "./ProductModal.css";
 import arrow from "./arrow.png";
 
-const ProductModal = ({ product, onClose, onAdd, onRemove, addedItems }) => {
+const ProductModal = ({
+  product,
+  onClose,
+  onAdd,
+  onRemove,
+  addedItems,
+  goToCart,
+}) => {
   const [showDetails, setShowDetails] = useState(false);
 
   const [isInCart, setIsInCart] = useState(false);
