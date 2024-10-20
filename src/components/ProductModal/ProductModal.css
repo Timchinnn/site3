@@ -149,6 +149,7 @@ body.no-scroll {
   font-size: 13px;
   font-weight: 400;
   margin-right: 20px;
+  padding: 5px;
 }
 .add-cart {
   color: white;

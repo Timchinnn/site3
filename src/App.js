@@ -29,6 +29,9 @@ function App() {
   const [isProductModalOpen, setIsProductModalOpen] = useState(false);
   const [isCartModalOpen, setIsCartModalOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const goToCart = () => {
+    setIsCartModalOpen(true);
+  };
   // const { t, i18n } = useTranslation();
 
   // const changeLanguage = () => {
@@ -256,6 +259,7 @@ function App() {
           onAdd={addToCart}
           onRemove={removeFromCart}
           addedItems={cartItems}
+          goToCart={goToCart}
         />
       )}
       {isCartModalOpen && (

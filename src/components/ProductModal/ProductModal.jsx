@@ -6,6 +6,7 @@ import arrow from "./arrow.png";
 const ProductModal = ({ product, onClose, onAdd, onRemove, addedItems }) => {
   const [showDetails, setShowDetails] = useState(false);
 
+  const [isInCart, setIsInCart] = useState(false);
   useEffect(() => {
     if (!product) return;
     document.body.classList.add("no-scroll");
@@ -65,35 +66,25 @@ const ProductModal = ({ product, onClose, onAdd, onRemove, addedItems }) => {
               <div className="garante">Гарантия</div>
               <div className="loyal">Склад и производство</div>
             </div>
+
             <div className="product-price-add">
-              {quantity > 0 ? (
-                <div className="price-controls">
-                  <button
-                    className="add-to-cart-min"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onRemove(product);
-                    }}
-                  >
-                    -
-                  </button>
-                  <div className="product-quantity">{quantity}</div>
-                  <button
-                    className="add-to-cart"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onAdd(product);
-                    }}
-                  >
-                    +
-                  </button>
-                </div>
+              {isInCart ? (
+                <button
+                  className="go-to-cart"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    goToCart();
+                  }}
+                >
+                  Корзина
+                </button>
               ) : (
                 <button
                   className="add-cart"
                   onClick={(e) => {
                     e.stopPropagation();
                     onAdd(product);
+                    setIsInCart(true);
                   }}
                 >
                   Купить
