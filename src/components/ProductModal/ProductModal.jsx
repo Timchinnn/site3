@@ -73,32 +73,31 @@ const ProductModal = ({
               <div className="garante">Гарантия</div>
               <div className="loyal">Склад и производство</div>
             </div>
-
-            <div className="product-price-add">
-              {isInCart ? (
-                <button
-                  className="go-to-cart"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    goToCart();
-                  }}
-                >
-                  Корзина
-                </button>
-              ) : (
-                <button
-                  className="add-cart"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onAdd(product);
-                    setIsInCart(true);
-                  }}
-                >
-                  Купить
-                </button>
-              )}
-            </div>
           </>
+        )}
+      </div>
+      <div className="product-price-add">
+        {isInCart ? (
+          <button
+            className="go-to-cart"
+            onClick={(e) => {
+              e.stopPropagation();
+              goToCart();
+            }}
+          >
+            Корзина
+          </button>
+        ) : (
+          <button
+            className="add-cart"
+            onClick={(e) => {
+              e.stopPropagation();
+              onAdd(product);
+              setIsInCart(true);
+            }}
+          >
+            Купить
+          </button>
         )}
       </div>
     </div>
