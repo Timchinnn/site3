@@ -19,12 +19,17 @@ const ProductModal = ({
     const scrollY = window.scrollY;
     document.body.style.position = "fixed";
     document.body.style.top = `-${scrollY}px`;
+
+    // Проверяем, есть ли товар в корзине при открытии модального окна
+    const itemInCart = addedItems.find((item) => item.id === product.id);
+    setIsInCart(!!itemInCart);
+
     return () => {
       document.body.style.position = "";
       document.body.style.top = "";
       window.scrollTo(0, scrollY);
     };
-  }, [product]);
+  }, [product, addedItems]);
 
   const handlers = useSwipeable({
     onSwipedLeft: () => console.log("Swiped left!"),
