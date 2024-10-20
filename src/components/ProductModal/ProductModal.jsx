@@ -32,7 +32,7 @@ const ProductModal = ({
   if (!product) return null;
 
   const addedItem = addedItems.find((item) => item.id === product.id);
-  const quantity = addedItem ? addedItem.quantity : 0;
+  // const quantity = addedItem ? addedItem.quantity : 0;
 
   const handleDetailsClick = () => {
     setShowDetails((prevShowDetails) => !prevShowDetails);
