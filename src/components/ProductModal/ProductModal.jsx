@@ -48,8 +48,8 @@ const ProductModal = ({
   };
 
   return (
-    <div className="modal-overlay">
-      <div className="modal-content" {...handlers}>
+    <div className="modal-overlay2">
+      <div className="modal-content1" {...handlers}>
         {showDetails ? (
           <div className="more">
             <img src={arrow} className="arrow" alt="arrow" onClick={onClose} />
