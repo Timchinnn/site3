@@ -105,15 +105,8 @@ function App() {
       </div>
 
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-      <div className="log-help">
-        <div className="my-log" onClick={() => navigate("/profile")}>
-          <img src={left} alt="right"></img>
-          <p>Поделись с другом</p>
-        </div>
-        <div className="help" onClick={() => navigate("/send-request")}>
-          <p>Гарантия</p>
-          <img src={right} alt="left"></img>
-        </div>
+      <div></div>
+
       <div className="log-help">
         <div className="my-log" onClick={() => navigate("/profile")}>
           <img src={left} alt="right"></img>
