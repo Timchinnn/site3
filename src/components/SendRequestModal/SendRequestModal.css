@@ -75,29 +75,29 @@
 }
 
 .msg {
-  margin-left: 20px;
+  /* margin-left: 20px; */
   height: 70px;
   width: 270px;
   border-radius: 10px;
-  margin-bottom: 6px;
+  /* margin-bottom: 6px; */
   border: none;
   background-color: #e6e6e6;
 }
 .send-msg {
-  margin-left: 20px;
+  /* margin-left: 20px; */
   color: white;
   background-color: #17453b;
   border-radius: 11px;
   width: 128px;
   text-align: center;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   border: none;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   height: 28px;
-  margin-left: 90px;
-  margin-top: 10px;
+  /* margin-left: 90px; */
+  /* margin-top: 10px; */
 }
 .cart-media-good1 {
   display: grid;
