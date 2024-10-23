@@ -116,17 +116,18 @@ function App() {
           <p>Гарантия</p>
           <img src={right} alt="left"></img>
         </div>
-        <div className="log-help">
-          <div className="my-log" onClick={() => navigate("/profile")}>
-            <img src={left} alt="right"></img>
-            <p>Для поставщиков</p>
-          </div>
-          <div className="help" onClick={() => navigate("/send-request")}>
-            <p>Оставить заявку</p>
-            <img src={right} alt="left"></img>
-          </div>
+      </div>
+      <div className="log-help">
+        <div className="my-log" onClick={() => navigate("/profile")}>
+          <img src={left} alt="right"></img>
+          <p>Для поставщиков</p>
         </div>
-        {/* <img
+        <div className="help" onClick={() => navigate("/send-request")}>
+          <p>Оставить заявку</p>
+          <img src={right} alt="left"></img>
+        </div>
+      </div>
+      {/* <img
           src={myLog}
           className="my-log"
           alt=""
@@ -138,7 +139,7 @@ function App() {
           alt=""
           onClick={() => navigate("/send-request")}
         ></img> */}
-      </div>
+      {/* </div> */}
       <div className="company">
         <div className="companya">
           <img src={dn} alt="dn"></img>
