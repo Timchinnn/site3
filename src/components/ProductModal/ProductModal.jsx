@@ -75,7 +75,7 @@ const ProductModal = ({
             <div className="block-about">
               <p>{product.description}</p>
             </div>
-            <p>Полезная информация</p>
+            {/* <p>Полезная информация</p> */}
             {/* <div className="about-buttons-question-from">
               <div className="why">Почему BANSYS?</div>
               <div className="how">Поделись с другом</div>

@@ -146,7 +146,7 @@ body.no-scroll {
   color: white;
   background-color: #3d6159;
   border-radius: 20px;
-  width: 100%;
+  width: 100vh;
   min-height: 36px;
   text-align: center;
   display: flex;
@@ -167,7 +167,7 @@ body.no-scroll {
   color: white;
   background-color: #3d6159;
   border-radius: 20px;
-  width: 100%;
+  width: 100vh;
   min-height: 36px;
   text-align: center;
   display: flex;
@@ -220,6 +220,8 @@ body.no-scroll {
   right: 0;
   top: 0;
   z-index: 1000;
+  display: flex;
+  flex-direction: column;
   display: inline-grid;
 }
 .product-price-add {
