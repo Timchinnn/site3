@@ -39,29 +39,29 @@ const ProfileModal = ({ onClose }) => {
     tgLink: "",
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setFormData({ ...formData, [name]: value });
+  // };
 
-  const handleSubmit = async () => {
-    try {
-      const tgLink = window.Telegram?.WebApp?.initDataUnsafe?.user?.username
-        ? `https://t.me/${window.Telegram.WebApp.initDataUnsafe.user.username}`
-        : null;
+  // const handleSubmit = async () => {
+  //   try {
+  //     const tgLink = window.Telegram?.WebApp?.initDataUnsafe?.user?.username
+  //       ? `https://t.me/${window.Telegram.WebApp.initDataUnsafe.user.username}`
+  //       : null;
 
-      setFormData((prevData) => ({ ...prevData, tgLink }));
+  //     setFormData((prevData) => ({ ...prevData, tgLink }));
 
-      const response = await axios.post("/api/send-request", {
-        ...formData,
-        tgLink,
-      });
-      console.log(response.data);
-      setRequestSent(true);
-    } catch (error) {
-      console.error("Error sending request:", error);
-    }
-  };
+  //     const response = await axios.post("/api/send-request", {
+  //       ...formData,
+  //       tgLink,
+  //     });
+  //     console.log(response.data);
+  //     setRequestSent(true);
+  //   } catch (error) {
+  //     console.error("Error sending request:", error);
+  //   }
+  // };
   return (
     <div>
       <div className="modal-overlay">
