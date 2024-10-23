@@ -66,7 +66,7 @@ const SendRequestModal = ({ onClose }) => {
             </div>
           ) : (
             <div className="window-reg">
-              <h1 className="application">ЗАЯВКА</h1>
+              {/* <h1 className="application">ЗАЯВКА</h1>
               <div className="input-container">
                 <p>Имя</p>
                 <input
@@ -98,7 +98,7 @@ const SendRequestModal = ({ onClose }) => {
                   className="input-order-profile"
                   onChange={handleChange}
                 />
-              </div>
+              </div> */}
               <input name="message" className="msg" onChange={handleChange} />
               <button className="send-msg" onClick={handleSubmit}>
                 Отправить заявку
