@@ -48,6 +48,7 @@ body {
   align-items: center; /* Центрирование по вертикали */
   margin-left: 10px;
   margin-right: 10px;
+  margin-top: 10px;
 }
 /* .log-help img {
   width: 194px;
