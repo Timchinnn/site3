@@ -66,8 +66,8 @@ const SendRequestModal = ({ onClose }) => {
             </div>
           ) : (
             <div className="window-reg">
-              {/* <h1 className="application">ЗАЯВКА</h1>
-              <div className="input-container">
+              <h1 className="application">ЗАЯВКА</h1>
+              {/* <div className="input-container">
                 <p>Имя</p>
                 <input
                   name="name"
