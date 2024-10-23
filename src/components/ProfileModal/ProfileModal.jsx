@@ -29,7 +29,7 @@ const ProfileModal = ({ onClose }) => {
   // const closeModal = () => {
   //   setIsModalOpen(false);
   // };
-  // const [requestSent, setRequestSent] = useState(false);
+  const [requestSent] = useState(false);
   // const [formData, setFormData] = useState({
   //   name: "",
   //   phone: "",
