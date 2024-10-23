@@ -153,7 +153,7 @@ body.no-scroll {
   justify-content: center;
   align-items: center;
   border: none;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 .block-about p {
   margin-left: 15px;
@@ -174,7 +174,7 @@ body.no-scroll {
   justify-content: center;
   align-items: center;
   border: none;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 .add-to-cart,
 .add-to-cart-min {
@@ -221,4 +221,7 @@ body.no-scroll {
   top: 0;
   z-index: 1000;
   display: inline-grid;
+}
+.product-price-add {
+  position: relative;
 }

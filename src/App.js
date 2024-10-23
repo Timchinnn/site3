@@ -105,26 +105,15 @@ function App() {
       </div>
 
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-      <div className="about-buttons-question">
-        <div className="why" onClick={() => navigate("/why-bansys")}>
-          <div>
-            {/* <p>{t("catalog")}</p> */}
-            <p>Почему</p>
-
-            <p className="bansys-highlight">BANSYS?</p>
-          </div>
+      <div className="log-help">
+        <div className="my-log" onClick={() => navigate("/profile")}>
+          <img src={left} alt="right"></img>
+          <p>Поделись с другом</p>
         </div>
-        <div className="how" onClick={() => navigate("/how-to-buy")}>
-          Поделись с другом
+        <div className="help" onClick={() => navigate("/send-request")}>
+          <p>Гарантия</p>
+          <img src={right} alt="left"></img>
         </div>
-        <div className="garante" onClick={() => navigate("/guarantee")}>
-          {/* {t("guarantee")} */}
-          Гарантия
-        </div>
-        <div className="loyal" onClick={() => navigate("/loyalty-program")}>
-          Склад и производство
-        </div>
-      </div>
       <div className="log-help">
         <div className="my-log" onClick={() => navigate("/profile")}>
           <img src={left} alt="right"></img>
