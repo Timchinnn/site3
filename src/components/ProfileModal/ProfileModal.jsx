@@ -128,48 +128,10 @@ const ProfileModal = ({ onClose }) => {
                   <button onClick={() => navigate(-1)}>OK</button>
                 </div>
               ) : (
-                <div className="window-reg">
-                  <h1 className="application">ПРЕДЛОЖЕНИЕ</h1>
-                  <div className="input-container">
-                    <p>Имя</p>
-                    <input
-                      name="name"
-                      className="input-order-profile"
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="input-container">
-                    <p>Телефон</p>
-                    <input
-                      name="phone"
-                      className="input-order-profile"
-                      onChange={handleChange}
-                    />
-                  </div>
-                  {/* <div className="input-container">
-                    <p>Страна</p>
-                    <input
-                      name="country"
-                      className="input-order-profile"
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="input-container">
-                    <p>Город</p>
-                    <input
-                      name="city"
-                      className="input-order-profile"
-                      onChange={handleChange}
-                    />
-                  </div> */}
-                  <input
-                    name="message"
-                    className="msg"
-                    onChange={handleChange}
-                  />
-                  <button className="send-msg1" onClick={handleSubmit}>
-                    Сделать предложение
-                  </button>
+                <div className="cart-media-good">
+                  <p>Заявка принята</p>
+                  <img src={vector} alt="vector" />
+                  <button onClick={() => navigate(-1)}>OK</button>
                 </div>
               )}
             </div>
