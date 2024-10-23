@@ -31,13 +31,13 @@
 }
 .window-reg {
   background-color: #d9d9d9;
-  border-color: #17453b;
+  border: 3px groove #17453b;
   border-radius: 11px;
-  border-width: 3px;
   height: 420px;
   width: 316px;
-  /* border-width: 100px; */
-  border-style: groove;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .arrow {
   width: 33px;
@@ -70,34 +70,29 @@
 .application {
   color: #173b33;
   font-size: 20px;
-  margin-top: 11px;
   margin: 20px 20px 30px;
 }
 
 .msg {
-  /* margin-left: 20px; */
-  height: 70px;
-  width: 270px;
-  border-radius: 10px;
-  /* margin-bottom: 6px; */
-  border: none;
   background-color: #e6e6e6;
+  border: none;
+  border-radius: 10px;
+  height: 65%;
+  width: 270px;
+  margin-left: 6%;
 }
 .send-msg {
-  margin-left: 20px;
-  color: white;
   background-color: #17453b;
-  border-radius: 11px;
-  width: 128px;
-  text-align: center;
-  /* display: flex; */
-  justify-content: center;
-  /* align-items: center; */
   border: none;
-  /* margin-bottom: 10px; */
+  border-radius: 11px;
+  color: #fff;
   height: 28px;
-  /* margin-left: 90px; */
-  /* margin-top: 10px; */
+  justify-content: center;
+  margin-left: 20px;
+  text-align: center;
+  width: 128px;
+  margin-bottom: 1%;
+  margin-left: 28%;
 }
 .cart-media-good1 {
   display: grid;
