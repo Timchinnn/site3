@@ -29,15 +29,15 @@ const ProfileModal = ({ onClose }) => {
   // const closeModal = () => {
   //   setIsModalOpen(false);
   // };
-  const [requestSent, setRequestSent] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    country: "",
-    city: "",
-    message: "",
-    tgLink: "",
-  });
+  // const [requestSent, setRequestSent] = useState(false);
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   phone: "",
+  //   country: "",
+  //   city: "",
+  //   message: "",
+  //   tgLink: "",
+  // });
 
   // const handleChange = (e) => {
   //   const { name, value } = e.target;
