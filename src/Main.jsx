@@ -33,7 +33,30 @@ function Main() {
       openModal();
     }
   };
+  const [requestSent, setRequestSent] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    country: "",
+    city: "",
+    message: "",
+  });
+  console.log(requestSent);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
+  const handleSubmit = async () => {
+    try {
+      const response = await axios.post("/api/send-request", formData);
+      console.log(response.data);
+      setRequestSent(true);
+      // Optionally close the modal or show a success message
+    } catch (error) {
+      console.error("Error sending request:", error);
+    }
+  };
   return (
     <Routes>
       <Route
