@@ -1,4 +1,5 @@
-import React from "react";
+jsx;
+import React, { useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import App from "./App";
 import "./Main.css";
@@ -8,22 +9,28 @@ import WhyBansysPage from "./components/WhyBansysPage/WhyBansysPage";
 import HowToBuyPage from "./components/HowToBuyPage/HowToBuyPage";
 import GuaranteePage from "./components/GuaranteePage/GuaranteePage";
 import LoyaltyProgramPage from "./components/LoyaltyProgramPage/LoyaltyProgramPage";
-
-// import ProductDetailPage from "./components/ProductModal/ProductModal";
 import SendRequestPage from "./components/SendRequestModal/SendRequestModal";
 import ProfilePage from "./components/ProfileModal/ProfileModal";
-function Main() {
-  const navigate = useNavigate(); // Используем хук для навигации
-  // const handleLoginClick = () => {
-  //   console.log("Вход");
-  // };
 
-  // const handleRegistrationClick = () => {
-  //   console.log("Регистрация");
-  // };
+function Main() {
+  const navigate = useNavigate();
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   const handleShopButtonClick = () => {
-    navigate("/app"); // Переход на новую страницу
+    if (isAuthenticated) {
+      navigate("/app");
+    } else {
+      openModal();
+    }
   };
 
   return (
@@ -32,17 +39,10 @@ function Main() {
         path="/"
         element={
           <div className="menu-container">
-            <div className="header">
-              {/* <button className="link" onClick={handleLoginClick}>
-                ВХОД
-              </button>
-              <button className="link" onClick={handleRegistrationClick}>
-                РЕГИСТРАЦИЯ
-              </button> */}
-            </div>
+            <div className="header"></div>
             <div>
               <div className="content">
-                <img src={bansys} alt="bans"></img>
+                <img src={bansys} alt="bans" />
                 <p className="subtitle">Bansys - Банкоматы - Терминалы</p>
               </div>
             </div>
@@ -52,16 +52,23 @@ function Main() {
                 alt="toBuy"
                 className="shop-button"
                 onClick={handleShopButtonClick}
-              ></img>
+              />
             </div>
+            {isModalOpen && (
+              <div className="modal">
+                <div className="modal-content">
+                  <h2>Требуется авторизация</h2>
+                  <p>Пожалуйста, войдите в систему для продолжения.</p>
+                  <button onClick={closeModal}>Закрыть</button>
+                </div>
+              </div>
+            )}
           </div>
         }
       />
       <Route path="/app" element={<App />} />
-      <Route path="/profile" element={<ProfilePage />} />{" "}
-      {/* Новый маршрут для профиля */}
-      <Route path="/send-request" element={<SendRequestPage />} />{" "}
-      {/* Новый маршрут для отправки запроса */}
+      <Route path="/profile" element={<ProfilePage />} />
+      <Route path="/send-request" element={<SendRequestPage />} />
       <Route path="/why-bansys" element={<WhyBansysPage />} />
       <Route path="/how-to-buy" element={<HowToBuyPage />} />
       <Route path="/guarantee" element={<GuaranteePage />} />
