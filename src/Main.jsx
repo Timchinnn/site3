@@ -12,6 +12,7 @@ import SendRequestPage from "./components/SendRequestModal/SendRequestModal";
 import ProfilePage from "./components/ProfileModal/ProfileModal";
 import bigB from "./bigb.png";
 import bigBContray from "./bigbContrary.png";
+import axios from "axios";
 
 function Main() {
   const navigate = useNavigate();
