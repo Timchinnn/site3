@@ -15,6 +15,7 @@ function Main() {
   const navigate = useNavigate();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  console.log(setIsAuthenticated);
 
   const openModal = () => {
     setIsModalOpen(true);
