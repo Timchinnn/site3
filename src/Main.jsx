@@ -10,7 +10,8 @@ import GuaranteePage from "./components/GuaranteePage/GuaranteePage";
 import LoyaltyProgramPage from "./components/LoyaltyProgramPage/LoyaltyProgramPage";
 import SendRequestPage from "./components/SendRequestModal/SendRequestModal";
 import ProfilePage from "./components/ProfileModal/ProfileModal";
-
+import bigB from "./bigb.png";
+import bigBContray from "./bigbContrary.png";
 function Main() {
   const navigate = useNavigate();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -55,11 +56,51 @@ function Main() {
               />
             </div>
             {isModalOpen && (
-              <div className="modal">
-                <div className="modal-content">
-                  <h2>Требуется авторизация</h2>
-                  <p>Пожалуйста, войдите в систему для продолжения.</p>
-                  <button onClick={closeModal}>Закрыть</button>
+              <div className="modal-overlay1">
+                <div className="images-container">
+                  <div className="window-reg">
+                    <h1 className="application">ЗАЯВКА</h1>
+                    <div className="input-container">
+                      <p>Имя</p>
+                      <input
+                        name="name"
+                        className="input-order-profile"
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <div className="input-container">
+                      <p>Телефон</p>
+                      <input
+                        name="phone"
+                        className="input-order-profile"
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <div className="input-container">
+                      <p>Страна</p>
+                      <input
+                        name="country"
+                        className="input-order-profile"
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <div className="input-container">
+                      <p>Город</p>
+                      <input
+                        name="city"
+                        className="input-order-profile"
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <input
+                      name="message"
+                      className="msg"
+                      onChange={handleChange}
+                    />
+                    <button className="send-msg" onClick={handleSubmit}>
+                      Отправить заявку
+                    </button>
+                  </div>
                 </div>
               </div>
             )}
