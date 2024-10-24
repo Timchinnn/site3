@@ -90,48 +90,51 @@ function Main() {
                     alt="bigBContray"
                     className="bottom-right"
                   />
-                  <div className="window-reg">
-                    <h1 className="application">ЗАЯВКА</h1>
-                    <div className="input-container">
-                      <p>Имя</p>
+                  <div className="parent">
+                    {" "}
+                    <div className="window-reg">
+                      <h1 className="application">ЗАЯВКА</h1>
+                      <div className="input-container">
+                        <p>Имя</p>
+                        <input
+                          name="name"
+                          className="input-order-profile"
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <div className="input-container">
+                        <p>Телефон</p>
+                        <input
+                          name="phone"
+                          className="input-order-profile"
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <div className="input-container">
+                        <p>Страна</p>
+                        <input
+                          name="country"
+                          className="input-order-profile"
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <div className="input-container">
+                        <p>Город</p>
+                        <input
+                          name="city"
+                          className="input-order-profile"
+                          onChange={handleChange}
+                        />
+                      </div>
                       <input
-                        name="name"
-                        className="input-order-profile"
+                        name="message"
+                        className="msg"
                         onChange={handleChange}
                       />
+                      <button className="send-msg" onClick={handleSubmit}>
+                        Отправить заявку
+                      </button>
                     </div>
-                    <div className="input-container">
-                      <p>Телефон</p>
-                      <input
-                        name="phone"
-                        className="input-order-profile"
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <div className="input-container">
-                      <p>Страна</p>
-                      <input
-                        name="country"
-                        className="input-order-profile"
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <div className="input-container">
-                      <p>Город</p>
-                      <input
-                        name="city"
-                        className="input-order-profile"
-                        onChange={handleChange}
-                      />
-                    </div>
-                    <input
-                      name="message"
-                      className="msg"
-                      onChange={handleChange}
-                    />
-                    <button className="send-msg" onClick={handleSubmit}>
-                      Отправить заявку
-                    </button>
                   </div>
                 </div>
               </div>
