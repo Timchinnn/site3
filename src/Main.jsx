@@ -58,6 +58,12 @@ function Main() {
             {isModalOpen && (
               <div className="modal-overlay1">
                 <div className="images-container">
+                  <img src={bigB} alt="bigB" className="top-left" />
+                  <img
+                    src={bigBContray}
+                    alt="bigBContray"
+                    className="bottom-right"
+                  />
                   <div className="window-reg">
                     <h1 className="application">ЗАЯВКА</h1>
                     <div className="input-container">
