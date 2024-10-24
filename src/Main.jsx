@@ -24,9 +24,9 @@ function Main() {
     setIsModalOpen(true);
   };
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  // const closeModal = () => {
+  //   setIsModalOpen(false);
+  // };
 
   const handleShopButtonClick = () => {
     if (isAuthenticated) {
