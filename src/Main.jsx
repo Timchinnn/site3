@@ -93,7 +93,7 @@ function Main() {
                   <div className="parent">
                     {" "}
                     <div className="window-reg">
-                      <h1 className="application">ЗАЯВКА</h1>
+                      <h1 className="application">РЕГИСТРАЦИЯ</h1>
                       <div className="input-container">
                         <p>Имя</p>
                         <input
@@ -103,7 +103,23 @@ function Main() {
                         />
                       </div>
                       <div className="input-container">
+                        <p>Фамилия</p>
+                        <input
+                          name="name"
+                          className="input-order-profile"
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <div className="input-container">
                         <p>Телефон</p>
+                        <input
+                          name="phone"
+                          className="input-order-profile"
+                          onChange={handleChange}
+                        />
+                      </div>
+                      <div className="input-container">
+                        <p>email</p>
                         <input
                           name="phone"
                           className="input-order-profile"
