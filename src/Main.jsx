@@ -148,7 +148,7 @@ function Main() {
                         onChange={handleChange}
                       />
                       <button className="send-msg" onClick={handleSubmit}>
-                        Отправить заявку
+                        Зарегистрироваться
                       </button>
                     </div>
                   </div>
