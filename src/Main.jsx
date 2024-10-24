@@ -142,11 +142,11 @@ function Main() {
                           onChange={handleChange}
                         />
                       </div>
-                      <input
+                      {/* <input
                         name="message"
                         className="msg"
                         onChange={handleChange}
-                      />
+                      /> */}
                       <button className="send-msg" onClick={handleSubmit}>
                         Зарегистрироваться
                       </button>
