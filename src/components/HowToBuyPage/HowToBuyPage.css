@@ -2,7 +2,9 @@
   width: 80%;
   margin-top: 50%;
 }
-
+.garant-description img {
+  height: 16px;
+}
 @media (max-width: 420px) {
   .garant-description {
     margin-top: 45%;
