@@ -52,6 +52,17 @@
   line-height: 18px;
   letter-spacing: -0.05000000074505806px;
   text-align: left;
+  width: 351px;
+  height: 162px;
+  border-radius: 11px;
+  background: #173b33;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.quality-assurance-section p {
+  width: 258px;
 }
 @media (max-width: 420px) {
   .garant-description {
