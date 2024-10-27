@@ -19,7 +19,7 @@ import cart from "./cart.png";
 import cartgl from "./cartgl.png";
 import right from "./right.png";
 import left from "./left.png";
-// import { useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 function App() {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
@@ -32,11 +32,11 @@ function App() {
   const goToCart = () => {
     setIsCartModalOpen(true);
   };
-  // const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
-  // const changeLanguage = () => {
-  //   i18n.changeLanguage(i18n.language === "ru" ? "en" : "ru");
-  // };
+  const changeLanguage = () => {
+    i18n.changeLanguage(i18n.language === "ru" ? "en" : "ru");
+  };
   const { cartItems, addToCart, removeFromCart, clearCart } = useCart();
 
   useEffect(() => {
@@ -97,11 +97,11 @@ function App() {
             @Bansys_sale
           </a>
         </div>
-        {/* <button onClick={changeLanguage}>
+        <button onClick={changeLanguage}>
           {i18n.language === "ru"
             ? "Switch to English"
             : "Переключить на русский"}
-        </button> */}
+        </button>
       </div>
 
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
