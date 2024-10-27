@@ -114,6 +114,17 @@ body {
   width: 109px;
   height: 109px;
 }
+.translate-button {
+  color: white;
+  width: 50px;
+  height: 40px;
+  top: 2436px;
+  left: 3470px;
+  gap: 0px;
+  border-radius: 0px 7.46px 7.46px 0px;
+  opacity: 0px;
+  background: #173b33;
+}
 .catalog {
   color: #ffffff;
   width: 122px;

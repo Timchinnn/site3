@@ -91,17 +91,15 @@ function App() {
   return (
     <div className="main">
       <div className="header-name">
+        <button onClick={changeLanguage} className="translate-button">
+          {i18n.language === "ru" ? "EN" : "RU"}
+        </button>
         <div className="tg-link-button">
           <img src={fly} alt="tglink" className="tglink"></img>
           <a href="https://t.me/Bansys_sale" className="tg-button">
             @Bansys_sale
           </a>
         </div>
-        <button onClick={changeLanguage}>
-          {i18n.language === "ru"
-            ? "Switch to English"
-            : "Переключить на русский"}
-        </button>
       </div>
 
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
