@@ -29,7 +29,7 @@ const GuaranteePage = ({ onClose }) => {
           />
           {/* <div className="window-block-about"></div> */}
           <div className="share">
-            <p className="share-header-p">{t("Summoning friend")} </p>
+            <p className="share-header-p">{t("Summoning friends")} </p>
             <div className="earn">
               <img src={arrowLong} alt="arrowLong" />
               <p className="share-header-p">{t("make money")}</p>
@@ -61,7 +61,6 @@ const GuaranteePage = ({ onClose }) => {
                   {t(
                     "Earn money with us - When you place an order through your link, you will receive 3% of the first check."
                   )}
-                  чека.
                 </p>
               </div>
             </div>
