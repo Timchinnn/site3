@@ -94,7 +94,7 @@ body {
   border-radius: 11px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   background: linear-gradient(106.16deg, #173b33 48.89%, #3d6159 78.14%);
   color: white;
   width: 194px;
