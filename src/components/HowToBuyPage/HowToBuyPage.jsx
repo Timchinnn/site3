@@ -56,7 +56,7 @@ const HowToBuyPage = ({ onClose }) => {
             </ul>
           </div>
           <div className="service-quality-intro-contrary">
-            <p className="service-quality-intro-contrary-text">
+            <p>
               Склады и производственные цеха отвечают необходимым стандартам
               хранения и эксплуатации:
             </p>
@@ -83,7 +83,7 @@ const HowToBuyPage = ({ onClose }) => {
             </ul>
             <div className="quality-assurance-section">
               <img src={dimg} alt="#" />
-              <p>
+              <p className="service-quality-intro-contrary-text">
                 Все поставляемые нами устройства проходят тщательное
                 тестирование, имеют гарантию, отвечают всем необходимым
                 требованиям для качественного оказания услуг и могут быть
