@@ -1,6 +1,6 @@
 .garant-description {
   width: 80%;
-  margin-top: 50%;
+  margin-top: 30%;
 }
 .garant-description img {
   height: 16px;
@@ -17,7 +17,7 @@
     /* width: 340px; */
   }
 }
-@media (max-width: 383px) and (max-height: 590px) {
+@media (max-width: 385px) and (max-height: 591px) {
   .garant-description {
     margin-top: 140%;
     /* width: 340px; */
