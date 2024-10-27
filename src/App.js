@@ -113,14 +113,14 @@ function App() {
           <p>{t("share")}</p>
         </div>
         <div className="help" onClick={() => navigate("/how-to-buy")}>
-          <p>Гарантия</p>
+          <p>{t("ensure")}</p>
           <img src={right} alt="left"></img>
         </div>
       </div>
       <div className="log-help">
         <div className="my-log" onClick={() => navigate("/profile")}>
           <img src={left} alt="right"></img>
-          <p>Для поставщиков</p>
+          <p>{t("My Office")}</p>
         </div>
         <div className="help" onClick={() => navigate("/send-request")}>
           <p>Оставить заявку</p>
