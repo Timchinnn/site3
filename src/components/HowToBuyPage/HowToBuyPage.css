@@ -5,8 +5,9 @@
 .garant-description:first-of-type {
   margin-top: 5%;
 }
-.garant-description img {
+.quality-assurance-section img {
   width: 16px;
+  margin-left: 10px;
 }
 .storage-facilities-description {
   font-family: Asap;
@@ -70,9 +71,11 @@
   justify-content: space-around;
   align-items: center;
   margin-top: 12px;
+  margin-bottom: 10px;
 }
 .service-quality-intro-contrary-text {
   width: 258px;
+  margin: 30px;
 }
 @media (max-width: 420px) {
   .garant-description:first-of-type {
