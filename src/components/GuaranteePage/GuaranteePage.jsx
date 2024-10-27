@@ -58,59 +58,67 @@ const GuaranteePage = ({ onClose }) => {
               </div>
               <div className="about-sale">
                 <p>
-                  Зарабатывайте вместе с нами — когда по вашей ссылке оформят
-                  заказ, вы получите 10% от первого чека.
+                  {t(
+                    "Earn money with us - When you place an order through your link, you will receive 3% of the first check."
+                  )}
+                  чека.
                 </p>
               </div>
             </div>
             <hr className="hr2" />
             <p className="all-p">
-              Каждый месяц самые активные участники получают ценные призы:
+              {t(
+                "Every month, the most active participants will receive valuable prizes:"
+              )}
             </p>
             <div className="arrow-groups">
               <div className="arrow-group">
                 <img src={arrowDownL} alt="arrowDownL" />
-                <p>1 место: скидка 15%</p>
+                <p>{t("First place: 7% discount")}</p>
               </div>
               <div className="arrow-group">
                 <img src={arrowDownM} alt="arrowDownM" />
-                <p>2 место: скидка 10%</p>
+                <p>{t("Second place: 5% discount")}</p>
               </div>
               <div className="arrow-group">
                 <img src={arrowDownS} alt="arrowDownS" />
-                <p>3 место: скидка 3%</p>
+                <p>{t("Third place: 3% discount")}</p>
               </div>
             </div>
             <div className="statistic-hrad">
               <div className="statistic">
                 <p className="all-p4">
-                  Статистика в реальном времени — отслеживайте количество
-                  переходов и заработанных денег в личном кабинете.
+                  {t(
+                    "Real time statistics - tracking traffic and deposit the earned money into a personal office."
+                  )}
                 </p>
               </div>
             </div>
 
             <p className="all-p2">
-              Нажмите на кнопку ниже, чтобы получить свою уникальную ссылку и
-              начать зарабатывать уже сегодня.
+              {t(
+                "Click the button below to get your unique link and start earning from today."
+              )}
             </p>
 
             <div className="arrowxs">
               <img src={arrowXs} alt="arrowXs" />
             </div>
-            <p className="all-p2"> [Получить ссылку и начать зарабатывать]</p>
+            <p className="all-p2">
+               {t("[Get the link and start earning money]")}
+            </p>
             <div className="innovation-head">
               {" "}
               <div className="invitation">
-                <p className="all-p">Твоя ссылка на приглашение</p>
+                <p className="all-p">{t("invitation")}</p>
                 <p className="all-p">https://t.me......................</p>
-                <button>Скопировать ссылку</button>
+                <button>{t("Your invitation link")}</button>
                 <div className="changeover">
-                  <p className="all-p">Переходов по ссылке</p>
+                  <p className="all-p">{t("Click on the link")}</p>
                   <p className="all-p">0</p>
                 </div>
                 <div className="changeover">
-                  <p className="all-p">Ваша скидка</p>
+                  <p className="all-p">{t("Earned money")}</p>
                   <p className="all-p">0</p>
                 </div>
               </div>

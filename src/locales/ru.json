@@ -11,11 +11,16 @@
   "How it works:": "Как это работает:",
   "Get a unique link - click the button below and copy your personal link.": "Получайте уникальную ссылку — нажми на кнопку ниже и скопируйте свою персональную ссылку.",
   "Share with friends - send links to colleagues, partners, and acquaintances on Messenger or social media.": "Делитесь с друзьями — отправляйте ссылку коллегам, партнёрам и знакомым в мессенджерах или социальных сетях.",
-  "application": "ЗАЯВКА",
-  "name": "Имя",
-  "phone": "Телефон",
-  "country": "Страна",
-  "city": "Город",
-  "sendRequest": "Отправить заявку",
-  "requestAccepted": "Заявка принята"
+  "Earn money with us - When you place an order through your link, you will receive 3% of the first check.": "Зарабатывайте вместе с нами — когда по вашей ссылке оформят заказ, вы получите 10% от первого ",
+  "naEvery month, the most active participants will receive valuable prizes:me": "Каждый месяц самые активные участники получают ценные призы:",
+  "First place: 7% discount": "1 место: скидка 15%",
+  "Second place: 5% discount": "2 место: скидка 10%",
+  "Third place: 3% discount": "3 место: скидка 3%",
+  "Real time statistics - tracking traffic and deposit the earned money into a personal office.": "Статистика в реальном времени — отслеживайте количество переходов и заработанных денег в личном кабинете.",
+  "Click the button below to get your unique link and start earning from today.": "Нажмите на кнопку ниже, чтобы получить свою уникальную ссылку и начать зарабатывать уже сегодня.",
+  "[Get the link and start earning money]": "Получить ссылку и начать зарабатывать",
+  "invitation": "Твоя ссылка на приглашение",
+  "Your invitation link": "Скопировать ссылку",
+  "Click on the link": "Переходов по ссылке",
+  "Earned money": " Ваша скидка"
 }
