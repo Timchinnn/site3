@@ -13,15 +13,26 @@
   text-align: left;
 }
 .service-quality-intro {
+  background-color: #c8c7c7;
   font-family: Asap;
   font-size: 15px;
   font-weight: 700;
-  line-height: 20px;
-  /* text-align: left; */
-  border-radius: 11px 0px 0px 11px;
-  background-color: #c8c7c7;
-  width: 378px;
   height: auto;
+  line-height: 20px;
+  width: 96%;
+  margin-left: auto;
+  border-radius: 11px 0px 0px 11px;
+}
+.service-quality-intro-contrary {
+  background-color: #c8c7c7;
+  font-family: Asap;
+  font-size: 15px;
+  font-weight: 700;
+  height: auto;
+  line-height: 20px;
+  width: 96%;
+  margin-right: auto;
+  border-radius: 0px 11px 11px 0px;
 }
 .service-quality-intro p {
   padding-left: 7px;

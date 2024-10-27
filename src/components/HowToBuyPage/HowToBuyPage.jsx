@@ -55,7 +55,7 @@ const HowToBuyPage = ({ onClose }) => {
               </li>
             </ul>
           </div>
-          <div className="service-quality-intro">
+          <div className="service-quality-intro-contrary">
             <p>
               Склады и производственные цеха отвечают необходимым стандартам
               хранения и эксплуатации:
