@@ -91,7 +91,7 @@
     /* width: 340px; */
   }
 }
-@media (max-width: 385px) and (max-height: 591px) {
+@media (max-width: 385px) and (max-height: 591px) and (min-height: 589px) {
   .garant-description:first-of-type {
     margin-top: 140%;
     /* width: 340px; */
