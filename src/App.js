@@ -147,7 +147,7 @@ function App() {
             className="more-detailed"
             onClick={() => handleCategoryClick("Банкоматы Diebold")}
           >
-            Подробнее
+            {t("More detailed")}
           </button>
         </div>
         <div className="companya">
@@ -156,7 +156,7 @@ function App() {
             className="more-detailed"
             onClick={() => handleCategoryClick("Банкоматы GRG")}
           >
-            Подробнее
+            {t("More detailed")}
           </button>
         </div>
         <div className="companya">
@@ -165,7 +165,7 @@ function App() {
             className="more-detailed"
             onClick={() => handleCategoryClick("Банкоматы Nautilus Huosyng")}
           >
-            Подробнее
+            {t("More detailed")}
           </button>
         </div>
         <div className="companya">
@@ -174,7 +174,7 @@ function App() {
             className="more-detailed"
             onClick={() => handleCategoryClick("Банкоматы NCR")}
           >
-            Подробнее
+            {t("More detailed")}
           </button>
         </div>
         <div className="companya">
@@ -183,7 +183,7 @@ function App() {
             className="more-detailed"
             onClick={() => handleCategoryClick("oki")}
           >
-            Подробнее
+            {t("More detailed")}
           </button>
         </div>
         <div className="companya">
@@ -192,7 +192,7 @@ function App() {
             className="more-detailed"
             onClick={() => handleCategoryClick("Банкоматы Wincor Nixdorf")}
           >
-            Подробнее
+            {t("More detailed")}
           </button>
         </div>
       </div>
