@@ -91,7 +91,7 @@
     /* width: 340px; */
   }
 }
-@media (max-width: 385px) and (max-height: 591px) and (min-height: 589px) {
+@media (max-width: 385px) and (max-height: 591px) {
   .garant-description:first-of-type {
     margin-top: 140%;
     /* width: 340px; */
@@ -103,7 +103,7 @@
     /* width: 340px; */
   }
 }
-@media (max-width: 391px) and (max-height: 845px) {
+@media (max-width: 391px) and (max-height: 845px) and (min-height: 843px) {
   .garant-description:first-of-type {
     margin-top: 35%;
     /* width: 340px; */
