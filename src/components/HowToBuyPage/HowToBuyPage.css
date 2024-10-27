@@ -38,6 +38,7 @@
   padding-left: 7px;
   border: 0.5px solid #173b33;
   margin-bottom: 12px;
+  margin-top: 12px;
 }
 .service-quality-intro p {
   padding-left: 7px;
@@ -65,6 +66,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 12px;
 }
 .quality-assurance-section p {
   width: 258px;
