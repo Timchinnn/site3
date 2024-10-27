@@ -30,12 +30,14 @@ const HowToBuyPage = ({ onClose }) => {
               техническим требованиям и необходимым условиям для хранения и
               подготовки банковского оборудования.
             </p>
-            <div className="service-quality-intro">
-              <p>
-                Для оказания качественных услуг компания имеет в своем
-                распоряжении:
-              </p>
-            </div>
+          </div>
+          <div className="service-quality-intro">
+            <p>
+              Для оказания качественных услуг компания имеет в своем
+              распоряжении:
+            </p>
+          </div>
+          <div className="garant-description">
             <ul className="company-advantages-list">
               <li>
                 Сервисных инженеров высокой квалификации по всем необходимым
@@ -52,12 +54,14 @@ const HowToBuyPage = ({ onClose }) => {
                 техникой
               </li>
             </ul>
-            <div className="service-quality-intro">
-              <p>
-                Склады и производственные цеха отвечают необходимым стандартам
-                хранения и эксплуатации:
-              </p>
-            </div>
+          </div>
+          <div className="service-quality-intro">
+            <p>
+              Склады и производственные цеха отвечают необходимым стандартам
+              хранения и эксплуатации:
+            </p>
+          </div>
+          <div className="garant-description">
             <ul className="company-advantages-list">
               <li>
                  Наличие освещения, отопления и приточно-вытяжной вентиляции;

@@ -21,10 +21,10 @@
   border-radius: 11px 0px 0px 11px;
   background-color: #c8c7c7;
   width: 378px;
-  height: 55px;
+  height: auto;
 }
 .service-quality-intro p {
-  padding: 7px;
+  padding-left: 7px;
 }
 
 .company-advantages-list {
