@@ -17,3 +17,9 @@
     /* width: 340px; */
   }
 }
+@media (max-width: 383px) and (max-height: 590px) {
+  .garant-description {
+    margin-top: 140%;
+    /* width: 340px; */
+  }
+}
