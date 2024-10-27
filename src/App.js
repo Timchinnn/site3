@@ -123,7 +123,7 @@ function App() {
           <p>{t("My Office")}</p>
         </div>
         <div className="help" onClick={() => navigate("/send-request")}>
-          <p>Оставить заявку</p>
+          <p>{t("Leave an application")}</p>
           <img src={right} alt="left"></img>
         </div>
       </div>
@@ -197,7 +197,7 @@ function App() {
         </div>
       </div>
       <div className="header-cart">
-        <h1 className="catalog">Каталог</h1>
+        <h1 className="catalog">{t("Catalogue")}</h1>
         <img
           src={cartgl}
           alt="cartgl"
