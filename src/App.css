@@ -3,7 +3,7 @@
   height: 66px;
   background-color: #216e5c;
   display: flex; /* Добавьте flexbox */
-  justify-content: flex-end; /* Выравнивание по правому краю */
+  justify-content: space-between; /* Выравнивание по правому краю */
   align-items: center; /* Вертикальное выравнивание по центру */
   /* padding-right: 20px; Можно добавить отступ справа если нужно */
 }
@@ -115,15 +115,13 @@ body {
   height: 109px;
 }
 .translate-button {
-  color: white;
-  width: 50px;
+  background-color: #173b33;
+  border-radius: 7px;
+  color: #fff;
   height: 40px;
-  top: 2436px;
-  left: 3470px;
-  gap: 0px;
-  border-radius: 0px 7.46px 7.46px 0px;
-  opacity: 0px;
-  background: #173b33;
+  width: 50px;
+  border: none;
+  margin-left: 5px;
 }
 .catalog {
   color: #ffffff;
