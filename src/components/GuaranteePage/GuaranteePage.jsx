@@ -32,7 +32,7 @@ const GuaranteePage = ({ onClose }) => {
             <p className="share-header-p">{t("Summoning friend")} </p>
             <div className="earn">
               <img src={arrowLong} alt="arrowLong" />
-              <p className="share-header-p"></p>
+              <p className="share-header-p">{t("make money")}</p>
             </div>
             <hr className="hr1" />
             <p className="all-p1">
@@ -40,18 +40,20 @@ const GuaranteePage = ({ onClose }) => {
                 "According to your suggestion, each order can enjoy a 3% discount!"
               )}
             </p>
-            <p className="all-p">Как это работает:</p>
+            <p className="all-p">{t("How it works:")}</p>
             <div className="about-sales">
               <div className="about-sale">
                 <p>
-                  Получайте уникальную ссылку — нажми на кнопку ниже и
-                  скопируйте свою персональную ссылку.
+                  {t(
+                    "Get a unique link - click the button below and copy your personal link."
+                  )}
                 </p>
               </div>
               <div className="about-sale">
                 <p>
-                  Делитесь с друзьями — отправляйте ссылку коллегам, партнёрам и
-                  знакомым в мессенджерах или социальных сетях.
+                  {t(
+                    "Share with friends - send links to colleagues, partners, and acquaintances on Messenger or social media."
+                  )}
                 </p>
               </div>
               <div className="about-sale">
