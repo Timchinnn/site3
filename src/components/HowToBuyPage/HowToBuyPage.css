@@ -3,7 +3,7 @@
   /* margin-top: 30%; */
 }
 .garant-description img {
-  height: 16px;
+  width: 16px;
 }
 .storage-facilities-description {
   font-family: Asap;
@@ -23,6 +23,7 @@
   margin-left: auto;
   border-radius: 11px 0px 0px 11px;
   border: 0.5px solid #173b33;
+  margin-bottom: 12px;
 }
 .service-quality-intro-contrary {
   background-color: #c8c7c7;
@@ -36,6 +37,7 @@
   border-radius: 0px 11px 11px 0px;
   padding-left: 7px;
   border: 0.5px solid #173b33;
+  margin-bottom: 12px;
 }
 .service-quality-intro p {
   padding-left: 7px;
