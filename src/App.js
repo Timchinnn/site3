@@ -110,7 +110,7 @@ function App() {
       <div className="log-help">
         <div className="my-log" onClick={() => navigate("/guarantee")}>
           <img src={left} alt="right"></img>
-          <p>Поделись с другом</p>
+          <p>{t("share")}</p>
         </div>
         <div className="help" onClick={() => navigate("/how-to-buy")}>
           <p>Гарантия</p>
