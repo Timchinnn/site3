@@ -170,9 +170,18 @@
     width: 100px;
   }
 }
-@media (min-width: 421px) and (max-height: 870px) and (min-height: 500px) {
+@media (min-width: 421px) and (max-height: 870px) and (min-height: 641px) {
   .share {
     margin-top: 120%;
+    /* width: 340px; */
+  }
+  .arrow-group {
+    width: 100px;
+  }
+}
+@media (min-width: 421px) and (max-height: 640px) {
+  .share {
+    margin-top: 140%;
     /* width: 340px; */
   }
   .arrow-group {
