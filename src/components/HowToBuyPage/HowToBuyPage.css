@@ -139,3 +139,8 @@
     margin-top: 50%;
   }
 }
+@media (max-width: 330px) and (max-height: 670px) and (min-height: 655px) {
+  .garant-description:first-of-type {
+    margin-top: 150%;
+  }
+}
