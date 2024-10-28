@@ -109,9 +109,9 @@ const GuaranteePage = ({ onClose }) => {
             <div className="innovation-head">
               {" "}
               <div className="invitation">
-                <p className="all-p">{t("invitation")}</p>
+                <p className="all-p">{t("Your invitation link")}</p>
                 <p className="all-p">https://t.me......................</p>
-                <button>{t("Your invitation link")}</button>
+                <button>{t("Copy link")}</button>
                 <div className="changeover">
                   <p className="all-p">{t("Click on the link")}</p>
                   <p className="all-p">0</p>
