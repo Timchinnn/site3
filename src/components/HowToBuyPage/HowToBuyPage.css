@@ -121,6 +121,6 @@
 }
 @media (max-width: 415px) and (max-height: 737px) and (min-height: 735px) {
   .garant-description:first-of-type {
-    margin-top: 170%;
+    margin-top: 60%;
   }
 }
