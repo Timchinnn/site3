@@ -188,3 +188,14 @@
     width: 100px;
   }
 }
+@media (max-width: 391px) and (max-height: 845px) and (min-height: 843px) {
+  .share {
+    margin-top: 100%;
+    /* width: 340px; */
+  }
+}
+@media (max-width: 376px) and (max-height: 741px) and (min-height: 739px) {
+  .share {
+    margin-top: 150%;
+  }
+}
