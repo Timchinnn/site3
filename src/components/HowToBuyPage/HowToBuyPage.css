@@ -139,18 +139,18 @@
     margin-top: 50%;
   }
 }
-@media (max-width: 330px) and (max-height: 670px) and (min-height: 655px) {
+@media (max-width: 360px) and (max-height: 670px) and (min-height: 655px) {
   .garant-description:first-of-type {
     margin-top: 150%;
   }
 }
-@media (max-width: 340px) and (max-height: 850px) and (min-height: 835px) {
+@media (max-width: 360px) and (max-height: 850px) and (min-height: 835px) {
   .garant-description:first-of-type {
     margin-top: 150%;
   }
 }
 @media (max-width: 360px) and (max-height: 650px) and (min-height: 625px) {
   .garant-description:first-of-type {
-    margin-top: 150%;
+    margin-top: 120%;
   }
 }
