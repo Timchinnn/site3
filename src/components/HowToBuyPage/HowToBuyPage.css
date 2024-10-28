@@ -109,9 +109,13 @@
     /* width: 340px; */
   }
 }
-@media (max-width: 376px) and (max-height: 741px) {
+@media (max-width: 376px) and (max-height: 741px) and (min-height: 739px) {
   .garant-description:first-of-type {
     margin-top: 90%;
-    /* width: 340px; */
+  }
+}
+@media (max-width: 321px) and (max-height: 569px) and (min-height: 567px) {
+  .garant-description:first-of-type {
+    margin-top: 170%;
   }
 }
