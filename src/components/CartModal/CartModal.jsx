@@ -3,7 +3,7 @@ import axios from "axios";
 import "./CartModal.css";
 import arrow from "./arrow.png";
 import vector from "./Vector.png";
-
+import { t } from "i18next";
 const CartModal = ({ items = [], onClose, onAdd, onRemove, onResetCart }) => {
   const [orderPlaced, setOrderPlaced] = useState(false);
 
@@ -36,15 +36,15 @@ const CartModal = ({ items = [], onClose, onAdd, onRemove, onResetCart }) => {
 
         {orderPlaced ? (
           <div className="cart-media-good">
-            <p>Заказ оформлен</p>
+            <p>{t("Order placed")}</p>
             <img src={vector} alt="vector" />
             <button onClick={handleOk}>OK</button>
           </div>
         ) : (
           <div className="cart-media">
-            <h2 className="cart-head">Корзина</h2>
+            <h2 className="cart-head">{t("Basket")}</h2>
             {items.length === 0 ? (
-              <p>Ваша корзина пуста</p>
+              <p>{t("Shopping cart is empty")}</p>
             ) : (
               <div>
                 <ul>
@@ -84,7 +84,7 @@ const CartModal = ({ items = [], onClose, onAdd, onRemove, onResetCart }) => {
         )}
         {items.length > 0 && !orderPlaced && (
           <button className="checkout-button" onClick={handleCheckout}>
-            Оформить заказ
+            {t("Leave an application")}
           </button>
         )}
       </div>
