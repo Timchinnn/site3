@@ -7,7 +7,7 @@ import arrow from "./arrow.png";
 import { useNavigate } from "react-router-dom";
 import vector from "./Vector.png";
 // import arrowimg from "./Arrow 15 (2).png";
-
+import { t } from "i18next";
 const SendRequestModal = ({ onClose }) => {
   const navigate = useNavigate();
   const [requestSent, setRequestSent] = useState(false);
@@ -60,13 +60,13 @@ const SendRequestModal = ({ onClose }) => {
           />
           {requestSent ? (
             <div className="cart-media-good1">
-              <p>Заявка принята</p>
+              <p>{t("Accept application")}</p>
               <img src={vector} alt="vector" />
               <button onClick={() => navigate(-1)}>OK</button>
             </div>
           ) : (
             <div className="window-reg">
-              <h1 className="application">ЗАЯВКА</h1>
+              <h1 className="application">{t("Apply")}</h1>
               {/* <div className="input-container">
                 <p>Имя</p>
                 <input
@@ -101,7 +101,7 @@ const SendRequestModal = ({ onClose }) => {
               </div> */}
               <input name="message" className="msg" onChange={handleChange} />
               <button className="send-msg" onClick={handleSubmit}>
-                Отправить заявку
+                {t("Submit application")}
               </button>
             </div>
           )}
