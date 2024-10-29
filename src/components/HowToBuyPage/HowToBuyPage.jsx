@@ -50,46 +50,47 @@ const HowToBuyPage = ({ onClose }) => {
                 )}
               </li>
               <li>
-                Наличие такелажного оборудования и сертифицированных
-                специалистов, что позволяет вести работы с любой габаритной
-                техникой
+                {t(
+                  "With rigging equipment and certified experts, it can handle any large equipment."
+                )}
               </li>
             </ul>
           </div>
           <div className="service-quality-intro-contrary">
             <p>
-              Склады и производственные цеха отвечают необходимым стандартам
-              хранения и эксплуатации:
+              {t(
+                "The warehouse and production workshop meet the necessary storage and operational standards:"
+              )}
             </p>
           </div>
           <div className="garant-description">
             <ul className="company-advantages-list">
               <li>
-                 Наличие освещения, отопления и приточно-вытяжной вентиляции;
+                 
+                {t("Equipped with lighting, heating, and exhaust ventilation;")}
               </li>
-              <li>Контроль температуры и влажности;</li>
+              <li>{t("Temperature and humidity control;")}</li>
               <li>
-                 Комплексная система безопасности – пропускная система,
-                охранно-пожарная сигнализация, камеры для фотофиксации и
-                видеонаблюдения, постановка всего комплекса на вневедомственную
-                охрану;
+                 
+                {t(
+                  " Comprehensive security system - pass system, fire alarm system, cameras, and video surveillance cameras, placing the entire complex under external security protection"
+                )}
               </li>
+              <li> {t("Insurance for all storage devices;")}</li>
               <li>
-                 Страхование всего оборудования, размещенного на хранение;
-              </li>
-              <li>
-                  Наличие внутренней парковочной зоны, рассчитанной на любые
-                виды автотранспорта.
+                  
+                {t(
+                  "The internal parking lot can be used by any type of vehicle."
+                )}
               </li>
             </ul>
           </div>
           <div className="quality-assurance-section">
             <img src={dimg} alt="#" />
             <p className="service-quality-intro-contrary-text">
-              Все поставляемые нами устройства проходят тщательное тестирование,
-              имеют гарантию, отвечают всем необходимым требованиям для
-              качественного оказания услуг и могут быть оснащены дополнительными
-              интеграционными решениями по желанию клиента.
+              {t(
+                "All the devices we provide have undergone rigorous testing and warranty, meeting all necessary requirements for providing high-quality service, and can be equipped with additional integrated solutions according to customer requirements."
+              )}
             </p>
           </div>
         </div>
