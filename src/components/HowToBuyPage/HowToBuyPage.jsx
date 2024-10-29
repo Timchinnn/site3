@@ -1,5 +1,5 @@
 import React from "react";
-
+import { t } from "i18next";
 import "./HowToBuyPage.css";
 // import bigB from "./bigb.png";
 // import bigBContray from "./bigbContrary.png";
@@ -24,27 +24,30 @@ const HowToBuyPage = ({ onClose }) => {
 
           <div className="garant-description">
             <p className="storage-facilities-description">
-              Складские и производственные помещения компании соответствуют всем
-              техническим требованиям и необходимым условиям для хранения и
-              подготовки банковского оборудования.
+              {t(
+                "The company's warehouse and production facilities meet all technical requirements the necessary conditions for storing and preparing bank equipment."
+              )}
             </p>
           </div>
           <div className="service-quality-intro">
             <p>
-              Для оказания качественных услуг компания имеет в своем
-              распоряжении:
+              {t(
+                "In order to provide high-quality services, the company has there are:"
+              )}
             </p>
           </div>
           <div className="garant-description">
             <ul className="company-advantages-list">
               <li>
-                Сервисных инженеров высокой квалификации по всем необходимым
-                направлениям обслуживания различного банковского оборудования,
-                имеющих
+                {t(
+                  "Highly qualified service engineers in various banking equipment service areas, with"
+                )}
               </li>
               <li>
-                 Многолетний опыт ремонтных работ, предпродажной подготовки и
-                восстановительных работ.
+                 
+                {t(
+                  "Years of experience in maintenance, pre-sales preparation, and repair."
+                )}
               </li>
               <li>
                 Наличие такелажного оборудования и сертифицированных
