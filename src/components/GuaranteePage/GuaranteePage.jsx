@@ -57,8 +57,6 @@ const GuaranteePage = ({ onClose }) => {
           {/* <p>cd{ref}</p> */}
           {/* <div className="window-block-about"></div> */}
           <div className="share">
-            <p>{ref}</p>
-
             <p className="share-header-p">{t("Summoning friends")} </p>
             <div className="earn">
               <img src={arrowLong} alt="arrowLong" />
@@ -140,7 +138,8 @@ const GuaranteePage = ({ onClose }) => {
               {" "}
               <div className="invitation">
                 <p className="all-p">{t("Your invitation link")}</p>
-                <p className="all-p">https://t.me......................</p>
+                <p className="all-p">{ref}</p>
+                {/* <p className="all-p">https://t.me......................</p> */}
                 <button>{t("Copy link")}</button>
                 <div className="changeover">
                   <p className="all-p">{t("Click on the link")}</p>
