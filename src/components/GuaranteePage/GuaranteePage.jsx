@@ -35,7 +35,7 @@ const GuaranteePage = ({ onClose }) => {
   }, []);
   console.log(userRef);
   const getRefByUserId = (targetUserId) => {
-    const user = userData.find((user) => user.user_id === targetUserId);
+    const user = userRef.find((user) => user.user_id === targetUserId);
     return user ? user.ref : null;
   };
 
