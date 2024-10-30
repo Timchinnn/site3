@@ -23,7 +23,7 @@ const GuaranteePage = ({ onClose }) => {
     Promise.all([axios.get("/api/ref")])
       .then(([userRef]) => {
         setUserRef(userRef.data);
-        consolel.log(userRef.data);
+        console.log(userRef.data);
       })
       .catch((error) => console.error("Ошибка при получении данных:", error));
   }, []);
@@ -36,7 +36,7 @@ const GuaranteePage = ({ onClose }) => {
 
   // Пример использования
 
-  const ref = getRefByUserId(tgUserId);
+  // const ref = getRefByUserId(tgUserId);
   return (
     <div className="modal-overlay1">
       <div className="images-container">
