@@ -33,6 +33,7 @@ const GuaranteePage = ({ onClose }) => {
   useEffect(() => {
     fetchUserRef();
   }, []);
+  console.log(userRef);
 
   return (
     <div className="modal-overlay1">
