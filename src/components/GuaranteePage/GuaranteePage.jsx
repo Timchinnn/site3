@@ -17,7 +17,7 @@ import { t } from "i18next";
 const GuaranteePage = ({ onClose }) => {
   const navigate = useNavigate();
   const [userRef, setUserRef] = useState(null);
-  const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
+  // const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
 
   useEffect(() => {
     Promise.all([axios.get("/api/ref")])
