@@ -41,7 +41,7 @@ const GuaranteePage = ({ onClose }) => {
   // };
 
   // Пример использования
-
+  const ref = getRefByUserId(tgUserId);
   return (
     <div className="modal-overlay1">
       <div className="images-container">
