@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 import "./GuaranteePage.css";
@@ -22,7 +22,7 @@ const GuaranteePage = ({ onClose }) => {
   useEffect(() => {
     Promise.all([axios.get("/api/ref")])
       .then(([userRef]) => {
-        setuserRef(userRef.data);
+        setUserRef(userRef.data);
       })
       .catch((error) => console.error("Ошибка при получении данных:", error));
   }, []);
