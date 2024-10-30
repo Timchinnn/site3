@@ -34,7 +34,7 @@ const GuaranteePage = ({ onClose }) => {
         .writeText(linkRef.current.textContent)
         .then(() => {
           // Опционально: показать уведомление об успешном копировании
-          alert("Ссылка скопирована!");
+          // alert("Ссылка скопирована!");
         })
         .catch((err) => {
           console.error("Ошибка при копировании: ", err);
@@ -151,10 +151,10 @@ const GuaranteePage = ({ onClose }) => {
             <div className="innovation-head">
               {" "}
               <div className="invitation">
+                <p className="all-p">{t("Your invitation link")}</p>
                 <p className="all-p" ref={linkRef}>
-                  {t("Your invitation link")}
+                  {ref}
                 </p>
-                <p className="all-p">{ref}</p>
                 {/* <p className="all-p">https://t.me......................</p> */}
                 <button onClick={copyLink}>{t("Copy link")}</button>
                 <div className="changeover">
