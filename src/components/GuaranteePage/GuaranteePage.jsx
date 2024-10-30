@@ -32,11 +32,12 @@ const GuaranteePage = ({ onClose }) => {
     //     console.error("Error fetching user ref:", error);
     //   }
     // }
-  }, [tgUserId]);
+  });
 
   useEffect(() => {
     fetchUserRef();
   }, [fetchUserRef]);
+
   console.log(userRef);
   const getRefByUserId = (targetUserId) => {
     const user = userRef.find((user) => user.user_id === targetUserId);
