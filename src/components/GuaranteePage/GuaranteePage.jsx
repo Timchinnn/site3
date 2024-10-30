@@ -17,26 +17,28 @@ import { t } from "i18next";
 const GuaranteePage = ({ onClose }) => {
   const navigate = useNavigate();
   const [userRef, setUserRef] = useState(null);
-  // const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
-
+  const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
+  const getRefByUserId = (targetUserId) => {
+    const user = userRef.find((user) => user.user_id === targetUserId);
+    return user ? user.ref : null;
+  };
   useEffect(() => {
     Promise.all([axios.get("/api/ref")])
       .then(([userRef]) => {
         setUserRef(userRef.data);
         console.log(userRef.data);
+        const ref = getRefByUserId(tgUserId);
+        console.log(ref);
       })
       .catch((error) => console.error("Ошибка при получении данных:", error));
   }, []);
 
   // console.log(userRef);
-  // const getRefByUserId = (targetUserId) => {
-  //   const user = userRef.find((user) => user.user_id === targetUserId);
-  //   return user ? user.ref : null;
+
   // };
 
   // Пример использования
 
-  // const ref = getRefByUserId(tgUserId);
   return (
     <div className="modal-overlay1">
       <div className="images-container">
