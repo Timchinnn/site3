@@ -32,7 +32,7 @@ const GuaranteePage = ({ onClose }) => {
 
   useEffect(() => {
     fetchUserRef();
-  }, []);
+  }, [fetchUserRef]);
   console.log(userRef);
   const getRefByUserId = (targetUserId) => {
     const user = userRef.find((user) => user.user_id === targetUserId);
