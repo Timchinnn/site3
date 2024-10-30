@@ -31,12 +31,11 @@ const GuaranteePage = ({ onClose }) => {
     Promise.all([axios.get("/api/ref")])
       .then(([userRef]) => {
         setUserRef(userRef.data);
-        console.log(userRef.data);
+
         const ref = getRefByUserId(tgUserId);
-        console.log(ref);
       })
       .catch((error) => console.error("Ошибка при получении данных:", error));
-  }, []);
+  }, [getRefByUserId, tgUserId]);
   // console.log(userRef);
 
   // };
@@ -55,7 +54,7 @@ const GuaranteePage = ({ onClose }) => {
             alt="arrow"
             onClick={() => navigate(-1)}
           />
-          <p>{userRef?.ref}</p>
+          <p>{ref}</p>
           {/* <p>cd{ref}</p> */}
           {/* <div className="window-block-about"></div> */}
           <div className="share">
