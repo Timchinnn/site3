@@ -3,7 +3,7 @@
   "ensure": "Гарантия",
   "My Office": "Для поставщиков",
   "Leave an application": "Оставить заявку",
-  "More detailed": "Подробнее",
+  "Details": "Подробнее",
   "Catalogue": "Каталог",
   "Summoning friends": "Зови друзей",
   "make money": "и зарабатывай",
@@ -42,5 +42,6 @@
   "Apply": "ЗАЯВКА",
   "Submit application": "Отправить заявку",
   "Accept application": "Заявка принята",
-  "": ""
+  "Add to cart": "Купить",
+  "Go to the shopping cart": "Корзина"
 }

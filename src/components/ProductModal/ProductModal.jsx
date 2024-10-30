@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSwipeable } from "react-swipeable";
 import "./ProductModal.css";
 import arrow from "./arrow.png";
-
+import { t } from "i18next";
 const ProductModal = ({
   product,
   onClose,
@@ -68,7 +68,7 @@ const ProductModal = ({
             <div className="card">
               <p className="card-title">{product.name}</p>
               <p className="details-button" onClick={handleDetailsClick}>
-                Подробнее
+                {t("Details")}
               </p>
             </div>
 
@@ -94,7 +94,7 @@ const ProductModal = ({
               goToCart();
             }}
           >
-            Корзина
+            {t("Go to the shopping cart")}
           </button>
         ) : (
           <button
@@ -105,7 +105,7 @@ const ProductModal = ({
               setIsInCart(true);
             }}
           >
-            Купить
+            {t("Add to cart")}
           </button>
         )}
       </div>

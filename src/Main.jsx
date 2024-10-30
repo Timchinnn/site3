@@ -13,6 +13,7 @@ import ProfilePage from "./components/ProfileModal/ProfileModal";
 import bigB from "./bigb.png";
 import bigBContray from "./bigbContrary.png";
 import axios from "axios";
+import { t } from "i18next";
 
 function Main() {
   const navigate = useNavigate();
