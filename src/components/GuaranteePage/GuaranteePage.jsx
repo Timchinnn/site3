@@ -32,7 +32,7 @@ const GuaranteePage = ({ onClose }) => {
       .then(([userRef]) => {
         setUserRef(userRef.data);
 
-        const ref = getRefByUserId(tgUserId);
+        // const ref = getRefByUserId(tgUserId);
       })
       .catch((error) => console.error("Ошибка при получении данных:", error));
   }, [getRefByUserId, tgUserId]);
