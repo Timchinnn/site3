@@ -47,7 +47,7 @@ const GuaranteePage = ({ onClose }) => {
             alt="arrow"
             onClick={() => navigate(-1)}
           />
-          <p>cd{ref}</p>
+          {/* <p>cd{ref}</p> */}
           {/* <div className="window-block-about"></div> */}
           <div className="share">
             <p className="share-header-p">{t("Summoning friends")} </p>
