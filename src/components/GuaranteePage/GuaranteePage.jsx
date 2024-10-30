@@ -17,12 +17,12 @@ import { t } from "i18next";
 const GuaranteePage = ({ onClose }) => {
   const navigate = useNavigate();
   const [userRef, setUserRef] = useState(null);
+  const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
 
   const fetchUserRef = async () => {
-    const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
     if (tgUserId) {
       try {
-        const response = await axios.get(`/api/ref?user_id=${tgUserId}`);
+        const response = await axios.get(`/api/ref`);
         setUserRef(response.data.ref);
       } catch (error) {
         console.error("Error fetching user ref:", error);
@@ -34,7 +34,14 @@ const GuaranteePage = ({ onClose }) => {
     fetchUserRef();
   }, []);
   console.log(userRef);
+  const getRefByUserId = (targetUserId) => {
+    const user = userData.find((user) => user.user_id === targetUserId);
+    return user ? user.ref : null;
+  };
 
+  // Пример использования
+
+  const ref = getRefByUserId(tgUserId);
   return (
     <div className="modal-overlay1">
       <div className="images-container">
@@ -47,7 +54,7 @@ const GuaranteePage = ({ onClose }) => {
             alt="arrow"
             onClick={() => navigate(-1)}
           />
-          <p>cd{userRef}</p>
+          <p>cd{ref}</p>
           {/* <div className="window-block-about"></div> */}
           <div className="share">
             <p className="share-header-p">{t("Summoning friends")} </p>
