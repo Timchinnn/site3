@@ -23,6 +23,7 @@ const GuaranteePage = ({ onClose }) => {
     if (tgUserId) {
       try {
         const response = await axios.get(`/api/ref`);
+        console.log(response);
         setUserRef(response.data);
       } catch (error) {
         console.error("Error fetching user ref:", error);
