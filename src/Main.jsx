@@ -52,11 +52,15 @@ function Main() {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post("/api/send-request", formData);
+      const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
+      const dataToSend = {
+        ...formData,
+        tgUserId,
+      };
+      const response = await axios.post("/api/send-request", dataToSend);
       console.log(response.data);
       setRequestSent(true);
       navigate("/app");
-      // Optionally close the modal or show a success message
     } catch (error) {
       console.error("Error sending request:", error);
     }
