@@ -23,19 +23,18 @@ const GuaranteePage = ({ onClose }) => {
     Promise.all([axios.get("/api/ref")])
       .then(([userRef]) => {
         setUserRef(userRef.data);
+        console.log(userRef);
+        const getRefByUserId = (targetUserId) => {
+          const user = userRef.find((user) => user.user_id === targetUserId);
+          return user ? user.ref : null;
+          const ref = getRefByUserId(tgUserId);
+        };
       })
       .catch((error) => console.error("Ошибка при получении данных:", error));
   }, []);
 
-  console.log(userRef);
-  const getRefByUserId = (targetUserId) => {
-    const user = userRef.find((user) => user.user_id === targetUserId);
-    return user ? user.ref : null;
-  };
-
   // Пример использования
 
-  const ref = getRefByUserId(tgUserId);
   return (
     <div className="modal-overlay1">
       <div className="images-container">
