@@ -19,24 +19,13 @@ const GuaranteePage = ({ onClose }) => {
   const [userRef, setUserRef] = useState(null);
   const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
 
-  const fetchUserRef = useCallback(async () => {
-    const response = await axios.get(`/api/ref`);
-    console.log(response);
-    setUserRef(response.data);
-    // if (tgUserId) {
-    //   try {
-    //     const response = await axios.get(`/api/ref`);
-    //     console.log(response);
-    //     setUserRef(response.data);
-    //   } catch (error) {
-    //     console.error("Error fetching user ref:", error);
-    //   }
-    // }
-  });
-
   useEffect(() => {
-    fetchUserRef();
-  }, [fetchUserRef]);
+    Promise.all([axios.get("/api/ref")])
+      .then(([userRef]) => {
+        setuserRef(userRef.data);
+      })
+      .catch((error) => console.error("Ошибка при получении данных:", error));
+  }, []);
 
   console.log(userRef);
   const getRefByUserId = (targetUserId) => {
