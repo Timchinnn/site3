@@ -27,7 +27,7 @@ const GuaranteePage = ({ onClose }) => {
         const getRefByUserId = (targetUserId) => {
           const user = userRef.find((user) => user.user_id === targetUserId);
           return user ? user.ref : null;
-          const ref = getRefByUserId(tgUserId);
+          // const ref = getRefByUserId(tgUserId);
         };
       })
       .catch((error) => console.error("Ошибка при получении данных:", error));
