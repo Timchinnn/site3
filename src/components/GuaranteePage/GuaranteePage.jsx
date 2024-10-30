@@ -49,6 +49,7 @@ const GuaranteePage = ({ onClose }) => {
             alt="arrow"
             onClick={() => navigate(-1)}
           />
+          <p>{userRef}</p>
           {/* <p>cd{ref}</p> */}
           {/* <div className="window-block-about"></div> */}
           <div className="share">
