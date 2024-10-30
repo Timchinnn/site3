@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useEffect } from "react";
 import "./GuaranteePage.css";
 import bigB from "./bigb.png";
 import bigBContray from "./bigbContrary.png";
@@ -14,6 +14,23 @@ import { t } from "i18next";
 
 const GuaranteePage = ({ onClose }) => {
   const navigate = useNavigate();
+  const [userRef, setUserRef] = useState(null);
+
+  const fetchUserRef = async () => {
+    const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
+    if (tgUserId) {
+      try {
+        const response = await axios.get(`/api/ref?user_id=${tgUserId}`);
+        setUserRef(response.data.ref);
+      } catch (error) {
+        console.error("Error fetching user ref:", error);
+      }
+    }
+  };
+
+  useEffect(() => {
+    fetchUserRef();
+  }, []);
 
   return (
     <div className="modal-overlay1">
@@ -27,6 +44,7 @@ const GuaranteePage = ({ onClose }) => {
             alt="arrow"
             onClick={() => navigate(-1)}
           />
+          <p>{userRef}</p>
           {/* <div className="window-block-about"></div> */}
           <div className="share">
             <p className="share-header-p">{t("Summoning friends")} </p>
