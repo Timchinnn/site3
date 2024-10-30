@@ -13,7 +13,7 @@ import arrowDownM from "./arrowDownM.png";
 import arrowDownS from "./arrowDownS.png";
 import arrowXs from "./arrows.png";
 import { t } from "i18next";
-
+import { useRef } from "react";
 const GuaranteePage = ({ onClose }) => {
   const navigate = useNavigate();
   const [userRef, setUserRef] = useState(null);
@@ -26,7 +26,21 @@ const GuaranteePage = ({ onClose }) => {
     },
     [userRef]
   );
+  const linkRef = useRef(null);
 
+  const copyLink = () => {
+    if (linkRef.current) {
+      navigator.clipboard
+        .writeText(linkRef.current.textContent)
+        .then(() => {
+          // Опционально: показать уведомление об успешном копировании
+          alert("Ссылка скопирована!");
+        })
+        .catch((err) => {
+          console.error("Ошибка при копировании: ", err);
+        });
+    }
+  };
   useEffect(() => {
     Promise.all([axios.get("/api/ref")])
       .then(([userRef]) => {
@@ -137,10 +151,12 @@ const GuaranteePage = ({ onClose }) => {
             <div className="innovation-head">
               {" "}
               <div className="invitation">
-                <p className="all-p">{t("Your invitation link")}</p>
+                <p className="all-p" ref={linkRef}>
+                  {t("Your invitation link")}
+                </p>
                 <p className="all-p">{ref}</p>
                 {/* <p className="all-p">https://t.me......................</p> */}
-                <button>{t("Copy link")}</button>
+                <button onClick={copyLink}>{t("Copy link")}</button>
                 <div className="changeover">
                   <p className="all-p">{t("Click on the link")}</p>
                   <p className="all-p">0</p>
