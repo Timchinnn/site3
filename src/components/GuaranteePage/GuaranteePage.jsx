@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import axios from "axios";
 
 import "./GuaranteePage.css";
@@ -18,10 +18,15 @@ const GuaranteePage = ({ onClose }) => {
   const navigate = useNavigate();
   const [userRef, setUserRef] = useState(null);
   const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
-  const getRefByUserId = (targetUserId) => {
-    const user = userRef.find((user) => user.user_id === targetUserId);
-    return user ? user.ref : null;
-  };
+  const getRefByUserId = useCallback(
+    (targetUserId) => {
+      return userRef
+        ? userRef.find((user) => user.user_id === targetUserId)?.ref
+        : null;
+    },
+    [userRef]
+  );
+
   useEffect(() => {
     Promise.all([axios.get("/api/ref")])
       .then(([userRef]) => {
@@ -32,7 +37,6 @@ const GuaranteePage = ({ onClose }) => {
       })
       .catch((error) => console.error("Ошибка при получении данных:", error));
   }, [getRefByUserId, tgUserId]);
-
   // console.log(userRef);
 
   // };
