@@ -19,6 +19,11 @@
 .arrow-group:first-child {
   height: 220px;
 }
+.images-container3 {
+  height: 100%;
+  /* position: relative; */
+  width: 100%;
+}
 .arrow-group:nth-child(2) {
   height: 175px;
 }
@@ -47,9 +52,9 @@
 }
 .parent1 {
   overflow-x: hidden;
-  height: 100vh;
+  /* height: 100vh; */
 
-  position: relative;
+  /* position: relative; */
 }
 /* .share p{
     font-size: 13px;
