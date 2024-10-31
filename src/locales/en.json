@@ -42,6 +42,14 @@
   "Apply": "APPLY",
   "Submit application": "Submit application",
   "Accept application": "Accept application",
-  "": "",
+  "Add to cart": "Add to cart",
+  "Go to the shopping cart": "Go to the shopping cart",
+  "City": "City",
+  "Register": "Register",
+  "Country": "Country",
+  "Telephone": "Telephone",
+  "Name": "Name",
+  "Surname": "Surname",
+  "REGISTER": "REGISTER",
   "": ""
 }

@@ -14,7 +14,7 @@ import bigB from "./bigb.png";
 import bigBContray from "./bigbContrary.png";
 import axios from "axios";
 // import { t } from "i18next";
-
+import { useTranslation } from "react-i18next";
 function Main() {
   const navigate = useNavigate();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -28,7 +28,11 @@ function Main() {
   // const closeModal = () => {
   //   setIsModalOpen(false);
   // };
+  const { t, i18n } = useTranslation();
 
+  const changeLanguage = () => {
+    i18n.changeLanguage(i18n.language === "ru" ? "en" : "ru");
+  };
   const handleShopButtonClick = () => {
     if (isAuthenticated) {
       navigate("/app");
@@ -71,7 +75,12 @@ function Main() {
         path="/"
         element={
           <div className="menu-container">
-            <div className="header"></div>
+            <div className="header">
+              {" "}
+              <button onClick={changeLanguage} className="translate-button">
+                {i18n.language === "ru" ? "EN" : "RU"}
+              </button>
+            </div>
             <div>
               <div className="content">
                 <img src={bansys} alt="bans" />
@@ -98,9 +107,9 @@ function Main() {
                   <div className="parent">
                     {" "}
                     <div className="window-reg">
-                      <h1 className="application">РЕГИСТРАЦИЯ</h1>
+                      <h1 className="application">{t("REGISTER")}</h1>
                       <div className="input-container">
-                        <p>Имя</p>
+                        <p>{t("Name")}</p>
                         <input
                           name="name"
                           className="input-order-profile"
@@ -108,7 +117,7 @@ function Main() {
                         />
                       </div>
                       <div className="input-container">
-                        <p>Фамилия</p>
+                        <p>{t("Surname")}</p>
                         <input
                           name="name"
                           className="input-order-profile"
@@ -116,7 +125,7 @@ function Main() {
                         />
                       </div>
                       <div className="input-container">
-                        <p>Телефон</p>
+                        <p>{t("Telephone")}</p>
                         <input
                           name="phone"
                           className="input-order-profile"
@@ -132,7 +141,7 @@ function Main() {
                         />
                       </div>
                       <div className="input-container">
-                        <p>Страна</p>
+                        <p>{t("Country")}</p>
                         <input
                           name="country"
                           className="input-order-profile"
@@ -140,7 +149,7 @@ function Main() {
                         />
                       </div>
                       <div className="input-container">
-                        <p>Город</p>
+                        <p>{t("City")}</p>
                         <input
                           name="city"
                           className="input-order-profile"
@@ -153,7 +162,7 @@ function Main() {
                         onChange={handleChange}
                       /> */}
                       <button className="send-msg" onClick={handleSubmit}>
-                        Зарегистрироваться
+                        {t("Register")}
                       </button>
                     </div>
                   </div>

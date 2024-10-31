@@ -43,5 +43,13 @@
   "Submit application": "Отправить заявку",
   "Accept application": "Заявка принята",
   "Add to cart": "Купить",
-  "Go to the shopping cart": "Корзина"
+  "Go to the shopping cart": "Корзина",
+  "REGISTER": "РЕГИСТРАЦИЯ",
+  "Name": "Имя",
+  "Surname": "Фамилия",
+  "Telephone": "Телефон",
+  "Country": "Страна",
+  "City": "Город",
+  "Register": "Зарегистрироваться",
+  "": ""
 }
