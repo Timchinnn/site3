@@ -11,7 +11,7 @@ const HowToBuyPage = ({ onClose }) => {
 
   return (
     <div className="modal-overlay1">
-      <div className="images-container">
+      <div className="images-container1">
         {/* <img src={bigB} alt="bigB" className="top-left" />
         <img src={bigBContray} alt="bigBContray" className="bottom-right" /> */}
         <img
