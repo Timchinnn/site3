@@ -14,14 +14,13 @@ const HowToBuyPage = ({ onClose }) => {
       <div className="images-container">
         {/* <img src={bigB} alt="bigB" className="top-left" />
         <img src={bigBContray} alt="bigBContray" className="bottom-right" /> */}
+        <img
+          className="arrow1"
+          src={arrow}
+          alt="arrow"
+          onClick={() => navigate(-1)}
+        />
         <div className="parent">
-          <img
-            className="arrow"
-            src={arrow}
-            alt="arrow"
-            onClick={() => navigate(-1)}
-          />
-
           <div className="garant-description">
             <p className="storage-facilities-description">
               {t(
