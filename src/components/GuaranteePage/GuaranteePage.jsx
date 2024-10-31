@@ -62,7 +62,7 @@ const GuaranteePage = ({ onClose }) => {
         <img src={bigB} alt="bigB" className="top-left" />
         <img src={bigBContray} alt="bigBContray" className="bottom-right" />
 
-        <div>
+        <div className="group-arrwo-post">
           <img
             className="arrow1"
             src={arrow}

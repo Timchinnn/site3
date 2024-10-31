@@ -1,10 +1,14 @@
 .arrow-group {
-  width: 120px;
+  width: 100px;
   display: flex;
   align-items: flex-start;
 }
 .arrow-groups {
   display: flex;
+}
+.group-arrwo-post {
+  height: 100vh;
+  overflow: auto;
 }
 .arrow-group p {
   align-self: flex-end;
