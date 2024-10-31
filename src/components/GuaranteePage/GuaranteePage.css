@@ -23,6 +23,8 @@
 }
 .arrow1 {
   width: 33px;
+  margin-top: 5%;
+  margin-left: 2%;
 }
 .about-sales {
   display: flex;
