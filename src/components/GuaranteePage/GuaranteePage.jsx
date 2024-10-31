@@ -61,13 +61,13 @@ const GuaranteePage = ({ onClose }) => {
       <div className="images-container">
         <img src={bigB} alt="bigB" className="top-left" />
         <img src={bigBContray} alt="bigBContray" className="bottom-right" />
+        <img
+          className="arrow"
+          src={arrow}
+          alt="arrow"
+          onClick={() => navigate(-1)}
+        />
         <div className="parent">
-          <img
-            className="arrow"
-            src={arrow}
-            alt="arrow"
-            onClick={() => navigate(-1)}
-          />
           {/* <p>cd{ref}</p> */}
           {/* <div className="window-block-about"></div> */}
           <div className="share">
