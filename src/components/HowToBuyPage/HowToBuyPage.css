@@ -46,6 +46,14 @@
   margin-top: 12px;
   color: #173b33;
 }
+.parent2 {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  /* justify-content: center; */
+  position: relative;
+}
 .service-quality-intro p {
   padding-left: 7px;
 }

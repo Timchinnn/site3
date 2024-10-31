@@ -20,7 +20,7 @@ const HowToBuyPage = ({ onClose }) => {
           alt="arrow"
           onClick={() => navigate(-1)}
         />
-        <div className="parent">
+        <div className="parent2">
           <div className="garant-description">
             <p className="storage-facilities-description">
               {t(
