@@ -9,6 +9,7 @@
 .group-arrwo-post {
   height: 100vh;
   overflow: auto;
+  position: absolute;
 }
 .arrow-group p {
   align-self: flex-end;
