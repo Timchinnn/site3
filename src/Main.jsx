@@ -120,7 +120,7 @@ function Main() {
                       <div className="input-container">
                         <p>{t("Surname")}</p>
                         <input
-                          name="name"
+                          name="surname"
                           className="input-order-profile"
                           onChange={handleChange}
                         />
@@ -136,7 +136,7 @@ function Main() {
                       <div className="input-container">
                         <p>email</p>
                         <input
-                          name="phone"
+                          name="email"
                           className="input-order-profile"
                           onChange={handleChange}
                         />
