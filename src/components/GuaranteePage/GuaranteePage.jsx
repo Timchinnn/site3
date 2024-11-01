@@ -29,7 +29,7 @@ const GuaranteePage = ({ onClose }) => {
   const getRefCountByUserId = useCallback(
     (targetUserId) => {
       return userRef
-        ? userRef.find((user) => user.user_id === targetUserId)?.ref_cout
+        ? userRef.find((user) => user.user_id === targetUserId)?.ref_count
         : null;
     },
     [userRef]
@@ -53,7 +53,7 @@ const GuaranteePage = ({ onClose }) => {
     Promise.all([axios.get("/api/ref")])
       .then(([userRef]) => {
         setUserRef(userRef.data);
-        console.log(userRef.data);
+        // console.log(userRef.data);
 
         // const ref = getRefByUserId(tgUserId);
       })
