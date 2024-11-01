@@ -53,12 +53,13 @@ const GuaranteePage = ({ onClose }) => {
     Promise.all([axios.get("/api/ref")])
       .then(([userRef]) => {
         setUserRef(userRef.data);
+        console.log(userRef.data);
 
         // const ref = getRefByUserId(tgUserId);
       })
       .catch((error) => console.error("Ошибка при получении данных:", error));
   }, [getRefByUserId, getRefCountByUserId, tgUserId]);
-  // console.log(userRef);
+  console.log(userRef);
 
   // };
 
