@@ -43,10 +43,11 @@ function Main() {
   const [requestSent, setRequestSent] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
+    surname: "",
     phone: "",
+    email: "",
     country: "",
     city: "",
-    message: "",
   });
   console.log(requestSent);
   const handleChange = (e) => {
