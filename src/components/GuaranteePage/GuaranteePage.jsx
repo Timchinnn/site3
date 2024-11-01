@@ -26,6 +26,14 @@ const GuaranteePage = ({ onClose }) => {
     },
     [userRef]
   );
+  const getRefCountByUserId = useCallback(
+    (targetUserId) => {
+      return userRef
+        ? userRef.find((user) => user.user_id === targetUserId)?.ref_cout
+        : null;
+    },
+    [userRef]
+  );
   const linkRef = useRef(null);
 
   const copyLink = () => {
@@ -56,6 +64,7 @@ const GuaranteePage = ({ onClose }) => {
 
   // Пример использования
   const ref = getRefByUserId(tgUserId);
+  const ref_cout = getRefCountByUserId(tgUserId);
   return (
     <div className="modal-overlay1">
       <div className="images-container3">
@@ -161,7 +170,7 @@ const GuaranteePage = ({ onClose }) => {
                   <button onClick={copyLink}>{t("Copy link")}</button>
                   <div className="changeover">
                     <p className="all-p">{t("Click on the link")}</p>
-                    <p className="all-p">0</p>
+                    <p className="all-p">{ref_cout}</p>
                   </div>
                   <div className="changeover">
                     <p className="all-p">{t("Earned money")}</p>
