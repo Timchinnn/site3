@@ -94,7 +94,7 @@ const ProfileModal = ({ onClose }) => {
                         placeholder="Введите текст..."
                       />
                       <div className="highlight">
-                        <p>10</p>
+                        <p>{product.quant}</p>
                         <img src={union} alt="union" />
                       </div>
                     </div>
