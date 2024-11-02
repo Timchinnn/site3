@@ -35,7 +35,7 @@ function Main() {
   };
   const handleShopButtonClick = () => {
     if (isAuthenticated) {
-      navigate("/app");
+      navigate(1);
     } else {
       openModal();
     }
