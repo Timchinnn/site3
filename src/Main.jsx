@@ -62,8 +62,10 @@ function Main() {
         ...formData,
         tgUserId,
       };
-      // const response = await axios.post("/api/send-request", dataToSend);
-      // console.log(response.data);
+      // const response = await axios.post("/api/send-request", formData);
+
+      const response = await axios.post("/api/send-request", dataToSend);
+      console.log(response.data);
       setRequestSent(true);
       navigate("/app");
     } catch (error) {
