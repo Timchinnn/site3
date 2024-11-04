@@ -1,4 +1,4 @@
-// import React, { useState } from "react";
+import React, { useState } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import App from "./App";
 import "./Main.css";
@@ -13,7 +13,6 @@ import ProfilePage from "./components/ProfileModal/ProfileModal";
 import bigB from "./bigb.png";
 import bigBContray from "./bigbContrary.png";
 import axios from "axios";
-import React, { useState, useEffect } from "react";
 // import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 function Main() {
@@ -56,33 +55,22 @@ function Main() {
     setFormData({ ...formData, [name]: value });
   };
 
-  // const [requestSent, setRequestSent] = useState(false);
-  const [submitTrigger, setSubmitTrigger] = useState(false);
-
-  useEffect(() => {
-    if (submitTrigger) {
-      const sendRequest = async () => {
-        try {
-          const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
-          const dataToSend = {
-            ...formData,
-            tgUserId,
-          };
-          const response = await axios.post("/api/send-request", dataToSend);
-          console.log(response.data);
-          setRequestSent(true);
-          navigate("/app");
-        } catch (error) {
-          console.error("Error sending request:", error);
-        }
-        setSubmitTrigger(false);
+  const handleSubmit = async () => {
+    try {
+      const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
+      const dataToSend = {
+        ...formData,
+        tgUserId,
       };
-      sendRequest();
-    }
-  }, [submitTrigger, formData, navigate]);
+      // const response = await axios.post("/api/send-request", formData);
 
-  const handleSubmit = () => {
-    setSubmitTrigger(true);
+      const response = await axios.post("/api/send-request", dataToSend);
+      console.log(response.data);
+      setRequestSent(true);
+      navigate("/app");
+    } catch (error) {
+      console.error("Error sending request:", error);
+    }
   };
   return (
     <Routes>
