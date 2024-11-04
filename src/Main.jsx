@@ -13,6 +13,7 @@ import ProfilePage from "./components/ProfileModal/ProfileModal";
 import bigB from "./bigb.png";
 import bigBContray from "./bigbContrary.png";
 import axios from "axios";
+import React, { useState, useEffect } from "react";
 // import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 function Main() {
