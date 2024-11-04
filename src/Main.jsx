@@ -55,22 +55,33 @@ function Main() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async () => {
-    try {
-      const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
-      const dataToSend = {
-        ...formData,
-        tgUserId,
-      };
-      // const response = await axios.post("/api/send-request", formData);
+  // const [requestSent, setRequestSent] = useState(false);
+  const [submitTrigger, setSubmitTrigger] = useState(false);
 
-      const response = await axios.post("/api/send-request", dataToSend);
-      console.log(response.data);
-      setRequestSent(true);
-      navigate("/app");
-    } catch (error) {
-      console.error("Error sending request:", error);
+  useEffect(() => {
+    if (submitTrigger) {
+      const sendRequest = async () => {
+        try {
+          const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
+          const dataToSend = {
+            ...formData,
+            tgUserId,
+          };
+          const response = await axios.post("/api/send-request", dataToSend);
+          console.log(response.data);
+          setRequestSent(true);
+          navigate("/app");
+        } catch (error) {
+          console.error("Error sending request:", error);
+        }
+        setSubmitTrigger(false);
+      };
+      sendRequest();
     }
+  }, [submitTrigger, formData, navigate]);
+
+  const handleSubmit = () => {
+    setSubmitTrigger(true);
   };
   return (
     <Routes>
