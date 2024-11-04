@@ -40,12 +40,21 @@ function App() {
   const { cartItems, addToCart, removeFromCart, clearCart } = useCart();
 
   useEffect(() => {
-    Promise.all([axios.get("/api/categories"), axios.get("/api/products")])
-      .then(([categoriesResponse, productsResponse]) => {
+    const fetchData = async () => {
+      try {
+        const [categoriesResponse, productsResponse] = await Promise.all([
+          axios.get("/api/categories"),
+          axios.get("/api/products"),
+        ]);
         setCategories(categoriesResponse.data);
         setProducts(productsResponse.data);
-      })
-      .catch((error) => console.error("Ошибка при получении данных:", error));
+      } catch (error) {
+        console.error("Ошибка при получении данных:", error);
+        // Добавьте здесь обработку ошибок, например, установку состояния ошибки
+      }
+    };
+
+    fetchData();
   }, []);
 
   const filteredProducts = products.filter(
