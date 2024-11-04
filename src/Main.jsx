@@ -12,7 +12,7 @@ import SendRequestPage from "./components/SendRequestModal/SendRequestModal";
 import ProfilePage from "./components/ProfileModal/ProfileModal";
 import bigB from "./bigb.png";
 import bigBContray from "./bigbContrary.png";
-import axios from "axios";
+// import axios from "axios";
 // import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 function Main() {
@@ -57,13 +57,13 @@ function Main() {
 
   const handleSubmit = async () => {
     try {
-      const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
-      const dataToSend = {
-        ...formData,
-        tgUserId,
-      };
-      const response = await axios.post("/api/send-request", dataToSend);
-      console.log(response.data);
+      // const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
+      // const dataToSend = {
+      //   ...formData,
+      //   tgUserId,
+      // };
+      // const response = await axios.post("/api/send-request", dataToSend);
+      // console.log(response.data);
       setRequestSent(true);
       navigate("/app");
     } catch (error) {
