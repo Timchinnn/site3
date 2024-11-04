@@ -38,7 +38,7 @@ function App() {
     i18n.changeLanguage(i18n.language === "ru" ? "en" : "ru");
   };
   const { cartItems, addToCart, removeFromCart, clearCart } = useCart();
-  const [dataVersion, setDataVersion] = useState(0);
+
   useEffect(() => {
     const fetchData = () => {
       const categoriesPromise = axios.get("/api/categories");
@@ -55,8 +55,7 @@ function App() {
         });
     };
     fetchData();
-  }, [dataVersion]);
-  setDataVersion((prev) => prev + 1);
+  }, []);
   const filteredProducts = products.filter(
     (product) =>
       product.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
