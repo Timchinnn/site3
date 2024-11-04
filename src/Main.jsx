@@ -57,11 +57,11 @@ function Main() {
 
   const handleSubmit = async () => {
     try {
-      // const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
-      // const dataToSend = {
-      //   ...formData,
-      //   tgUserId,
-      // };
+      const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
+      const dataToSend = {
+        ...formData,
+        tgUserId,
+      };
       // const response = await axios.post("/api/send-request", dataToSend);
       // console.log(response.data);
       setRequestSent(true);
