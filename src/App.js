@@ -41,13 +41,12 @@ function App() {
 
   useEffect(() => {
     const fetchData = () => {
-      axios
-        .get("/api/categories")
-        .then((categoriesResponse) => {
+      const categoriesPromise = axios.get("/api/categories");
+      const productsPromise = axios.get("/api/products");
+
+      Promise.all([categoriesPromise, productsPromise])
+        .then(([categoriesResponse, productsResponse]) => {
           setCategories(categoriesResponse.data);
-          return axios.get("/api/products");
-        })
-        .then((productsResponse) => {
           setProducts(productsResponse.data);
         })
         .catch((error) => {
@@ -57,7 +56,6 @@ function App() {
     };
     fetchData();
   }, []);
-
   const filteredProducts = products.filter(
     (product) =>
       product.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
