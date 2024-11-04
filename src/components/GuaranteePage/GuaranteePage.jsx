@@ -58,7 +58,7 @@ const GuaranteePage = ({ onClose }) => {
         // const ref = getRefByUserId(tgUserId);
       })
       .catch((error) => console.error("Ошибка при получении данных:", error));
-  }, [getRefByUserId, getRefCountByUserId, tgUserId]);
+  }, [tgUserId]);
   // console.log(userRef);
 
   // };
