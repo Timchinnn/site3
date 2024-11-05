@@ -3,7 +3,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 import App from "./App";
 import "./Main.css";
 import bansys from "./bansys.png";
-import toBuy from "./tobuy.png";
+// import toBuy from "./tobuy.png";
 import WhyBansysPage from "./components/WhyBansysPage/WhyBansysPage";
 import HowToBuyPage from "./components/HowToBuyPage/HowToBuyPage";
 import GuaranteePage from "./components/GuaranteePage/GuaranteePage";
