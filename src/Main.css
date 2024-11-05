@@ -98,3 +98,9 @@ body {
   background-color: #e1b95b;
   color: #3d6659;
 } */
+.go-shop-button {
+  border-radius: 11px;
+  background-color: #173b33;
+  width: 127px;
+  height: 52px;
+}

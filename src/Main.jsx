@@ -87,16 +87,22 @@ function Main() {
             <div>
               <div className="content">
                 <img src={bansys} alt="bans" />
-                <p className="subtitle">Bansys - Банкоматы - Терминалы</p>
+                <p className="subtitle">{t("Bansys ATM Terminal")}</p>
               </div>
             </div>
             <div className="footer">
-              <img
+              {/* <img
                 src={toBuy}
                 alt="toBuy"
                 className="shop-button"
                 onClick={handleShopButtonClick}
-              />
+              /> */}
+              <button
+                className="go-shop-button"
+                onClick={handleShopButtonClick}
+              >
+                {t("shopping")}
+              </button>
             </div>
             {isModalOpen && (
               <div className="modal-overlay1">
