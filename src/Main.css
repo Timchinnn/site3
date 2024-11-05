@@ -103,4 +103,9 @@ body {
   background-color: #173b33;
   width: 127px;
   height: 52px;
+  border: none;
+  color: #baa36e;
+  font-family: Asap;
+  font-size: 16px;
+  font-weight: 800;
 }
