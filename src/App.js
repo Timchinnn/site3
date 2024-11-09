@@ -231,7 +231,7 @@ function App() {
                         alt={product.name}
                         className="img-product"
                       />
-                      <p className="product-name">{product.name}</p>
+                      <p className="product-name">{t(`${product.name}`)}</p>
                       <div className="ordertext-cart">
                         <p>Под заказ</p>
                         <img src={cart} alt="cart" className="img-cart" />
