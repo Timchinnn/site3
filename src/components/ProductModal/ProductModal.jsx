@@ -54,7 +54,7 @@ const ProductModal = ({
           <div className="more">
             <img src={arrow} className="arrow" alt="arrow" onClick={onClose} />
             <div className="block-about">
-              <p>{product.description}</p>
+              <p>{product.more}</p>
             </div>
           </div>
         ) : (
