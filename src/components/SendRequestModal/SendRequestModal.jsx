@@ -91,7 +91,11 @@ const SendRequestModal = ({ onClose }) => {
                   onChange={handleChange}
                 />
               </div> */}
-              <input name="message" className="msg" onChange={handleChange} />
+              <textarea
+                name="message"
+                className="msg"
+                onChange={handleChange}
+              />
               <button className="send-msg" onClick={handleSubmit}>
                 {t("Submit application")}
               </button>
