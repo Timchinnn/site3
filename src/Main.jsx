@@ -33,11 +33,29 @@ function Main() {
   const changeLanguage = () => {
     i18n.changeLanguage(i18n.language === "ru" ? "en" : "ru");
   };
-  const handleShopButtonClick = () => {
+  const handleShopButtonClick = async () => {
     if (isAuthenticated) {
       navigate(1);
     } else {
-      openModal();
+      const userExists = await checkUserExists(); // Проверяем существование пользователя
+      if (userExists) {
+        setIsAuthenticated(true); // Если пользователь существует, устанавливаем аутентификацию
+        navigate(1); // Переходим в магазин
+      } else {
+        openModal(); // Если пользователь не существует, открываем модальное окно
+      }
+    }
+  };
+
+  // Функция для проверки существования пользователя по userId
+  const checkUserExists = async () => {
+    const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id; // Получаем userId
+    try {
+      const response = await axios.get(`/api/users/${tgUserId}`); // Отправляем запрос на сервер
+      return response.data.exists; // Предполагается, что сервер возвращает объект с полем `exists`
+    } catch (error) {
+      console.error("Error checking user existence:", error);
+      return false; // Если произошла ошибка, считаем, что пользователь не существует
     }
   };
   const [requestSent, setRequestSent] = useState(false);
@@ -78,7 +96,7 @@ function Main() {
       const response = await axios.post("/api/send-request", dataToSend);
       console.log(response.data);
       setRequestSent(true);
-      setIsAuthenticated(true);
+      // setIsAuthenticated(true);
       navigate("/app");
     } catch (error) {
       console.error("Error sending request:", error);
