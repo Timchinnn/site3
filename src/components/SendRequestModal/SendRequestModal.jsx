@@ -11,25 +11,17 @@ import { t } from "i18next";
 const SendRequestModal = ({ onClose }) => {
   const navigate = useNavigate();
   const [requestSent, setRequestSent] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    country: "",
-    city: "",
-    message: "",
-  });
+  const [message, setMessage] = useState("");
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setMessage(e.target.value);
   };
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post("/api/send-request", formData);
+      const response = await axios.post("/api/send-request-form", { message });
       console.log(response.data);
       setRequestSent(true);
-      // Optionally close the modal or show a success message
     } catch (error) {
       console.error("Error sending request:", error);
     }
