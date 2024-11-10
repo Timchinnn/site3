@@ -233,7 +233,7 @@ function App() {
                       />
                       <p className="product-name">{t(`${product.name_en}`)}</p>
                       <div className="ordertext-cart">
-                        <p>Под заказ</p>
+                        <p>{t("By order")}</p>
                         <img src={cart} alt="cart" className="img-cart" />
                       </div>
                     </div>
