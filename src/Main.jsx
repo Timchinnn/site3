@@ -38,6 +38,7 @@ function Main() {
       navigate(1);
     } else {
       const userExists = await checkUserExists(); // Проверяем существование пользователя
+      console.log(userExists);
       if (userExists) {
         navigate(1); // Переходим в магазин
       } else {
