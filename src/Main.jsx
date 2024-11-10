@@ -40,7 +40,7 @@ function Main() {
       const userExists = await checkUserExists(); // Проверяем существование пользователя
       console.log(userExists);
       if (userExists) {
-        navigate(1); // Переходим в магазин
+        navigate("/app"); // Переходим в магазин
       } else {
         openModal(); // Если пользователь не существует, открываем модальное окно
       }
