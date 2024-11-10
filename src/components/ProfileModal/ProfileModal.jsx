@@ -8,6 +8,7 @@ import union from "./Union.png";
 import vector from "./Vector.png";
 import bigB from "./bigb.png";
 import bigBContray from "./bigbContrary.png";
+import { t } from "i18next";
 
 const ProfileModal = ({ onClose }) => {
   const navigate = useNavigate();
@@ -91,7 +92,7 @@ const ProfileModal = ({ onClose }) => {
                       <input
                         type="text"
                         className="input-field"
-                        placeholder="Введите текст..."
+                        placeholder={t("Price")}
                       />
                       <div className="highlight">
                         <p>{product.quant}</p>
@@ -100,7 +101,7 @@ const ProfileModal = ({ onClose }) => {
                     </div>
 
                     <button className="submit-button" onClick={openModal}>
-                      сделать предложение
+                      {t("propose")}
                     </button>
                   </div>
                 )}
@@ -123,13 +124,13 @@ const ProfileModal = ({ onClose }) => {
               />
               {requestSent ? (
                 <div className="cart-media-good">
-                  <p>Заявка принята</p>
+                  <p>{t("Accept application")}</p>
                   <img src={vector} alt="vector" />
                   <button onClick={() => navigate(-1)}>OK</button>
                 </div>
               ) : (
                 <div className="cart-media-good">
-                  <p>Заявка принята</p>
+                  <p>{t("Accept application")}</p>
                   <img src={vector} alt="vector" />
                   <button onClick={() => navigate(-1)}>OK</button>
                 </div>
