@@ -39,7 +39,6 @@ function Main() {
     } else {
       const userExists = await checkUserExists(); // Проверяем существование пользователя
       if (userExists) {
-        setIsAuthenticated(true); // Если пользователь существует, устанавливаем аутентификацию
         navigate(1); // Переходим в магазин
       } else {
         openModal(); // Если пользователь не существует, открываем модальное окно
@@ -53,6 +52,7 @@ function Main() {
     try {
       const response = await axios.get(`/api/users/${tgUserId}`); // Отправляем запрос на сервер
       return response.data.exists; // Предполагается, что сервер возвращает объект с полем `exists`
+      setIsAuthenticated(true); // Если пользователь существует, устанавливаем аутентификацию
     } catch (error) {
       console.error("Error checking user existence:", error);
       return false; // Если произошла ошибка, считаем, что пользователь не существует
