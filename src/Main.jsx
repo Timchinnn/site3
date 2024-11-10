@@ -56,14 +56,25 @@ function Main() {
   };
 
   const handleSubmit = async () => {
+    // Проверка на пустые поля
+    if (
+      !formData.name ||
+      !formData.surname ||
+      !formData.phone ||
+      !formData.email ||
+      !formData.country ||
+      !formData.city
+    ) {
+      alert(t("Please fill in all fields")); // Сообщение об ошибке
+      return; // Прекращаем выполнение функции, если есть пустые поля
+    }
+
     try {
       const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
       const dataToSend = {
         ...formData,
         tgUserId,
       };
-      // const response = await axios.post("/api/send-request", formData);
-
       const response = await axios.post("/api/send-request", dataToSend);
       console.log(response.data);
       setRequestSent(true);
