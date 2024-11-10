@@ -78,6 +78,7 @@ function Main() {
       const response = await axios.post("/api/send-request", dataToSend);
       console.log(response.data);
       setRequestSent(true);
+      setIsAuthenticated(true);
       navigate("/app");
     } catch (error) {
       console.error("Error sending request:", error);
