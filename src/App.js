@@ -216,7 +216,7 @@ function App() {
         {categoriesWithFilteredProducts.length > 0 ? (
           categoriesWithFilteredProducts.map((category) => (
             <div key={category.id}>
-              <p className="category-text">{category.name}</p>
+              <p className="category-text">{t(`${category.name}`)}</p>
               <div className="products">
                 {filteredProducts
                   .filter((product) => product.category === category.name)
