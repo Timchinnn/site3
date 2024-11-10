@@ -54,7 +54,7 @@ const ProductModal = ({
           <div className="more">
             <img src={arrow} className="arrow" alt="arrow" onClick={onClose} />
             <div className="block-about">
-              <p>{product.more}</p>
+              <p>{t(`${product.more_en}`)}</p>
             </div>
           </div>
         ) : (
@@ -66,14 +66,14 @@ const ProductModal = ({
               alt={product.name}
             />
             <div className="card">
-              <p className="card-title">{product.name}</p>
+              <p className="card-title">{t(`${product.name_en}`)}</p>
               <p className="details-button" onClick={handleDetailsClick}>
                 {t("Details")}
               </p>
             </div>
 
             <div className="block-about">
-              <p>{product.description}</p>
+              <p>{t(`${product.description_en}`)}</p>
             </div>
             {/* <p>Полезная информация</p> */}
             {/* <div className="about-buttons-question-from">
