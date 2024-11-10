@@ -12,17 +12,21 @@ const SendRequestModal = ({ onClose }) => {
   const navigate = useNavigate();
   const [requestSent, setRequestSent] = useState(false);
   const [formData, setFormData] = useState({
-    msg: "",
+    name: "",
+    phone: "",
+    country: "",
+    city: "",
+    message: "",
   });
 
   const handleChange = (e) => {
-    // const { name, value } = e.target;
-    setFormData({ ...formData });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post("/api/send-request-form", formData);
+      const response = await axios.post("/api/send-request", formData);
       console.log(response.data);
       setRequestSent(true);
       // Optionally close the modal or show a success message
@@ -95,7 +99,7 @@ const SendRequestModal = ({ onClose }) => {
                   onChange={handleChange}
                 />
               </div> */}
-              <input name="msg" className="msg" onChange={handleChange} />
+              <input name="message" className="msg" onChange={handleChange} />
               <button className="send-msg" onClick={handleSubmit}>
                 {t("Submit application")}
               </button>
