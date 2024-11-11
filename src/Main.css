@@ -42,6 +42,7 @@ body {
   width: 316px;
   font-size: 12px;
   color: #173b33;
+  overflow: hidden;
 }
 .footer {
   display: flex;
