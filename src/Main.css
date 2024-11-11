@@ -21,7 +21,26 @@ body {
   justify-content: center; /* Центрирует содержимое по вертикали */
   flex-grow: 1; /* Позволяет содержимому занимать оставшееся пространство */
 }
-
+.send-msg-main {
+  background-color: #17453b;
+  border: none;
+  color: #fff;
+  height: 28px;
+  justify-content: center;
+  margin-bottom: 1%;
+  margin-left: 28%;
+  text-align: center;
+  width: 47%;
+}
+.window-reg-main {
+  background-color: #d9d9d9;
+  border: 3px groove #17453b;
+  display: flex;
+  flex-direction: column;
+  height: 420px;
+  justify-content: space-between;
+  width: 316px;
+}
 .footer {
   display: flex;
   justify-content: center; /* Центрирование футера */

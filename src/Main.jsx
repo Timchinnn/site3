@@ -146,7 +146,7 @@ function Main() {
                   />
                   <div className="parent">
                     {" "}
-                    <div className="window-reg">
+                    <div className="window-reg-main">
                       <h1 className="application">{t("REGISTER")}</h1>
                       <div className="input-container">
                         <p>{t("Name")}</p>
@@ -201,7 +201,7 @@ function Main() {
                         className="msg"
                         onChange={handleChange}
                       /> */}
-                      <button className="send-msg" onClick={handleSubmit}>
+                      <button className="send-msg-main" onClick={handleSubmit}>
                         {t("Register")}
                       </button>
                     </div>
