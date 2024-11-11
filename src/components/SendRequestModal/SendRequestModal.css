@@ -130,3 +130,11 @@
 input {
   touch-action: manipulation;
 }
+@media (max-height: 600px) {
+  .window-reg-main {
+    height: 360px;
+  }
+  .application {
+    margin-bottom: 2px;
+  }
+}
