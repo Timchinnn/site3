@@ -147,13 +147,14 @@ body.no-scroll {
   background-color: #3d6159;
   border-radius: 20px;
   width: 100vh;
-  min-height: 45px;
+  min-height: 55px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   /* margin-bottom: 10px; */
+  font-size: 15px;
 }
 .block-about p {
   margin-left: 15px;
@@ -168,13 +169,14 @@ body.no-scroll {
   background-color: #3d6159;
   border-radius: 20px;
   width: 100vh;
-  min-height: 45px;
+  min-height: 55px;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   /* margin-bottom: 10px; */
+  font-size: 15px;
 }
 .add-to-cart,
 .add-to-cart-min {
