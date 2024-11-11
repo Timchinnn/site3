@@ -39,7 +39,7 @@ const ProfileModal = ({ onClose }) => {
       });
       console.log(response.data);
       setRequestSent(true); // Установка состояния, что запрос отправлен
-      setIsModalOpen(false); // Закрытие модального окна
+      setIsModalOpen(true); // Закрытие модального окна
     } catch (error) {
       console.error("Ошибка при отправке предложения:", error);
     }
