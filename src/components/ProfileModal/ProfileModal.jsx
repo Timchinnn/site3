@@ -15,6 +15,8 @@ const ProfileModal = ({ onClose }) => {
   const [products, setProducts] = useState([]);
   const [activeItem, setActiveItem] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [inputValue, setInputValue] = useState(""); // Состояние для хранения текста инпута
+  const [requestSent, setRequestSent] = useState(false);
 
   useEffect(() => {
     axios
@@ -23,46 +25,26 @@ const ProfileModal = ({ onClose }) => {
       .catch((error) => console.error("Ошибка при получении товаров:", error));
   }, []);
 
-  const openModal = () => {
-    setIsModalOpen(true);
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value); // Обновление состояния при изменении инпута
   };
 
-  // const closeModal = () => {
-  //   setIsModalOpen(false);
-  // };
-  const [requestSent] = useState(false);
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   phone: "",
-  //   country: "",
-  //   city: "",
-  //   message: "",
-  //   tgLink: "",
-  // });
+  const handlePropose = async (product) => {
+    try {
+      const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
+      const response = await axios.post("/api/propose", {
+        productName: product.name,
+        message: inputValue,
+        tgUserId,
+      });
+      console.log(response.data);
+      setRequestSent(true); // Установка состояния, что запрос отправлен
+      setIsModalOpen(false); // Закрытие модального окна
+    } catch (error) {
+      console.error("Ошибка при отправке предложения:", error);
+    }
+  };
 
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormData({ ...formData, [name]: value });
-  // };
-
-  // const handleSubmit = async () => {
-  //   try {
-  //     const tgLink = window.Telegram?.WebApp?.initDataUnsafe?.user?.username
-  //       ? `https://t.me/${window.Telegram.WebApp.initDataUnsafe.user.username}`
-  //       : null;
-
-  //     setFormData((prevData) => ({ ...prevData, tgLink }));
-
-  //     const response = await axios.post("/api/send-request", {
-  //       ...formData,
-  //       tgLink,
-  //     });
-  //     console.log(response.data);
-  //     setRequestSent(true);
-  //   } catch (error) {
-  //     console.error("Error sending request:", error);
-  //   }
-  // };
   return (
     <div>
       <div className="modal-overlay">
@@ -93,14 +75,18 @@ const ProfileModal = ({ onClose }) => {
                         type="text"
                         className="input-field"
                         placeholder={t("Price")}
+                        value={inputValue} // Привязка значения инпута
+                        onChange={handleInputChange} // Обработчик изменения инпута
                       />
                       <div className="highlight">
                         <p>{product.quant}</p>
                         <img src={union} alt="union" />
                       </div>
                     </div>
-
-                    <button className="submit-button" onClick={openModal}>
+                    <button
+                      className="submit-button"
+                      onClick={() => handlePropose(product)} // Отправка данных при нажатии на кнопку
+                    >
                       {t("propose")}
                     </button>
                   </div>
