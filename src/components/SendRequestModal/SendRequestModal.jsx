@@ -19,7 +19,11 @@ const SendRequestModal = ({ onClose }) => {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post("/api/send-request-form", { message });
+      const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
+      const response = await axios.post("/api/send-request-form", {
+        message,
+        tgUserId,
+      });
       console.log(response.data);
       setRequestSent(true);
     } catch (error) {
