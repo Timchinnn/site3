@@ -16,7 +16,8 @@ const CartModal = ({ items = [], onClose, onAdd, onRemove, onResetCart }) => {
 
   const handleCheckout = async () => {
     try {
-      const response = await axios.post("/api/checkout", { items });
+      const tgUserId = window.Telegram?.WebApp?.initDataUnsafe?.user?.id;
+      const response = await axios.post("/api/checkout", { items, tgUserId });
       console.log("Order placed successfully:", response.data);
       setOrderPlaced(true); // Устанавливаем состояние заказа в true
     } catch (error) {
