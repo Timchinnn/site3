@@ -17,6 +17,10 @@
   font-size: 11px;
   white-space: nowrap;
 }
+.highlight {
+  font-weight: bold; /* Делает текст жирным */
+  color: #173b33; /* Устанавливает цвет текста */
+}
 .arrow-group:first-child {
   height: 220px;
 }

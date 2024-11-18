@@ -98,13 +98,15 @@ const GuaranteePage = ({ onClose }) => {
               <div className="about-sales">
                 <div className="about-sale">
                   <p>
+                    <span>{t("Get a unique link")}</span>
                     {t(
-                      "Get a unique link - click the button below and copy your personal link."
+                      " - click the button below and copy your personal link."
                     )}
                   </p>
                 </div>
                 <div className="about-sale">
                   <p>
+                    <span>{t("")}</span>
                     {t(
                       "Share with friends - send links to colleagues, partners, and acquaintances on Messenger or social media."
                     )}
@@ -112,6 +114,7 @@ const GuaranteePage = ({ onClose }) => {
                 </div>
                 <div className="about-sale">
                   <p>
+                    <span>{t("")}</span>
                     {t(
                       "Earn money with us - When you place an order through your link, you will receive 3% of the first check."
                     )}
@@ -124,7 +127,7 @@ const GuaranteePage = ({ onClose }) => {
                   "Every month, the most active participants will receive valuable prizes:"
                 )}
               </p>
-              <div className="arrow-groups">
+              {/* <div className="arrow-groups">
                 <div className="arrow-group">
                   <img src={arrowDownL} alt="arrowDownL" />
                   <p>{t("First place: 7% discount")}</p>
@@ -137,7 +140,7 @@ const GuaranteePage = ({ onClose }) => {
                   <img src={arrowDownS} alt="arrowDownS" />
                   <p>{t("Third place: 3% discount")}</p>
                 </div>
-              </div>
+              </div> */}
               <div className="statistic-hrad">
                 <div className="statistic">
                   <p className="all-p4">
