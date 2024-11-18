@@ -83,10 +83,14 @@ const GuaranteePage = ({ onClose }) => {
             {/* <p>cd{ref}</p> */}
             {/* <div className="window-block-about"></div> */}
             <div className="share">
-              <p className="share-header-p">{t("Summoning friends")} </p>
+              <p className="share-header-p">
+                <span className="highlight-text">{t("Summoning friends")}</span>
+              </p>
               <div className="earn">
                 <img src={arrowLong} alt="arrowLong" />
-                <p className="share-header-p">{t("make money")}</p>
+                <p className="share-header-p">
+                  <span className="highlight-text">{t("make money")}</span>
+                </p>
               </div>
               <hr className="hr1" />
               <p className="all-p1">
