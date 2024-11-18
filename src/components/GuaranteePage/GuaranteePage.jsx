@@ -108,7 +108,9 @@ const GuaranteePage = ({ onClose }) => {
                 </div>
                 <div className="about-sale">
                   <p>
-                    <span>{t("Share with friends")}</span>
+                    <span className="highlight-text">
+                      {t("Share with friends")}
+                    </span>
                     {t(
                       " - send links to colleagues, partners, and acquaintances on Messenger or social media."
                     )}
@@ -116,7 +118,9 @@ const GuaranteePage = ({ onClose }) => {
                 </div>
                 <div className="about-sale">
                   <p>
-                    <span>{t("Earn money with us")}</span>
+                    <span className="highlight-text">
+                      {t("Earn money with us")}
+                    </span>
                     {t(
                       " - When you place an order through your link, you will receive 3% of the first check."
                     )}
