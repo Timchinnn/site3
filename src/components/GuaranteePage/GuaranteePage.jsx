@@ -93,11 +93,7 @@ const GuaranteePage = ({ onClose }) => {
                 </p>
               </div>
               <hr className="hr1" />
-              <p className="all-p1">
-                {t(
-                  "According to your suggestion, each order can enjoy a 3% discount!"
-                )}
-              </p>
+              <p className="all-p1">{t("Call your friend and get a gift!")}</p>
               <p className="all-p">{t("How it works:")}</p>
               <div className="about-sales">
                 <div className="about-sale">
@@ -134,7 +130,7 @@ const GuaranteePage = ({ onClose }) => {
               <hr className="hr2" />
               <p className="all-p">
                 {t(
-                  "Every month, the most active participants will receive valuable prizes:"
+                  "When your link is accessed by 5 people, please contact our manager and choose one of the three keyboards for free."
                 )}
               </p>
               {/* <div className="arrow-groups">
@@ -155,7 +151,7 @@ const GuaranteePage = ({ onClose }) => {
                 <div className="statistic">
                   <p className="all-p4">
                     {t(
-                      "Real time statistics - tracking traffic and deposit the earned money into a personal office."
+                      "Real time statistics- Track the number of transitions."
                     )}
                   </p>
                 </div>
@@ -186,10 +182,10 @@ const GuaranteePage = ({ onClose }) => {
                     <p className="all-p">{t("Click on the link")}</p>
                     <p className="all-p">{ref_cout}</p>
                   </div>
-                  <div className="changeover">
+                  {/* <div className="changeover">
                     <p className="all-p">{t("Earned money")}</p>
                     <p className="all-p">0</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
