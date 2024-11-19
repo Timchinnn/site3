@@ -122,7 +122,7 @@ const GuaranteePage = ({ onClose }) => {
                       {t("Earn money with us")}
                     </span>
                     {t(
-                      " - When you place an order through your link, you will receive 3% of the first check."
+                      " - call 5 people and receive one of 3 keyboards as a gift."
                     )}
                   </p>
                 </div>
